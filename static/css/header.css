@@ -1,0 +1,179 @@
+/* General Styles */
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Navbar Styles */
+.navbar {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  width: 100%;
+  height: 80px;
+  background: rgba(30, 30, 30);
+  color: #fff;
+  user-select: none;
+  z-index: 10000;
+  box-sizing: border-box;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar__logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar__logo-icon {
+  width: 60px;
+  transition: transform 0.3s ease;
+}
+
+.navbar__logo-icon:hover {
+  transform: scale(1.1);
+}
+
+.navbar__logo-text {
+  margin-left: 15px;
+}
+
+.navbar__title {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.navbar__subtitle {
+  margin-top: 0px;
+  font-size: 14px;
+  font-weight: 300;
+  color: #cccccc;
+}
+
+/* Menu Styles */
+.navbar__menu {
+  display: flex;
+  align-items: center;
+  line-height: 80px;
+}
+
+.navbar__menu-item {
+  font-size: 18px;
+  margin: 0 25px;
+  cursor: pointer;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.navbar__menu-item:hover,
+.navbar__toggle-btn:hover,
+.navbar__close-btn:hover {
+  color: #afd918;
+  transform: translateY(-2px);
+}
+
+.navbar__menu-item.active {
+  color: #a8f900;
+  font-weight: 600;
+}
+
+/* Submenu Styles */
+.navbar__menu-item-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.navbar__submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  font-size: clamp(12px, 4vw, 18px);
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+
+.navbar__submenu-item {
+  padding: 5px 20px;
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  line-height: 2;
+  transition: background 0.3s ease;
+}
+
+.navbar__submenu-item:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.navbar__menu-item-dropdown:hover .navbar__submenu {
+  display: block;
+}
+
+/* Toggle Button Styles */
+.navbar__toggle-btn,
+.navbar__close-btn {
+  font-size: 28px;
+  cursor: pointer;
+  display: none;
+  transition: color 0.3s;
+}
+
+/* Checkbox Styles */
+.navbar__checkbox {
+  position: absolute;
+  visibility: hidden;
+  z-index: 99999;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1200px) {
+
+  .navbar__toggle-btn,
+  .navbar__close-btn {
+    display: block;
+  }
+
+  .navbar__menu {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(30, 30, 30, 0.95);
+    transition: top 0.4s ease-in-out;
+    z-index: 9998;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .navbar__menu-item {
+    display: block;
+    font-size: clamp(14px, 5vw, 2rem);
+  }
+
+  .navbar__close-btn {
+    position: absolute;
+    top: -10px;
+    right: 20px;
+  }
+
+  .navbar__checkbox:checked~.navbar__menu {
+    top: 0;
+  }
+
+  .navbar__submenu {
+    background: rgba(0, 0, 0, 0.95);
+  }
+
+  .navbar__submenu-item {
+    padding: 5px;
+    text-align: center;
+  }
+}

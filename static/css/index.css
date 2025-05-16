@@ -1,0 +1,460 @@
+/*--------------------*/
+/* Scroll Snapping */
+/*--------------------*/
+.main-content {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+  scroll-behavior: smooth;
+}
+
+section {
+  margin-bottom: 10%;
+  padding: 0 5%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start;
+}
+
+/*--------------------*/
+/* Text */
+/*--------------------*/
+h3 {
+  font-size: clamp(1.3rem, 4vw, 5rem);
+  margin-bottom: 15px;
+  text-align: center;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 9);
+}
+
+p {
+  font-size: clamp(1rem, 2.5vw, 2rem);
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  text-align: justify;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 9);
+}
+
+/*--------------------*/
+/* Background Overlay */
+/*--------------------*/
+.main-content__background-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://static.igem.wiki/teams/5218/image/static/images/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  z-index: -1;
+  opacity: 0.8;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/*--------------------*/
+/* Falling Acids Animation */
+/*--------------------*/
+#falling-acids-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+}
+
+.caffeic-acid {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-image: url('https://static.igem.wiki/teams/5218/image/static/images/ca.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  animation: fall 5s linear infinite;
+  pointer-events: auto;
+}
+
+@keyframes fall {
+  from {
+    top: -10%;
+  }
+
+  to {
+    top: 100%;
+  }
+}
+
+/*--------------------*/
+/* Video Section */
+/*--------------------*/
+.video {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px 0;
+}
+
+.video__title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 0;
+  text-align: left;
+  font-weight: 600;
+}
+
+.video__container {
+  width: 70%;
+  max-width: 1200px;
+  aspect-ratio: 16 / 9;
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.video__container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 20px;
+}
+
+/*--------------------*/
+/* Title and Content Spacing */
+/*--------------------*/
+.problem__title,
+.solution__title,
+.detailed-solution__title,
+.team__title {
+  width: 100%;
+  text-align: left;
+}
+
+.partners__title,
+.contacts__title {
+  margin-bottom: -20px;
+}
+
+.problem__content,
+.solution__text,
+.detailed-solution__content,
+.team__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  text-align: left;
+  flex-wrap: wrap;
+}
+
+.problem__content p,
+.detailed-solution__paragraph,
+.team__description {
+  flex: 1;
+  margin-right: 40px;
+}
+
+/*--------------------*/
+/* Home Image Processing */
+/*--------------------*/
+.problem__image,
+.detailed-solution__image_1,
+.detailed-solution__image_2,
+.team__image {
+  width: 100%;
+  /* Ensure all images take up full width of their containers */
+  height: auto;
+  max-width: 500px;
+  /* Maintain aspect ratio */
+  object-fit: cover;
+  /* Ensure the image covers its container */
+  margin: 0 auto;
+  /* Center the image horizontally */
+  display: block;
+  /* Ensure no inline spacing */
+  border-radius: 20px;
+}
+
+/*--------------------*/
+/* Team and Partners Section */
+/*--------------------*/
+.collection {
+  position: relative;
+  height: 100vh;
+  width: 90%;
+  overflow: hidden;
+  /* Prevent scrolling */
+}
+
+/* Partners Section Styling */
+.partners {
+  position: absolute;
+  /* Allows fixed positioning within the container */
+  top: 20%;
+  /* Distance from the top of the viewport */
+  left: 50%;
+  /* Center horizontally */
+  transform: translateX(-50%) scale(1.1);
+  /* Adjust horizontal center alignment */
+  width: 100%;
+  /* Set the width for the section */
+  font-size: 1rem;
+  /* Larger font size */
+  text-align: center;
+}
+
+/* Contacts Section Styling */
+.contacts {
+  position: absolute;
+  top: 60%;
+  /* Positioning below the Partners section */
+  left: 50%;
+  transform: translate(-50%) scale(0.4);
+  /* Center both vertically and horizontally */
+  width: 100%;
+  /* Adjust width to be smaller than Partners */
+  padding: 0px;
+  text-align: center;
+  display: flex;
+  /* Use flexbox */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Copyright Section Styling */
+.copyright {
+  position: absolute;
+  top: 70%;
+  /* Distance from the bottom of the viewport */
+  left: 50%;
+  transform: translateX(-50%) scale(0.4);
+  /* Center horizontally */
+  width: 120%;
+  /* Smaller width for a compact look */
+  color: white;
+  text-align: center;
+  display: flex;
+  /* Use flexbox */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+
+.copyright__link {
+  text-decoration: none;
+  color: white;
+  font-style: bold;
+  transition: .2s all ease-in-out;
+}
+
+.copyright__link:hover {
+  text-decoration: underline;
+  font-style: bold;
+  color: #afd918;
+}
+
+/*--------------------*/
+/* Media Queries */
+/*--------------------*/
+
+/* For screens up to 1200px (Large Devices) */
+@media screen and (max-width: 1200px) {
+
+  .partners__title,
+  .contacts__title {
+    font-size: 1.5rem;
+    /* Adjust title size */
+  }
+
+  .partners {
+    top: 18%;
+    /* Adjust positioning */
+    width: 85%;
+    /* Adjust width for large screens */
+  }
+
+  .contacts {
+    top: 65%;
+    /* Adjust positioning for contacts */
+    width: 85%;
+    /* Adjust width */
+    font-size: 1rem;
+    /* Adjust font size */
+  }
+
+  .problem__image,
+  .detailed-solution__image_1,
+  .detailed-solution__image_2,
+  .team__image {
+    max-width: 400px;
+    /* Adjust image size */
+  }
+}
+
+/* For screens up to 992px (Medium Devices - Tablets and Small Laptops) */
+@media screen and (max-width: 992px) {
+  .partners {
+    top: 17%;
+    /* Adjust positioning for medium screens */
+    width: 80%;
+    /* Adjust width */
+  }
+
+  .contacts {
+    top: 60%;
+    /* Adjust positioning for contacts */
+    width: 80%;
+    /* Adjust width */
+    font-size: 1rem;
+    /* Adjust font size */
+  }
+
+  .problem__image,
+  .detailed-solution__image_1,
+  .detailed-solution__image_2,
+  .team__image {
+    max-width: 350px;
+    /* Adjust image size for medium devices */
+  }
+
+  .problem__content,
+  .detailed-solution__content,
+  .team__content {
+    flex-direction: column;
+    /* Stack content and images vertically on medium devices */
+  }
+
+  .problem__content p,
+  .detailed-solution__paragraph,
+  .team__description {
+    margin-right: 0;
+    /* Remove margin when stacked vertically */
+    margin-bottom: 20px;
+    /* Add space between stacked elements */
+  }
+
+  .copyright {
+    font-size: 0.8rem;
+    /* Adjust copyright font size */
+    bottom: 2%;
+  }
+}
+
+/* For screens up to 768px (Tablets and Smaller Devices) */
+@media screen and (max-width: 768px) {
+  .partners {
+    top: 15%;
+    /* Adjust positioning for smaller tablets */
+    width: 90%;
+    /* Increase width for smaller screens */
+    font-size: 1.3rem;
+    /* Adjust font size */
+    transform: translateX(-50%);
+  }
+
+  .contacts {
+    top: 55%;
+    transform: translate(-50%, -50%) scale(0.7);
+    /* Adjust scale for smaller screens */
+    width: 90%;
+    /* Adjust width */
+    font-size: 0.9rem;
+    /* Adjust font size */
+  }
+
+  .copyright {
+    bottom: 5%;
+    transform: translateX(-50%) scale(0.7);
+    /* Adjust scale for smaller screens */
+    width: 90%;
+    /* Adjust width */
+    font-size: 0.7rem;
+    /* Adjust font size */
+  }
+
+  .problem__image,
+  .detailed-solution__image_1,
+  .detailed-solution__image_2,
+  .team__image {
+    max-width: 300px;
+    /* Reduce image size for smaller screens */
+  }
+
+  .problem__content,
+  .detailed-solution__content,
+  .team__content {
+    flex-direction: column;
+    /* Stack content vertically on smaller screens */
+  }
+
+  .problem__content p,
+  .detailed-solution__paragraph,
+  .team__description {
+    margin-right: 0;
+    /* Remove right margin for vertical stacking */
+    margin-bottom: 15px;
+    /* Add space between stacked elements */
+  }
+
+  .video__container {
+    width: 90%;
+    /* Reduce video container width for smaller screens */
+  }
+}
+
+/* For screens up to 576px (Small Mobile Devices) */
+@media screen and (max-width: 576px) {
+  .partners {
+    top: 12%;
+    /* Adjust positioning for small screens */
+    width: 100%;
+    /* Full width for small screens */
+    font-size: 1.2rem;
+    /* Adjust font size */
+  }
+
+  .contacts {
+    top: 52%;
+    transform: translate(-50%, -50%) scale(0.6);
+    /* Further reduce scale */
+    width: 100%;
+    /* Full width */
+    font-size: 0.8rem;
+    /* Reduce font size */
+  }
+
+  .copyright {
+    bottom: 10%;
+    transform: translateX(-50%) scale(0.6);
+    /* Further reduce scale */
+    font-size: 0.6rem;
+    /* Adjust font size for small screens */
+  }
+
+  .problem__image,
+  .detailed-solution__image_1,
+  .detailed-solution__image_2,
+  .team__image {
+    max-width: 250px;
+    /* Further reduce image size for small screens */
+  }
+
+  .problem__content,
+  .detailed-solution__content,
+  .team__content {
+    flex-direction: column;
+    /* Stack content vertically */
+    text-align: left;
+  }
+
+  .video__container {
+    width: 100%;
+    /* Full width for video container on mobile */
+  }
+}

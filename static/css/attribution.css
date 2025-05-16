@@ -1,0 +1,135 @@
+/* Text */
+h3 {
+    font-size: clamp(1.3rem, 4vw, 5rem);
+    margin-bottom: 15px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+h1 {
+    font-size: clamp(3rem, 5vw, 6rem);
+    font-weight: 700;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 9);
+}
+
+p {
+    font-size: clamp(0.5rem, 1.25vw, 1rem);
+    margin-top: 0;
+    color: white;
+    margin-bottom: 15px
+}
+
+/* Attribution Container */
+.attribution-container {
+    width: 97%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: rgba(30, 30, 30);
+}
+
+#igem-attribution-form {
+    width: 100%;
+    border: none;
+    border-radius: 20px;
+}
+
+/* Description Section Styling */
+.description-page {
+    padding: 60px 0;
+    background-image: url('https://static.igem.wiki/teams/5218/image/static/images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    transition: opacity 0.3s ease-in-out;
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+}
+
+.content-background {
+    position: relative;
+    padding: 40px;
+    z-index: 0;
+}
+
+/* Team and Partners Section */
+.collection {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Partners Section Styling */
+.partners {
+    position: absolute;
+    /* Allows fixed positioning within the container */
+    top: 10%;
+    /* Distance from the top of the viewport */
+    left: 50%;
+    /* Center horizontally */
+    transform: translateX(-50%) scale(1.1);
+    /* Adjust horizontal center alignment */
+    width: 100%;
+    /* Set the width for the section */
+    font-size: 1rem;
+    /* Larger font size */
+    text-align: center;
+}
+
+/* Contacts Section Styling */
+.contacts {
+    position: absolute;
+    top: 60%;
+    /* Positioning below the Partners section */
+    left: 50%;
+    transform: translate(-50%);
+    /* Center both vertically and horizontally */
+    width: 100%;
+    /* Adjust width to be smaller than Partners */
+    padding: 0px;
+    text-align: center;
+    display: flex;
+    /* Use flexbox */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Copyright Section Styling */
+.copyright {
+    position: absolute;
+    top: 75%;
+    /* Distance from the bottom of the viewport */
+    left: 50%;
+    transform: translateX(-50%);
+    /* Center horizontally */
+    width: 120%;
+    /* Smaller width for a compact look */
+    color: white;
+    text-align: center;
+    display: flex;
+    /* Use flexbox */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+.copyright__link {
+    text-decoration: none;
+    color: white;
+    font-style: bold;
+    transition: .2s all ease-in-out;
+}
+
+.copyright__link:hover {
+    text-decoration: underline;
+    font-style: bold;
+    color: #afd918;
+}
