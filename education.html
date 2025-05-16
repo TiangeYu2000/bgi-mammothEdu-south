@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="https://static.igem.wiki/teams/5218/image/static/images/logo.png" />
+    <title>PetalGlow</title>
+    <!-- Reset and Custom Stylesheets -->
+    <link rel="stylesheet" href="./static/css/reset.css">
+    <link rel="stylesheet" href="./static/css/main.css">
+    <link rel="stylesheet" href="./static/css/header.css">
+    <link rel="stylesheet" href="./static/css/notebook.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header class="navbar">
+        <!-- Logo -->
+        <a class="navbar__logo" href="https://2024.igem.wiki/bgi-mammothedu-south/">
+            <img class="navbar__logo-icon" src="https://static.igem.wiki/teams/5218/image/static/images/logo.png"
+                width="80" alt="PetalGlow Logo" />
+            <div class="navbar__logo-text">
+                <div class="navbar__title" href="https://2024.igem.wiki/bgi-mammothedu-south/">Petalglow</div>
+                <div class="navbar__subtitle" href="roster.html">BGI-MammothEdu-South</div>
+            </div>
+        </a>
+
+        <!-- Toggle for mobile menu -->
+        <input type="checkbox" id="menu-toggle" class="navbar__checkbox" />
+        <label for="menu-toggle" class="navbar__toggle-btn">☰</label>
+
+        <!-- Navigation Menu -->
+        <nav class="navbar__menu">
+            <!-- Home Link （Retrun to Home page） -->
+            <a href="https://2024.igem.wiki/bgi-mammothedu-south/" class="navbar__menu-item">Home</a>
+
+            <!-- Project Dropdown -->
+            <div class="navbar__menu-item-dropdown">
+                <a href="#" class="navbar__menu-item">Project</a>
+                <div class="navbar__submenu">
+                    <a href="./description.html" class="navbar__submenu-item">Description</a>
+                    <a href="./engineering.html" class="navbar__submenu-item">Engineering</a>
+                    <a href="./results" class="navbar__submenu-item">Results</a>
+                    <a href="./results#plant" class="navbar__submenu-item">Plant</a>
+                    <a href="./implementation" class="navbar__submenu-item">Implementation</a>
+                    <a href="./contribution" class="navbar__submenu-item">Contribution</a>
+                </div>
+            </div>
+
+            <!-- Wet Lab Dropdown -->
+            <div class="navbar__menu-item-dropdown">
+                <a href="#" class="navbar__menu-item">Wet Lab</a>
+                <div class="navbar__submenu">
+                    <a href="./parts.html" class="navbar__submenu-item">Parts</a>
+                    <a href="./experiments" class="navbar__submenu-item">Experiments</a>
+                    <a href="./notebook.html" class="navbar__submenu-item">Notebook</a>
+                    <a href="./protocal" class="navbar__submenu-item">Protocal</a>
+                    <a href="./safety" class="navbar__submenu-item">Safety</a>
+                </div>
+            </div>
+
+            <!-- Dry Lab Dropdown -->
+            <div class="navbar__menu-item-dropdown">
+                <a href="#" class="navbar__menu-item">Dry Lab</a>
+                <div class="navbar__submenu">
+                    <a href="./model" class="navbar__submenu-item">Model</a>
+                    <a href="./measurement" class="navbar__submenu-item">Measurement</a>
+                </div>
+            </div>
+
+            <!-- Out Reach Dropdown -->
+            <div class="navbar__menu-item-dropdown">
+                <a href="#" class="navbar__menu-item">Out Reach</a>
+                <div class="navbar__submenu">
+                    <a href="./human-practices.html" class="navbar__submenu-item">Human Practices</a>
+                    <a href="./education" class="navbar__submenu-item">Education</a>
+                    <a href="./entrepreneurship" class="navbar__submenu-item">Entrepreneurship</a>
+                    <a href="./inclusivity" class="navbar__submenu-item">Inclusivity</a>
+                </div>
+            </div>
+
+            <!-- Team Dropdown -->
+            <div class="navbar__menu-item-dropdown">
+                <a href="#" class="navbar__menu-item">Team</a>
+                <div class="navbar__submenu">
+                    <a href="./roster.html" class="navbar__submenu-item">Roster</a>
+                    <a href="./attributions.html" class="navbar__submenu-item">Attribution</a>
+                    <a href="./partnership.html" class="navbar__submenu-item">Partnership</a>
+                    <a href="./highlights.html" class="navbar__submenu-item">Highlights</a>
+                    <a href="#" class="navbar__submenu-item">Medals</a>
+                </div>
+            </div>
+
+            <!-- Close Button for mobile menu -->
+            <label for="menu-toggle" class="navbar__close-btn">✖</label>
+        </nav>
+    </header>
+
+    <!-- Preloader Section -->
+    <div id="preloader">
+        <div class="spinner"></div>
+        <p>cooking...</p>
+    </div>
+
+    <section class="intro-section" id="intro-section">
+        <!-- Navigation Dots for Carousel -->
+        <div class="carousel-nav">
+            <span class="active" onclick="showSlide(0)"></span>
+            <span onclick="showSlide(1)"></span>
+            <span onclick="showSlide(2)"></span>
+        </div>
+
+        <div class="intro-background">
+            <h1>Education</h1>
+        </div>
+    </section>
+
+    <!-- Main Section with Content and TOC -->
+    <section class="description-page">
+        <!-- Background Image for Content Section -->
+        <div class="content-background">
+            <!-- Table of Contents (Left Side) -->
+            <nav class="toc">
+                <ul>
+                    <li><a href="#why">&#127849Why</a></li>
+                    <li><a href="#p">&#127849Preperation</a></li>
+                    <li><a href="#m">&#127849Middle School</a></li>
+                    <li><a href="#g">&#127849Gallery Walk</a></li>
+                </ul>
+            </nav>
+
+            <!-- Content Sections (Right Side) -->
+            <div class="content" style="margin-top: -230px;">
+                <section id="why">
+                    <h3>Why Education？</h3>
+                    <div style="text-align: left;">
+                        <p>Synthetic biology, hailed as the third biotechnological revolution following the discovery of
+                            the "DNA double helix
+                            structure" and "genome technology," has gained significant attention. But do ordinary people
+                            truly understand and
+                            recognize its significance? In middle school textbooks, the remarkable achievements of
+                            synthetic biology are merely
+                            glossed over, as if they have no relevance to middle school students. However, after our
+                            team delved into the principles
+                            of synthetic biology, we realized that its core is not overly complex. With the right
+                            approach to science education,
+                            middle school students can easily comprehend synthetic biology. Therefore, we decided to
+                            conduct a series of educational
+                            activities aimed at middle school students in Shenzhen, bringing more of them into the world
+                            of synthetic biology.
+                            On this foundation, we can further promote the knowledge of synthetic biology and glowing
+                            plants to the general public,
+                            ensuring that this knowledge expands and deepens through continuous exchange and
+                            dissemination. Our educational project,
+                            centered around glowing plants, aims to fill the public's knowledge gap in the field of
+                            synthetic biology. Through
+                            offline presentations and other activities, learners of different ages can personally
+                            experience the scientific
+                            principles behind glowing plants. These activities not only spark interest in biotechnology
+                            among participants but also
+                            raise their awareness of sustainable development issues.
+                            Through the power of education, we hope to inspire more people to engage in scientific
+                            exploration and together build a
+                            greener and more innovative future. We believe that with these efforts, we can not only
+                            ignite the curiosity of the next
+                            generation of scientists but also enhance the public's understanding and support of
+                            technological innovation, ultimately
+                            driving society toward a more sustainable and inclusive direction.</p>
+                    </div>
+                </section>
+
+                <section id="p">
+                    <h3>Preperation</h3>
+                    <div style="text-align: left;">
+                        <p>We believe that education is the re-output of knowledge after it has been absorbed.
+                            Therefore, the key to our
+                            preparation lies in enriching our own knowledge base as much as possible. All iGEM
+                            participants understand the
+                            importance of laboratory safety and bioethics, as this is not just a technical issue but the
+                            fundamental foundation of
+                            all scientific research and experimental activities.</p>
+                        <p>We decided to learn from professionals and summarize the knowledge we acquired into segments
+                            that can be easily shared
+                            with others. To achieve this, we invited Ms. Wenni from the BGI Research Institute and Ms.
+                            Weili Zhou from BGI’s
+                            Bioethics Office to provide our team with lectures and training focused on bioethics and
+                            biosafety.</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/education/5.png" alt="s6">
+                        </figure>
+                        <p>Afterward, we summarized the knowledge we gained into the "Biosafety" section of our
+                            presentation PPT, incorporating
+                            more engaging reflections on genetically modified plants. This became part of our efforts in
+                            sharing knowledge, with the
+                            goal of reaching a wider audience.</p>
+                        <p>Our target audience includes plant lovers, individuals aged 18-30 experiencing stress or mild
+                            anxiety, and people
+                            interested in innovative products. To better understand the needs of these groups and
+                            provide effective educational
+                            outreach, we consulted with Dr. Zhong Yi, a psychiatrist from Hong Kong’s Castle Peak
+                            Hospital and a PhD in Public
+                            Health from the University of Hong Kong. This collaboration helped deepen our understanding
+                            of how innovative projects
+                            like glowing plants can inspire curiosity and provide a unique solution to stress relief.
+                        </p>
+                        <p>Our goal is to raise awareness about the benefits of bioluminescent plants and engage these
+                            specific audiences. While
+                            our role may simply be to introduce this idea, even small steps can lead to greater societal
+                            impacts in the future.
+                            Taking action, no matter how small, contributes to a larger effort of bringing together
+                            science, innovation, and
+                            well-being.</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/education/6.png" alt="s6">
+                        </figure>
+                    </div>
+                </section>
+
+                <section id="m">
+                    <h3>Tiandong Middle School</h3>
+                    <div style="text-align: left;">
+                        <p>We have now accumulated a wealth of knowledge, and our mission has always been to pass it on.
+                            The question is, where do
+                            we begin? In the end, we chose to conduct our presentation at Tiandong Middle School in
+                            Shenzhen. The students there
+                            have a strong interest in biology, so we decided to share all the knowledge we had about
+                            synthetic biology with these
+                            young minds, full of potential. We wanted to ask them how they perceive synthetic biology,
+                            what impressions they had
+                            after our presentation, and whether anyone aspired to participate in the iGEM competition in
+                            the future, dedicating
+                            themselves to synthetic biology for a lifetime.</p>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">1. Introduction to Synthetic Biology and the iGEM
+                                    Competition:</b>
+                            </p>
+                        </div>
+                        <p>Liu Chengcheng began by explaining the core of synthetic biology: "The essence of synthetic
+                            biology lies in surpassing
+                            the limitations of natural evolution in traditional biology, transforming cells into highly
+                            efficient tools that serve
+                            humanity. This field revolves around the 'artificial design and writing of genomes,' using
+                            engineering methods to
+                            construct biological components or modules to achieve specific functions and synthesize
+                            products."</p>
+                        <p>To make this concept easier for middle school students to grasp, Chengcheng cleverly used the
+                            analogy of building with
+                            LEGO blocks: "Imagine synthetic biology as playing with LEGO. In the world of LEGO, you can
+                            choose different blocks to
+                            build the model you want. In synthetic biology, scientists are like LEGO builders, using
+                            carefully selected biological
+                            components as building blocks. Through innovative design and precise combination, they
+                            create new biological systems
+                            that can perform specific tasks."</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/education/7.png" alt="s6">
+                        </figure>
+                        <p>Chengcheng also mentioned the students' upcoming lessons in circuit design during their
+                            physics class in the second
+                            year: "Soon, in your physics class, you will learn how to design circuits. In circuit
+                            design, we use various electronic
+                            components like resistors and capacitors, which are the 'parts' of a circuit. By combining
+                            them in different ways, we
+                            can make the circuit perform different tasks. Similarly, in synthetic biology, we select and
+                            combine biological
+                            components to build biological systems with specific functions." This analogy was meant to
+                            spark students' interest in
+                            synthetic biology and build their confidence in potentially joining scientific research in
+                            the future.</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/education/8.png" alt="s6">
+                        </figure>
+                        <p>Next, to give students a better understanding of and involvement in the iGEM project, we
+                            introduced iGEM through videos
+                            and images. Judging by the students' attentive expressions, it was clear that they
+                            recognized and were inspired by the
+                            iGEM project.</p>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">2. Inclusivity Sharing:</b>
+                            </p>
+                        </div>
+                        <p>Our target audience includes middle school students who are interested in biology but have
+                            little to no knowledge of
+                            synthetic biology. The main goals of our project were to raise awareness about the
+                            importance of mental health and
+                            well-being, and to educate students on how our product could contribute to a more inclusive
+                            society. Specifically, we
+                            wanted to address the social stigmas surrounding mental health, particularly within Eastern
+                            and Chinese cultures.</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/education/9.jpg" alt="s6">
+                        </figure>
+                        <p>As a team, we carefully considered how our bioluminescent plant product could positively
+                            impact society. We identified
+                            people experiencing mental health challenges as a key group, aiming to create an environment
+                            where they could openly
+                            discuss and seek support for their mental health needs. However, we understand that cultural
+                            stigmas in Eastern
+                            societies might present barriers to inclusivity. Thus, we focused on educating students and
+                            raising awareness about
+                            mental health, hoping to dismantle stereotypes and encourage more open discussions about
+                            well-being.</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/education/10.png" alt="s6">
+                        </figure>
+                        <p>To accomplish these objectives, we prepared detailed materials, including engaging slideshows
+                            that highlighted the
+                            importance of inclusivity. We discussed the struggles faced by individuals with mental
+                            health challenges, such as social
+                            stigma, lack of access to resources, and physical limitations, and explained how our glowing
+                            plant could address some of
+                            these issues. For example, our plant serves as an affordable, one-time purchase alternative
+                            to expensive medications or
+                            professional treatments, making it accessible to a broader audience.</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/education/11.png" alt="s6">
+                        </figure>
+                        <p>We also outlined the steps our team took to promote inclusivity, such as consulting with
+                            health professionals and
+                            interacting with our target audience. By openly discussing mental health with the students,
+                            we aimed to raise awareness,
+                            foster inclusivity, and educate them about the product. Additionally, we emphasized the
+                            broader importance of creating a
+                            more inclusive environment, which could lead to a more open and collaborative community.
+                            Through these efforts, we hoped
+                            to not only teach students about synthetic biology and mental health but also inspire them
+                            to think about how science
+                            can contribute to building a more compassionate and inclusive society.</p>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">3. Science Behind Glowing Plants:</b>
+                            </p>
+                        </div>
+                        <p>Through the excellent presentations by Liu Chengcheng and Xu Jinghan, the students' interest
+                            in synthetic biology and
+                            glowing plants was fully ignited. Following this, Long Yuxiang guided the students on a deep
+                            exploration of glowing
+                            plants, covering their history, technical principles, biosafety, project outcomes, and
+                            future prospects. Together, they
+                            journeyed through this vast sea of knowledge filled with limitless possibilities.</p>
+                        <p>Long Yuxiang’s introduction not only deepened the students’ understanding of glowing plants
+                            but also fueled their
+                            excitement and anticipation for the future of synthetic biology, opening the door to future
+                            scientific exploration.</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/education/12.jpg" alt="s6">
+                        </figure>
+                        <p>When discussing biosafety, Long Yuxiang interacted with the students regarding the biosafety
+                            issues of genetically
+                            modified plants. He compared biosafety to the importance of ensuring a stable foundation
+                            when building skyscrapers,
+                            emphasizing the necessity of ensuring the safe application of new technologies. The
+                            atmosphere was lively, with students
+                            actively participating in discussions, asking questions, and reflecting on how to advance
+                            science while ensuring safety.</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/education/13.jpg" alt="s6">
+                        </figure>
+                        <p>After discussing biosafety, we showcased our project results through videos. When presenting
+                            the game “Genetically
+                            Modified Plants vs. Zombies,” the atmosphere reached a climax, as students expressed their
+                            excitement about learning
+                            synthetic biology through gaming. This fun and educational method greatly stimulated their
+                            interest, allowing them to
+                            absorb knowledge in a relaxed and enjoyable environment.</p>
+                        <p>Finally, we and the students looked ahead at the future of glowing plants from various
+                            perspectives, including
+                            education, psychotherapy, and aesthetics. Together, we envisioned a world full of
+                            possibilities, where glowing plants
+                            not only beautify the environment but also serve as educational tools and even as a form of
+                            therapy to bring emotional
+                            comfort. This exchange not only enhanced the students' understanding of synthetic biology
+                            but also opened their minds to
+                            the exciting future of technology.</p>
+                        <p>During the presentation, students gained a lot of knowledge, but they also had many
+                            questions. In the Q&A session that
+                            followed, they eagerly voiced their inquiries. Our team sent representatives to answer each
+                            question patiently and
+                            thoroughly, ensuring that every student left satisfied. This interaction not only deepened
+                            their understanding of
+                            synthetic biology but also ignited their enthusiasm for future scientific research.</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/education/14.jpg" alt="s6">
+                        </figure>
+                        <p>Some of the key questions asked by students were as follows:</p>
+                        <p>1. Do glowing plants produce harmful substances when they emit light?</p>
+                        <p>The team answered: No. To address the concern about whether genetically modified fungi-based
+                            glowing plants produce
+                            harmful substances, several points were discussed:</p>
+                        <ul style="list-style-type: disc;">
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem); ">Light Emission Mechanism: Glowing
+                                plants emit light through a genetic modification that introduces the genes for
+                                luciferase and the pathway for synthesizing luciferin into the plant. During
+                                bioluminescence, luciferin is oxidized by
+                                luciferase, releasing light without producing toxic byproducts.
+                            </li>
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem); ">Safety Evaluation: During the
+                                development of genetically modified plants, strict safety evaluations are conducted to
+                                assess potential risks to human health and the environment.
+                            </li>
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem); ">Gene Source: If the glowing genes
+                                come from fungi, the bioluminescent mechanism is already proven to be safe in
+                                nature. We select genes that have been shown to be harmless in their natural settings.
+                            </li>
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem); ">Long-term Monitoring: Even with this
+                                assurance, the long-term environmental behavior of genetically modified plants
+                                and their potential ecological impact must be continuously monitored. In conclusion,
+                                based on current research and
+                                evaluations, glowing plants using luciferase and luciferin pathways are unlikely to
+                                produce harmful substances. However,
+                                to ensure safety, scientists conduct rigorous tests in both labs and field trials.
+                            </li>
+                        </ul>
+                        <p></p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/education/15.jpg" alt="s6">
+                        </figure>
+                        <p>2. Why does the government promote genetically modified (GM) technology, but restricts its
+                            commercialization?</p>
+                        <p>The team explained: The promotion of GM technology by the government does not contradict the
+                            regulations around GM product
+                            commercialization. Although GM technology research is encouraged, commercialization still
+                            requires compliance with
+                            strict regulations and review processes. Several key points explain why the government
+                            promotes GM technology while
+                            regulating GM product sales:</p>
+                        <ul style="list-style-type: disc;">
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem); ">Safety Evaluation: GM products must
+                                undergo strict safety evaluations before entering the market, ensuring they don't
+                                pose irreversible harm to human health or the ecosystem.
+                            </li>
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem); ">Public Acceptance: While GM technology
+                                is widely accepted in the scientific community, public opinion is divided.
+                                Governments may take a cautious approach to maintain public trust by ensuring thorough
+                                verification before market
+                                release.
+                            </li>
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem); ">Market Regulation: Governments
+                                establish laws to regulate the production and sale of GM products, ensuring fair
+                                competition and market order. This often includes labeling systems so consumers can make
+                                informed choices.</li>
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem); ">International Standards: Global
+                                standards and regulations for GM products vary. National policies must align with
+                                these standards to facilitate international trade and cooperation.
+                            </li>
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem); ">Long-term Impact: The long-term
+                                effects of GM technology, especially on ecosystems and genetic diversity, are still
+                                under research. Governments may take a more prudent stance to prevent potential negative
+                                impacts. In summary, while the
+                                government supports the development of GM technology, strict regulations are needed for
+                                commercialization to ensure
+                                safety, protect the environment, and promote healthy market development.
+                            </li>
+                        </ul>
+                        <p></p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/education/16.jpg" alt="s6">
+                        </figure>
+                        <p>3. Would consumers accept glowing plants if they were sold on the market?</p>
+                        <p>The team answered: Consumer acceptance and preference for glowing plants will be influenced
+                            by several factors:</p>
+                        <ul style="list-style-type: disc;">
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem); ">Novelty and Uniqueness: Innovative
+                                products often attract consumers' attention. As a unique horticultural product,
+                                glowing plants are likely to spark curiosity and interest.
+                            </li>
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem); ">Practicality: If glowing plants provide
+                                tangible benefits, such as complementing psychological therapy or beautifying
+                                the environment, consumers may be more willing to accept them.
+                            </li>
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem); ">Safety: Consumers will be concerned
+                                about
+                                the safety of GM products, particularly regarding their impact on health and
+                                the environment.</li>
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem); ">Price: Cost is a key factor in
+                                purchasing
+                                decisions. If the price is too high, it may limit market acceptance.
+                            </li>
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem); ">Sustainability: With growing
+                                awareness of
+                                environmental protection, sustainability is an important consideration. If
+                                glowing plants help reduce energy consumption, they could become more popular.
+                            </li>
+                        </ul>
+                        <p></p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/education/17.jpg" alt="s6">
+                        </figure>
+                        <p>These questions addressed the challenges we face in advancing our project and highlighted key
+                            areas of public concern,
+                            guiding our research direction. Jin Fan, Zi Ye, and Yi Han answered the students' questions
+                            from both theoretical (dry
+                            lab) and practical (wet lab) perspectives. They explained the bioluminescence mechanisms,
+                            the latest advances in GM
+                            technology, and the potential of glowing plants in mental therapy. The enthusiastic feedback
+                            from the audience further
+                            confirmed the novelty and appeal of our glowing plant concept, strengthening our confidence
+                            in its practical
+                            application.</p>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">4. Reflection and Summary</b>
+                            </p>
+                        </div>
+                        <p>The event was largely successful, as evidenced by the positive feedback from students. The
+                            presentations were
+                            well-received, achieving their goal of generating interest in synthetic biology and glowing
+                            plants. Students not only
+                            engaged with the material but also showed a clear level of understanding. Their active
+                            participation during the Q&A
+                            session, where they asked insightful questions and provided feedback, demonstrated that they
+                            had listened carefully and
+                            thought critically about the topics presented. This indicated a successful two-way exchange
+                            of knowledge.</p>
+                        <p>However, there were some areas for improvement. Communication within the team was sometimes
+                            lacking, leading to
+                            insufficient preparation of materials like posters and souvenirs. Additionally, some team
+                            members did not have a deep
+                            enough understanding of the project, which affected their ability to provide thorough
+                            answers during the Q&A session.
+                            Improving spontaneous response skills during live interactions would enhance future events.
+                            Lastly, while the topic of
+                            glowing plants was well presented, there could have been a deeper exploration of their
+                            future applications to provide
+                            more comprehensive guidance to the students.</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/education/18.jpg" alt="s6">
+                        </figure>
+                    </div>
+                </section>
+
+                <section id="g">
+                    <h3>X-Challenge Gallery Walk</h3>
+                    <div style="text-align: left;">
+                        <p>While our presentations have undoubtedly piqued the interest of middle school students in
+                            synthetic biology, we
+                            recognized that the future audience for PetalGlow extends beyond students experiencing
+                            anxiety. We were eager to
+                            understand how the general public might perceive and value our product once it officially
+                            enters the market. More
+                            importantly, we saw an opportunity to use this as a platform to introduce synthetic biology
+                            and glowing plants to a
+                            broader audience, thereby increasing public awareness and interest in cutting-edge
+                            technologies.</p>
+                        <p>At this time, we learned about the "2024 X-Challenge Disruptive Innovation Youth Camp" hosted
+                            by Shenzhen Zero One
+                            Academy. We decided to participate in the Gallery Walk activity, where we could explore
+                            current research directions in
+                            synthetic biology and engage in discussions. This event provided our team with a perfect
+                            opportunity to showcase our
+                            project, exchange ideas, and gain valuable feedback from peers and experts alike.</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/education/3.png" alt="s6">
+                        </figure>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Event Content</b>
+                            </p>
+                        </div>
+                        <p>We participated in the Gallery Walk at the youth camp, where we observed the project
+                            presentations from the other
+                            participants. During these exchanges, we gained insights into their research directions and
+                            were inspired by the
+                            imaginative ideas from the high school students. After visiting all the booths, we realized
+                            that there was a noticeable
+                            lack of representation in biology, especially in synthetic biology. To address this gap and
+                            further promote the
+                            advancements in synthetic biology among students, our mentors arranged for us to set up a
+                            booth in the biology section
+                            featuring genetically modified plants.</p>
+                        <p>By setting up our display, we quickly immersed ourselves in the academic atmosphere of the
+                            Gallery Walk. We shared our
+                            posters and project concepts with high school students and passersby, explaining the concept
+                            of PetalGlow and the future
+                            potential of genetically modified plants. During the presentation, we received many
+                            questions about PetalGlow, such as
+                            how to enhance the plant’s brightness, how to design controls to compare light intensity,
+                            which plants could be made to
+                            glow, and whether PetalGlow could be commercialized. These questions were closely related to
+                            the challenges we were
+                            already addressing in our project, providing us with valuable insights into the public's
+                            interests and concerns, which
+                            helped to further refine our research direction.</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/education/19.jpg" alt="s6">
+                        </figure>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/education/20.jpg" alt="s6">
+                        </figure>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/education/21.jpg" alt="s6">
+                        </figure>
+                        <p>The event reached its peak when our team leader guided everyone through a comprehensive
+                            presentation of our project’s
+                            concept, experimental progress, product prospects, and future directions. This allowed the
+                            audience to gain a deeper
+                            understanding of our project. The enthusiastic feedback from the audience confirmed the
+                            novelty and appeal of the
+                            PetalGlow concept, strengthening our belief in the practical value of our research. It also
+                            inspired the students of
+                            Zero One Academy in their own research fields. Members of the Track 5 team from the 2023
+                            summer school, Chen Tanghao and
+                            Jin Borui, extended the conversation with us by sharing their work on glowing plants from
+                            the previous year, which
+                            helped us further expand our project’s direction.</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/education/22.jpg" alt="s6">
+                        </figure>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/education/23.jpg" alt="s6">
+                        </figure>
+                        <p>We also gained inspiration for creating a game to promote and market our project.
+                            Incorporating PetalGlow into a game
+                            had been an idea we wanted to pursue, but we were unsure of how to proceed. Through the
+                            Track 6 "Biological Interaction
+                            Game" session, where students created a slime mold-themed game, we learned about the game
+                            development process and the
+                            expected outcomes. This provided us with valuable references for creating our own game. We
+                            also realized that using
+                            games could significantly capture the audience’s attention and boost the visibility of our
+                            product, helping to introduce
+                            the PetalGlow concept to a wider audience.</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/education/24.jpg" alt="s6">
+                        </figure>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/education/25.jpg" alt="s6">
+                        </figure>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Key Takeaways</b>
+                            </p>
+                        </div>
+                        <p>1. We gained insights into other biology-related research topics and progress, which helped
+                            us clarify the next steps in
+                            our research, particularly focusing on enhancing brightness and exploring different types of
+                            glowing plants.</p>
+                        <p>2. We successfully promoted PetalGlow and gathered data on its acceptance among students,
+                            which helped us understand the
+                            public’s main expectations and concerns. We learned that PetalGlow has great market
+                            potential, though ensuring the
+                            safety of the product is paramount.</p>
+                        <p>3. We explored the feasibility of using a game as a tool for promoting the project, which
+                            provided a valuable reference
+                            model for our game design.</p>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Conclusion</b>
+                            </p>
+                        </div>
+                        <p>During this event, we systematically introduced the concept of PetalGlow, our experimental
+                            progress, product prospects,
+                            and future directions. We were pleasantly surprised by the overwhelmingly positive feedback
+                            from the audience, which
+                            even sparked ideas for further research and integration with synthetic biology in their own
+                            fields. After our
+                            presentation, members of the Track 5 team from the 2023 summer school extended the
+                            conversation with us, sharing their
+                            previous work on glowing plants, which led to further discussions and collaboration. The
+                            strong audience interest
+                            confirmed the novelty and appeal of PetalGlow, reinforcing our confidence in the practical
+                            value of our research. This
+                            experience demonstrated that we had effectively introduced synthetic biology and glowing
+                            plants to a wider audience,
+                            successfully expanding public knowledge and awareness.</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collection Section -->
+    <section class="collection" style="background-color: rgba(30, 30, 30);">
+        <div class="partners">
+            <img class="partners__image"
+                src="https://static.igem.wiki/teams/5218/image/static/images/sponsor/all.png" />
+        </div>
+
+        <div class="contacts">
+            <p class="contacts__description">Address: BGI Center, No. 9 Yunhua Road, Yantian District,
+                Shenzhen, 518083,
+                China</p>
+            <p class="contacts__description">Phone: +86 13101793873 (Weekdays: 8:00-17:00 Weekends: Closed)
+                E-mail:
+                chenlichuan@genomics.cn</p>
+        </div>
+
+        <div class="copyright">
+            <p class="copyright__text">
+                ©2024 Content on this site is licensed under a
+                <a class="copyright__link" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons
+                    Attribution 4.0 International license</a>
+            </p>
+            <p class="copyright__text">
+                The repository used to create this website is available at
+                <a class="copyright__link" href="">gitlab.igem.org/2024/bgi-mammothedu-south</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- JavaScript -->
+
+    <!-- Loader -->
+    <script>
+        // Remove the preloader when the page is fully loaded
+        window.onload = function () {
+            const preloader = document.getElementById('preloader');
+            preloader.style.opacity = '0'; // Start fading out the preloader
+            setTimeout(() => {
+                preloader.style.display = 'none'; // Hide the preloader completely
+            }, 500); // Wait for the fade-out to complete
+        };
+    </script>
+
+    <!-- Image slider -->
+    <script>
+        let currentSlide = 0;
+        const slides = [
+            "linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0)), url('https://static.igem.wiki/teams/5218/image/static/images/education/2.jpg')",
+            "linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0)), url('https://static.igem.wiki/teams/5218/image/static/images/education/1.jpg')",
+            "linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0)), url('https://static.igem.wiki/teams/5218/image/static/images/education/4.jpg')"
+        ];
+        const dots = document.querySelectorAll('.carousel-nav span');
+        const introSection = document.getElementById('intro-section');
+
+        function showSlide(index) {
+            dots[currentSlide].classList.remove('active');
+            currentSlide = index;
+            introSection.style.backgroundImage = slides[currentSlide]; // Apply the gradient and image
+            dots[currentSlide].classList.add('active');
+        }
+
+        // Make sure the first slide is loaded when the page loads
+        document.addEventListener('DOMContentLoaded', function () {
+            // Preload images
+            slides.forEach(function (slide) {
+                const img = new Image();
+                img.src = slide.match(/url\('(.*)'\)/)[1]; // Extract the URL from the background-image
+            });
+
+            showSlide(0); // Show the first slide immediately after preloading starts
+        });
+
+        setInterval(() => {
+            const nextSlide = (currentSlide + 1) % slides.length;
+            showSlide(nextSlide);
+        }, 2000); // Change every 2 seconds
+    </script>
+
+    <!-- ToC -->
+    <script>
+        // Smooth scroll when clicking ToC links
+        document.querySelectorAll('.toc a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+    <!-- Header -->
+    <script src="./static/js/header.js"></script>
+
+</body>
+
+</html>

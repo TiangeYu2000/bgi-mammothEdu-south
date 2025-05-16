@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="https://static.igem.wiki/teams/5218/image/static/images/logo.png" />
+    <title>PetalGlow</title>
+    <!-- Reset and Custom Stylesheets -->
+    <link rel="stylesheet" href="./static/css/reset.css">
+    <link rel="stylesheet" href="./static/css/main.css">
+    <link rel="stylesheet" href="./static/css/header.css">
+    <link rel="stylesheet" href="./static/css/notebook.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header class="navbar">
+        <!-- Logo -->
+        <a class="navbar__logo" href="https://2024.igem.wiki/bgi-mammothedu-south/">
+            <img class="navbar__logo-icon" src="https://static.igem.wiki/teams/5218/image/static/images/logo.png"
+                width="80" alt="PetalGlow Logo" />
+            <div class="navbar__logo-text">
+                <div class="navbar__title" href="https://2024.igem.wiki/bgi-mammothedu-south/">Petalglow</div>
+                <div class="navbar__subtitle" href="roster.html">BGI-MammothEdu-South</div>
+            </div>
+        </a>
+
+        <!-- Toggle for mobile menu -->
+        <input type="checkbox" id="menu-toggle" class="navbar__checkbox" />
+        <label for="menu-toggle" class="navbar__toggle-btn">☰</label>
+
+        <!-- Navigation Menu -->
+        <nav class="navbar__menu">
+            <!-- Home Link （Retrun to Home page） -->
+            <a href="https://2024.igem.wiki/bgi-mammothedu-south/" class="navbar__menu-item">Home</a>
+
+            <!-- Project Dropdown -->
+            <div class="navbar__menu-item-dropdown">
+                <a href="#" class="navbar__menu-item">Project</a>
+                <div class="navbar__submenu">
+                    <a href="./description.html" class="navbar__submenu-item">Description</a>
+                    <a href="./engineering.html" class="navbar__submenu-item">Engineering</a>
+                    <a href="./results" class="navbar__submenu-item">Results</a>
+                    <a href="./results#plant" class="navbar__submenu-item">Plant</a>
+                    <a href="./implementation" class="navbar__submenu-item">Implementation</a>
+                    <a href="./contribution" class="navbar__submenu-item">Contribution</a>
+                </div>
+            </div>
+
+            <!-- Wet Lab Dropdown -->
+            <div class="navbar__menu-item-dropdown">
+                <a href="#" class="navbar__menu-item">Wet Lab</a>
+                <div class="navbar__submenu">
+                    <a href="./parts.html" class="navbar__submenu-item">Parts</a>
+                    <a href="./experiments" class="navbar__submenu-item">Experiments</a>
+                    <a href="./notebook.html" class="navbar__submenu-item">Notebook</a>
+                    <a href="./protocal" class="navbar__submenu-item">Protocal</a>
+                    <a href="./safety" class="navbar__submenu-item">Safety</a>
+                </div>
+            </div>
+
+            <!-- Dry Lab Dropdown -->
+            <div class="navbar__menu-item-dropdown">
+                <a href="#" class="navbar__menu-item">Dry Lab</a>
+                <div class="navbar__submenu">
+                    <a href="./model" class="navbar__submenu-item">Model</a>
+                    <a href="./measurement" class="navbar__submenu-item">Measurement</a>
+                </div>
+            </div>
+
+            <!-- Out Reach Dropdown -->
+            <div class="navbar__menu-item-dropdown">
+                <a href="#" class="navbar__menu-item">Out Reach</a>
+                <div class="navbar__submenu">
+                    <a href="./human-practices.html" class="navbar__submenu-item">Human Practices</a>
+                    <a href="./education" class="navbar__submenu-item">Education</a>
+                    <a href="./entrepreneurship" class="navbar__submenu-item">Entrepreneurship</a>
+                    <a href="./inclusivity" class="navbar__submenu-item">Inclusivity</a>
+                </div>
+            </div>
+
+            <!-- Team Dropdown -->
+            <div class="navbar__menu-item-dropdown">
+                <a href="#" class="navbar__menu-item">Team</a>
+                <div class="navbar__submenu">
+                    <a href="./roster.html" class="navbar__submenu-item">Roster</a>
+                    <a href="./attributions.html" class="navbar__submenu-item">Attribution</a>
+                    <a href="./partnership.html" class="navbar__submenu-item">Partnership</a>
+                    <a href="./highlights.html" class="navbar__submenu-item">Highlights</a>
+                    <a href="#" class="navbar__submenu-item">Medals</a>
+                </div>
+            </div>
+
+            <!-- Close Button for mobile menu -->
+            <label for="menu-toggle" class="navbar__close-btn">✖</label>
+        </nav>
+    </header>
+
+    <!-- Preloader Section -->
+    <div id="preloader">
+        <div class="spinner"></div>
+        <p>cooking...</p>
+    </div>
+
+    <section class="intro-section" id="intro-section">
+        <!-- Navigation Dots for Carousel -->
+        <div class="carousel-nav">
+            <span class="active" onclick="showSlide(0)"></span>
+            <span onclick="showSlide(1)"></span>
+            <span onclick="showSlide(2)"></span>
+        </div>
+
+        <div class="intro-background">
+            <h1>Entrepreneurship</h1>
+        </div>
+    </section>
+
+    <!-- Main Section with Content and TOC -->
+    <section class="description-page">
+        <!-- Background Image for Content Section -->
+        <div class="content-background">
+            <!-- Table of Contents (Left Side) -->
+            <nav class="toc">
+                <ul>
+                    <li><a href="#description">&#127849Description</a></li>
+                    <li><a href="#function">&#127849Function</a></li>
+                    <li><a href="#customers">&#127849Customers</a></li>
+                    <li><a href="#competitive">&#127849Competitors</a></li>
+                    <li><a href="#swot">&#127849SWOT</a></li>
+                    <li><a href="#business">&#127849Business model</a></li>
+                    <li><a href="#regulate">&#127849Regulations</a></li>
+                    <li><a href="#marketing">&#127849Marketing</a></li>
+                    <li><a href="#future">&#127849The future</a></li>
+                    <li><a href="#ip">&#127849ip & risk</a></li>
+                    <li><a href="#long">&#127849Long term</a></li>
+                    <li><a href="#conclusion">&#127849Conclusion</a></li>
+                    <li><a href="#references">&#127849References</a></li>
+                </ul>
+            </nav>
+
+            <!-- Content Sections (Right Side) -->
+            <div class="content" style="margin-top: -728px;">
+                <section id="description">
+                    <h3>Product Description</h3>
+                    <div style="text-align: left;">
+                        <p>The COVID-19 pandemic has profoundly impacted mental health worldwide, contributing to a 25%
+                            increase in anxiety,
+                            depression, and stress (WHO, 2022). In China, these challenges are particularly severe,
+                            exacerbated by the relentless
+                            pressure of neijuan—a cultural phenomenon where societal norms and self-imposed competition
+                            drive individuals to work
+                            harder, often at the expense of their well-being.</p>
+                        <p>One of the first casualties of this unrelenting stress is sleep. Anxiety disrupts the ability
+                            to relax, leading to
+                            difficulties in falling asleep (Dusang, 2019). Traditional night lights, which many rely on
+                            for comfort, can
+                            inadvertently worsen this problem by interfering with melatonin production—the hormone
+                            essential for regulating sleep.
+                            Exposure to light before bed can suppress melatonin levels, making it harder to fall asleep
+                            and intensifying the cycle
+                            of stress and anxiety (Zlatina Nenchovska et al., 2022).</p>
+                        <p>Recognizing these challenges, PetalGlow was designed to offer a unique and holistic approach
+                            to mental well-being. At
+                            daytime, PetalGlow incorporates the therapeutic benefits of horticultural therapy. It
+                            arrives as a young plant, ready to
+                            grow under your care. Daily tasks like watering and caring for PetalGlow's growth create a
+                            mindful routine that
+                            alleviates mild anxiety and stress, promotes relaxation, and enhances mood (Lu et al.,
+                            2023).</p>
+                        <p>As night falls, PetalGlow takes its therapeutic effects a step further by emitting a soft,
+                            calming bioluminescent light
+                            that creates an ideal pre-sleep environment. Unlike harsh night lights, PetalGlow’s subtle
+                            glow provides just enough
+                            illumination to ease you into a restful state without disrupting the darkness needed for
+                            sleep.</p>
+                        <p>PetalGlow can't eliminate the stress and pressures of daily life, but it can provide a
+                            soothing escape. Through the
+                            therapeutic routine of caring and calming bioluminescent light, PetalGlow helps you unwind,
+                            promoting relaxation and
+                            better sleep. As a gift, it’s a thoughtful way to bring a touch of peace and tranquility
+                            into the lives of those you
+                            care about.</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/entrep/e2.jpg" alt="s6">
+                        </figure>
+                    </div>
+                </section>
+
+                <section id="function">
+                    <h3>Product Function</h3>
+                    <div style="text-align: left;">
+                        <p>PetalGlow works in two distinct ways to support mental well-being:</p>
+                        <p>1. Daytime Horticultural Therapy:
+                            During the day, PetalGlow harnesses the proven benefits of horticultural therapy. Studies
+                            show that engaging with plant
+                            care activities, such as watering and nurturing a plant, can reduce stress and promote
+                            mental well-being. PetalGlow
+                            arrives as a young plant, ready to be cared for, allowing users to create a daily routine
+                            that provides a sense of
+                            accomplishment and calm (Lu et al., 2023). This therapeutic engagement helps mitigate
+                            anxiety throughout the day.</p>
+                        <p>2. Nighttime Bioluminescent Light:
+                            At night, PetalGlow serves as a gentle replacement for artificial lights, which are known to
+                            interfere with melatonin
+                            production and disrupt sleep (Falcón et al., 2020). The soft bioluminescent light emitted by
+                            PetalGlow creates a
+                            soothing pre-sleep environment. This natural light promotes relaxation and reduces anxiety,
+                            helping users to drift off
+                            more easily. Unlike traditional night lights that suppress melatonin and exacerbate sleep
+                            issues, PetalGlow’s glow is
+                            gentle enough to complement the body’s natural circadian rhythms.</p>
+                    </div>
+                </section>
+
+                <section id="customers">
+                    <h3>Potential Customers</h3>
+                    <div style="text-align: left;">
+                        <p>Our primary target customers are individuals seeking unique living companions and innovative
+                            ways to enhance their
+                            pre-sleep environment. PetalGlow's soothing bioluminescence and natural characteristics make
+                            it an optimal solution for
+                            both functional use and decorative appeal. Based on survey results (Figure 1), 81% of
+                            respondents expressed interest in
+                            using PetalGlow to improve their sleep environment, with over 68% recognizing the potential
+                            benefits of bioluminescent
+                            light in aiding sleep. Based on the study, we have identified key customer groups who are
+                            most likely to be drawn to
+                            PetalGlow:</p>
+                        <p>Plant lovers: These individuals will find PetalGlow’s bioluminescent properties particularly
+                            appealing, as this
+                            feature is not found in natural plants, offering a unique addition to their collection.</p>
+                        <p>Adults aged 18-30: This demographic faces significant stress from career and social
+                            pressures. Studies show that 19.5%
+                            of adults aged 18-29 exhibit anxiety symptoms, making PetalGlow a fitting tool to alleviate
+                            anxiety and improve mood
+                            through its calming light and the therapeutic experience of plant care.</p>
+                        <p>Innovative product enthusiasts: People interested in cutting-edge products are likely to be
+                            attracted to PetalGlow’s
+                            fusion of genetic engineering and natural aesthetics.</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/entrep/4.png" alt="s6">
+                            <figcaption>
+                                <p>Figure 1. Survey results of respondents's attitudes toward Petalglow's fucntion as
+                                    living comapnion and improving
+                                    sleeping quality. (A) The majority of respondents (81%) expressed interest in trying
+                                    PetalGlow to improve their
+                                    pre-sleeping environment, indicating strong consumer demand for natural, calming
+                                    light solutions like bioluminescent
+                                    plants.
+                                    (B) A significant proportion of respondents (68%) believe that the bioluminescent
+                                    light from PetalGlow would help them
+                                    fall asleep, reinforcing the product’s potential as an alternative to traditional
+                                    night lights.</p>
+                            </figcaption>
+                        </figure>
+                        <p>We have also identified key occasions when potential customers may be more inclined to
+                            purchase PetalGlow, either for
+                            personal enjoyment or as a gift for others. PetalGlow’s blend of aesthetic beauty,
+                            functionality, and support for
+                            emotional well-being makes it an ideal gift for a variety of special occasions:</p>
+                        <p>Birthdays: Consumers often seek personalized and distinctive gifts. PetalGlow, as a
+                            bioluminescent plant, offers a
+                            novel and memorable option that combines uniqueness with therapeutic benefits.</p>
+                        <p>Valentine’s Day: PetalGlow can serve as a symbol of growth and nurturing within a
+                            relationship. Its aesthetic
+                            appearance and gentle glow add a romantic touch to any setting, offering a living, growing
+                            token of affection that can
+                            be cherished over time.</p>
+                        <p>Mother’s Day and Father’s Day: PetalGlow offers a thoughtful gift that signifies care and
+                            appreciation. Its calming
+                            presence can contribute to the well-being of parents, providing a tranquil addition to their
+                            living space.</p>
+                        <p>In the context of self-care, individuals experiencing stressful life events such as job
+                            transitions, examinations, or
+                            personal challenges may seek ways to relax and create a serene home environment. PetalGlow
+                            offers a non-invasive method
+                            to introduce peace and tranquility into personal spaces, aiding in stress reduction and
+                            mental wellness.</p>
+                        <p>Additionally, PetalGlow is an ideal housewarming gift or a way to mark new beginnings, such
+                            as moving into a new home,
+                            starting a new job, or embarking on a new life chapter. Its bioluminescent glow adds a
+                            soothing and aesthetically
+                            pleasing element to any new environment, symbolizing tranquility and fresh starts.</p>
+                        <p>Given PetalGlow’s versatility and appeal across various contexts—from personal use to special
+                            occasions—the product is
+                            well-positioned to tap into several growing markets. These markets are seeing substantial
+                            growth due to shifting
+                            consumer preferences towards unique, personalized products that offer both functionality and
+                            emotional value.</p>
+                        <p>Gift Market: The global gift market is projected to grow significantly in the coming years.
+                            According to China Daily
+                            Global, in 2022, the overall scale of China's gifts industry reached 1.23 trillion yuan,
+                            with the annual growth rate
+                            exceeding 9 percent from 2018 to 2022. Projections anticipate an average growth rate of 4
+                            percent between 2023 and 2027
+                            (Wang, 2024). This phenomenon is driven by trends toward personalization and the rising
+                            demand for unique and thoughtful
+                            gifts. PetalGlow, as a novel product, fits well within this market, especially in regions
+                            like China, where gifting is
+                            an important cultural tradition.</p>
+                        <p>Wellness and Mental Health Products: In compliance with Straits Research, the global mental
+                            wellness market size was
+                            valued at USD 147.07 billion in 2022. It is estimated to reach USD 251.65 billion by 2031,
+                            growing at a CAGR of 6.15%
+                            during the forecast period (Straits Research, 2023). This suggests that the mental wellness
+                            market has seen rapid
+                            expansion, fueled by a heightened focus on mental health, especially in the post-pandemic
+                            era. As more people seek
+                            natural, non-invasive ways to reduce stress and improve sleep, PetalGlow is ideally
+                            positioned to capture a significant
+                            share of this growing sector.</p>
+                        <p>Home Décor Market: According to analysis, China's home decor market is projected to reach
+                            around US$28.83 billion by
+                            2027, with a forecasted CAGR growth of 9.26% from 2023 to 2027 (David M, 2023). With an
+                            increasing emphasis on home
+                            décor, particularly as people spend more time at home, demand for products that blend beauty
+                            with functionality is
+                            rising. In China alone, the home décor market is expected to experience substantial growth,
+                            providing PetalGlow a strong
+                            entry point as both a decorative and therapeutic product.</p>
+                    </div>
+                </section>
+
+                <section id="competitive">
+                    <h3>Competitive Analysis</h3>
+                    <div style="text-align: left;">
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Night Light vs. Petalglow</b>
+                            </p>
+                        </div>
+                        <p>Night lights provide comfort but often emit bright light that disrupts sleep by suppressing
+                            melatonin production,
+                            leading to poor sleep quality and increased stress (Falcón et al., 2020; Cho et al., 2013).
+                            They offer safety but don't
+                            address underlying sleep issues.</p>
+                        <p>PetalGlow emits a soft bioluminescent light that is gentle on the eyes and less likely to
+                            interfere with sleep. By
+                            creating a calming environment and combining light benefits with horticultural therapy,
+                            PetalGlow alleviates mild
+                            anxiety and improves sleep, offering a holistic alternative to traditional night lights.</p>
+                        <p>The night light market is expected to grow to $388.07 million by 2031, driven by rising
+                            demand in commercial and
+                            residential sectors (Business Research Insight, 2024). The Asia Pacific region, particularly
+                            China, is projected to lead
+                            this growth (Patel, 2019). As the market expands, PetalGlow represents an emerging niche for
+                            health-conscious consumers
+                            seeking products that combine functionality with mental health benefits, positioning it as a
+                            premium alternative
+                            appealing to those who prioritize both health and innovation in their home decor.</p>
+                        <p>PetalGlow also improves indoor air quality and has a lower carbon footprint compared to night
+                            lights, offering a more
+                            eco-friendly option for consumers.</p>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Medication (Anti-Anxiety and Melatonin) vs. Petalglow</b>
+                            </p>
+                        </div>
+                        <p>PetalGlow offers a natural, side-effect-free solution for mild anxiety by combining
+                            bioluminescent light and
+                            horticultural therapy to create a calming environment that supports sleep and relaxation.
+                            Unlike melatonin, which
+                            primarily targets sleep disturbances and can cause side effects like drowsiness, headaches,
+                            and nausea (NHS, 2023), or
+                            antidepressants prescribed for moderate to severe anxiety with potential side effects and
+                            dependency risks
+                            (Healthdirect, 2023), PetalGlow integrates seamlessly into daily life without medical
+                            supervision or social stigma.</p>
+                        <p>As a living, growing companion, PetalGlow flourishes under your care, creating a personal
+                            connection and rewarding
+                            experience that other solutions do not offer. It reflects your nurturing efforts, adding a
+                            meaningful dimension to its
+                            therapeutic benefits.</p>
+                        <p>In summary, PetalGlow is a safer alternative to melatonin and antidepressants for managing
+                            mild anxiety, providing both
+                            a soothing environment and a unique, personal experience.</p>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Ornamental Plants vs. Petalglow</b>
+                            </p>
+                        </div>
+                        <p>Traditional ornamental plants enhance living spaces with natural beauty but are limited to
+                            visual appeal. PetalGlow, as
+                            a genetically modified plant, emits a soft, soothing glow, making it more captivating than
+                            conventional plants. Its
+                            bioluminescence sets it apart in the vast ornamental plant market, aligning with the growing
+                            interest in innovative home
+                            decor. The glow not only enhances visual appeal but also promotes relaxation and aids sleep,
+                            offering something
+                            traditional plants cannot provide. PetalGlow caters to consumers seeking novelty and
+                            exclusivity, giving it a distinct
+                            advantage in the market.</p>
+                    </div>
+                </section>
+
+                <section id="swot">
+                    <h3>SWOT</h3>
+                    <div style="text-align: left;">
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/entrep/5.png" alt="s6">
+                        </figure>
+                    </div>
+                </section>
+
+                <section id="business">
+                    <h3>Business Model</h3>
+                    <div style="text-align: left;">
+                        <p>PetalGlow targets individuals who prefer non-medical treatments for stress relief, including
+                            those facing social stigma
+                            or limited access to professional help.</p>
+                        <p>Revenue Streams focus on direct online sales to individual customers and bulk sales for
+                            wellness events or decorative
+                            purposes. With a growing market for stress-relief products, these streams are feasible and
+                            align with increasing
+                            awareness of mental health.</p>
+                        <p>Cost Structure includes product development, manufacturing, marketing, and logistics, all of
+                            which are crucial for
+                            scaling. As production increases, costs will decrease due to economies of scale.</p>
+                        <p>Pricing Strategy places PetalGlow at a moderate premium, based on customer willingness to pay
+                            for a unique, eco-friendly
+                            product that combines mental health support with sustainability. Survey results indicate
+                            strong interest, justifying a
+                            competitive yet value-based price.</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/entrep/6.png" alt="s6">
+                        </figure>
+                    </div>
+                </section>
+
+                <section id="regulate">
+                    <h3>Regulatory Pathway</h3>
+                    <div style="text-align: left;">
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">GMO Regulations</b>
+                            </p>
+                        </div>
+                        <p>To commercialize PetalGlow in the U.S., based on the process followed by Light Bio, PetalGlow
+                            would need to first
+                            undergo a Regulatory Status Review (RSR) with the USDA’s Animal and Plant Health Inspection
+                            Service (APHIS) to assess
+                            any potential plant pest risks. APHIS would evaluate the genetic modifications, particularly
+                            the bioluminescence trait,
+                            to determine if PetalGlow poses any environmental or pest-related risks. If approved,
+                            PetalGlow could be granted
+                            non-regulated status under 7 CFR part 340, allowing production and breeding without further
+                            federal oversight. Since
+                            PetalGlow is ornamental, FDA and EPA involvement is expected to be minimal, though FDA
+                            labeling requirements may apply
+                            if there are significant differences in safety or allergenicity. Compliance with
+                            state-specific GMO regulations for
+                            production and sales permits would also be required.</p>
+                        <p>In China, where there are no specific laws governing genetically modified ornamental plants,
+                            we must refer to
+                            agricultural GMO regulations such as "Regulations on the Safety Management of Agricultural
+                            Genetically Modified
+                            Organisms" for guidance. According to these regulations, since the recipient organism,
+                            genetic modification, and
+                            production activity of PetalGlow indicate no significant risk to the environment and human,
+                            it would likely be
+                            classified as Safety Level I. The genetic modification would undergo thorough laboratory
+                            testing, including gene
+                            expression analysis, toxicity testing, and allergenicity evaluation, to assess its impact on
+                            the environment and
+                            non-target organisms. After passing these tests, the product would proceed to intermediate
+                            trials under controlled
+                            conditions, followed by environmental release trials to ensure it does not negatively affect
+                            the environment. Upon
+                            successful completion, PetalGlow can apply for an Agricultural GMO Safety Certificate, after
+                            which it must comply with
+                            labeling and product traceability requirements for commercialization.</p>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Male Sterility Submodule</b>
+                            </p>
+                        </div>
+                        <p>To ensure environmental safety and compliance, we will implement sterility measures to
+                            prevent PetalGlow from
+                            reproducing. This approach protects ecosystems, aligns with regulatory standards, and
+                            fosters customer trust by
+                            demonstrating our commitment to safety and responsibility.</p>
+                        <p>In our project, we referenced the male sterility mechanism described in iGEM part
+                            BBa_K1554004 to prevent the spread of
+                            genetic material through pollen. This mechanism utilizes the TA29 promoter, which is a
+                            specific promoter to the tapetum
+                            tissue in plant's anthers (the part of the flower that produces pollen). The TA29 promoter
+                            controls the expression of
+                            barnase, a gene that codes for a ribonuclease, which is specifically expressed in the
+                            anthers. During the plant's flower
+                            development, the TA29 promoter triggers the expression of barnase, causing death of cells
+                            responsible for pollen
+                            formation, thereby leading to male sterility. This approach effectively prevents the
+                            dissemination of genetically
+                            modified traits through natural reproduction, contributing to biosafety measures (IGEM
+                            Registry of Standard Biology
+                            Parts, 2014).</p>
+                    </div>
+                </section>
+
+                <section id="marketing">
+                    <h3>Marketing and Sales Strategy</h3>
+                    <div style="text-align: left;">
+                        <p>Our primary sales channel will be the PetalGlow official website. Through our website, we can
+                            interact directly with
+                            customers, fully control our brand image, and provide a personalized shopping experience. We
+                            will integrate a
+                            user-friendly e-commerce platform that supports secure payment options, easy navigation, and
+                            a quick checkout process.
+                            This direct sales model is highly effective in reaching our target customer group who prefer
+                            online shopping, especially
+                            those seeking unique products.</p>
+                        <p>To expand our market reach, PetalGlow will also be available on popular e-commerce platforms.
+                            These platforms have vast
+                            user bases and can help us leverage their extensive customer pools and high traffic to
+                            quickly enhance brand visibility.
+                            Market research indicates that consumers shop more frequently and have higher trust levels
+                            on these platforms, which
+                            will help boost our sales volume.</p>
+                        <p>We also plan to partner with home decor stores, providing an ideal offline environment to
+                            showcase PetalGlow as a
+                            premium, aesthetically pleasing product. Physical store displays can enhance customers'
+                            perception and trust in the
+                            product, facilitating sales.</p>
+                        <p>Additionally, collaborating with hotels will help us generate revenue and increase product
+                            popularity. Hotels, as
+                            high-traffic venues, allow more potential customers to experience PetalGlow firsthand,
+                            thereby increasing brand
+                            exposure.</p>
+                        <p>See more future implementations at "<a class="link"
+                                href="https://2024.igem.wiki/bgi-mammothedu-south/implementation">Implementation: the
+                                future</a>" section.</p>
+                        <p>To increase customer repeat purchases, we will implement several key strategies. First, we
+                            will diversify our product
+                            offerings by launching new varieties of PetalGlow, including limited-edition and seasonal
+                            products to create a sense of
+                            scarcity and encourage early purchases. Second, we will enhance the customer experience by
+                            providing detailed care
+                            guides to help customers nurture their PetalGlow plants, boosting satisfaction and promoting
+                            repeat business.</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/entrep/7.png" alt="s6">
+                        </figure>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/entrep/8.png" alt="s6">
+                        </figure>
+                        <p>Third, we will foster community engagement by developing an online platform where users can
+                            share their care
+                            experiences, showcase their plants, and interact with other enthusiasts, strengthening brand
+                            loyalty. Lastly, we will
+                            send personalized reminders and recommendations via email or social media—such as care tips,
+                            product updates, or special
+                            offers—and use customer data to suggest new products they might be interested in, increasing
+                            the likelihood of repeat
+                            purchases.</p>
+                    </div>
+                </section>
+
+                <section id="future">
+                    <h3>Future Plans and Scaling</h3>
+                    <div style="text-align: left;">
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Product Development Plan</b>
+                            </p>
+                        </div>
+                        <p>To ensure scalability and adherence to realistic timelines, PetalGlow’s development plan will
+                            be structured in several
+                            key phases:</p>
+                        <p>1. Initial R&D (2-3 months):</p>
+                        <p>The foundation of PetalGlow’s bioluminescent trait will be developed through advanced genetic
+                            engineering, specifically
+                            by enhancing caffeic acid synthesis. This phase will involve close collaboration between
+                            genetic engineers, who will
+                            design and test the bioluminescent modifications. Horticultural experts will ensure that the
+                            genetically modified plants
+                            can thrive under different environmental conditions, making them suitable for consumer use.
+                            During this period, mental
+                            health professionals will be consulted to explore how the bioluminescent effect could
+                            enhance therapeutic benefits, such
+                            as reducing anxiety and improving sleep quality. Additionally, safety testing will be
+                            conducted to ensure that the
+                            modifications align with global safety standards for genetically modified organisms (GMOs).
+                        </p>
+                        <p>2. Safety Testing & Regulatory Compliance (3-6 months):</p>
+                        <p>During this phase, PetalGlow will undergo rigorous safety testing to comply with GMO safety
+                            regulations in each target
+                            market. The genetic engineering team will continue to work closely with regulatory agencies
+                            to ensure that the product
+                            meets the necessary GMO safety certifications, such as the Agricultural GMO Safety
+                            Certificate in China. Additionally,
+                            horticultural experts will contribute to obtaining phytosanitary certifications for global
+                            shipments by ensuring the
+                            plants can survive international transport without carrying pests or diseases. The combined
+                            efforts of marketing and
+                            sales teams will also focus on transparent labeling to mitigate any concerns related to
+                            GMOs, especially through clear
+                            communication with regulatory bodies.</p>
+                        <p>3. Market Launch (6-12 months):</p>
+                        <p>Once safety and regulatory approvals are in place, PetalGlow will launch on its official
+                            e-commerce platform, alongside
+                            other popular online marketplaces. The marketing and sales teams will play a crucial role
+                            during this phase by
+                            developing educational campaigns that inform consumers about the product’s therapeutic
+                            benefits. Mental health
+                            professionals will be integral in validating these benefits, ensuring that the marketing
+                            materials accurately reflect
+                            the product’s potential to reduce anxiety and improve sleep. Horticultural experts will
+                            develop plant care guides to be
+                            included with each purchase, ensuring that consumers have the information needed to care for
+                            their plants properly.
+                            These combined efforts will help establish a positive perception of the product and address
+                            any potential concerns
+                            regarding GMOs.</p>
+                        <p>3.1 Pricing Strategy:</p>
+                        <p>Considering PetalGlow’s production costs and market positioning, we estimate an appropriate
+                            retail price for the
+                            product. The average cost of a glass vase on platforms like Taobao is around 20 RMB (about
+                            $2.8 USD). Based on pricing
+                            from Kunming International Flora Auction Trading Center, a traditional rose costs between
+                            1.5 to 2 RMB (approximately
+                            $0.2 to $0.3 USD) per flower. However, PetalGlow is a genetically modified bioluminescent
+                            plant, and due to efficient
+                            production methods and low labor costs in China, the production cost per plant is estimated
+                            to be around 5 RMB
+                            (approximately $0.7 USD) or even lower.
+                            Adding the cost of high-quality packaging, which is estimated at 5 RMB (approximately $0.7
+                            USD), the total production
+                            cost per unit is broken down as follows:</p>
+                        <ul style="list-style-type: disc;">
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem); ">Glass Vase: 20 RMB
+                            </li>
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem); ">PetalGlow Plant: 5 RMB
+                            </li>
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem); ">Packaging: 5 RMB
+                            </li>
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem); ">Total Production Cost: 30 RMB
+                                (approximately $4.2 USD)
+                            </li>
+                        </ul>
+                        <p></p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/entrep/9.png" alt="s6">
+                            <figcaption>
+                                <p>- Packaging: 5 RMB</p>
+                            </figcaption>
+                        </figure>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/entrep/10.jpg" alt="s6">
+                            <figcaption>
+                                <p>- Glass Vase: 20 RMB</p>
+                            </figcaption>
+                        </figure>
+                        <p>To ensure profitability while remaining competitive in the market, we will apply a reasonable
+                            markup of approximately
+                            two to two and a half times the production cost. This results in a retail price range of:
+                        </p>
+                        <ul style="list-style-type: disc;">
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem); ">Lower Estimate: 30 RMB × 2 = 60 RMB
+                                (about $8.4 USD)
+                            </li>
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem); ">Upper Estimate: 30 RMB × 2.5 = 75 RMB
+                                (about $10.5 USD)
+                            </li>
+                        </ul>
+                        <p></p>
+                        <p>Pricing PetalGlow between 60 and 75 RMB positions it as an affordable luxury item, making it
+                            accessible to a broad
+                            customer base while reflecting its unique value proposition. This price range is competitive
+                            compared to premium flowers
+                            and decorative plants available in the market and ensures a healthy profit margin to cover
+                            other operational expenses
+                            such as marketing, distribution, and customer service. It is important to note that this
+                            estimation excludes research
+                            and development costs, focusing solely on production and operational expenses to determine a
+                            feasible retail price.</p>
+                        <p>4. Scaling & Expanding Product Line (12+ months):</p>
+                        <p>After a successful market launch, PetalGlow will begin to expand its product line with
+                            additional plant varieties and a
+                            subscription service for regular plant deliveries. Genetic engineers will continue to
+                            innovate new plant traits, while
+                            horticultural experts will ensure that these varieties are easy to care for. The marketing
+                            and sales teams will focus on
+                            customer engagement through educational content and personalized offerings, while also
+                            promoting the subscription
+                            service. Additionally, the development of a community platform will provide a space for
+                            users to share plant care tips
+                            and success stories, encouraging ongoing interaction and engagement.</p>
+                        <p>5. Risks and Mitigation:</p>
+                        <p>GMO Perception: Public concerns about the safety of GMOs are a potential risk. To address
+                            this, the marketing and sales
+                            teams will prioritize clear labeling and transparency. Educational campaigns developed in
+                            collaboration with genetic
+                            engineers and mental health professionals will provide scientifically backed information to
+                            reassure customers.</p>
+                        <p>Regulatory Challenges: Navigating the complex regulations of various countries, particularly
+                            in China, can pose a risk.
+                            Close collaboration between the genetic engineering team and regulatory bodies will be
+                            essential for meeting safety and
+                            compliance standards in each market, avoiding delays.</p>
+                        <p>Customer Engagement: Continuous customer interaction will be critical for the product’s
+                            long-term success. The marketing
+                            and sales teams will develop a community platform that provides resources for plant care and
+                            therapeutic benefits,
+                            fostering long-term customer loyalty.</p>
+                    </div>
+                </section>
+
+                <section id="ip">
+                    <h3>Intellectual Property and Risk Management</h3>
+                    <div style="text-align: left;">
+                        <p>Given the risk that counterfeiters might engage in unauthorized cultivation of PetalGlow and
+                            illegally sell subsequent
+                            generations, we must implement male sterility measures to prevent piracy and ensure
+                            PetalGlow does not spread
+                            uncontrollably. In our project, we referenced the male sterility mechanism described in iGEM
+                            part BBa_K1554004 to
+                            prevent the spread of genetic material through pollen. This is crucial for protecting our
+                            intellectual property and
+                            complying with regulatory standards. By ensuring PetalGlow cannot be reproduced without
+                            authorization, we can better
+                            control the product’s distribution and protect the brand name.</p>
+                        <p>One of the primary risks for PetalGlow lies in potential market resistance to GMOs, with
+                            consumer concerns ranging from
+                            safety and environmental impacts to ethical issues. Some individuals may prefer natural
+                            houseplants, which are widely
+                            accepted and free from these concerns, even though they do not provide the same nighttime
+                            therapeutic effects as
+                            PetalGlow. This resistance could hinder market adoption and growth.</p>
+                        <p>However, our survey results show a more favorable stance toward GMOs: 55.56% of respondents
+                            were neutral, 42.22%
+                            supported or strongly supported GMOs, and only 2.22% expressed opposition. These figures
+                            suggest that the actual
+                            resistance is not as widespread as might be feared, meaning that selling PetalGlow is quite
+                            feasible given the
+                            majority’s neutral or positive stance. To further mitigate this risk, our primary strategy
+                            will focus on education to
+                            dispel misconceptions and biases against GMOs. By providing clear, evidence-based
+                            information about the safety,
+                            environmental benefits, and effectiveness of PetalGlow, we aim to reduce the influence of
+                            any false beliefs or unfounded
+                            fears. This targeted educational effort will help build consumer trust and acceptance,
+                            ensuring a smoother path to
+                            market success.</p>
+                    </div>
+                </section>
+
+                <section id="long">
+                    <h3>Long-term Impacts</h3>
+                    <div style="text-align: left;">
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Positive Impacts:</b>
+                            </p>
+                        </div>
+                        <ul style="list-style-type: disc;">
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem); ">Mental Health Benefits: PetalGlow
+                                offers a unique, non-invasive, and natural solution for addressing mental health
+                                challenges, such as anxiety and sleep disorders. By integrating bioluminescence with
+                                plant care, it provides a holistic
+                                approach to mental well-being, catering to a growing demand for therapeutic,
+                                nature-based solutions.
+                            </li>
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem); ">Sustainability: As an eco-friendly
+                                alternative to traditional night lights, PetalGlow reduces energy consumption,
+                                contributing to a reduction in electricity usage. Additionally, it improves indoor air
+                                quality through its natural
+                                ability to purify the air, making it a sustainable option for consumers looking to make
+                                greener lifestyle choices.
+                            </li>
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem); ">Building a Community: PetalGlow aims
+                                to foster a community of users who share their plant care experiences and
+                                contribute to mental health awareness. By encouraging users to connect through plant
+                                care tips and success stories,
+                                PetalGlow will help build a supportive community around well-being and sustainable
+                                living.
+                            </li>
+                        </ul>
+                        <p></p>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Negative Impacts:</b>
+                            </p>
+                        </div>
+                        <ul style="list-style-type: disc;">
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem); ">GMO Concerns: Public perception of
+                                GMOs remains a significant challenge. Despite PetalGlow’s safety and compliance
+                                with GMO regulatory standards, some consumers may be hesitant to adopt genetically
+                                modified products. Clear, transparent
+                                communication about the benefits and safety of PetalGlow, coupled with educational
+                                campaigns, will be crucial to
+                                addressing these concerns and building trust among potential customers.
+                            </li>
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem); ">Consistent Engagement: PetalGlow
+                                requires ongoing plant care to maintain its bioluminescence and mental health
+                                benefits. If users do not consistently engage with the plant, the intended effects on
+                                mental health and sustainability
+                                may not be fully realized. Ensuring that customers are supported with care guides,
+                                reminders, and an active community
+                                platform will be key to long-term user engagement and product success.
+                            </li>
+                        </ul>
+                        <p></p>
+                    </div>
+                </section>
+
+                <section id="conclusion">
+                    <h3>Conclusion</h3>
+                    <div style="text-align: left;">
+                        <p>PetalGlow is a uniquely positioned product that integrates bioluminescent plant technology
+                            with mental wellness
+                            benefits, offering a sustainable, non-invasive solution for anxiety and sleep disorders. By
+                            combining the therapeutic
+                            effects of horticultural care during the day with a calming bioluminescent glow at night,
+                            PetalGlow stands out in the
+                            wellness, home décor, and gift markets. With a clear pricing strategy, a focus on customer
+                            education, and innovative
+                            marketing efforts, PetalGlow is well-equipped to address both consumer needs and potential
+                            concerns about GMOs. As the
+                            product scales, PetalGlow will not only bring comfort and relaxation into customers' lives
+                            but also build a community
+                            centered around mental health and sustainable living.</p>
+                        <p>A more detailed Entrepreneurship can be accessed through pdf version:</p>
+                        <p>
+                            <object id="pdf" type="application/pdf"
+                                data="https://static.igem.wiki/teams/5218/image/static/images/entrep/entrepreneurship-notebook.pdf"
+                                class="pdf">
+                                <a
+                                    href="https://static.igem.wiki/teams/5218/image/static/images/entrep/entrepreneurship-notebook.pdf"></a>
+                                <a
+                                    href="https://static.igem.wiki/teams/5218/image/static/images/entrep/entrepreneurship-notebook.pdf">https://static.igem.wiki/teams/5218/image/static/images/entrep/entrepreneurship-notebook.pdf</a>
+                            </object>
+                            <!-- Fullscreen Button -->
+                            <button onclick="toggleFullScreen()">
+                                <p>Toggle Fullscreen</p>
+                            </button>
+                        </p>
+                    </div>
+                </section>
+
+                <section id="supp">
+                    <h3>Supplementary Materials</h3>
+                    <div style="text-align: left;">
+                        <p>Original Questionnaire Results:</p>
+                        <p>
+                            <object id="pdf" type="application/pdf"
+                                data="https://static.igem.wiki/teams/5218/image/static/images/entrep/question.pdf"
+                                class="pdf">
+                                <a
+                                    href="https://static.igem.wiki/teams/5218/image/static/images/entrep/question.pdf"></a>
+                                <a
+                                    href="https://static.igem.wiki/teams/5218/image/static/images/entrep/question.pdf">https://static.igem.wiki/teams/5218/image/static/images/entrep/question.pdf</a>
+                            </object>
+                            <!-- Fullscreen Button -->
+                            <button onclick="toggleFullScreen()">
+                                <p>Toggle Fullscreen</p>
+                            </button>
+                        </p>
+                    </div>
+                </section>
+
+                <section id="references">
+                    <h3>References</h3>
+                    <div style="text-align: left;">
+                        <p>APHIS Issues Regulatory Status Review Response: Light Bio Petunia | Animal and Plant Health
+                            Inspection Service.
+                            (2023). Usda.gov.</p>
+                        <p>Cho, J. R., Joo, E. Y., Koo, D. L., & Hong, S. B. (2013). Let there be no light: The effect
+                            of bedside light on sleep
+                            quality and background electroencephalographic rhythms. <i>Sleep Medicine, 14</i>(12),
+                            1422–1425.</p>
+                        <p>David, M. (2023, February 3). Chinese home décor market: Premium home décor demand is
+                            increasing despite the pandemic.
+                            Daxue Consulting - Market Research and Consulting China.</p>
+                        <p>DeCaluwé, L. L. J., VanOostrum, J., Janssen, J. J. M., & DeGrip, W. J. (1993). In Vitro
+                            Synthesis of Bovine Rhodopsin
+                            Using Recombinant Baculovirus (P. A. Hargrave, Ed.). In <i>22 - In Vitro Synthesis of Bovine
+                                Rhodopsin Using
+                                Recombinant Baculovirus</i>. Academic Press.</p>
+                        <p>Dusang, K. (2019, May 9). How stress can affect your sleep. Baylor College of Medicine.</p>
+                        <p>Falcón, J., Torriglia, A., Attia, D., Viénot, F., Gronfier, C., Behar-Cohen, F., Martinsons,
+                            C., & Hicks, D. (2020).
+                            Exposure to artificial light at night and the consequences for flora, fauna, and ecosystems.
+                            <i>Frontiers in
+                                Neuroscience, 14</i>.
+                        </p>
+                        <p>Halson, S. L., Appaneal, R. N., Welvaert, M., Maniar, N., & Drew, M. K. (2021). Stressed and
+                            not sleeping: Poor sleep
+                            and psychological stress in elite athletes prior to the Rio 2016 Olympic Games.
+                            <i>International Journal of Sports
+                                Physiology and Performance, 17</i>(2), 1–8.
+                        </p>
+                        <p>Healthdirect. (2023, April 21). Medicines for anxiety. Healthdirect.gov.au.</p>
+
+                        <p>Kandel, E. R., Schwartz, J. H., & Jessell, T. M. (2000). <i>Principles of Neural Science</i>
+                            (4th ed., pp. 507–513).
+                            McGraw-Hill.</p>
+                        <p>Library of Congress. (2020, December 20). Restrictions on genetically modified organisms:
+                            United States.</p>
+                        <p>Light Bio. (2024). Firefly Petunia: The flower you will love the most. Glowing Plants by
+                            Light Bio.</p>
+                        <p>Lu, S., Liu, J., Xu, M., & Xu, F. (2023, July 26). Horticultural therapy for stress
+                            reduction: A systematic review
+                            and meta-analysis. PubMed Central (PMC).</p>
+                        <p>Night Light Market Size, Share, Growth and COVID-19 Impact Analysis, 2020-2028, By Type (LED,
+                            Halogen, Incandescent,
+                            and Others), By Application (Commercial and Residential), Regional Forecast to 2031. (2024,
+                            July 29). Business
+                            Research Insights.</p>
+                        <p>NHS. (2023, February 23). Side effects of melatonin.</p>
+                        <p>IGEM Registry of Standard Biology Parts. (2014). Part:BBa_K1554004.</p>
+                        <p>Patel, D. (2019, September 19). Night Light Market Outlook 2032. Dataintelo.</p>
+                        <p>Ritz, T., & Trueba, A. F. (2014). Airway nitric oxide and psychological processes in asthma
+                            and health: A review.
+                            <i>Annals of Allergy Asthma & Immunology, 112</i>(4), 302–308.
+                        </p>
+                        <p>Russart, K. L. G., & Nelson, R. J. (2018). Light at night as an environmental endocrine
+                            disruptor. <i>Physiology &
+                                Behavior, 190</i>, 82–89.</p>
+                        <p>Straits Research. (2023, October 31). Mental Wellness Market Share & Analysis Report
+                            2023-2031.</p>
+                        <p>U.S. Department of Agriculture. (2024, May 9). Regulatory status review (RSR). Animal and
+                            Plant Health Inspection
+                            Service.</p>
+                        <p>Wang, Z. Q. (2024, April 18). Gifting one's way to business potential. China Daily Global,
+                            Page010.</p>
+                        <p>What is Sound Healing? How does it work and what is the science behind it? (2023, January
+                            16). Sensory Land.</p>
+                        <p>Weiser, M. J., Foradori, C. D., & Handa, R. J. (2010). Estrogen receptor beta activation
+                            prevents glucocorticoid
+                            receptor-dependent effects of the central nucleus of the amygdala on behavior and
+                            neuroendocrine function. <i>Brain
+                                Research, 1336</i>, 78–88.</p>
+                        <p>World Health Organization (WHO). (2022, March 2). COVID-19 pandemic triggers 25% increase in
+                            prevalence of anxiety
+                            and depression worldwide.</p>
+                        <p>Zlatina Nenchovska, Milena Atanasova, Ivanova, N., Rumyana Mitreva, & Tchekalarova, J.
+                            (2022). Emotional disturbance
+                            in two models of melatonin deficiency: A comparative study. <i>Dokladi Na Bʺlgarskata
+                                Akademiâ Na Naukite,
+                                75</i>(1), 143–149.</p>
+                        <p>上海市农业农村委员会. (2022, January 21). 农业转基因生物安全评价管理办法（2022年1月21日修订版）.</p>
+                        <p>全国人大常委会办公厅. (2017, October 7). 国家法律法规数据库.</p>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Collection Section -->
+    <section class="collection" style="background-color: rgba(30, 30, 30);">
+        <div class="partners">
+            <img class="partners__image"
+                src="https://static.igem.wiki/teams/5218/image/static/images/sponsor/all.png" />
+        </div>
+
+        <div class="contacts">
+            <p class="contacts__description">Address: BGI Center, No. 9 Yunhua Road, Yantian District,
+                Shenzhen, 518083,
+                China</p>
+            <p class="contacts__description">Phone: +86 13101793873 (Weekdays: 8:00-17:00 Weekends: Closed)
+                E-mail:
+                chenlichuan@genomics.cn</p>
+        </div>
+
+        <div class="copyright">
+            <p class="copyright__text">
+                ©2024 Content on this site is licensed under a
+                <a class="copyright__link" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons
+                    Attribution 4.0 International license</a>
+            </p>
+            <p class="copyright__text">
+                The repository used to create this website is available at
+                <a class="copyright__link" href="">gitlab.igem.org/2024/bgi-mammothedu-south</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- JavaScript -->
+
+    <!-- Loader -->
+    <script>
+        // Remove the preloader when the page is fully loaded
+        window.onload = function () {
+            const preloader = document.getElementById('preloader');
+            preloader.style.opacity = '0'; // Start fading out the preloader
+            setTimeout(() => {
+                preloader.style.display = 'none'; // Hide the preloader completely
+            }, 500); // Wait for the fade-out to complete
+        };
+    </script>
+
+    <!-- Image slider -->
+    <script>
+        let currentSlide = 0;
+        const slides = [
+            "linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0)), url('https://static.igem.wiki/teams/5218/image/static/images/entrep/e3.jpg')",
+            "linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0)), url('https://static.igem.wiki/teams/5218/image/static/images/entrep/e1.jpg')",
+            "linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0)), url('https://static.igem.wiki/teams/5218/image/static/images/entrep/1.jpg')"
+        ];
+        const dots = document.querySelectorAll('.carousel-nav span');
+        const introSection = document.getElementById('intro-section');
+
+        function showSlide(index) {
+            dots[currentSlide].classList.remove('active');
+            currentSlide = index;
+            introSection.style.backgroundImage = slides[currentSlide]; // Apply the gradient and image
+            dots[currentSlide].classList.add('active');
+        }
+
+        // Make sure the first slide is loaded when the page loads
+        document.addEventListener('DOMContentLoaded', function () {
+            // Preload images
+            slides.forEach(function (slide) {
+                const img = new Image();
+                img.src = slide.match(/url\('(.*)'\)/)[1]; // Extract the URL from the background-image
+            });
+
+            showSlide(0); // Show the first slide immediately after preloading starts
+        });
+
+        setInterval(() => {
+            const nextSlide = (currentSlide + 1) % slides.length;
+            showSlide(nextSlide);
+        }, 2000); // Change every 2 seconds
+    </script>
+
+    <!-- ToC -->
+    <script>
+        // Smooth scroll when clicking ToC links
+        document.querySelectorAll('.toc a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+    <!-- Header -->
+    <script src="./static/js/header.js"></script>
+
+</body>
+
+</html>

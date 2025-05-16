@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="https://static.igem.wiki/teams/5218/image/static/images/logo.png" />
+    <title>PetalGlow</title>
+    <!-- Reset and Custom Stylesheets -->
+    <link rel="stylesheet" href="./static/css/reset.css">
+    <link rel="stylesheet" href="./static/css/main.css">
+    <link rel="stylesheet" href="./static/css/header.css">
+    <link rel="stylesheet" href="./static/css/notebook.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header class="navbar">
+        <!-- Logo -->
+        <a class="navbar__logo" href="https://2024.igem.wiki/bgi-mammothedu-south/">
+            <img class="navbar__logo-icon" src="https://static.igem.wiki/teams/5218/image/static/images/logo.png"
+                width="80" alt="PetalGlow Logo" />
+            <div class="navbar__logo-text">
+                <div class="navbar__title" href="https://2024.igem.wiki/bgi-mammothedu-south/">Petalglow</div>
+                <div class="navbar__subtitle" href="roster.html">BGI-MammothEdu-South</div>
+            </div>
+        </a>
+
+        <!-- Toggle for mobile menu -->
+        <input type="checkbox" id="menu-toggle" class="navbar__checkbox" />
+        <label for="menu-toggle" class="navbar__toggle-btn">☰</label>
+
+        <!-- Navigation Menu -->
+        <nav class="navbar__menu">
+            <!-- Home Link （Retrun to Home page） -->
+            <a href="https://2024.igem.wiki/bgi-mammothedu-south/" class="navbar__menu-item">Home</a>
+
+            <!-- Project Dropdown -->
+            <div class="navbar__menu-item-dropdown">
+                <a href="#" class="navbar__menu-item">Project</a>
+                <div class="navbar__submenu">
+                    <a href="./description.html" class="navbar__submenu-item">Description</a>
+                    <a href="./engineering.html" class="navbar__submenu-item">Engineering</a>
+                    <a href="./results" class="navbar__submenu-item">Results</a>
+                    <a href="./results#plant" class="navbar__submenu-item">Plant</a>
+                    <a href="./implementation" class="navbar__submenu-item">Implementation</a>
+                    <a href="./contribution" class="navbar__submenu-item">Contribution</a>
+                </div>
+            </div>
+
+            <!-- Wet Lab Dropdown -->
+            <div class="navbar__menu-item-dropdown">
+                <a href="#" class="navbar__menu-item">Wet Lab</a>
+                <div class="navbar__submenu">
+                    <a href="./parts.html" class="navbar__submenu-item">Parts</a>
+                    <a href="./experiments" class="navbar__submenu-item">Experiments</a>
+                    <a href="./notebook.html" class="navbar__submenu-item">Notebook</a>
+                    <a href="./protocal" class="navbar__submenu-item">Protocal</a>
+                    <a href="./safety" class="navbar__submenu-item">Safety</a>
+                </div>
+            </div>
+
+            <!-- Dry Lab Dropdown -->
+            <div class="navbar__menu-item-dropdown">
+                <a href="#" class="navbar__menu-item">Dry Lab</a>
+                <div class="navbar__submenu">
+                    <a href="./model" class="navbar__submenu-item">Model</a>
+                    <a href="./measurement" class="navbar__submenu-item">Measurement</a>
+                </div>
+            </div>
+
+            <!-- Out Reach Dropdown -->
+            <div class="navbar__menu-item-dropdown">
+                <a href="#" class="navbar__menu-item">Out Reach</a>
+                <div class="navbar__submenu">
+                    <a href="./human-practices.html" class="navbar__submenu-item">Human Practices</a>
+                    <a href="./education" class="navbar__submenu-item">Education</a>
+                    <a href="./entrepreneurship" class="navbar__submenu-item">Entrepreneurship</a>
+                    <a href="./inclusivity" class="navbar__submenu-item">Inclusivity</a>
+                </div>
+            </div>
+
+            <!-- Team Dropdown -->
+            <div class="navbar__menu-item-dropdown">
+                <a href="#" class="navbar__menu-item">Team</a>
+                <div class="navbar__submenu">
+                    <a href="./roster.html" class="navbar__submenu-item">Roster</a>
+                    <a href="./attributions.html" class="navbar__submenu-item">Attribution</a>
+                    <a href="./partnership.html" class="navbar__submenu-item">Partnership</a>
+                    <a href="./highlights.html" class="navbar__submenu-item">Highlights</a>
+                    <a href="#" class="navbar__submenu-item">Medals</a>
+                </div>
+            </div>
+
+            <!-- Close Button for mobile menu -->
+            <label for="menu-toggle" class="navbar__close-btn">✖</label>
+        </nav>
+    </header>
+
+    <!-- Preloader Section -->
+    <div id="preloader">
+        <div class="spinner"></div>
+        <p>cooking...</p>
+    </div>
+
+    <section class="intro-section" id="intro-section">
+        <!-- Navigation Dots for Carousel -->
+        <div class="carousel-nav">
+            <span class="active" onclick="showSlide(0)"></span>
+            <span onclick="showSlide(1)"></span>
+            <span onclick="showSlide(2)"></span>
+        </div>
+
+        <div class="intro-background">
+            <h1>Description</h1>
+        </div>
+    </section>
+
+    <!-- Main Section with Content and TOC -->
+    <section class="description-page">
+        <!-- Background Image for Content Section -->
+        <div class="content-background">
+            <!-- Table of Contents (Left Side) -->
+            <nav class="toc">
+                <ul>
+                    <li><a href="#inspiration">&#127849Inspiration</a></li>
+                    <li><a href="#technology">&#127849Technology</a></li>
+                    <li><a href="#results">&#127849Results</a></li>
+                    <li><a href="#conclusion">&#127849Conclusion</a></li>
+                    <li><a href="#references">&#127849References</a></li>
+                </ul>
+            </nav>
+
+            <!-- Content Sections (Right Side) -->
+            <div class="content" style="margin-top: -280px;">
+                <section id="inspiration">
+                    <h3>Inspiration</h3>
+                    <div style="text-align: left;">
+                        <p>In the post-pandemic era, people's focus on
+                            personal health has intensified significantly. At the same time, mental
+                            health issues have become increasingly prominent in the fast-paced environment of modern
+                            life. According to research
+                            from the Mental Health section of the World Health Organization (WHO) website, rates of
+                            anxiety, depression, and stress
+                            have surged dramatically worldwide.
+                            We have observed that, particularly in China, societal and individual pressures — often
+                            referred to as the phenomenon of
+                            "neijuan" or excessive competition — have severely impacted people's mental well-being. In
+                            this context, it has become
+                            clear that there is a need for innovative approaches to alleviate these mental health
+                            challenges.
+                            Petalglow, a glowing plant companion, was designed to offer a unique and holistic approach
+                            to mental well-being. At
+                            daytime, Petalglow incorporates the therapeutic benefits of horticultural therapy. It
+                            arrives as a young plant, ready to
+                            grow under your care. Daily tasks like watering and caring for Petalglow's growth create a
+                            mindful routine that
+                            alleviates mild anxiety and stress, promotes relaxation, and enhances mood [1].
+                            As night falls, Petalglow takes its therapeutic effects a step further by emitting a soft,
+                            calming bioluminescent light
+                            that creates an ideal pre-sleep environment. Unlike harsh night lights, Petalglow's subtle
+                            glow provides just enough
+                            illumination to ease people into a restful state without disrupting the darkness needed for
+                            sleep.</p>
+                    </div>
+                </section>
+
+                <section id="technology">
+                    <h3>Technology</h3>
+                    <div style="text-align: left;">
+                        <p>
+                            To achieve the soothing light effect, we needed to enhance the brightness beyond what was
+                            possible with earlier fungal
+                            bioluminescence pathways (FBP) used in transgenic tobacco plants, where the light emitted
+                            was often too dim to be
+                            noticed. This challenge led us to explore innovative solutions to create a more visibly
+                            luminous plant. Through a
+                            comprehensive review of existing scientific literature, we identified several key genes with
+                            the potential to
+                            significantly boost the bioluminescence intensity.
+                        </p>
+                        <p>1. Gene Selection and Optimization:</p>
+                        <p>We chose the TAL (Tyrosine Ammonia-Lyase)
+                            and C3H (p-Coumarate 3-Hydroxylase) genes, which have been shown to enhance
+                            caffeic acid production in saccharomyces cerevisiae [2][3]. TAL and C3H increases the
+                            concentractions of caffeic acid,
+                            thereby boost the original FBP to increase the overall light intensity of our enginerred
+                            plant.</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/des/d1.png" alt="d1">
+                        </figure>
+                        <p>2. Construction of the Gene Expression
+                            System:</p>
+                        <p>After selecting the TAL and C3H genes for
+                            their ability to enhance caffeic acid production, the next step was to ensure
+                            their effective expression in plant cells. To achieve this, we used transient expression
+                            technology in plant leaves to
+                            construct overexpression plasmids containing these target genes. Additionally, we utilized
+                            JCat, a codon optimization
+                            tool, to refine the non-plant-derived gene sequences, ensuring higher expression efficiency
+                            in plant cells [4]. This
+                            optimization is crucial for maximizing the impact of the selected genes on the
+                            bioluminescence pathway.</p>
+                        <p>3. Enhancement of the Bioluminescent System:
+                        </p>
+                        <p>Building on the optimized expression of our
+                            selected genes, we further enhanced the plant's bioluminescent properties by
+                            introducing and optimizing genes involved in the synthesis of luciferin substrates [5][6].
+                            This strategic modification
+                            significantly increased the amount of light emitted by the plant at night, creating an
+                            environment that is conducive to
+                            relaxation and sleep.</p>
+                        <p>4. Development of an Environmental Sensing
+                            Module:
+                        </p>
+                        <p>In parallel, we developed a regulatory
+                            module capable of responding to environmental signals, such as detecting
+                            formaldehyde levels [8]. This module allows the plant to adjust its bioluminescence
+                            properties dynamically based on
+                            changes in the surrounding environment. By enabling the plant to react to external stimuli,
+                            this innovation lays a solid
+                            foundation for creating future interactive bioluminescent plant companions that can engage
+                            more intuitively with human
+                            users.</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/des/d4.png" alt="d2">
+                            <figcaption>
+                                <p>HCHO stress from Zhao, X., et al. (2023)</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                <section id="results">
+                    <h3>Results</h3>
+                    <div style="text-align: left;">
+                        <p>Through this series of technological
+                            approaches, we successfully achieved the following outcomes:</p>
+                        <p>1. Development of a Novel Bioluminescent
+                            Plant:</p>
+                        <p>Petalglow, a new type of bioluminescent
+                            plant and plant companion, not only offers the benefits of horticultural therapy
+                            during the day but also emits a soft glow at night to help users relax and improve
+                            pre-sleeping envrionemnt.</p>
+                        <p>2. Provision of a Support Tool for Mental
+                            Health:</p>
+                        <p>As a natural therapy tool, PetalGlow
+                            provides new possibilities for alleviating anxiety and stress, as well as improving
+                            sleep quality.</p>
+                        <p>3. Establishment of an Environmentally
+                            Responsive Plant Expression System:</p>
+                        <p>Our engineered plant can adjust its
+                            bioluminescence based on environmental signals, demonstrating the potential of
+                            synthetic biology in environmental sensing and responsiveness.</p>
+                        <p>4. Education and Community Engagement:</p>
+                        <p>Through educational activities and community
+                            involvement, we have raised public awareness about synthetic biology and
+                            mental health issues with Petalglow, inspiring young people to take an interest in these
+                            fields.</p>
+                    </div>
+                </section>
+
+                <section id="conclusion">
+                    <h3>Conclusion</h3>
+                    <div style="text-align: left;">
+                        <p>The Petalglow project saw the potential of
+                            synthetic biology in addressing real-world challenges. Through innovative
+                            genetic engineering and environmental sensing technologies, we have not only created a plant
+                            with therapeutic potential
+                            but also paved the way for new applications of synthetic biology. We hope that Petalglow
+                            will bring a positive impact to
+                            the field of mental health worldwide.</p>
+                    </div>
+                </section>
+
+                <section id="references">
+                    <h3>References</h3>
+                    <div style="text-align: left;">
+                        <p>[1] Lu, S., Liu, J., Xu, M., & Xu, F.
+                            (2023).
+                            Horticultural therapy for stress reduction: A systematic review and
+                            meta-analysis. Frontiers in Public Health, 11, Article 10411738.</p>
+                        <p>[2] Lanqing Liu, Hong Liu, Wei Zhang,
+                            Mingdong Yao, Bingzhi Li, Duo Liu, Yingjin Yuan*. Engineering the Biosynthesis of
+                            Caffeic Acid in Saccharomyces cerevisiae with Heterologous Enzyme Combinations, Engineering,
+                            Volume 5, Issue 2, 2019,
+                            Pages 287-295.</p>
+                        <p>[3] Lingling Li, Xue Liu, Zetian Qiu,
+                            Guangrong Zhao. Microbial synthesis of plant polyphenols. Chinese Journal of
+                            Biotechnology, 2021, 37(6): 2050-2076.</p>
+                        <p>[4] JCat: A novel tool to adapt codon usage
+                            of a target gene to its potential expression host.</p>
+                        <p>[5] Peng Zheng, Jieyu Ge, Jiayi Ji, Jingling
+                            Zhong, Hongyu Chen, Daren Luo, Wei Li, Bo Bi, Yongjun Ma, Wanghui Tong,
+                            Leiqin Han, Siqi Ma, Yuqi Zhang, Jianping Wu, Yanqiu Zhao, Ronghui Pan, Pengxiang Fan,
+                            Mengzhu
+                            Lu, Hao Du*. Metabolic
+                            engineering and mechanical investigation of enhanced plant autoluminescence. Plant
+                            Biotechnol J,
+                            2023
+                            Aug;21(8):1671-1681.</p>
+                        <p>[6] Jieyu Ge, Xuye Lang, Jiayi Ji, Chengyi
+                            Qu, He Qiao, Jingling Zhong, Daren Luo, Jin Hu, Hongyu Chen, Shun Wang, Tiange
+                            Wang, Shiquan Li, Wei Li, Jiming Xu, Hao Du*. Optimization of fungal bioluminescence pathway
+                            for
+                            creating enhanced plant
+                            autoluminescence. Plant Cell, 2024.</p>
+                        <p>[7] Zhao X, Yang X, Li Y, Nian H, Li K.
+                            14-3-3 proteins regulate the HCHO stress response by interacting with AtMDH1 and
+                            AtGS1 in tobacco and Arabidopsis. J Hazard Mater. 2023 Sep 15;458:132036. doi:
+                            10.1016/j.jhazmat.2023.132036. Epub 2023
+                            Jul 10. PMID: 37453350.</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collection Section -->
+    <section class="collection" style="align-items: center; background-color: rgba(30, 30, 30);">
+        <div class="partners">
+            <img class="partners__image"
+                src="https://static.igem.wiki/teams/5218/image/static/images/sponsor/all.png" />
+        </div>
+
+        <div class="contacts">
+            <p class="contacts__description">Address: BGI Center, No. 9 Yunhua Road, Yantian District, Shenzhen, 518083,
+                China</p>
+            <p class="contacts__description">Phone: +86 13101793873 (Weekdays: 8:00-17:00 Weekends: Closed) E-mail:
+                chenlichuan@genomics.cn</p>
+        </div>
+
+        <div class="copyright">
+            <p class="copyright__text">
+                ©2024 Content on this site is licensed under a
+                <a class="copyright__link" href="">Creative Commons Attribution 4.0 International license.</a>
+            </p>
+            <p class="copyright__text">
+                The repository used to create this website is available at
+                <a class="copyright__link" href="">gitlab.igem.org/2024/bgi-mammothedu-south</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- JavaScript -->
+
+    <!-- Loader -->
+    <script>
+        // Remove the preloader when the page is fully loaded
+        window.onload = function () {
+            const preloader = document.getElementById('preloader');
+            preloader.style.opacity = '0'; // Start fading out the preloader
+            setTimeout(() => {
+                preloader.style.display = 'none'; // Hide the preloader completely
+            }, 500); // Wait for the fade-out to complete
+        };
+    </script>
+
+    <!-- Image slider -->
+    <script>
+        let currentSlide = 0;
+        const slides = [
+            "linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0)), url('https://static.igem.wiki/teams/5218/image/static/images/des/d2.jpg')",
+            "linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0)), url('https://static.igem.wiki/teams/5218/image/static/images/des/2.jpg')",
+            "linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0)), url('https://static.igem.wiki/teams/5218/image/static/images/des/4.jpg')"
+        ];
+        const dots = document.querySelectorAll('.carousel-nav span');
+        const introSection = document.getElementById('intro-section');
+
+        function showSlide(index) {
+            dots[currentSlide].classList.remove('active');
+            currentSlide = index;
+            introSection.style.backgroundImage = slides[currentSlide]; // Apply the gradient and image
+            dots[currentSlide].classList.add('active');
+        }
+
+        // Make sure the first slide is loaded when the page loads
+        document.addEventListener('DOMContentLoaded', function () {
+            // Preload images
+            slides.forEach(function (slide) {
+                const img = new Image();
+                img.src = slide.match(/url\('(.*)'\)/)[1]; // Extract the URL from the background-image
+            });
+
+            showSlide(0); // Show the first slide immediately after preloading starts
+        });
+
+        setInterval(() => {
+            const nextSlide = (currentSlide + 1) % slides.length;
+            showSlide(nextSlide);
+        }, 2000); // Change every 2 seconds
+    </script>
+
+    <!-- ToC -->
+    <script>
+        // Smooth scroll when clicking ToC links
+        document.querySelectorAll('.toc a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+    <!-- pdf -->
+    <script>
+        function toggleFullScreen() {
+            var elem = document.getElementById("pdf");
+
+            if (!document.fullscreenElement) {
+                if (elem.requestFullscreen) {
+                    elem.requestFullscreen();
+                } else if (elem.mozRequestFullScreen) { // Firefox
+                    elem.mozRequestFullScreen();
+                } else if (elem.webkitRequestFullscreen) { // Chrome, Safari and Opera
+                    elem.webkitRequestFullscreen();
+                } else if (elem.msRequestFullscreen) { // IE/Edge
+                    elem.msRequestFullscreen();
+                }
+            } else {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                } else if (document.mozCancelFullScreen) { // Firefox
+                    document.mozCancelFullScreen();
+                } else if (document.webkitExitFullscreen) { // Chrome, Safari and Opera
+                    document.webkitExitFullscreen();
+                } else if (document.msExitFullscreen) { // IE/Edge
+                    document.msExitFullscreen();
+                }
+            }
+        }
+    </script>
+
+    <!-- Header -->
+    <script src="./static/js/header.js"></script>
+
+</body>
+
+</html>

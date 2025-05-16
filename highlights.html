@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="https://static.igem.wiki/teams/5218/image/static/images/logo.png" />
+    <title>PetalGlow</title>
+    <!-- Reset and Custom Stylesheets -->
+    <link rel="stylesheet" href="./static/css/reset.css">
+    <link rel="stylesheet" href="./static/css/main.css">
+    <link rel="stylesheet" href="./static/css/header.css">
+    <link rel="stylesheet" href="./static/css/notebook.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header class="navbar">
+        <!-- Logo -->
+        <a class="navbar__logo" href="https://2024.igem.wiki/bgi-mammothedu-south/">
+            <img class="navbar__logo-icon" src="https://static.igem.wiki/teams/5218/image/static/images/logo.png"
+                width="80" alt="PetalGlow Logo" />
+            <div class="navbar__logo-text">
+                <div class="navbar__title" href="https://2024.igem.wiki/bgi-mammothedu-south/">Petalglow</div>
+                <div class="navbar__subtitle" href="roster.html">BGI-MammothEdu-South</div>
+            </div>
+        </a>
+
+        <!-- Toggle for mobile menu -->
+        <input type="checkbox" id="menu-toggle" class="navbar__checkbox" />
+        <label for="menu-toggle" class="navbar__toggle-btn">☰</label>
+
+        <!-- Navigation Menu -->
+        <nav class="navbar__menu">
+            <!-- Home Link （Retrun to Home page） -->
+            <a href="https://2024.igem.wiki/bgi-mammothedu-south/" class="navbar__menu-item">Home</a>
+
+            <!-- Project Dropdown -->
+            <div class="navbar__menu-item-dropdown">
+                <a href="#" class="navbar__menu-item">Project</a>
+                <div class="navbar__submenu">
+                    <a href="./description.html" class="navbar__submenu-item">Description</a>
+                    <a href="./engineering.html" class="navbar__submenu-item">Engineering</a>
+                    <a href="./results" class="navbar__submenu-item">Results</a>
+                    <a href="./results#plant" class="navbar__submenu-item">Plant</a>
+                    <a href="./implementation" class="navbar__submenu-item">Implementation</a>
+                    <a href="./contribution" class="navbar__submenu-item">Contribution</a>
+                </div>
+            </div>
+
+            <!-- Wet Lab Dropdown -->
+            <div class="navbar__menu-item-dropdown">
+                <a href="#" class="navbar__menu-item">Wet Lab</a>
+                <div class="navbar__submenu">
+                    <a href="./parts.html" class="navbar__submenu-item">Parts</a>
+                    <a href="./experiments" class="navbar__submenu-item">Experiments</a>
+                    <a href="./notebook.html" class="navbar__submenu-item">Notebook</a>
+                    <a href="./protocal" class="navbar__submenu-item">Protocal</a>
+                    <a href="./safety" class="navbar__submenu-item">Safety</a>
+                </div>
+            </div>
+
+            <!-- Dry Lab Dropdown -->
+            <div class="navbar__menu-item-dropdown">
+                <a href="#" class="navbar__menu-item">Dry Lab</a>
+                <div class="navbar__submenu">
+                    <a href="./model" class="navbar__submenu-item">Model</a>
+                    <a href="./measurement" class="navbar__submenu-item">Measurement</a>
+                </div>
+            </div>
+
+            <!-- Out Reach Dropdown -->
+            <div class="navbar__menu-item-dropdown">
+                <a href="#" class="navbar__menu-item">Out Reach</a>
+                <div class="navbar__submenu">
+                    <a href="./human-practices.html" class="navbar__submenu-item">Human Practices</a>
+                    <a href="./education" class="navbar__submenu-item">Education</a>
+                    <a href="./entrepreneurship" class="navbar__submenu-item">Entrepreneurship</a>
+                    <a href="./inclusivity" class="navbar__submenu-item">Inclusivity</a>
+                </div>
+            </div>
+
+            <!-- Team Dropdown -->
+            <div class="navbar__menu-item-dropdown">
+                <a href="#" class="navbar__menu-item">Team</a>
+                <div class="navbar__submenu">
+                    <a href="./roster.html" class="navbar__submenu-item">Roster</a>
+                    <a href="./attributions.html" class="navbar__submenu-item">Attribution</a>
+                    <a href="./partnership.html" class="navbar__submenu-item">Partnership</a>
+                    <a href="./highlights.html" class="navbar__submenu-item">Highlights</a>
+                    <a href="#" class="navbar__submenu-item">Medals</a>
+                </div>
+            </div>
+
+            <!-- Close Button for mobile menu -->
+            <label for="menu-toggle" class="navbar__close-btn">✖</label>
+        </nav>
+    </header>
+
+    <!-- Preloader Section -->
+    <div id="preloader">
+        <div class="spinner"></div>
+        <p>cooking...</p>
+    </div>
+
+    <section class="intro-section" id="intro-section">
+        <!-- Navigation Dots for Carousel -->
+        <div class="carousel-nav">
+            <span class="active" onclick="showSlide(0)"></span>
+            <span onclick="showSlide(1)"></span>
+            <span onclick="showSlide(2)"></span>
+        </div>
+
+        <div class="intro-background">
+        </div>
+    </section>
+
+    <!-- JavaScript -->
+
+    <!-- Loader -->
+    <script>
+        // Remove the preloader when the page is fully loaded
+        window.onload = function () {
+            const preloader = document.getElementById('preloader');
+            preloader.style.opacity = '0'; // Start fading out the preloader
+            setTimeout(() => {
+                preloader.style.display = 'none'; // Hide the preloader completely
+            }, 500); // Wait for the fade-out to complete
+        };
+    </script>
+
+    <!-- Image slider -->
+    <script>
+        let currentSlide = 0;
+        const slides = [
+            "linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0)), url('https://static.igem.wiki/teams/5218/image/static/images/highlights/03.png')",
+            "linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0)), url('https://static.igem.wiki/teams/5218/image/static/images/highlights/02.png')",
+            "linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0)), url('https://static.igem.wiki/teams/5218/image/static/images/highlights/01.png')"
+        ];
+        const dots = document.querySelectorAll('.carousel-nav span');
+        const introSection = document.getElementById('intro-section');
+
+        function showSlide(index) {
+            dots[currentSlide].classList.remove('active');
+            currentSlide = index;
+            introSection.style.backgroundImage = slides[currentSlide]; // Apply the gradient and image
+            dots[currentSlide].classList.add('active');
+        }
+
+        // Make sure the first slide is loaded when the page loads
+        document.addEventListener('DOMContentLoaded', function () {
+            // Preload images
+            slides.forEach(function (slide) {
+                const img = new Image();
+                img.src = slide.match(/url\('(.*)'\)/)[1]; // Extract the URL from the background-image
+            });
+
+            showSlide(0); // Show the first slide immediately after preloading starts
+        });
+
+        setInterval(() => {
+            const nextSlide = (currentSlide + 1) % slides.length;
+            showSlide(nextSlide);
+        }, 2000); // Change every 2 seconds
+    </script>
+
+    <!-- ToC -->
+    <script>
+        // Smooth scroll when clicking ToC links
+        document.querySelectorAll('.toc a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+    <!-- pdf -->
+    <script>
+        function toggleFullScreen() {
+            var elem = document.getElementById("pdf");
+
+            if (!document.fullscreenElement) {
+                if (elem.requestFullscreen) {
+                    elem.requestFullscreen();
+                } else if (elem.mozRequestFullScreen) { // Firefox
+                    elem.mozRequestFullScreen();
+                } else if (elem.webkitRequestFullscreen) { // Chrome, Safari and Opera
+                    elem.webkitRequestFullscreen();
+                } else if (elem.msRequestFullscreen) { // IE/Edge
+                    elem.msRequestFullscreen();
+                }
+            } else {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                } else if (document.mozCancelFullScreen) { // Firefox
+                    document.mozCancelFullScreen();
+                } else if (document.webkitExitFullscreen) { // Chrome, Safari and Opera
+                    document.webkitExitFullscreen();
+                } else if (document.msExitFullscreen) { // IE/Edge
+                    document.msExitFullscreen();
+                }
+            }
+        }
+    </script>
+
+    <!-- Header -->
+    <script src="./static/js/header.js"></script>
+
+</body>
+
+</html>

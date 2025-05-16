@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="https://static.igem.wiki/teams/5218/image/static/images/logo.png" />
+    <title>PetalGlow</title>
+    <!-- Reset and Custom Stylesheets -->
+    <link rel="stylesheet" href="./static/css/reset.css">
+    <link rel="stylesheet" href="./static/css/main.css">
+    <link rel="stylesheet" href="./static/css/header.css">
+    <link rel="stylesheet" href="./static/css/notebook.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header class="navbar">
+        <!-- Logo -->
+        <a class="navbar__logo" href="https://2024.igem.wiki/bgi-mammothedu-south/">
+            <img class="navbar__logo-icon" src="https://static.igem.wiki/teams/5218/image/static/images/logo.png"
+                width="80" alt="PetalGlow Logo" />
+            <div class="navbar__logo-text">
+                <div class="navbar__title" href="https://2024.igem.wiki/bgi-mammothedu-south/">Petalglow</div>
+                <div class="navbar__subtitle" href="roster.html">BGI-MammothEdu-South</div>
+            </div>
+        </a>
+
+        <!-- Toggle for mobile menu -->
+        <input type="checkbox" id="menu-toggle" class="navbar__checkbox" />
+        <label for="menu-toggle" class="navbar__toggle-btn">☰</label>
+
+        <!-- Navigation Menu -->
+        <nav class="navbar__menu">
+            <!-- Home Link （Retrun to Home page） -->
+            <a href="https://2024.igem.wiki/bgi-mammothedu-south/" class="navbar__menu-item">Home</a>
+
+            <!-- Project Dropdown -->
+            <div class="navbar__menu-item-dropdown">
+                <a href="#" class="navbar__menu-item">Project</a>
+                <div class="navbar__submenu">
+                    <a href="./description.html" class="navbar__submenu-item">Description</a>
+                    <a href="./engineering.html" class="navbar__submenu-item">Engineering</a>
+                    <a href="./results" class="navbar__submenu-item">Results</a>
+                    <a href="./results#plant" class="navbar__submenu-item">Plant</a>
+                    <a href="./implementation" class="navbar__submenu-item">Implementation</a>
+                    <a href="./contribution" class="navbar__submenu-item">Contribution</a>
+                </div>
+            </div>
+
+            <!-- Wet Lab Dropdown -->
+            <div class="navbar__menu-item-dropdown">
+                <a href="#" class="navbar__menu-item">Wet Lab</a>
+                <div class="navbar__submenu">
+                    <a href="./parts.html" class="navbar__submenu-item">Parts</a>
+                    <a href="./experiments" class="navbar__submenu-item">Experiments</a>
+                    <a href="./notebook.html" class="navbar__submenu-item">Notebook</a>
+                    <a href="./protocal" class="navbar__submenu-item">Protocal</a>
+                    <a href="./safety" class="navbar__submenu-item">Safety</a>
+                </div>
+            </div>
+
+            <!-- Dry Lab Dropdown -->
+            <div class="navbar__menu-item-dropdown">
+                <a href="#" class="navbar__menu-item">Dry Lab</a>
+                <div class="navbar__submenu">
+                    <a href="./model" class="navbar__submenu-item">Model</a>
+                    <a href="./measurement" class="navbar__submenu-item">Measurement</a>
+                </div>
+            </div>
+
+            <!-- Out Reach Dropdown -->
+            <div class="navbar__menu-item-dropdown">
+                <a href="#" class="navbar__menu-item">Out Reach</a>
+                <div class="navbar__submenu">
+                    <a href="./human-practices.html" class="navbar__submenu-item">Human Practices</a>
+                    <a href="./education" class="navbar__submenu-item">Education</a>
+                    <a href="./entrepreneurship" class="navbar__submenu-item">Entrepreneurship</a>
+                    <a href="./inclusivity" class="navbar__submenu-item">Inclusivity</a>
+                </div>
+            </div>
+
+            <!-- Team Dropdown -->
+            <div class="navbar__menu-item-dropdown">
+                <a href="#" class="navbar__menu-item">Team</a>
+                <div class="navbar__submenu">
+                    <a href="./roster.html" class="navbar__submenu-item">Roster</a>
+                    <a href="./attributions.html" class="navbar__submenu-item">Attribution</a>
+                    <a href="./partnership.html" class="navbar__submenu-item">Partnership</a>
+                    <a href="./highlights.html" class="navbar__submenu-item">Highlights</a>
+                    <a href="#" class="navbar__submenu-item">Medals</a>
+                </div>
+            </div>
+
+            <!-- Close Button for mobile menu -->
+            <label for="menu-toggle" class="navbar__close-btn">✖</label>
+        </nav>
+    </header>
+
+    <!-- Preloader Section -->
+    <div id="preloader">
+        <div class="spinner"></div>
+        <p>cooking...</p>
+    </div>
+
+    <section class="intro-section" id="intro-section">
+        <!-- Navigation Dots for Carousel -->
+        <div class="carousel-nav">
+            <span class="active" onclick="showSlide(0)"></span>
+            <span onclick="showSlide(1)"></span>
+            <span onclick="showSlide(2)"></span>
+        </div>
+
+        <div class="intro-background">
+            <h1>Model</h1>
+        </div>
+    </section>
+
+    <!-- Main Section with Content and TOC -->
+    <section class="description-page">
+        <!-- Background Image for Content Section -->
+        <div class="content-background">
+            <!-- Table of Contents (Left Side) -->
+            <nav class="toc">
+                <ul>
+                    <li><a href="#overview">&#127849Overview</a></li>
+                    <li><a href="#msa">&#127849MSA</a></li>
+                    <li><a href="#motif">&#127849Motif</a></li>
+                    <li><a href="#second">&#127849Secondary</a></li>
+                    <li><a href="#third">&#127849Tertiary</a></li>
+                    <li><a href="#rsmd">&#127849RSMD</a></li>
+                    <li><a href="#docking">&#127849Docking</a></li>
+                    <li><a href="#exp">&#127849Experiment</a></li>
+                    <li><a href="#conclusion">&#127849Conclusion</a></li>
+                </ul>
+            </nav>
+
+            <!-- Content Sections (Right Side) -->
+            <div class="content" style="margin-top: -500px;">
+                <section id="overview">
+                    <h3>Overview</h3>
+                    <div style="text-align: left;">
+                        <p>Cinnamate 3-hydroxylase (C3H) is a crucial enzyme in the bioluminescent pathway, specifically
+                            in synthesizing caffeic
+                            acid, a key precursor of luciferin. By optimizing C3H and integrating it into the p-coumaric
+                            acid pathway via the TAL
+                            and PAL routes, we aimed to boost bioluminescence in plant systems. A deep understanding of
+                            how structural differences
+                            in C3H homologs affect bioluminescence can provide insights into the enzyme's performance,
+                            helping to amplify luciferin
+                            production and, consequently, the intensity of the bioluminescent output.</p>
+                        <p>Our approach utilized an integrated computational strategy, including multiple sequence
+                            alignments (MSA), motif
+                            consensus analysis, secondary and tertiary structure prediction, root mean square deviation
+                            (RMSD) analysis, and docking
+                            site simulations. This enabled us to identify key structural features of C3H homologs and
+                            predict their influence on
+                            enzyme activity and bioluminescence enhancement.</p>
+                    </div>
+                </section>
+
+                <section id="msa">
+                    <h3>Multiple Sequence Alignment (MSA)</h3>
+                    <div style="text-align: left;">
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Materials & Methods</b>
+                            </p>
+                        </div>
+                        <p>Using BLAST, we identified eight homologous C3H proteins from six plant species, namely
+                            Arabidopsis thaliana (At),
+                            Catharanthus roseus (Cr), Nicotiana tabacum (Nt), Physcomitrium patens (Pp), Rosa chinensis
+                            (Rc), and Solanum
+                            lycopersicum (Sl). We aligned these sequences using Clustalw, producing an alignment file
+                            (.aln) to compare sequence
+                            homology.</p>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Results</b>
+                            </p>
+                        </div>
+                        <p>The MSA (Fig. 1) visualization from SNAPgene revealed conserved residues across the eight C3H
+                            homologs. Conserved
+                            regions, marked in yellow, reflect critical functional motifs potentially influencing enzyme
+                            activity. Gaps in the
+                            alignment indicated sequence differences between the homologs, which may contribute to
+                            variations in enzyme efficiency.</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/model/1.png" alt="s6">
+                            <figcaption>
+                                <p>Figure 1: Multiple sequence alignment annotations in yellow illustrating conserved
+                                    amino acids among 8 protein homologs</p>
+                            </figcaption>
+                        </figure>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Discussion</b>
+                            </p>
+                        </div>
+                        <p>Despite originating from diverse plant species, these homologs exhibit significant structural
+                            similarity, particularly
+                            in their functional motifs. The clusters of conserved amino acids suggest regions crucial
+                            for C3H function, likely
+                            involved in catalysis or structural integrity. However, the MSA alone is insufficient to
+                            explain functional differences,
+                            emphasizing the need for deeper structural analyses.</p>
+                    </div>
+                </section>
+
+                <section id="motif">
+                    <h3>Motif Consensus Analysis</h3>
+                    <div style="text-align: left;">
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Materials & Methods</b>
+                            </p>
+                        </div>
+                        <p>To identify conserved functional motifs, we employed the MEME suite for motif discovery. The
+                            analysis was constrained to
+                            a maximum of 15 motifs, with motif widths ranging from 6 to 100 amino acids. This allowed us
+                            to focus on the most
+                            critical and conserved regions.</p>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Results</b>
+                            </p>
+                        </div>
+                        <p>Motif locations (Fig. 2) were largely conserved across all homologs. The motifs were
+                            distributed throughout the protein
+                            sequences, indicating that the homologs share core functional elements despite sequence
+                            variations in non-motif regions.</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/model/2.png" alt="s6">
+                            <figcaption>
+                                <p>Figure 2: Illustration of motif consensus labeled in respect to its locations on
+                                    protein homologs</p>
+                            </figcaption>
+                        </figure>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Discussion</b>
+                            </p>
+                        </div>
+                        <p>The alignment of motifs across the C3H homologs supports the hypothesis of conserved
+                            functional regions. These conserved
+                            motifs may correlate with enzyme efficiency in the bioluminescence pathway, though
+                            variations in non-motif regions could
+                            affect catalytic rates or substrate affinity. The insights gained here set the stage for
+                            structural analysis at the
+                            secondary and tertiary levels.</p>
+                    </div>
+                </section>
+
+                <section id="second">
+                    <h3>Secondary Structure Prediction</h3>
+                    <div style="text-align: left;">
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Materials & Methods</b>
+                            </p>
+                        </div>
+                        <p>Using PSIPRED, we predicted the secondary structures of the eight C3H homologs, focusing on
+                            alpha helices, beta strands,
+                            and random coils.</p>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Results</b>
+                            </p>
+                        </div>
+                        <p>The secondary structure prediction (Fig. 3) indicated that all homologs share similar
+                            secondary structural features.
+                            Alpha helices (pink) and beta strands (yellow) were consistent across the homologs, with
+                            variations in coiled regions
+                            (grey).</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/model/03.png" alt="s6">
+                            <figcaption>
+                                <p>Figure 3: Illustration of secondary structural prediction on the 8 C3H protein
+                                    homologs (At_CYP98A3, Cr_C3H, Nt_CYP98A3,
+                                    NtCYP98A2, PpCYP98A3, Rc_CYP98A3, SI_CYP98A2, SI_CYP98A3) using PSIPRED</p>
+                            </figcaption>
+                        </figure>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Discussion</b>
+                            </p>
+                        </div>
+                        <p>The strong correlation in secondary structure across the homologs suggests that overall
+                            folding patterns are conserved.
+                            This structural similarity hints at functional conservation, but small differences in coil
+                            regions may influence enzyme
+                            dynamics and substrate binding. These insights will be explored further through tertiary
+                            structure predictions and
+                            docking simulations.</p>
+                    </div>
+                </section>
+
+                <section id="third">
+                    <h3>Tertiary Structure Prediction</h3>
+                    <div style="text-align: left;">
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Materials & Methods</b>
+                            </p>
+                        </div>
+                        <p>We predicted the tertiary structures of the eight homologs using the SWISS-MODEL server,
+                            visualizing the structures with
+                            alpha helices in blue and beta sheets in green.</p>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Results</b>
+                            </p>
+                        </div>
+                        <p>The tertiary structure models (Fig. 4) revealed high similarity among the homologs. Despite
+                            slight differences in
+                            surface loops and coiled regions, the overall folding pattern is conserved.</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/model/4.png" alt="s6">
+                            <figcaption>
+                                <p>Figure 4: Illustration of the 8 C3H homologs in protein three-dimensional structure
+                                    using the SWISS model.</p>
+                            </figcaption>
+                        </figure>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Discussion</b>
+                            </p>
+                        </div>
+                        <p>The tertiary structures align well with secondary structure predictions, confirming the
+                            structural conservation of C3H
+                            homologs. However, subtle variations in surface loops or coiled regions may contribute to
+                            functional differences,
+                            particularly in how the enzyme interacts with ligands like p-coumaric acid. These structural
+                            insights suggest that any
+                            enhancements in bioluminescence may result from small but crucial changes in these regions.
+                        </p>
+                    </div>
+                </section>
+
+                <section id="rsmd">
+                    <h3>Root Mean Square Deviation (RMSD) Analysis</h3>
+                    <div style="text-align: left;">
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Materials & Methods</b>
+                            </p>
+                        </div>
+                        <p>We performed RMSD analysis using TM-align to compare the tertiary structures of five C3H
+                            homologs. Arabidopsis thaliana
+                            (At) C3H served as the reference for comparison.</p>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Results</b>
+                            </p>
+                        </div>
+                        <p>The RMSD values ranged from 1.18 to 2.15, with TM-scores between 0.87 and 0.97 (Fig. 5).
+                            These values indicate strong
+                            structural similarity, particularly between Physcomitrium patens (Pp) and At_CYP98A3, which
+                            exhibited the highest
+                            similarity (RMSD = 1.18).</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/model/05.png" alt="s6">
+                            <figcaption>
+                                <p>Figure 5: Table of Root Mean Square Deviation results on 5 protein sequences
+                                    (At_CYP98A3, Cr_C, Nt_A3, Pp_CYP98A3,
+                                    SI_CYP98A3) by RCSB PDB.</p>
+                            </figcaption>
+                        </figure>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Discussion</b>
+                            </p>
+                        </div>
+                        <p>RMSD analysis revealed significant structural similarity among the C3H homologs, with lower
+                            RMSD values indicating
+                            greater similarity to At_CYP98A3. This structural resemblance correlates with enhanced
+                            bioluminescence, as proteins with
+                            higher structural similarity to At_CYP98A3 tend to yield higher light intensity. These
+                            findings suggest that structural
+                            features of At_CYP98A3 may underlie its superior performance.</p>
+                    </div>
+                </section>
+
+                <section id="docking">
+                    <h3>Docking Simulation</h3>
+                    <div style="text-align: left;">
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Materials & Methods</b>
+                            </p>
+                        </div>
+                        <p>We simulated the docking of p-coumaric acid, the substrate for C3H, using AutoDock Vina.
+                            Ligand-binding sites were
+                            identified using ConSurf, focusing on functional and structural residues surrounding the
+                            active site.</p>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Results</b>
+                            </p>
+                        </div>
+                        <p>The docking simulations (Fig. 7) revealed binding sites near conserved regions across the C3H
+                            homologs. Active sites for
+                            each protein homogy are calculated by Consurf.</p>
+                        <p>
+                            <object id="pdf" type="application/pdf"
+                                data="https://static.igem.wiki/teams/5218/image/static/images/model/docking-selection.pdf"
+                                class="pdf">
+                                <a
+                                    href="https://static.igem.wiki/teams/5218/image/static/images/model/docking-selection.pdf"></a>
+                                <a
+                                    href="https://static.igem.wiki/teams/5218/image/static/images/model/docking-selection.pdf">https://static.igem.wiki/teams/5218/image/static/images/model/docking-selection.pdf</a>
+                            </object>
+                            <!-- Fullscreen Button -->
+                            <button onclick="toggleFullScreen()">
+                                <p>Toggle Fullscreen</p>
+                            </button>
+                        </p>
+                        <p>Key residues in the active sites, such as R436, P362, and G432 in At_CYP98A3, were identified
+                            as potential contributors
+                            to catalytic efficiency.</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/model/7.png" alt="s6">
+                            <figcaption>
+                                <p>Figure 7: Illustration of 5 C3H homologs in three dimensions with ligand P-coumaric
+                                    acid binding to its specific active
+                                    site, visualized by Pymol.</p>
+                            </figcaption>
+                        </figure>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Discussion</b>
+                            </p>
+                        </div>
+                        <p>The docking simulations suggest that differences in active site composition and surrounding
+                            residues could explain
+                            variations in enzymatic performance. At_CYP98A3's superior performance in enhancing
+                            bioluminescence may stem from
+                            specific residue interactions within the active site that optimize the enzyme's catalytic
+                            activity. These findings align
+                            with the structural predictions and RMSD analysis, confirming that small structural
+                            variations can significantly impact
+                            bioluminescence efficiency.</p>
+                    </div>
+                </section>
+
+                <section id="exp">
+                    <h3>Experimental Validation: Light Intensity Analysis</h3>
+                    <div style="text-align: left;">
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Materials & Methods</b>
+                            </p>
+                        </div>
+                        <p>To validate our computational predictions, we measured the light intensity in genetically
+                            modified tobacco plants
+                            expressing different C3H homologs. Light intensity was quantified using Image J, with the
+                            control being tobacco injected
+                            with only the water vector.</p>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Results</b>
+                            </p>
+                        </div>
+                        <p>As shown in Fig. 6, tobacco expressing Pp_CYP98A3 exhibited the second-highest light
+                            intensity, closely following
+                            At_CYP98A3. This trend is consistent with the structural similarities observed in our RMSD
+                            analysis.</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/model/6.png" alt="s6">
+                            <figcaption>
+                                <p>Figure 6: Graphs of measured light intensity of tobacco using grey scale value
+                                    analysis by Image J</p>
+                            </figcaption>
+                        </figure>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Discussion</b>
+                            </p>
+                        </div>
+                        <p>The empirical data support our hypothesis that structural similarity to At_CYP98A3 correlates
+                            with higher
+                            bioluminescence. Plants expressing homologs structurally closest to At_CYP98A3, such as
+                            Pp_CYP98A3, produced
+                            significantly brighter light. These findings highlight the importance of fine-tuning
+                            structural elements in C3H homologs
+                            to enhance bioluminescence output.</p>
+                    </div>
+                </section>
+
+                <section id="conclusion">
+                    <h3>Conclusion</h3>
+                    <div style="text-align: left;">
+                        <p>Our comprehensive analysis of C3H homologs, combining sequence alignment, structural
+                            predictions, and docking
+                            simulations, identified key structural features that contribute to enhanced bioluminescence.
+                            The similarity between
+                            At_CYP98A3 and other homologs, particularly Pp_CYP98A3, suggests that conserved structural
+                            motifs and active site
+                            residues are critical for optimizing enzyme performance. These insights will guide future
+                            engineering efforts to further
+                            enhance bioluminescence through targeted modifications of C3H homologs.</p>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Collection Section -->
+    <section class="collection" style="background-color: rgba(30, 30, 30);">
+        <div class="partners">
+            <img class="partners__image"
+                src="https://static.igem.wiki/teams/5218/image/static/images/sponsor/all.png" />
+        </div>
+
+        <div class="contacts">
+            <p class="contacts__description">Address: BGI Center, No. 9 Yunhua Road, Yantian District,
+                Shenzhen, 518083,
+                China</p>
+            <p class="contacts__description">Phone: +86 13101793873 (Weekdays: 8:00-17:00 Weekends: Closed)
+                E-mail:
+                chenlichuan@genomics.cn</p>
+        </div>
+
+        <div class="copyright">
+            <p class="copyright__text">
+                ©2024 Content on this site is licensed under a
+                <a class="copyright__link" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons
+                    Attribution 4.0 International license</a>
+            </p>
+            <p class="copyright__text">
+                The repository used to create this website is available at
+                <a class="copyright__link" href="">gitlab.igem.org/2024/bgi-mammothedu-south</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- JavaScript -->
+
+    <!-- Loader -->
+    <script>
+        // Remove the preloader when the page is fully loaded
+        window.onload = function () {
+            const preloader = document.getElementById('preloader');
+            preloader.style.opacity = '0'; // Start fading out the preloader
+            setTimeout(() => {
+                preloader.style.display = 'none'; // Hide the preloader completely
+            }, 500); // Wait for the fade-out to complete
+        };
+    </script>
+
+    <!-- Image slider -->
+    <script>
+        let currentSlide = 0;
+        const slides = [
+            "linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0)), url('https://static.igem.wiki/teams/5218/image/static/images/model/1.jpg')",
+            "linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0)), url('https://static.igem.wiki/teams/5218/image/static/images/model/2.jpg')",
+            "linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0)), url('https://static.igem.wiki/teams/5218/image/static/images/model/3.jpg')"
+        ];
+        const dots = document.querySelectorAll('.carousel-nav span');
+        const introSection = document.getElementById('intro-section');
+
+        function showSlide(index) {
+            dots[currentSlide].classList.remove('active');
+            currentSlide = index;
+            introSection.style.backgroundImage = slides[currentSlide]; // Apply the gradient and image
+            dots[currentSlide].classList.add('active');
+        }
+
+        // Make sure the first slide is loaded when the page loads
+        document.addEventListener('DOMContentLoaded', function () {
+            // Preload images
+            slides.forEach(function (slide) {
+                const img = new Image();
+                img.src = slide.match(/url\('(.*)'\)/)[1]; // Extract the URL from the background-image
+            });
+
+            showSlide(0); // Show the first slide immediately after preloading starts
+        });
+
+        setInterval(() => {
+            const nextSlide = (currentSlide + 1) % slides.length;
+            showSlide(nextSlide);
+        }, 2000); // Change every 2 seconds
+    </script>
+
+    <!-- ToC -->
+    <script>
+        // Smooth scroll when clicking ToC links
+        document.querySelectorAll('.toc a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+    <!-- pdf -->
+    <script>
+        function toggleFullScreen() {
+            var elem = document.getElementById("pdf");
+
+            if (!document.fullscreenElement) {
+                if (elem.requestFullscreen) {
+                    elem.requestFullscreen();
+                } else if (elem.mozRequestFullScreen) { // Firefox
+                    elem.mozRequestFullScreen();
+                } else if (elem.webkitRequestFullscreen) { // Chrome, Safari and Opera
+                    elem.webkitRequestFullscreen();
+                } else if (elem.msRequestFullscreen) { // IE/Edge
+                    elem.msRequestFullscreen();
+                }
+            } else {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                } else if (document.mozCancelFullScreen) { // Firefox
+                    document.mozCancelFullScreen();
+                } else if (document.webkitExitFullscreen) { // Chrome, Safari and Opera
+                    document.webkitExitFullscreen();
+                } else if (document.msExitFullscreen) { // IE/Edge
+                    document.msExitFullscreen();
+                }
+            }
+        }
+    </script>
+
+    <!-- Header -->
+    <script src="./static/js/header.js"></script>
+
+</body>
+
+</html>

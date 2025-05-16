@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="https://static.igem.wiki/teams/5218/image/static/images/logo.png" />
+    <title>PetalGlow</title>
+    <!-- Reset and Custom Stylesheets -->
+    <link rel="stylesheet" href="./static/css/reset.css">
+    <link rel="stylesheet" href="./static/css/main.css">
+    <link rel="stylesheet" href="./static/css/header.css">
+    <link rel="stylesheet" href="./static/css/notebook.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header class="navbar">
+        <!-- Logo -->
+        <a class="navbar__logo" href="https://2024.igem.wiki/bgi-mammothedu-south/">
+            <img class="navbar__logo-icon" src="https://static.igem.wiki/teams/5218/image/static/images/logo.png"
+                width="80" alt="PetalGlow Logo" />
+            <div class="navbar__logo-text">
+                <div class="navbar__title" href="https://2024.igem.wiki/bgi-mammothedu-south/">Petalglow</div>
+                <div class="navbar__subtitle" href="roster.html">BGI-MammothEdu-South</div>
+            </div>
+        </a>
+
+        <!-- Toggle for mobile menu -->
+        <input type="checkbox" id="menu-toggle" class="navbar__checkbox" />
+        <label for="menu-toggle" class="navbar__toggle-btn">☰</label>
+
+        <!-- Navigation Menu -->
+        <nav class="navbar__menu">
+            <!-- Home Link （Retrun to Home page） -->
+            <a href="https://2024.igem.wiki/bgi-mammothedu-south/" class="navbar__menu-item">Home</a>
+
+            <!-- Project Dropdown -->
+            <div class="navbar__menu-item-dropdown">
+                <a href="#" class="navbar__menu-item">Project</a>
+                <div class="navbar__submenu">
+                    <a href="./description.html" class="navbar__submenu-item">Description</a>
+                    <a href="./engineering.html" class="navbar__submenu-item">Engineering</a>
+                    <a href="./results" class="navbar__submenu-item">Results</a>
+                    <a href="./results#plant" class="navbar__submenu-item">Plant</a>
+                    <a href="./implementation" class="navbar__submenu-item">Implementation</a>
+                    <a href="./contribution" class="navbar__submenu-item">Contribution</a>
+                </div>
+            </div>
+
+            <!-- Wet Lab Dropdown -->
+            <div class="navbar__menu-item-dropdown">
+                <a href="#" class="navbar__menu-item">Wet Lab</a>
+                <div class="navbar__submenu">
+                    <a href="./parts.html" class="navbar__submenu-item">Parts</a>
+                    <a href="./experiments" class="navbar__submenu-item">Experiments</a>
+                    <a href="./notebook.html" class="navbar__submenu-item">Notebook</a>
+                    <a href="./protocal" class="navbar__submenu-item">Protocal</a>
+                    <a href="./safety" class="navbar__submenu-item">Safety</a>
+                </div>
+            </div>
+
+            <!-- Dry Lab Dropdown -->
+            <div class="navbar__menu-item-dropdown">
+                <a href="#" class="navbar__menu-item">Dry Lab</a>
+                <div class="navbar__submenu">
+                    <a href="./model" class="navbar__submenu-item">Model</a>
+                    <a href="./measurement" class="navbar__submenu-item">Measurement</a>
+                </div>
+            </div>
+
+            <!-- Out Reach Dropdown -->
+            <div class="navbar__menu-item-dropdown">
+                <a href="#" class="navbar__menu-item">Out Reach</a>
+                <div class="navbar__submenu">
+                    <a href="./human-practices.html" class="navbar__submenu-item">Human Practices</a>
+                    <a href="./education" class="navbar__submenu-item">Education</a>
+                    <a href="./entrepreneurship" class="navbar__submenu-item">Entrepreneurship</a>
+                    <a href="./inclusivity" class="navbar__submenu-item">Inclusivity</a>
+                </div>
+            </div>
+
+            <!-- Team Dropdown -->
+            <div class="navbar__menu-item-dropdown">
+                <a href="#" class="navbar__menu-item">Team</a>
+                <div class="navbar__submenu">
+                    <a href="./roster.html" class="navbar__submenu-item">Roster</a>
+                    <a href="./attributions.html" class="navbar__submenu-item">Attribution</a>
+                    <a href="./partnership.html" class="navbar__submenu-item">Partnership</a>
+                    <a href="./highlights.html" class="navbar__submenu-item">Highlights</a>
+                    <a href="#" class="navbar__submenu-item">Medals</a>
+                </div>
+            </div>
+
+            <!-- Close Button for mobile menu -->
+            <label for="menu-toggle" class="navbar__close-btn">✖</label>
+        </nav>
+    </header>
+
+    <!-- Preloader Section -->
+    <div id="preloader">
+        <div class="spinner"></div>
+        <p>cooking...</p>
+    </div>
+
+    <section class="intro-section" id="intro-section">
+        <!-- Navigation Dots for Carousel -->
+        <div class="carousel-nav">
+            <span class="active" onclick="showSlide(0)"></span>
+            <span onclick="showSlide(1)"></span>
+            <span onclick="showSlide(2)"></span>
+        </div>
+
+        <div class="intro-background">
+            <h1>Human Practices</h1>
+        </div>
+    </section>
+
+    <!-- Main Section with Content and TOC -->
+    <section class="description-page">
+        <!-- Background Image for Content Section -->
+        <div class="content-background">
+            <!-- Table of Contents (Left Side) -->
+            <nav class="toc">
+                <ul>
+                    <li><a href="#introduction">&#127849Introduction</a></li>
+                    <li><a href="#emergence">&#127849Emergence</a></li>
+                    <li><a href="#practice">&#127849Practice</a></li>
+                    <li><a href="#market">&#127849Market</a></li>
+                    <li><a href="#persistence">&#127849Persistence</a></li>
+                    <li><a href="#sublimation">&#127849Sublimation</a></li>
+                    <li><a href="#climax">&#127849Climax</a></li>
+                    <li><a href="#epilogue">&#127849Epilogue</a></li>
+                </ul>
+            </nav>
+
+            <!-- Content Sections (Right Side) -->
+            <div class="content" style="margin-top: -450px;">
+                <section id="introduction">
+                    <h3>Introduction: A Spark in the Night</h3>
+                    <div style="text-align: left;">
+                        <p>On a serene evening, the BGI-MammothEdu-South team found inspiration in an unexpected place.
+                            During a visit to the BGI
+                            Time and Space Center, we were captivated by a quietly glowing plant. This was no ordinary
+                            tour; it was the moment that
+                            ignited our team's vision. Amidst the sparse starlight, the plant emitted a gentle yet
+                            steadfast glow, unfolding a
+                            splendid scene as if starlight had descended upon the earth. Its leaves swayed softly,
+                            whispering a secret: even in the
+                            darkest times, hope's light awaits discovery.
+                            We realized that life is a continuous cycle of renewal, and we believed that when light and
+                            darkness intertwine, the
+                            light becomes softer, and the darkness gradually fades—transforming into dawn, hope, and
+                            redemption. Inspired by this
+                            natural marvel, our team began to ponder: How could we bring this miracle into human life in
+                            a way that is both gentle
+                            and powerful?</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/hp/h1.jpg" alt="h1">
+                        </figure>
+                        <p>Our team leader, Xingzhu Mu, was deeply moved at that moment. She shared, "Recently, while
+                            studying late in the library,
+                            I often feel an indescribable loneliness and pressure." Her words resonated with all of us.
+                            We recognized that many of
+                            our peers were also grappling with similar psychological pressures—exams, internships, and
+                            the uncertainties of the
+                            future. We wondered if we could create something that would offer solace during these
+                            moments of stress.</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/hp/h2.jpg" alt="h2">
+                        </figure>
+                    </div>
+                </section>
+
+                <section id="emergence">
+                    <h3>The Emergence and Iteration of the Idea</h3>
+                    <div style="text-align: left;">
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Discovering the Need</b>
+                            </p>
+                        </div>
+                        <p>After our visit, we gathered to discuss the glowing plant we had seen. The idea emerged:
+                            Could we harness this natural
+                            wonder to create something that provides emotional support and psychological comfort? Our
+                            vision became clear—to create
+                            a glowing plant that is not just a decorative piece but a companion offering solace during
+                            times of loneliness and
+                            anxiety.</p>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Inspiration and Exploration</b>
+                            </p>
+                        </div>
+                        <p>The healing process of the glowing plant is one of companionship. It thrives under simple
+                            conditions and provides a
+                            gentle light source, especially at night or during low moods, offering psychological
+                            calmness. It creates a tranquil
+                            environment, enhances aesthetic feelings, promotes relaxation and meditation, and provides
+                            emotional support. By
+                            improving the sleeping environment, it effectively heals the mind and alleviates stress. The
+                            unique glow not only adds
+                            visual comfort in dark environments but also helps people relax and calm down, enhancing
+                            overall psychological health
+                            and well-being.</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/hp/102.jpg" alt="h2">
+                        </figure>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Vision and Goals</b>
+                            </p>
+                        </div>
+                        <p>Our vision was clear: to harness the power of synthetic biology to create a glowing plant
+                            that resonates emotionally
+                            with people. We believed this plant would become a guardian of the night, a silent healer
+                            whose light would illuminate
+                            the soul and dispel gloom.</p>
+                    </div>
+                </section>
+
+                <section id="practice">
+                    <h3>Practice and Iteration</h3>
+                    <div style="text-align: left;">
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Communication with Professor Du Hao</b>
+                            </p>
+                        </div>
+                        <p>In the early stages, we realized that enhancing the brightness of the glowing plant required
+                            innovative thinking and
+                            continuous iteration. We reached out to Professor Du Hao, a leading figure in synthetic
+                            biology at Zhejiang University.
+                            In our email, we detailed our team, project focus, and technical route. Professor Du's reply
+                            was insightful: "The
+                            application of glowing plants is fascinating, but current limitations are due to the
+                            intensity of luminescence.
+                            Enhancing the brightness is a challenging process, but glowing plants themselves have great
+                            potential."</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/hp/h3.png" alt="h3">
+                        </figure>
+                        <p>His words prompted us to rethink our approach. We realized that the previously planned C3H
+                            pathway might not achieve the
+                            desired brightness. Professor Du's suggestions led us to redesign the metabolic pathway to
+                            increase luciferin
+                            production. Based on his work, we devised a new luminescence enhancement pathway,
+                            constructing a TAL pathway to produce
+                            more p-coumaric acid, which, through the caffeic acid cycle, would lead to increased
+                            luciferin production. This redesign
+                            was a significant breakthrough in our project.</p>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Participation in iGEM Plant Synthetic Biology Exchange</b>
+                            </p>
+                        </div>
+                        <p>Following our communication with Professor Du, we participated in the iGEM Plant Synthetic
+                            Biology Conference. We shared
+                            our technical route and envisioned outcomes for the glowing plant. The feedback was
+                            constructive, and we learned about a
+                            biotech company called Light Bio, also focusing on glowing plants.</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/hp/h5.png" alt="h5">
+                        </figure>
+                        <p>We realized that glowing plants are a topic of great interest. The feedback encouraged us to
+                            contact Light Bio and
+                            consider building dry lab models to assist in predicting our metabolic pathways. We sent a
+                            friendly email to Light Bio,
+                            seeking collaboration or guidance.</p>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Interview with Nurse Alex</b>
+                            </p>
+                        </div>
+                        <p>To explore clinical applications, we conducted an online interview with Nurse Alex from a
+                            psychiatric hospital in the
+                            United States. We explained our project's expected outcomes and the roles of dark light
+                            therapy and plant therapy. Alex
+                            provided valuable insights: "If your glowing plants can achieve the expected healing
+                            effect, this would be a novel
+                            therapeutic method."</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/hp/h6.png" alt="h6">
+                        </figure>
+                        <p>We recognized the potential of glowing plants in providing a healing environment for
+                            patients with psychological trauma.
+                            Alex highlighted that patients with PTSD require environments free from strong light and
+                            other stimuli. The soft glow of
+                            our plants fits this need perfectly. However, he also cautioned that further clinical
+                            trials are necessary to validate
+                            therapeutic effects. This interview helped us understand both the potential and
+                            limitations of our project in clinical
+                            applications.</p>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Online Communication with Dr. Zhong Yi</b>
+                            </p>
+                        </div>
+                        <p>We further explored the role of glowing plants in psychological treatment through an online
+                            exchange with Dr. Zhong Yi,
+                            a psychiatrist at Hong Kong's Castle Peak Hospital. Dr. Zhong's professional opinions
+                            provided valuable guidance:
+                            "Glowing plant pets have unique advantages and can serve as a special pet therapy with a
+                            broader range of applications."</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/hp/h7.jpg" alt="h7">
+                        </figure>
+                        <p>We considered the potential application of glowing plant pets in home environments as
+                            auxiliary tools in psychological
+                            therapy. We discussed how they could provide a comfortable healing space for people with
+                            suboptimal mental health.</p>
+                        <p>Through these key communication and iterative processes, our project has continuously
+                            matured, and our ideas have
+                            gradually taken shape. We have learned to listen, reflect, and quickly adapt to new
+                            information and feedback—skills that
+                            are crucial to the maturation of our project. Our story is one of continuous progress
+                            through exploration and iteration.</p>
+                    </div>
+                </section>
+
+                <section id="market">
+                    <h3>Demand and Market Exploration</h3>
+                    <div style="text-align: left;">
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Field Research at Flower Markets</b>
+                            </p>
+                        </div>
+                        <p>Believing that glowing plants are not just a scientific marvel but also a product that could
+                            touch people's hearts, we
+                            conducted field research at flower markets. We engaged directly with consumers to understand
+                            their perceptions and
+                            needs.</p>
+                        <p>Consumers showed strong interest in plants that could create a unique atmosphere at home. One
+                            customer remarked, "Such a
+                            plant would not only beautify the environment but also provide a warm feeling at
+                            night—something traditional flowers
+                            can't offer."</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/hp/101.jpg" alt="h2">
+                        </figure>
+                        <p>Based on our findings, we decided to develop a series of glowing plants with varying
+                            brightness and colors to meet
+                            different consumer needs. We emphasized the environmental friendliness and psychological
+                            healing potential of the
+                            product, positioning glowing plants as high-end, artistic home decorations.</p>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Consultation with Industry Experts</b>
+                            </p>
+                        </div>
+                        <p>To explore the commercial potential further, we had an in-depth discussion with an investment
+                            manager at BGI. She
+                            provided valuable feedback from an investor's perspective: "When considering
+                            commercialization, you need to clarify the
+                            unique selling points of your product and consider how to achieve sustainable growth through
+                            innovative business
+                            models."</p>
+                        <p>We began drafting a detailed business plan, including market analysis, competitor analysis,
+                            pricing strategy, and
+                            marketing strategy. She suggested exploring partnerships with health and lifestyle brands to
+                            expand our product's market
+                            influence.</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/hp/h8.png" alt="h8">
+                        </figure>
+                        <p>We planned market tests to verify consumers' acceptance and willingness to pay. We also
+                            considered offering subscription
+                            services, including regular replacement and maintenance, to enhance customer satisfaction
+                            and loyalty.</p>
+                        <p>Through these market exploration activities, our BGI-MammothEdu-South team has gained a
+                            clearer understanding of the
+                            market potential of glowing plants and laid a solid foundation for the commercialization of
+                            the project. We believe that
+                            through continuous market research and communication with industry experts, we can
+                            continuously optimize our products
+                            and business model, ultimately achieving commercial success for glowing plants.</p>
+                    </div>
+                </section>
+
+                <section id="persistence">
+                    <h3>Persistence: Exploration Beyond Scientific Experiments</h3>
+                    <div style="text-align: left;">
+                        <p>In our laboratory, we pursued scientific breakthroughs while emphasizing safety and ethical
+                            responsibility. We
+                            understand that any scientific exploration must be built on solid safety foundations and
+                            ethical considerations.</p>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Laboratory Safety Lecture</b>
+                            </p>
+                        </div>
+                        <p>We attended a laboratory safety lecture where we learned about potential risks and proper
+                            handling of hazardous
+                            materials. "Safety always comes first in the laboratory," our instructor emphasized. We
+                            strictly adhered to safety
+                            protocols, regularly checking equipment and ensuring all safety measures were in place.</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/hp/h9.jpg" alt="h9">
+                        </figure>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Biosafety and Ethics Lecture</b>
+                            </p>
+                        </div>
+                        <p>A lecture on bioethics and biosafety deepened our understanding of ethical standards in
+                            research. Through case studies,
+                            we recognized the importance of respecting life and protecting the environment. We
+                            considered the potential
+                            environmental impact of genetically modified plants and took measures to ensure biosafety,
+                            following ethical guidelines
+                            throughout our experiments.</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/hp/h10.png" alt="h10">
+                        </figure>
+                        <p>Through background research and learning, our BGI-MammothEdu-South team members have not only
+                            improved their
+                            experimental skills but also gained a profound understanding of scientific ethics and
+                            responsibility. We love science,
+                            but we are even more aware that the true value of science lies in its ability to bring
+                            positive impact to humanity and
+                            the planet. Every step of our experiments is a pursuit and practice of this value.</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/hp/h11.jpg" alt="h11">
+                        </figure>
+                    </div>
+                </section>
+
+                <section id="sublimation">
+                    <h3>Sublimation: Iteration and Communication</h3>
+                    <div style="text-align: left;">
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Online communication with Counselor Mi</b>
+                            </p>
+                        </div>
+                        <p>Realizing that true innovation comes from interdisciplinary collaboration, we engaged in an
+                            online exchange with
+                            Counselor Mei, a psychological counselor. Her insights helped us understand how glowing
+                            plant
+                            pets could function in
+                            psychological therapy.</p>
+                        <p>She noted that glowing plant pets could serve as emotional outlets for those unable to care
+                            for
+                            traditional pets due to
+                            physical or psychological reasons. She encouraged us to focus on the user's emotional
+                            experience
+                            and consider adding
+                            interactive elements to enhance the therapeutic effect. Following Counselor Mi's advice, we
+                            began considering adding
+                            more interactive elements to our glowing plant pets, such as having the plants' light change
+                            in
+                            response to the user's
+                            emotional state. We also started exploring how to better understand the needs of our target
+                            users through user research,
+                            aiming to make our product design more user-friendly and personalized.</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/hp/h12.jpg" alt="h12">
+                        </figure>
+                        <p>"The interactivity that Counselor Mi mentioned made me think that we could develop an app to
+                            enable users to engage in
+                            deeper interactions with their glowing plant pets," Peng Yujun suggested after the meeting.
+                        </p>
+                        <p>"Yes, we could also add mental health tips to the app, turning the glowing plant pets into
+                            little
+                            assistants for users'
+                            mental well-being," Huang Zihan added.</p>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Artistic Collaboration with Artist Xu</b>
+                            </p>
+                        </div>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/hp/h13.jpg" alt="h13">
+                        </figure>
+                        <p>We also interacted with Artist Xu, whose work inspired new ideas. Xu shared his experiences
+                            using fluorescent materials
+                            in art, suggesting that the natural beauty of glowing plants could provoke deep reflections
+                            on life and nature.</p>
+                        <p>He encouraged us to explore applications of glowing plants in art installations, combining
+                            science and art seamlessly.
+                            We began considering integrating glowing plants into public art projects, creating unique
+                            night-time landscapes in city
+                            parks or exhibitions. We have also begun collaborating with local artists to explore how the
+                            unique qualities of glowing
+                            plants can be transformed into a new medium for artistic creation.</p>
+                        <p>Mr. Xu Hong's work made me realize that our glowing plant pets can become a tool for artistic
+                            expression," Li Jinfan
+                            shared during the discussion.</p>
+                        <p>"Yes, we could host an art workshop and invite community members to create glowing plant
+                            artworks together," Xiong Ziye
+                            suggested as a specific activity idea.</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/hp/h14.jpg" alt="h14">
+                        </figure>
+                        <p>We believe that through interdisciplinary collaboration and continuous innovation, our
+                            glowing plant pets will not just
+                            be a scientific product but also a heartfelt piece of art and an innovative solution that
+                            enhances people's quality of
+                            life.</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/hp/h15.jpg" alt="h15">
+                        </figure>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Step into the Light</b>
+                            </p>
+                        </div>
+                        <p>To foster collaboration and communication between research teams involved in synthetic
+                            biology, we participated in the
+                            “2024 X-Challenge Disruptive Innovation Youth Camp” Gallery Walk, hosted by Shenzhen Zero
+                            One Academy, under the
+                            guidance of our mentor. This event allowed us to delve into research directions related to
+                            synthetic biology, engage in
+                            discussions, and share our team's progress on the glowing plant-pet project. We also had
+                            meaningful exchanges with
+                            participants from previous glowing plant projects and those interested in our work.</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/education/3.png" alt="s6">
+                        </figure>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Event Content</b>
+                            </p>
+                        </div>
+                        <p>We participated in the Gallery Walk at the youth camp, where we observed the project
+                            presentations from the other
+                            participants. During these exchanges, we gained insights into their research directions and
+                            were inspired by the
+                            imaginative ideas from the high school students. After visiting all the booths, we realized
+                            that there was a noticeable
+                            lack of representation in biology, especially in synthetic biology. To address this gap and
+                            further promote the
+                            advancements in synthetic biology among students, our mentors arranged for us to set up a
+                            booth in the biology section
+                            featuring genetically modified plants.</p>
+                        <p>By setting up our display, we quickly immersed ourselves in the academic atmosphere of the
+                            Gallery Walk. We shared our
+                            posters and project concepts with high school students and passersby, explaining the concept
+                            of PetalGlow and the future
+                            potential of genetically modified plants. During the presentation, we received many
+                            questions about PetalGlow, such as
+                            how to enhance the plant’s brightness, how to design controls to compare light intensity,
+                            which plants could be made to
+                            glow, and whether PetalGlow could be commercialized. These questions were closely related to
+                            the challenges we were
+                            already addressing in our project, providing us with valuable insights into the public's
+                            interests and concerns, which
+                            helped to further refine our research direction.</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/education/19.jpg" alt="s6">
+                        </figure>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/education/20.jpg" alt="s6">
+                        </figure>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/education/21.jpg" alt="s6">
+                        </figure>
+                        <p>The event reached its peak when our team leader guided everyone through a comprehensive
+                            presentation of our project’s
+                            concept, experimental progress, product prospects, and future directions. This allowed the
+                            audience to gain a deeper
+                            understanding of our project. The enthusiastic feedback from the audience confirmed the
+                            novelty and appeal of the
+                            PetalGlow concept, strengthening our belief in the practical value of our research. It also
+                            inspired the students of
+                            Zero One Academy in their own research fields. Members of the Track 5 team from the 2023
+                            summer school, Chen Tanghao and
+                            Jin Borui, extended the conversation with us by sharing their work on glowing plants from
+                            the previous year, which
+                            helped us further expand our project’s direction.</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/education/22.jpg" alt="s6">
+                        </figure>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/education/23.jpg" alt="s6">
+                        </figure>
+                        <p>We also gained inspiration for creating a game to promote and market our project.
+                            Incorporating PetalGlow into a game
+                            had been an idea we wanted to pursue, but we were unsure of how to proceed. Through the
+                            Track 6 "Biological Interaction
+                            Game" session, where students created a slime mold-themed game, we learned about the game
+                            development process and the
+                            expected outcomes. This provided us with valuable references for creating our own game. We
+                            also realized that using
+                            games could significantly capture the audience’s attention and boost the visibility of our
+                            product, helping to introduce
+                            the PetalGlow concept to a wider audience.</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/education/24.jpg" alt="s6">
+                        </figure>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/education/25.jpg" alt="s6">
+                        </figure>
+                        <!-- VIDEO -->
+                        <p>Below are some of the screenshots of Petalglow vs. Zombies game we developed with the
+                            inspiration from this trip:</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/hp/pz1.jpg" alt="s6">
+                            <figcaption>
+                                <p>In our game, the structural models of caffeic acid and p-coumaric acid, which are key
+                                    components in the bioluminescence
+                                    pathway, serve as points. These models are randomly generated by the background and
+                                    Arabidopsis thaliana plants, worth
+                                    15 and 10 points, respectively. The game offers both day and night modes for players
+                                    to choose from. The day mode is
+                                    common, and if the night mode is
+                                    selected, the brightness of the caffeic acid and p-coumaric acid models will be
+                                    enhanced. Our game also features six plant species used in our experiments.
+                                    Arabidopsis
+                                    thaliana functions by producing p-coumaric
+                                    acid and requires 15 points to plant. Tobacco can withstand 10 zombie attacks and
+                                    costs 45 points. Physcomitrella patens
+                                    and Catharanthus roseus can both shoot C3H proteinsto attack zombies, costing
+                                    30 and 60 points respectively, and
+                                    inflicting 10 and 20 zombie's HP of damage per hit. The Tomato Bomb can eliminate
+                                    zombies within the explosion radius
+                                    and costs 75 points, while the Rose functions similarly to tobacco but can withstand
+                                    20 zombie attacks, costing 90
+                                    points. You win the game after successfully defending against 25 zombies.
+                                    Conversely, if all
+                                    plants in a row and the target
+                                    plants are eaten by zombies, the game is lost.</p>
+                            </figcaption>
+                        </figure>
+                        <p>Key Takeaways:</p>
+                        <p>1. We gained insights into other biology-related research topics and progress, which helped
+                            us clarify the next steps in
+                            our research, particularly focusing on enhancing brightness and exploring different types of
+                            glowing plants.</p>
+                        <p>2. We successfully promoted PetalGlow and gathered data on its acceptance among students,
+                            which helped us understand the
+                            public’s main expectations and concerns. We learned that PetalGlow has great market
+                            potential, though ensuring the
+                            safety of the product is paramount.</p>
+                        <p>3. We explored the feasibility of using a game as a tool for promoting the project, which
+                            provided a valuable reference
+                            model for our game design.</p>
+                        <p>Conclusion:</p>
+                        <p>During this event, we systematically introduced the concept of PetalGlow, our experimental
+                            progress, product prospects,
+                            and future directions. We were pleasantly surprised by the overwhelmingly positive feedback
+                            from the audience, which
+                            even sparked ideas for further research and integration with synthetic biology in their own
+                            fields. After our
+                            presentation, members of the Track 5 team from the 2023 summer school extended the
+                            conversation with us, sharing their
+                            previous work on glowing plants, which led to further discussions and collaboration. The
+                            strong audience interest
+                            confirmed the novelty and appeal of PetalGlow, reinforcing our confidence in the practical
+                            value of our research. This
+                            experience demonstrated that we had effectively introduced synthetic biology and glowing
+                            plants to a wider audience,
+                            successfully expanding public knowledge and awareness.</p>
+                    </div>
+                </section>
+
+                <section id="climax">
+                    <h3>Climax: Recognition and Progress</h3>
+                    <div style="text-align: left;">
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Project Presentation at the ICG Conference</b>
+                            </p>
+                        </div>
+                        <p>On the stage of the BGI International Conference Center, our team members, full of enthusiasm
+                            and well-prepared,
+                            presented our glowing plant pet project to scientists and experts from around the globe. Our
+                            presentation not only
+                            covered the scientific details of the project but also demonstrated our deep understanding
+                            of and commitment to human
+                            practices.</p>
+                        <figure>
+                            <img class="text_img" src="https://static.igem.wiki/teams/5218/image/static/images/hp/2.jpg"
+                                alt="2">
+                        </figure>
+                        <p>On-Site Performance:</p>
+                        <p>With her passion and clear logic, Mu Xingzhu introduced the concept of glowing plant pets and
+                            our research progress to
+                            the audience. Li Jinfan detailed our efforts and innovations in enhancing the brightness of
+                            the glowing plants.</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/hp/h16.jpg" alt="h16">
+                        </figure>
+                        <p>Expert Interaction:</p>
+                        <p>During the Q&A session, we were met with a question from Dr. Shen Yue of the University of
+                            Edinburgh, who inquired about
+                            how we ensure the biosafety of the glowing plants. Our response not only showcased our
+                            thoughtful consideration of the
+                            project but also reflected our respect for scientific ethics.</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/hp/h17.jpg" alt="h17">
+                        </figure>
+                        <p>“When Dr. Shen Yue acknowledged our project, I felt incredibly proud. Our hard work has
+                            finally been recognized by
+                            international experts,” said Mu Xingzhu excitedly after the presentation.</p>
+                        <p>“Yes, it’s not just a recognition of our work but also a testament to our team spirit,” Li
+                            Jinfan added.</p>
+                        <p>As the ICG Conference concluded successfully, our project embarked on a new starting point.
+                            Our Human Practices efforts
+                            added value to the project and gave it deeper social significance. Our project won the
+                            "Biomanufacturing’s Best Oral
+                            Presentation Award" at the conference, which was a great acknowledgment of our work. This
+                            experience brought our team
+                            members closer together and boosted their confidence, allowing our story—and our plants—to
+                            shine brightly on the
+                            international stage. We plan to continue optimizing our glowing plant pets to better meet
+                            market demands and user
+                            expectations. We will also explore more collaborative opportunities to bring our project to
+                            an even broader stage.</p>
+                    </div>
+                </section>
+
+                <section id="epilogue">
+                    <h3>Epilogue: An Ending is Also a Beginning</h3>
+                    <div style="text-align: left;">
+                        <p>In today’s world, the relationship between humanity and nature is being reshaped. Human
+                            civilization, in its pursuit of
+                            progress, continually disrupts the natural order. In the long run, this not only harms
+                            nature but also serves as a slow
+                            poison to humanity itself. In modern society, we are losing our primal essence, leading to
+                            feelings of boredom, anxiety,
+                            depression, and numbness—deep and lasting damage to each individual within human society.
+                            However, through synthetic
+                            biology, we actively modify plants that originate from nature, and this modification is
+                            positive and constructive.
+                            Nature nurtures humanity and grants us the ability to transform the world around us; by
+                            altering plants, we ultimately
+                            enable them to have the potential to change us in return.</p>
+                        <p>We warmly invite you to join us in this luminous journey. Let's illuminate the path toward a
+                            brighter future together.</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/hp/100.jpg" alt="h2">
+                        </figure>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collection Section -->
+    <section class="collection" style="background-color: rgba(30, 30, 30);">
+        <div class="partners">
+            <img class="partners__image"
+                src="https://static.igem.wiki/teams/5218/image/static/images/sponsor/all.png" />
+        </div>
+
+        <div class="contacts">
+            <p class="contacts__description">Address: BGI Center, No. 9 Yunhua Road, Yantian District,
+                Shenzhen, 518083,
+                China</p>
+            <p class="contacts__description">Phone: +86 13101793873 (Weekdays: 8:00-17:00 Weekends: Closed)
+                E-mail:
+                chenlichuan@genomics.cn</p>
+        </div>
+
+        <div class="copyright">
+            <p class="copyright__text">
+                ©2024 Content on this site is licensed under a
+                <a class="copyright__link" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons
+                    Attribution 4.0 International license</a>
+            </p>
+            <p class="copyright__text">
+                The repository used to create this website is available at
+                <a class="copyright__link" href="">gitlab.igem.org/2024/bgi-mammothedu-south</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- JavaScript -->
+
+    <!-- Loader -->
+    <script>
+        // Remove the preloader when the page is fully loaded
+        window.onload = function () {
+            const preloader = document.getElementById('preloader');
+            preloader.style.opacity = '0'; // Start fading out the preloader
+            setTimeout(() => {
+                preloader.style.display = 'none'; // Hide the preloader completely
+            }, 500); // Wait for the fade-out to complete
+        };
+    </script>
+
+    <!-- Image slider -->
+    <script>
+        let currentSlide = 0;
+        const slides = [
+            "linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0)), url('https://static.igem.wiki/teams/5218/image/static/images/hp/2.jpg')",
+            "linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0)), url('https://static.igem.wiki/teams/5218/image/static/images/hp/1.jpg')",
+            "linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0)), url('https://static.igem.wiki/teams/5218/image/static/images/hp/3.jpg')"
+        ];
+        const dots = document.querySelectorAll('.carousel-nav span');
+        const introSection = document.getElementById('intro-section');
+
+        function showSlide(index) {
+            dots[currentSlide].classList.remove('active');
+            currentSlide = index;
+            introSection.style.backgroundImage = slides[currentSlide]; // Apply the gradient and image
+            dots[currentSlide].classList.add('active');
+        }
+
+        // Make sure the first slide is loaded when the page loads
+        document.addEventListener('DOMContentLoaded', function () {
+            // Preload images
+            slides.forEach(function (slide) {
+                const img = new Image();
+                img.src = slide.match(/url\('(.*)'\)/)[1]; // Extract the URL from the background-image
+            });
+
+            showSlide(0); // Show the first slide immediately after preloading starts
+        });
+
+        setInterval(() => {
+            const nextSlide = (currentSlide + 1) % slides.length;
+            showSlide(nextSlide);
+        }, 2000); // Change every 2 seconds
+    </script>
+
+    <!-- ToC -->
+    <script>
+        // Smooth scroll when clicking ToC links
+        document.querySelectorAll('.toc a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+    <!-- PDF fullscreen view -->
+    <script>
+        function toggleFullScreen() {
+            var elem = document.getElementById("pdf");
+
+            if (!document.fullscreenElement) {
+                if (elem.requestFullscreen) {
+                    elem.requestFullscreen();
+                } else if (elem.mozRequestFullScreen) { // Firefox
+                    elem.mozRequestFullScreen();
+                } else if (elem.webkitRequestFullscreen) { // Chrome, Safari and Opera
+                    elem.webkitRequestFullscreen();
+                } else if (elem.msRequestFullscreen) { // IE/Edge
+                    elem.msRequestFullscreen();
+                }
+            } else {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                } else if (document.mozCancelFullScreen) { // Firefox
+                    document.mozCancelFullScreen();
+                } else if (document.webkitExitFullscreen) { // Chrome, Safari and Opera
+                    document.webkitExitFullscreen();
+                } else if (document.msExitFullscreen) { // IE/Edge
+                    document.msExitFullscreen();
+                }
+            }
+        }
+    </script>
+
+    <!-- Header -->
+    <script src="./static/js/header.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="https://static.igem.wiki/teams/5218/image/static/images/logo.png" />
+    <title>PetalGlow</title>
+    <!-- Reset and Custom Stylesheets -->
+    <link rel="stylesheet" href="./static/css/reset.css">
+    <link rel="stylesheet" href="./static/css/main.css">
+    <link rel="stylesheet" href="./static/css/header.css">
+    <link rel="stylesheet" href="./static/css/notebook.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header class="navbar">
+        <!-- Logo -->
+        <a class="navbar__logo" href="https://2024.igem.wiki/bgi-mammothedu-south/">
+            <img class="navbar__logo-icon" src="https://static.igem.wiki/teams/5218/image/static/images/logo.png"
+                width="80" alt="PetalGlow Logo" />
+            <div class="navbar__logo-text">
+                <div class="navbar__title" href="https://2024.igem.wiki/bgi-mammothedu-south/">Petalglow</div>
+                <div class="navbar__subtitle" href="roster.html">BGI-MammothEdu-South</div>
+            </div>
+        </a>
+
+        <!-- Toggle for mobile menu -->
+        <input type="checkbox" id="menu-toggle" class="navbar__checkbox" />
+        <label for="menu-toggle" class="navbar__toggle-btn">☰</label>
+
+        <!-- Navigation Menu -->
+        <nav class="navbar__menu">
+            <!-- Home Link （Retrun to Home page） -->
+            <a href="https://2024.igem.wiki/bgi-mammothedu-south/" class="navbar__menu-item">Home</a>
+
+            <!-- Project Dropdown -->
+            <div class="navbar__menu-item-dropdown">
+                <a href="#" class="navbar__menu-item">Project</a>
+                <div class="navbar__submenu">
+                    <a href="./description.html" class="navbar__submenu-item">Description</a>
+                    <a href="./engineering.html" class="navbar__submenu-item">Engineering</a>
+                    <a href="./results" class="navbar__submenu-item">Results</a>
+                    <a href="./results#plant" class="navbar__submenu-item">Plant</a>
+                    <a href="./implementation" class="navbar__submenu-item">Implementation</a>
+                    <a href="./contribution" class="navbar__submenu-item">Contribution</a>
+                </div>
+            </div>
+
+            <!-- Wet Lab Dropdown -->
+            <div class="navbar__menu-item-dropdown">
+                <a href="#" class="navbar__menu-item">Wet Lab</a>
+                <div class="navbar__submenu">
+                    <a href="./parts.html" class="navbar__submenu-item">Parts</a>
+                    <a href="./experiments" class="navbar__submenu-item">Experiments</a>
+                    <a href="./notebook.html" class="navbar__submenu-item">Notebook</a>
+                    <a href="./protocal" class="navbar__submenu-item">Protocal</a>
+                    <a href="./safety" class="navbar__submenu-item">Safety</a>
+                </div>
+            </div>
+
+            <!-- Dry Lab Dropdown -->
+            <div class="navbar__menu-item-dropdown">
+                <a href="#" class="navbar__menu-item">Dry Lab</a>
+                <div class="navbar__submenu">
+                    <a href="./model" class="navbar__submenu-item">Model</a>
+                    <a href="./measurement" class="navbar__submenu-item">Measurement</a>
+                </div>
+            </div>
+
+            <!-- Out Reach Dropdown -->
+            <div class="navbar__menu-item-dropdown">
+                <a href="#" class="navbar__menu-item">Out Reach</a>
+                <div class="navbar__submenu">
+                    <a href="./human-practices.html" class="navbar__submenu-item">Human Practices</a>
+                    <a href="./education" class="navbar__submenu-item">Education</a>
+                    <a href="./entrepreneurship" class="navbar__submenu-item">Entrepreneurship</a>
+                    <a href="./inclusivity" class="navbar__submenu-item">Inclusivity</a>
+                </div>
+            </div>
+
+            <!-- Team Dropdown -->
+            <div class="navbar__menu-item-dropdown">
+                <a href="#" class="navbar__menu-item">Team</a>
+                <div class="navbar__submenu">
+                    <a href="./roster.html" class="navbar__submenu-item">Roster</a>
+                    <a href="./attributions.html" class="navbar__submenu-item">Attribution</a>
+                    <a href="./partnership.html" class="navbar__submenu-item">Partnership</a>
+                    <a href="./highlights.html" class="navbar__submenu-item">Highlights</a>
+                    <a href="#" class="navbar__submenu-item">Medals</a>
+                </div>
+            </div>
+
+            <!-- Close Button for mobile menu -->
+            <label for="menu-toggle" class="navbar__close-btn">✖</label>
+        </nav>
+    </header>
+
+    <!-- Preloader Section -->
+    <div id="preloader">
+        <div class="spinner"></div>
+        <p>cooking...</p>
+    </div>
+
+    <section class="intro-section" id="intro-section">
+        <!-- Navigation Dots for Carousel -->
+        <div class="carousel-nav">
+            <span class="active" onclick="showSlide(0)"></span>
+            <span onclick="showSlide(1)"></span>
+            <span onclick="showSlide(2)"></span>
+        </div>
+
+        <div class="intro-background">
+            <h1>Measurement</h1>
+        </div>
+    </section>
+
+    <!-- Main Section with Content and TOC -->
+    <section class="description-page">
+        <!-- Background Image for Content Section -->
+        <div class="content-background">
+            <!-- Table of Contents (Left Side) -->
+            <nav class="toc">
+                <ul>
+                    <li><a href="#overview">&#127849Measurement</a></li>
+                </ul>
+            </nav>
+
+            <!-- Content Sections (Right Side) -->
+            <div class="content" style="margin-top: -50px;">
+                <section id="overview">
+                    <h3>Measurement</h3>
+                    <div style="text-align: left;">
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Overview</b>
+                            </p>
+                        </div>
+                        <p>In this project, by recording the growth cycle of Nicotiana benthamiana, we assisted the
+                            functional validation team in
+                            preparing for the optimal period of tobacco transient infection. To accurately determine the
+                            suitable injection period,
+                            we watered the plants with a fixed amount of water every other day while maintaining
+                            consistent environmental
+                            conditions. We measured the daily changes in leaf length and plant height after
+                            transplantation, with individual
+                            measurements taken for each leaf. Each group had three replicates, and two batches of
+                            seedlings were used in the
+                            experiments. The raw data can be found in the Excel spreadsheet.</p>
+                        <p>For data analysis, we processed missing and outlier values using Excel. The preprocessed data
+                            was organized into line
+                            charts to visualize trends, and final effect plots were provided.</p>
+                        <p>Our measurement tools offered the functional validation team more precise time points for
+                            processing, enabling accurate
+                            prediction of the optimal time window to prepare infection samples.</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/measurement/m1.png"
+                                alt="s6">
+                            <figcaption>
+                                <p>The daily care for Nicotiana benthamiana, including transplanting and measurements,
+                                    involved several tasks. Note: The plants shown in the figure are wild-type
+                                    specimens.</p>
+                            </figcaption>
+                        </figure>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Plant Growth Cycle Records</b>
+                            </p>
+                        </div>
+                        <p>During the seedling cultivation period, we observed the following: 1. As shown in the raw
+                            data in the Excel sheet below,
+                            many leaves were still in the budding stage in the early period, so no growth records were
+                            taken; only significant
+                            growth was recorded later. 2. In the later growth records, some bottom leaves exhibited
+                            slowed growth, fluctuations in
+                            leaf length, and even wrinkling, which could be due to mild dehydration or the plant
+                            sacrificing nutrients from the
+                            lower leaves to support the growth of the upper leaves. 3. After more than four days of
+                            recording, the growth slope of
+                            newly emerged leaves was significantly steeper than that of the older leaves, indicating
+                            that the new leaves grew much
+                            faster than the older ones. This may have a beneficial effect on plant growth (apical
+                            dominance).</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/results/21.png" alt="s6">
+                            <figcaption>
+                                <p>Figure: Growth Cycle Curve of Nicotiana Leaves</p>
+                                <p>Leaf length is measured from the center of the plant to the furthest tip of the leaf.
+                                </p>
+                                <p>A: Growth stages of tobacco at different periods (a randomly selected tobacco
+                                    seedling from the second batch, with
+                                    records starting from 3 days after surface sterilization, 0 days after vernalization
+                                    and sowing, 1 day after
+                                    germination begins, and 10 days after transplanting).</p>
+                                <p>B: Tobacco leaf growth curve.</p>
+                                <p>C: Number and position of tobacco leaves.</p>
+                            </figcaption>
+                        </figure>
+                        <p>
+                            <object id="pdf" type="application/pdf"
+                                data="https://static.igem.wiki/teams/5218/image/static/images/results/measurements.pdf"
+                                class="pdf">
+                                <a
+                                    href="https://static.igem.wiki/teams/5218/image/static/images/results/measurements.pdf"></a>
+                                <a
+                                    href="https://static.igem.wiki/teams/5218/image/static/images/results/measurements.pdf">https://static.igem.wiki/teams/5218/image/static/images/results/measurements.pdf</a>
+                            </object>
+                            <!-- Fullscreen Button -->
+                            <!-- <button onclick="toggleFullScreen()">
+                                <p>Toggle Fullscreen</p>
+                            </button> -->
+                        </p>
+                        <p>Due to the growth of the leaves, the gravity of the leaves will lower the height of the
+                            plant, and the contact with the
+                            plant during measurement may change the height of the plant, so the plant height here is
+                            unstable and there is a large
+                            fluctuation.</p>
+                        <p>According to the chart, the plant height was generally slower in the early stage. The first
+                            and second batches both had
+                            large fluctuations in plant height between August 8 and August 14. Because the first batch
+                            and the second batch were not
+                            planted at the same time, the tobacco should be affected by environmental factors, and
+                            therefore, the instability of
+                            plant height makes plant height not a standard to measure the development of tobacco.</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/results/22.png" alt="s6">
+                            <figcaption>
+                                <p>Figure: Growth Cycle Curve of Nicotiana Plant Height</p>
+                                <p>Note: Plant height is measured as the maximum relative height from the stem above the
+                                    soil surface to the leaf.</p>
+                                <p>A: Average growth curve of tobacco plant height (three plants were randomly selected
+                                    from each of the first and
+                                    second batches of seedlings, and the average values were used for plotting).</p>
+                                <p>B: Tobacco photos and schematic diagram of plant height measurement.</p>
+                            </figcaption>
+                        </figure>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">The Impact of Seedling Stage on Experimental Results</b>
+                            </p>
+                        </div>
+                        <p>In plant experiments, we typically use Agrobacterium-mediated transient transformation of
+                            tobacco leaves for rapid
+                            functional validation. When infecting leaves, older leaves are generally not selected under
+                            non-specific conditions for
+                            the following reasons:</p>
+                        <p>1. Cell Activity: Older leaves have lower cell activity and reduced metabolic activity, which
+                            are not conducive to the
+                            expression of foreign genes and reduce transformation efficiency.</p>
+                        <p>2. Tissue Structure: Older leaves have thicker cell walls and a harder texture, which may
+                            hinder the transfer and
+                            absorption of foreign DNA, reducing transformation efficiency.</p>
+                        <p>3. Health Condition: Older leaves may harbor more pathogens or be more affected by
+                            environmental stress, making them
+                            less healthy than younger leaves, which could impact the accuracy of experimental results.
+                        </p>
+                        <p>4. Physiological State: Younger leaves are in a physiological state more suitable for gene
+                            expression and protein
+                            synthesis, enhancing the effectiveness of transient expression.</p>
+                        <p>Therefore, selecting younger leaves for transient transformation experiments in tobacco can
+                            improve transformation
+                            efficiency and gene expression levels, ensuring the reliability and accuracy of the
+                            experimental results.</p>
+                        <p>To determine the optimal injection period for younger leaves, our data analysis indicated
+                            that around the third week
+                            (approximately 16 days) after transplanting is suitable for preparing infection solutions
+                            and conducting bacterial
+                            culture shaking. We then performed transient injections at various growth stages of the
+                            tobacco seedlings, finding
+                            notable differences between early-stage new leaves and mature leaves (26 days after
+                            germination) at the injection stage.</p>
+                        <p>Compared to younger leaves, mature tobacco leaves are fully expanded, have smoother surfaces,
+                            and clearly defined veins
+                            with fewer small veins, allowing a single injection to spread the infection solution over a
+                            larger area, often covering
+                            more than one-third of the leaf area, thereby reducing the number of injections needed. In
+                            contrast, immature leaves are
+                            not fully smooth, sometimes exhibiting uneven surfaces and numerous fine veins, making
+                            injection more challenging and
+                            resulting in a smaller spread area per injection, often not exceeding a 2 cm diameter
+                            circle. This necessitates multiple
+                            injections. Under these conditions, using overly young leaves for injection, such as when
+                            comparing luminescence
+                            differences, causes significant damage to the leaves and greatly affects the accuracy and
+                            stability of functional
+                            validation results.</p>
+                        <p>Therefore, it is advisable to schedule bacterial culture shaking and infection solution
+                            preparation around the third
+                            week (approximately 16 days) after transplanting, with infection and phenotypic observation
+                            conducted one month from the
+                            initial sterilization treatment.</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/results/23.png" alt="s6">
+                            <figcaption>
+                                <p>Figure: Visual Effects of Injections in Mature vs. Immature Leaves</p>
+                                <p>A: Visual effect of injections in mature leaves at the correct stage. Injections are
+                                    easy, with large and even water
+                                    spread, causing minimal operational damage.</p>
+                                <p>B: Visual effect of injections in immature leaves at an early stage. Water spread is
+                                    small, the operation is
+                                    difficult, and the damage is significant.</p>
+                            </figcaption>
+                        </figure>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Conclusion</b>
+                            </p>
+                        </div>
+                        <p>We can use the cultivation timeline of Nicotiana benthamiana shown in the diagram below to
+                            assess
+                            the optimal preparation
+                            time for infection and injection testing by the experimenters.</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/measurement/m2.jpg"
+                                alt="s6">
+                            <figcaption>
+                                <p>Nicotiana benthamiana Growth Cycle Timeline</p>
+                            </figcaption>
+                        </figure>
+                        <p>Around the third week (approximately 16 days) after transplantation, bacterial culture
+                            shaking can be scheduled, and the
+                            infection solution can be prepared. From the day of sterilization, the infection and
+                            phenotype observation should be
+                            conducted about one month later.</p>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Collection Section -->
+    <section class="collection" style="background-color: rgba(30, 30, 30);">
+        <div class="partners">
+            <img class="partners__image"
+                src="https://static.igem.wiki/teams/5218/image/static/images/sponsor/all.png" />
+        </div>
+
+        <div class="contacts">
+            <p class="contacts__description">Address: BGI Center, No. 9 Yunhua Road, Yantian District,
+                Shenzhen, 518083,
+                China</p>
+            <p class="contacts__description">Phone: +86 13101793873 (Weekdays: 8:00-17:00 Weekends: Closed)
+                E-mail:
+                chenlichuan@genomics.cn</p>
+        </div>
+
+        <div class="copyright">
+            <p class="copyright__text">
+                ©2024 Content on this site is licensed under a
+                <a class="copyright__link" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons
+                    Attribution 4.0 International license</a>
+            </p>
+            <p class="copyright__text">
+                The repository used to create this website is available at
+                <a class="copyright__link" href="">gitlab.igem.org/2024/bgi-mammothedu-south</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- JavaScript -->
+
+    <!-- Loader -->
+    <script>
+        // Remove the preloader when the page is fully loaded
+        window.onload = function () {
+            const preloader = document.getElementById('preloader');
+            preloader.style.opacity = '0'; // Start fading out the preloader
+            setTimeout(() => {
+                preloader.style.display = 'none'; // Hide the preloader completely
+            }, 500); // Wait for the fade-out to complete
+        };
+    </script>
+
+    <!-- Image slider -->
+    <script>
+        let currentSlide = 0;
+        const slides = [
+            "linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0)), url('https://static.igem.wiki/teams/5218/image/static/images/measurement/1.jpg')",
+            "linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0)), url('https://static.igem.wiki/teams/5218/image/static/images/measurement/2.jpg')",
+            "linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0)), url('https://static.igem.wiki/teams/5218/image/static/images/measurement/3.jpg')"
+        ];
+        const dots = document.querySelectorAll('.carousel-nav span');
+        const introSection = document.getElementById('intro-section');
+
+        function showSlide(index) {
+            dots[currentSlide].classList.remove('active');
+            currentSlide = index;
+            introSection.style.backgroundImage = slides[currentSlide]; // Apply the gradient and image
+            dots[currentSlide].classList.add('active');
+        }
+
+        // Make sure the first slide is loaded when the page loads
+        document.addEventListener('DOMContentLoaded', function () {
+            // Preload images
+            slides.forEach(function (slide) {
+                const img = new Image();
+                img.src = slide.match(/url\('(.*)'\)/)[1]; // Extract the URL from the background-image
+            });
+
+            showSlide(0); // Show the first slide immediately after preloading starts
+        });
+
+        setInterval(() => {
+            const nextSlide = (currentSlide + 1) % slides.length;
+            showSlide(nextSlide);
+        }, 2000); // Change every 2 seconds
+    </script>
+
+    <!-- ToC -->
+    <script>
+        // Smooth scroll when clicking ToC links
+        document.querySelectorAll('.toc a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+    <!-- Header -->
+    <script src="./static/js/header.js"></script>
+
+</body>
+
+</html>

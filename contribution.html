@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="https://static.igem.wiki/teams/5218/image/static/images/logo.png" />
+    <title>PetalGlow</title>
+    <!-- Reset and Custom Stylesheets -->
+    <link rel="stylesheet" href="./static/css/reset.css">
+    <link rel="stylesheet" href="./static/css/main.css">
+    <link rel="stylesheet" href="./static/css/header.css">
+    <link rel="stylesheet" href="./static/css/notebook.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header class="navbar">
+        <!-- Logo -->
+        <a class="navbar__logo" href="https://2024.igem.wiki/bgi-mammothedu-south/">
+            <img class="navbar__logo-icon" src="https://static.igem.wiki/teams/5218/image/static/images/logo.png"
+                width="80" alt="PetalGlow Logo" />
+            <div class="navbar__logo-text">
+                <div class="navbar__title" href="https://2024.igem.wiki/bgi-mammothedu-south/">Petalglow</div>
+                <div class="navbar__subtitle" href="roster.html">BGI-MammothEdu-South</div>
+            </div>
+        </a>
+
+        <!-- Toggle for mobile menu -->
+        <input type="checkbox" id="menu-toggle" class="navbar__checkbox" />
+        <label for="menu-toggle" class="navbar__toggle-btn">☰</label>
+
+        <!-- Navigation Menu -->
+        <nav class="navbar__menu">
+            <!-- Home Link （Retrun to Home page） -->
+            <a href="https://2024.igem.wiki/bgi-mammothedu-south/" class="navbar__menu-item">Home</a>
+
+            <!-- Project Dropdown -->
+            <div class="navbar__menu-item-dropdown">
+                <a href="#" class="navbar__menu-item">Project</a>
+                <div class="navbar__submenu">
+                    <a href="./description.html" class="navbar__submenu-item">Description</a>
+                    <a href="./engineering.html" class="navbar__submenu-item">Engineering</a>
+                    <a href="./results" class="navbar__submenu-item">Results</a>
+                    <a href="./results#plant" class="navbar__submenu-item">Plant</a>
+                    <a href="./implementation" class="navbar__submenu-item">Implementation</a>
+                    <a href="./contribution" class="navbar__submenu-item">Contribution</a>
+                </div>
+            </div>
+
+            <!-- Wet Lab Dropdown -->
+            <div class="navbar__menu-item-dropdown">
+                <a href="#" class="navbar__menu-item">Wet Lab</a>
+                <div class="navbar__submenu">
+                    <a href="./parts.html" class="navbar__submenu-item">Parts</a>
+                    <a href="./experiments" class="navbar__submenu-item">Experiments</a>
+                    <a href="./notebook.html" class="navbar__submenu-item">Notebook</a>
+                    <a href="./protocal" class="navbar__submenu-item">Protocal</a>
+                    <a href="./safety" class="navbar__submenu-item">Safety</a>
+                </div>
+            </div>
+
+            <!-- Dry Lab Dropdown -->
+            <div class="navbar__menu-item-dropdown">
+                <a href="#" class="navbar__menu-item">Dry Lab</a>
+                <div class="navbar__submenu">
+                    <a href="./model" class="navbar__submenu-item">Model</a>
+                    <a href="./measurement" class="navbar__submenu-item">Measurement</a>
+                </div>
+            </div>
+
+            <!-- Out Reach Dropdown -->
+            <div class="navbar__menu-item-dropdown">
+                <a href="#" class="navbar__menu-item">Out Reach</a>
+                <div class="navbar__submenu">
+                    <a href="./human-practices.html" class="navbar__submenu-item">Human Practices</a>
+                    <a href="./education" class="navbar__submenu-item">Education</a>
+                    <a href="./entrepreneurship" class="navbar__submenu-item">Entrepreneurship</a>
+                    <a href="./inclusivity" class="navbar__submenu-item">Inclusivity</a>
+                </div>
+            </div>
+
+            <!-- Team Dropdown -->
+            <div class="navbar__menu-item-dropdown">
+                <a href="#" class="navbar__menu-item">Team</a>
+                <div class="navbar__submenu">
+                    <a href="./roster.html" class="navbar__submenu-item">Roster</a>
+                    <a href="./attributions.html" class="navbar__submenu-item">Attribution</a>
+                    <a href="./partnership.html" class="navbar__submenu-item">Partnership</a>
+                    <a href="./highlights.html" class="navbar__submenu-item">Highlights</a>
+                    <a href="#" class="navbar__submenu-item">Medals</a>
+                </div>
+            </div>
+
+            <!-- Close Button for mobile menu -->
+            <label for="menu-toggle" class="navbar__close-btn">✖</label>
+        </nav>
+    </header>
+
+    <!-- Preloader Section -->
+    <div id="preloader">
+        <div class="spinner"></div>
+        <p>cooking...</p>
+    </div>
+
+    <section class="intro-section" id="intro-section">
+        <!-- Navigation Dots for Carousel -->
+        <div class="carousel-nav">
+            <span class="active" onclick="showSlide(0)"></span>
+            <span onclick="showSlide(1)"></span>
+            <span onclick="showSlide(2)"></span>
+        </div>
+
+        <div class="intro-background">
+            <h1>Contribution</h1>
+        </div>
+    </section>
+
+    <!-- Main Section with Content and TOC -->
+    <section class="description-page">
+        <!-- Background Image for Content Section -->
+        <div class="content-background">
+            <!-- Table of Contents (Left Side) -->
+            <nav class="toc">
+                <ul>
+                    <li><a href="#overview">&#127849 Overview</a></li>
+                    <li><a href="#societalimpact">&#127849 Influences</a></li>
+                </ul>
+            </nav>
+
+            <!-- Content Sections (Right Side) -->
+            <div class="content" style="margin-top: -110px;">
+                <section id="overview">
+                    <h3>Overview</h3>
+                    <div style="text-align: left;">
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Overview of Synthetic Biology and Its Significance</b>
+                            </p>
+                        </div>
+                        <p>Synthetic biology involves creating biological systems from basic life elements, using
+                            engineering principles to design
+                            organisms with specific functions. By combining biology, genetic engineering, and
+                            engineering principles, researchers
+                            construct systems that function like circuits. Bioluminescence, especially from organisms
+                            like fireflies or fungi,
+                            offers useful biological components for creating synthetic systems. These systems have
+                            applications in environmental
+                            monitoring, scientific research, and creating bioluminescent plants. The introduction of
+                            foreign genes into plants
+                            enables them to glow, demonstrating the practical applications of synthetic biology.</p>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Our Project: Bioluminescent Pet Plants</b>
+                            </p>
+                        </div>
+                        <p>Our project focuses on creating bioluminescent plants that not only serve as emotional
+                            therapy tools but also act as
+                            environmental sensors. By integrating fungal bioluminescence pathways with optimized plant
+                            pathways, we significantly
+                            improved the plants' ability to emit light. We also introduced a formaldehyde-sensing system
+                            that triggers increased
+                            bioluminescence when formaldehyde levels rise. These plants are designed to be visible in
+                            the dark, providing
+                            therapeutic effects while also acting as biosensors for pollutants.</p>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Key Innovations and Contributions</b>
+                            </p>
+                        </div>
+                        <p>1. Enhanced Bioluminescent Pathway:</p>
+                        <ul style="list-style-type: disc;">
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem); ">TAL and C3H Genes: By introducing TAL
+                                (Tyrosine Ammonia-Lyase) and C3H (Cinnamate-4-Hydroxylase) genes, we improved
+                                caffeic acid biosynthesis, a key precursor in the bioluminescence pathway. This
+                                significantly increased the brightness
+                                of the plant's glow.
+                            </li>
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem); ">Codon Optimization: To ensure the
+                                efficient expression of these genes in plants, we performed codon optimization of,
+                                increasing the expression levels of key enzymes involved in the bioluminescent pathway.
+                            </li>
+                        </ul>
+                        <p></p>
+                        <p>2. Formaldehyde Response System:</p>
+                        <ul style="list-style-type: disc;">
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem); ">Formaldehyde Sensor: We incorporated
+                                formaldehyde-responsive elements that activate when exposed to elevated levels of
+                                formaldehyde, triggering increased production of caffeic acid. This results in enhanced
+                                bioluminescence, transforming
+                                the plant into a living sensor for harmful environmental pollutants.
+                            </li>
+                        </ul>
+                        <p></p>
+                        <p>3. Innovative Experimental Methods:</p>
+                        <ul style="list-style-type: disc;">
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem); ">Transient Transformation System:
+                                Using a transient transformation system, we tested the functionality of various
+                                genetic constructs in tobacco seedlings, allowing us to quickly validate the key
+                                catalytic enzymes involved in the
+                                bioluminescent and caffeic acid synthesis pathways. This method significantly shortened
+                                experimental cycles.
+                            </li>
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem); ">Molecular Biology Tools: We applied
+                                advanced molecular biology tools to rapidly characterize the function of enzymes
+                                involved in the synthetic pathway, providing new methods for characterizing metabolic
+                                functions in synthetic biology.
+                            </li>
+                        </ul>
+                        <p></p>
+                        <p>4. Gene Expression Optimization:</p>
+                        <ul style="list-style-type: disc;">
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem); ">We used transient expression of TAL
+                                and C3H to successfully increase the concentration of caffeic acid in the plant's
+                                metabolic pathway. This strategy represents a novel application in synthetic biology,
+                                enhancing natural bioluminescence
+                                mechanisms and laying the groundwork for future biotechnological applications.
+                            </li>
+                        </ul>
+                        <p></p>
+                        <p>5. Detailed Experimental Protocol and Tool Sharing:</p>
+                        <ul style="list-style-type: disc;">
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem); ">Experimental Protocol: We
+                                meticulously documented our entire experimental process and created an experimental
+                                manual
+                                to help future iGEM teams and researchers replicate or build on our work. This manual is
+                                openly accessible and provides
+                                step-by-step instructions for constructing bioluminescent plants.
+                            </li>
+                            <p>English Version:</p>
+                            <p>
+                                <object id="pdf" type="application/pdf"
+                                    data="https://static.igem.wiki/teams/5218/image/static/images/contribution/experiments-for-protocol-wiki-en.pdf"
+                                    class="pdf">
+                                    <a
+                                        href="https://static.igem.wiki/teams/5218/image/static/images/contribution/experiments-for-protocol-wiki-en.pdf"></a>
+                                    <a
+                                        href="https://static.igem.wiki/teams/5218/image/static/images/contribution/experiments-for-protocol-wiki-en.pdf">https://static.igem.wiki/teams/5218/image/static/images/contribution/experiments-for-protocol-wiki-en.pdf</a>
+                                </object>
+                                <!-- Fullscreen Button -->
+                                <!-- <button onclick="toggleFullScreen()">
+                                    <p>Toggle Fullscreen</p>
+                                </button> -->
+                            </p>
+                            <p>Chinese Version:</p>
+                            <p>
+                                <object id="pdf" type="application/pdf"
+                                    data="https://static.igem.wiki/teams/5218/image/static/images/contribution/experiments-for-protocol-wiki-cn.pdf"
+                                    class="pdf">
+                                    <a
+                                        href="https://static.igem.wiki/teams/5218/image/static/images/contribution/experiments-for-protocol-wiki-cn.pdf"></a>
+                                    <a
+                                        href="https://static.igem.wiki/teams/5218/image/static/images/contribution/experiments-for-protocol-wiki-cn.pdf">https://static.igem.wiki/teams/5218/image/static/images/contribution/experiments-for-protocol-wiki-cn.pdf</a>
+                                </object>
+                                <!-- Fullscreen Button -->
+                                <!-- <button onclick="toggleFullScreen()">
+                                    <p>Toggle Fullscreen</p>
+                                </button> -->
+                            </p>
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem); ">Quantitative Tools: We used tools
+                                like ImageJ for quantitative analysis of bioluminescence, measuring grayscale values
+                                to objectively assess luminescence intensity. This standardized method ensures
+                                reproducibility and provides a reliable
+                                way to compare results across different experiments.
+                            </li>
+                        </ul>
+                        <p></p>
+                        <p>6. Component and Biological System Improvements:</p>
+                        <ul style="list-style-type: disc;">
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem); ">Enhanced Caffeic Acid Pathway: By
+                                overexpressing genes related to caffeic acid production, we optimized the overall
+                                bioluminescence of the plant. This offers a new approach for optimizing other biological
+                                systems within synthetic
+                                biology.
+                            </li>
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem); ">Environmental Sensing Module: Our
+                                integration of a formaldehyde-responsive module not only enhances the plant's
+                                bioluminescent function but also contributes to synthetic biology by providing a new
+                                environmental monitoring tool.
+                            </li>
+                        </ul>
+                        <p></p>
+                    </div>
+                </section>
+
+                <section id="societalimpact">
+                    <h3>Societal Impact</h3>
+                    <div style="text-align: left;">
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Cross-Disciplinary Applications and Humanistic Benefits</b>
+                            </p>
+                        </div>
+                        <ul style="list-style-type: disc;">
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem); ">Horticultural Therapy and
+                                Bioluminescence: Our bioluminescent plants are designed to improve mental health by
+                                combining the calming effects of light with the therapeutic potential of horticulture.
+                                These plants offer a form of
+                                natural dark therapy, helping alleviate stress, anxiety, and potentially even
+                                depression.
+                            </li>
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem); ">Bioluminescent Environmental Sensors:
+                                By integrating formaldehyde-responsive elements, our plants can serve as
+                                biosensors for pollutants like formaldehyde, providing a visual indication of toxic
+                                environments. This represents a
+                                significant step toward the application of synthetic biology in environmental science.
+                            </li>
+                        </ul>
+                        <p></p>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Educational Impact and Community Engagement</b>
+                            </p>
+                        </div>
+                        <ul style="list-style-type: disc;">
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem); ">Outreach and Education: Through
+                                community and school outreach, we are raising awareness about the potential of
+                                synthetic biology and its applications. We aim to educate the public not only about
+                                bioluminescence but also about
+                                mental health and the potential therapeutic benefits of integrating biotechnologies with
+                                traditional wellness practices.
+                            </li>
+                        </ul>
+                        <p></p>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Ethical and Biosafety Considerations</b>
+                            </p>
+                        </div>
+                        <ul style="list-style-type: disc;">
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem); ">Biosafety and Ethical Guidelines:
+                                Throughout the project, we adhered to strict biosafety standards, ensuring the
+                                responsible development and application of genetically modified plants. We considered
+                                the environmental impact, making
+                                sure that the modified plants do not pose risks to ecosystems.
+                            </li>
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem); ">Ethical Responsibility in Synthetic
+                                Biology: We take responsibility for evaluating the potential societal impacts of
+                                our project, ensuring that it aligns with ethical principles and contributes positively
+                                to both science and society.
+                            </li>
+                        </ul>
+                        <p></p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collection Section -->
+    <section class="collection" style="background-color: rgba(30, 30, 30);">
+        <div class="partners">
+            <img class="partners__image"
+                src="https://static.igem.wiki/teams/5218/image/static/images/sponsor/all.png" />
+        </div>
+
+        <div class="contacts">
+            <p class="contacts__description">Address: BGI Center, No. 9 Yunhua Road, Yantian District,
+                Shenzhen, 518083,
+                China</p>
+            <p class="contacts__description">Phone: +86 13101793873 (Weekdays: 8:00-17:00 Weekends: Closed)
+                E-mail:
+                chenlichuan@genomics.cn</p>
+        </div>
+
+        <div class="copyright">
+            <p class="copyright__text">
+                ©2024 Content on this site is licensed under a Creative Commons
+                <a class="copyright__link" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons
+                    Attribution 4.0 International license</a>
+            </p>
+            <p class="copyright__text">
+                The repository used to create this website is available at
+                <a class="copyright__link" href="">gitlab.igem.org/2024/bgi-mammothedu-south</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- JavaScript -->
+
+    <!-- Loader -->
+    <script>
+        // Remove the preloader when the page is fully loaded
+        window.onload = function () {
+            const preloader = document.getElementById('preloader');
+            preloader.style.opacity = '0'; // Start fading out the preloader
+            setTimeout(() => {
+                preloader.style.display = 'none'; // Hide the preloader completely
+            }, 500); // Wait for the fade-out to complete
+        };
+    </script>
+
+    <!-- Image slider -->
+    <script>
+        let currentSlide = 0;
+        const slides = [
+            "linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0)), url('https://static.igem.wiki/teams/5218/image/static/images/contribution/c1.jpg')",
+            "linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0)), url('https://static.igem.wiki/teams/5218/image/static/images/contribution/c2.jpg')",
+            "linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0)), url('https://static.igem.wiki/teams/5218/image/static/images/contribution/3.jpg')"
+        ];
+        const dots = document.querySelectorAll('.carousel-nav span');
+        const introSection = document.getElementById('intro-section');
+
+        function showSlide(index) {
+            dots[currentSlide].classList.remove('active');
+            currentSlide = index;
+            introSection.style.backgroundImage = slides[currentSlide]; // Apply the gradient and image
+            dots[currentSlide].classList.add('active');
+        }
+
+        // Make sure the first slide is loaded when the page loads
+        document.addEventListener('DOMContentLoaded', function () {
+            // Preload images
+            slides.forEach(function (slide) {
+                const img = new Image();
+                img.src = slide.match(/url\('(.*)'\)/)[1]; // Extract the URL from the background-image
+            });
+
+            showSlide(0); // Show the first slide immediately after preloading starts
+        });
+
+        setInterval(() => {
+            const nextSlide = (currentSlide + 1) % slides.length;
+            showSlide(nextSlide);
+        }, 2000); // Change every 2 seconds
+    </script>
+
+    <!-- pdf -->
+    <script>
+        function toggleFullScreen() {
+            var elem = document.getElementById("pdf");
+
+            if (!document.fullscreenElement) {
+                if (elem.requestFullscreen) {
+                    elem.requestFullscreen();
+                } else if (elem.mozRequestFullScreen) { // Firefox
+                    elem.mozRequestFullScreen();
+                } else if (elem.webkitRequestFullscreen) { // Chrome, Safari and Opera
+                    elem.webkitRequestFullscreen();
+                } else if (elem.msRequestFullscreen) { // IE/Edge
+                    elem.msRequestFullscreen();
+                }
+            } else {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                } else if (document.mozCancelFullScreen) { // Firefox
+                    document.mozCancelFullScreen();
+                } else if (document.webkitExitFullscreen) { // Chrome, Safari and Opera
+                    document.webkitExitFullscreen();
+                } else if (document.msExitFullscreen) { // IE/Edge
+                    document.msExitFullscreen();
+                }
+            }
+        }
+    </script>
+
+    <!-- Header -->
+    <script src="./static/js/header.js"></script>
+
+</body>
+
+</html>

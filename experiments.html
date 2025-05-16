@@ -1,0 +1,1289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="https://static.igem.wiki/teams/5218/image/static/images/logo.png" />
+    <title>PetalGlow</title>
+    <!-- Reset and Custom Stylesheets -->
+    <link rel="stylesheet" href="./static/css/reset.css">
+    <link rel="stylesheet" href="./static/css/main.css">
+    <link rel="stylesheet" href="./static/css/header.css">
+    <link rel="stylesheet" href="./static/css/notebook.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header class="navbar">
+        <!-- Logo -->
+        <a class="navbar__logo" href="https://2024.igem.wiki/bgi-mammothedu-south/">
+            <img class="navbar__logo-icon" src="https://static.igem.wiki/teams/5218/image/static/images/logo.png"
+                width="80" alt="PetalGlow Logo" />
+            <div class="navbar__logo-text">
+                <div class="navbar__title" href="https://2024.igem.wiki/bgi-mammothedu-south/">Petalglow</div>
+                <div class="navbar__subtitle" href="roster.html">BGI-MammothEdu-South</div>
+            </div>
+        </a>
+
+        <!-- Toggle for mobile menu -->
+        <input type="checkbox" id="menu-toggle" class="navbar__checkbox" />
+        <label for="menu-toggle" class="navbar__toggle-btn">☰</label>
+
+        <!-- Navigation Menu -->
+        <nav class="navbar__menu">
+            <!-- Home Link （Retrun to Home page） -->
+            <a href="https://2024.igem.wiki/bgi-mammothedu-south/" class="navbar__menu-item">Home</a>
+
+            <!-- Project Dropdown -->
+            <div class="navbar__menu-item-dropdown">
+                <a href="#" class="navbar__menu-item">Project</a>
+                <div class="navbar__submenu">
+                    <a href="./description.html" class="navbar__submenu-item">Description</a>
+                    <a href="./engineering.html" class="navbar__submenu-item">Engineering</a>
+                    <a href="./results" class="navbar__submenu-item">Results</a>
+                    <a href="./results#plant" class="navbar__submenu-item">Plant</a>
+                    <a href="./implementation" class="navbar__submenu-item">Implementation</a>
+                    <a href="./contribution" class="navbar__submenu-item">Contribution</a>
+                </div>
+            </div>
+
+            <!-- Wet Lab Dropdown -->
+            <div class="navbar__menu-item-dropdown">
+                <a href="#" class="navbar__menu-item">Wet Lab</a>
+                <div class="navbar__submenu">
+                    <a href="./parts.html" class="navbar__submenu-item">Parts</a>
+                    <a href="./experiments" class="navbar__submenu-item">Experiments</a>
+                    <a href="./notebook.html" class="navbar__submenu-item">Notebook</a>
+                    <a href="./protocal" class="navbar__submenu-item">Protocal</a>
+                    <a href="./safety" class="navbar__submenu-item">Safety</a>
+                </div>
+            </div>
+
+            <!-- Dry Lab Dropdown -->
+            <div class="navbar__menu-item-dropdown">
+                <a href="#" class="navbar__menu-item">Dry Lab</a>
+                <div class="navbar__submenu">
+                    <a href="./model" class="navbar__submenu-item">Model</a>
+                    <a href="./measurement" class="navbar__submenu-item">Measurement</a>
+                </div>
+            </div>
+
+            <!-- Out Reach Dropdown -->
+            <div class="navbar__menu-item-dropdown">
+                <a href="#" class="navbar__menu-item">Out Reach</a>
+                <div class="navbar__submenu">
+                    <a href="./human-practices.html" class="navbar__submenu-item">Human Practices</a>
+                    <a href="./education" class="navbar__submenu-item">Education</a>
+                    <a href="./entrepreneurship" class="navbar__submenu-item">Entrepreneurship</a>
+                    <a href="./inclusivity" class="navbar__submenu-item">Inclusivity</a>
+                </div>
+            </div>
+
+            <!-- Team Dropdown -->
+            <div class="navbar__menu-item-dropdown">
+                <a href="#" class="navbar__menu-item">Team</a>
+                <div class="navbar__submenu">
+                    <a href="./roster.html" class="navbar__submenu-item">Roster</a>
+                    <a href="./attributions.html" class="navbar__submenu-item">Attribution</a>
+                    <a href="./partnership.html" class="navbar__submenu-item">Partnership</a>
+                    <a href="./highlights.html" class="navbar__submenu-item">Highlights</a>
+                    <a href="#" class="navbar__submenu-item">Medals</a>
+                </div>
+            </div>
+
+            <!-- Close Button for mobile menu -->
+            <label for="menu-toggle" class="navbar__close-btn">✖</label>
+        </nav>
+    </header>
+
+    <!-- Preloader Section -->
+    <div id="preloader">
+        <div class="spinner"></div>
+        <p>cooking...</p>
+    </div>
+
+    <section class="intro-section" id="intro-section">
+        <!-- Navigation Dots for Carousel -->
+        <div class="carousel-nav">
+            <span class="active" onclick="showSlide(0)"></span>
+            <span onclick="showSlide(1)"></span>
+            <span onclick="showSlide(2)"></span>
+        </div>
+
+        <div class="intro-background">
+            <h1>Experiments</h1>
+        </div>
+    </section>
+
+    <!-- Main Section with Content and TOC -->
+    <section class="description-page">
+        <!-- Background Image for Content Section -->
+        <div class="content-background">
+            <!-- Table of Contents (Left Side) -->
+            <nav class="toc">
+                <ul>
+                    <li><a href="#overview">&#127849Overview</a></li>
+                    <li><a href="#composite">&#127849Composite part</a></li>
+                    <li><a href="#improve">&#127849Improvement</a></li>
+                    <li><a href="#reponse">&#127849Promotor regulation</a></li>
+                    <li><a href="#module">&#127849Module</a></li>
+                </ul>
+            </nav>
+
+            <!-- Content Sections (Right Side) -->
+            <div class="content" style="margin-top: -310px;">
+                <section id="overview">
+                    <h3></h3>
+                    <h3>Overview</h3>
+                    <div style="text-align: left;">
+                        <p>Between June 30, 2024, and August 26, 2024, our wet lab team successfully assembled 13
+                            expression vectors and created
+                            new composite expression elements. Each recombinant vector included basic regulatory
+                            sequences, CDS sequences, and
+                            fused reporter genes. Using Agrobacterium-mediated transient transformation of tobacco
+                            leaves, we successfully
+                            validated that the TAL and C3H genes can enhance luminescence, while the promoters GRF3,
+                            GS1, and MDH1 can regulate
+                            the response to formaldehyde. Additionally, the constructed pGRF3-RtTAL and pGRF3-AtC3H
+                            modules also successfully
+                            responded to formaldehyde signals.</p>
+                        <p>The following diagram presents the complete workflow and timeline of our experiment. This
+                            workflow clearly outlines the
+                            time schedule and procedural details for each experimental step, helping us to
+                            systematically advance the project. For
+                            more detailed experimental data and analysis results you can find <a class="link"
+                                href="https://2024.igem.wiki/bgi-mammothedu-south/results">here</a> in Resutls section.
+                        </p>
+                        <p>Experiments Workflow:</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/engineering/111.png"
+                                alt="s6">
+                        </figure>
+                        <p>Experiments Timeline:</p>
+                        <p>
+                            <object id="pdf" type="application/pdf"
+                                data="https://static.igem.wiki/teams/5218/image/static/images/contribution/timeline.pdf"
+                                class="pdf">
+                                <a
+                                    href="https://static.igem.wiki/teams/5218/image/static/images/contribution/timeline.pdf"></a>
+                                <a
+                                    href="https://static.igem.wiki/teams/5218/image/static/images/contribution/timeline.pdf">https://static.igem.wiki/teams/5218/image/static/images/contribution/timeline.pdf</a>
+                            </object>
+                        </p>
+                    </div>
+                </section>
+
+                <section id="composite">
+                    <h3></h3>
+                    <h3>Composite Parts Construction</h3>
+                    <div style="text-align: left;">
+                        <p>In three rounds of DBTL (Design-Build-Test-Learn), we successfully constructed 13 expression
+                            vectors. Each recombinant
+                            vector contains basic regulatory sequences, CDS sequences, and fused reporter genes. The
+                            target gene sequences were
+                            amplified using PCR cloning and the successful amplification was confirmed by agarose gel
+                            electrophoresis, showing bands
+                            of expected sizes. Using seamless cloning (or homologous recombination), these sequences
+                            were then inserted into the
+                            desired positions of the main vector, followed by transformation into E. coli TOP10 cells.
+                            Single colonies were picked
+                            for shaking culture, colony PCR, and agarose gel electrophoresis verification. The correct
+                            single colony transformants
+                            were confirmed by DNA sequencing.</p>
+                        <p>The correct single colony transformants were then subjected to shaking culture, plasmid
+                            extraction, and transformation
+                            into competent Agrobacterium GV3101 cells. Single colonies were picked for shaking culture,
+                            colony PCR, and agarose gel
+                            electrophoresis verification to confirm the correct Agrobacterium single colony
+                            transformants, which were then stored in
+                            glycerol stock (culture: 50% sterile glycerol = 1:1, mixed and stored at -80°C).</p>
+                        <p>The complete experimental SOP can be referenced <a class="link"
+                                href="https://2024.igem.wiki/bgi-mammothedu-south/protocal">here</a>!</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/results/4.png" alt="s6">
+                            <figcaption>
+                                <p>Figure 1. Maps of the 13 successfully constructed expression vectors.</p>
+                            </figcaption>
+                        </figure>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">pS1300-GFP (pCAMBIA1300 backbone) vector backbone</b>
+                            </p>
+                        </div>
+                        <p>In this project, the vector backbone for the insertion of the target gene CDS is the modified
+                            pS1300-GFP, based on the
+                            pCAMBIA1300 backbone. The insertion site is located in the multiple cloning site (MCS)
+                            between the Super promoter and
+                            GFP, specifically between Hind III and Kpn I (indicated by the green arrow in Figure 2A).
+                        </p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/results/5.png" alt="s6">
+                            <figcaption>
+                                <p>Figure 2. Schematic diagram of the pS1300-GFP (pCAMBIA1300 backbone) vector backbone.
+                                </p>
+                                <p>A: Schematic of the pS1300-GFP
+                                    vector backbone, with the green arrow indicating the insertion site for the target
+                                    gene.</p>
+                                <p>B: Expanded view of the vector
+                                    sequence at the green arrow in A, showing the homologous arm junction sequences. The
+                                    overhang of HA-F includes an added
+                                    BamH I site, which is prepared for subsequent replacement of the Super promoter
+                                    sequence.</p>
+                            </figcaption>
+                        </figure>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">pS1300-GUS (pCAMBIA1300 backbone) vector backbone</b>
+                            </p>
+                        </div>
+                        <p>The vector backbone used for the target gene promoter in this project is pS1300-GUS, an
+                            improved version based on the
+                            pCAMBIA1300 backbone. The insertion site replaces the Super promoter sequence between the
+                            BamH I sites on both ends
+                            (indicated by the blue arrow in Figure 3A).</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/results/13.png" alt="s6">
+                            <figcaption>
+                                <p>Figure 3: Schematic Diagram of the pS1300-GUS (pCAMBIA1300 backbone) Vector Backbone
+                                </p>
+                                <p>A: Schematic of the pS1300-GUS vector backbone, with the blue arrow indicating the
+                                    insertion site for the target
+                                    gene.</p>
+                                <p>B and C: Expanded schematic of the vector sequence at the green arrows in A, showing
+                                    the homologous arm linker
+                                    sequences.</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                <section id="improve">
+                    <h3>Transient Expression of RtTAL and AtC3H to Enhance Self-Luminescence Intensity</h3>
+                    <div style="text-align: left;">
+                        <p>We completed the construction of 8 vectors: pS1300-RtTAL-GFP (<a class="link"
+                                href="http://parts.igem.org/Part:BBa_K5218006">BBa_K5218006</a>), pS1300-RcTAL-GFP
+                            (<a class="link" href="http://parts.igem.org/Part:BBa_K5218004">BBa_K5218004</a>),
+                            pS1300-NoRtTAL-GFP (<a class="link"
+                                href="http://parts.igem.org/Part:BBa_K5218026">BBa_K5218026</a>), pS1300-AtC3H-GFP
+                            (<a class="link" href="http://parts.igem.org/Part:BBa_K5218003">BBa_K5218003</a>),
+                            pS1300-PpC3H-GFP
+                            (<a class="link" href="http://parts.igem.org/Part:BBa_K5218008">BBa_K5218008</a>),
+                            pS1300-NtC3H-GFP (<a class="link"
+                                href="http://parts.igem.org/Part:BBa_K5218012">BBa_K5218012</a>), pS1300-SlC3H-GFP
+                            (<a class="link" href="http://parts.igem.org/Part:BBa_K5218014">BBa_K5218014</a>), and
+                            pS1300-CrC3H-GFP
+                            (<a class="link" href="http://parts.igem.org/Part:BBa_K5218010">BBa_K5218010</a>).
+                            Additionally,
+                            we attempted to clone the C3H genes from other materials, but these were unsuccessful. We
+                            also successfully
+                            constructed pS1300-NtPKS-GFP, which was a deviation from the main project focus and was
+                            attempted without
+                            summarizing related data.</p>
+                        <p>These constructs validated that the target genes TAL and C3H can enhance the
+                            self-luminescence intensity of the
+                            first-generation transgenic tobacco lines FBP-22/FBP-T2. The data shows that RtTAL and AtC3H
+                            achieved the highest
+                            increase in self-luminescence intensity.</p>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">pS1300-RtTAL-GFP vector construction</b>
+                            </p>
+                        </div>
+                        <p>Figure 1 shows the process of amplifying the target gene RtTAL CDS (<a class="link"
+                                href="http://parts.igem.org/Part:BBa_K5218005">BBa_K5218005</a>). Initially,
+                            due to improper handling,
+                            the desired band was not observed in the electrophoresis (Figure 1A). We then performed PCR
+                            cloning again using the
+                            plasmid as a template (Figure 1B). However, due to sample spillage on the floor during gel
+                            loading, the recovered sample
+                            quantity was insufficient. We used the PCR product as a template for cloning again and
+                            obtained a new product (Figure
+                            1C) with a length of 2206 bp. The re-amplified product resulted in non-specific bands, but
+                            we decided to proceed with
+                            direct purification and recovery. The double enzyme digestion of the plasmid GFP was
+                            performed on this sample (with
+                            extended digestion time followed by direct product purification). The recombinant single
+                            colony E. coli verification
+                            showed bands of different sizes. We selected the expected results for sequencing (Figure
+                            1E), and the sequencing results
+                            confirmed successful construction.</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/results/6.png" alt="s6">
+                            <figcaption>
+                                <p>Figure 1: Results of pS1300-RtTAL-GFP vector construction</p>
+                                <p>A: Agarose gel electrophoresis of RtTAL CDS PCR product. M represents the 1kb plus
+                                    DNA marker, lane 1 shows the RtTAL
+                                    CDS PCR product, lane 2 is circular plasmid GFP, lane 3 is linearized plasmid GFP
+                                    double-digested with Hind III and Kpn
+                                    I, and lane 4 is linearized plasmid GUS double-digested with Hind III and Kpn I. The
+                                    product verification failed, as
+                                    indicated in the figure.</p>
+                                <p>B and C: Agarose gel electrophoresis of RtTAL CDS PCR products. M represents the 1kb
+                                    plus DNA marker, lane 1 shows the
+                                    RtTAL CDS PCR product. Amplification was successful, but due to template issues, the
+                                    band morphology varied; therefore,
+                                    the products were pooled for recovery and purification.</p>
+                                <p>D: Single colonies of pS1300-RtTAL-GFP transformants on an LB kanamycin+ plate. The
+                                    recombinant vector was transformed
+                                    into Escherichia coli TOP10, and colony growth appeared normal.</p>
+                                <p>E: PCR validation of monoclonal E. coli cultures. M represents the 1kb plus DNA
+                                    marker, lanes 1-12 show the PCR results
+                                    for 12 tested single colonies. Lanes 6, 8, and 11 exhibit single bands at the
+                                    correct position and were used for
+                                    sequencing.</p>
+                                <p>F: Sequencing results of the target gene RtTAL CDS. Although the sequence was not
+                                    fully completed, it was considered
+                                    correct due to the uniformity of the template.</p>
+                                <p>G: Single colonies of pS1300-RtTAL-GFP transformants on an LB kanamycin+ rifampicin+
+                                    plate. The extracted plasmid was
+                                    transformed into Agrobacterium tumefaciens GV3101, and colony growth appeared
+                                    normal.</p>
+                                <p>H: PCR validation of monoclonal Agrobacterium cultures. M represents the 1kb plus
+                                    DNA marker. Lanes 1-8 show the PCR
+                                    results for eight tested single colonies, all of which show correct band
+                                    positioning.</p>
+                            </figcaption>
+                        </figure>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">pS1300-RcTAL-GFP vector construction</b>
+                            </p>
+                        </div>
+                        <p>Figure 2 shows the successful amplification of the target gene RcTAL CDS (<a class="link"
+                                href="http://parts.igem.org/Part:BBa_K5218001">BBa_K5218001</a>),
+                            with a length of 1657 bp. The
+                            digested GFP product also appears higher than the circular control plasmid (as
+                            linearized plasmids migrate more slowly
+                            than circular plasmids during electrophoresis), indicating successful digestion (Figure
+                            2A). The PCR validation of the
+                            recombinant monoclonal colonies confirms that most of the monoclonal colonies were
+                            successfully constructed, as verified
+                            by PCR and sequencing (Figures 2C and 2D).</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/results/7.png" alt="s6">
+                            <figcaption>
+                                <p>Figure 2: Results of pS1300-RcTAL-GFP vector construction</p>
+                                <p>A: Agarose gel electrophoresis of RcTAL CDS PCR product. M represents the 1kb plus
+                                    DNA marker, lane 1 shows the RcTAL
+                                    CDS PCR product, lane 2 is circular plasmid GFP, and lane 3 is linearized plasmid
+                                    GFP double-digested with Hind III and
+                                    Kpn I. The results indicate successful amplification of RcTAL and successful
+                                    digestion of GFP.</p>
+                                <p>B: Single colonies of pS1300-RcTAL-GFP transformants on LB kanamycin+ plate. The
+                                    recombinant vector was transformed into
+                                    Escherichia coli TOP10, and colony growth appeared normal.</p>
+                                <p>C: PCR validation of monoclonal E. coli cultures. M represents the 1kb plus DNA
+                                    marker, lanes 1-22 show the PCR results
+                                    for 22 tested single colonies. Bright bands with correct positions were observed,
+                                    and randomly selected positive
+                                    monoclonal colonies were used for sequencing.</p>
+                                <p>D: Sequencing results of the target gene RcTAL CDS. The sequence was fully read, and
+                                    the sequencing was successful.</p>
+                                <p>E: Single colonies of pS1300-RcTAL-GFP transformants on LB kanamycin+ rifampicin+
+                                    plate. The extracted plasmid was
+                                    transformed into Agrobacterium tumefaciens GV3101, and colony growth appeared
+                                    normal.</p>
+                                <p>F: PCR validation of monoclonal Agrobacterium cultures. M represents the 1kb plus
+                                    DNA marker, lanes 1-8 show the PCR
+                                    results for eight tested single colonies with correct band positions. Lanes 9 and 10
+                                    show the PCR results for empty
+                                    vector pS1300-GFP, confirming the absence of RcTAL.</p>
+                            </figcaption>
+                        </figure>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">pS1300-NoRtTAL-GFP vector construction</b>
+                            </p>
+                        </div>
+                        <p>Figure 3 shows the successful amplification of the target gene NoRtTAL CDS (<a class="link"
+                                href="http://parts.igem.org/Part:BBa_K5218025">BBa_K5218025</a>),
+                            with a length of 2206 bp. The
+                            GFP digestion product is at the same position as the circular control plasmid, indicating
+                            that an extended digestion
+                            time is required before product purification (Figure 3A). PCR validation of the recombinant
+                            monoclonal colonies confirms
+                            that most of the monoclonal colonies were successfully constructed, as verified by PCR and
+                            sequencing (Figures 3C and
+                            3D).</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/results/8.png" alt="s6">
+                            <figcaption>
+                                <p>Figure 3: Results of pS1300-NoRtTAL-GFP vector construction</p>
+                                <p>A: Agarose gel electrophoresis of NoRtTAL CDS PCR product. M represents the 1kb plus
+                                    DNA marker, lane 1 shows the
+                                    successfully amplified NoRtTAL CDS PCR product, lane 2 is circular plasmid GFP, lane
+                                    3 is linearized plasmid GFP
+                                    double-digested with Hind III and Kpn I, and lane 4 is linearized plasmid GUS
+                                    double-digested with Hind III and Kpn I.</p>
+                                <p>B: Single colonies of pS1300-NoRtTAL-GFP transformants on LB kanamycin+ plate. The
+                                    recombinant vector was transformed
+                                    into Escherichia coli TOP10, and colony growth appeared normal.</p>
+                                <p>C: PCR validation of monoclonal E. coli cultures. M represents the 1kb plus DNA
+                                    marker, lanes 1-23 show the PCR results
+                                    for 23 tested single colonies. Bright bands with correct positions were observed,
+                                    and randomly selected positive
+                                    monoclonal colonies were used for sequencing.</p>
+                                <p>D: Sequencing results of the target gene NoRtTAL CDS. Although the full sequence was
+                                    not obtained, it was considered
+                                    correct due to the uniformity of the template.</p>
+                                <p>E: Single colonies of pS1300-NoRtTAL-GFP transformants on LB kanamycin+ rifampicin+
+                                    plate. The extracted plasmid was
+                                    transformed into Agrobacterium tumefaciens GV3101, and colony growth appeared
+                                    normal.</p>
+                                <p>F: PCR validation of monoclonal Agrobacterium cultures. M represents the 2000bp DNA
+                                    marker, lanes 1-8 show the PCR
+                                    results for eight tested single colonies, all of which show correct band
+                                    positioning.</p>
+                            </figcaption>
+                        </figure>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">pS1300-AtC3H-GFP, pS1300-PpC3H-GFP vector construction</b>
+                            </p>
+                        </div>
+                        <p>Figure 4 shows the successful amplification of the target gene AtC3H CDS (<a class="link"
+                                href="http://parts.igem.org/Part:BBa_K5218002">BBa_K5218002</a>)
+                            through two rounds of PCR.
+                            The first round yielded a product with a length of 1525 bp, and the second round produced a
+                            product with a length of
+                            1536 bp. Similarly, PpC3H CDS (<a class="link"
+                                href="http://parts.igem.org/Part:BBa_K5218007">BBa_K5218007</a>) was
+                            also successfully
+                            amplified in two rounds,
+                            with the first PCR product
+                            measuring 1786 bp and the second 1601 bp (Figures 4A and 4B), resulting in products without
+                            stop codons and with
+                            recombinant overhangs.The PCR validation of monoclonal colonies for the recombinant
+                            pS1300-AtC3H-GFP confirmed
+                            that most of the colonies were
+                            correctly constructed and verified through PCR and sequencing (Figures 4C, 4F, and 4G).
+                            However, when constructing pS1300-PpC3H-GFP, colony PCR validation of the first connection
+                            plates showed no bands
+                            (Figure 4F, lanes 13-21), and multiple attempts to isolate colonies still resulted in no
+                            bands. Seamless cloning was
+                            repeated (Figure 4E), and subsequent colony PCR validation (Figure 4H) showed the expected
+                            bands. Sequencing was
+                            successful (Figure 4I).</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/results/9.png" alt="s6">
+                            <figcaption>
+                                <p>Figure 4: Construction Results of pS1300-AtC3H-GFP and pS1300-PpC3H-GFP Vectors</p>
+                                <p>A: First round of CDS PCR products with termination codons, without recombinant
+                                    overhangs, visualized on agarose gel
+                                    electrophoresis. Lane M: 1 kb plus DNA marker; Lane 1: AtC3H CDS PCR product; Lane
+                                    2: PpC3H CDS PCR product. The
+                                    results confirm successful amplification of AtC3H and PpC3H CDS.</p>
+                                <p>B: Second round of CDS PCR products without termination codons and with recombinant
+                                    overhangs, shown on agarose gel
+                                    electrophoresis. Lane M: 1 kb plus DNA marker; Lane 1: AtC3H CDS PCR product; Lane
+                                    2: PpC3H CDS PCR product. The
+                                    results confirm successful amplification of AtC3H and PpC3H CDS.</p>
+                                <p>C: Single colonies of pS1300-AtC3H-GFP transformants on LB kanamycin+ plate. The
+                                    recombinant vector was transformed
+                                    into E. coli TOP10, and the plate showed normal colony growth.</p>
+                                <p>D and E: Single colonies of pS1300-PpC3H-GFP transformants on LB kanamycin+ plate.
+                                    The recombinant vectors were
+                                    transformed into E. coli TOP10, and both plates showed normal colony growth.</p>
+                                <p>F: Colony PCR validation of pS1300-AtC3H-GFP transformants. Lane M: 1 kb plus DNA
+                                    marker; Lanes 1-12: PCR results of
+                                    12 tested single colonies. Bright single bands at the correct positions indicate the
+                                    correct transformants, which
+                                    were randomly selected and confirmed by sequencing.</p>
+                                <p>G: Sequencing results of the AtC3H CDS gene. The entire sequence was successfully
+                                    obtained, confirming accurate
+                                    sequencing.</p>
+                                <p>H: Colony PCR validation of pS1300-PpC3H-GFP transformants. Lane M: 1 kb plus DNA
+                                    marker; Lanes 1-24: PCR results of
+                                    24 tested single colonies. Bright single bands at the correct positions indicate
+                                    correct transformants, which were
+                                    randomly selected and confirmed by sequencing.</p>
+                                <p>I: Sequencing results of the PpC3H CDS gene. The entire sequence was successfully
+                                    obtained, confirming accurate
+                                    sequencing.</p>
+                                <p>J: Single colonies of pS1300-AtC3H-GFP transformants on LB kanamycin+ rifampicin+
+                                    plate. The extracted plasmid was
+                                    transformed into Agrobacterium GV3101, and the plate showed normal colony growth.
+                                </p>
+                                <p>L: Colony PCR validation of single-clone Agrobacterium carrying pS1300-AtC3H-GFP.
+                                    Lane M: 1 kb plus DNA marker; Lanes
+                                    1-12: PCR results of 12 tested single colonies, showing bands at the correct
+                                    positions.</p>
+                                <p>M: Single colonies of pS1300-PpC3H-GFP transformants on LB kanamycin+ rifampicin+
+                                    plate. The extracted plasmid was
+                                    transformed into Agrobacterium GV3101, and the plate showed normal colony growth.
+                                </p>
+                                <p>K: Colony PCR validation of single-clone Agrobacterium carrying pS1300-PpC3H-GFP.
+                                    Lane M: 1 kb plus DNA marker; Lanes
+                                    1-23: PCR results of 23 tested single colonies, all showing bands at the correct
+                                    positions.</p>
+                            </figcaption>
+                        </figure>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">pS1300-NtC3H-GFP vector construction</b>
+                            </p>
+                        </div>
+                        <p>Figure 5 shows the successful two-round PCR amplification of the target gene NtC3H CDS
+                            (<a class="link" href="http://parts.igem.org/Part:BBa_K5218011">BBa_K5218011</a>). The first
+                            round of PCR produced a product with a length of 1782 bp, and the second round produced a
+                            product with a length of 1536
+                            bp (Figure 5A and Figure 5B), ultimately obtaining a product without a termination codon and
+                            with recombinant overhangs.
+                            PCR validation of the recombinant single colonies confirmed that most of the single colonies
+                            were successfully
+                            constructed, as verified by PCR and sequencing (Figure 5D and Figure 5E).</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/results/10.png" alt="s6">
+                            <figcaption>
+                                <p>Figure 5: Construction Results of pS1300-NtC3H-GFP Vector</p>
+                                <p>A: First round of NtC3H CDS PCR products (with termination codons, without
+                                    recombinant overhangs) on agarose gel
+                                    electrophoresis. M: 1 kb plus DNA marker; 1: successfully amplified NtC3H CDS PCR
+                                    product.</p>
+                                <p>B: Second round of NtC3H CDS PCR products (without termination codons, with
+                                    recombinant overhangs) on agarose gel
+                                    electrophoresis. M: 1 kb plus DNA marker; 1: successfully amplified NtC3H CDS PCR
+                                    product.</p>
+                                <p>C: Single colonies of pS1300-NtC3H-GFP transformants on LB kanamycin+ plate. The
+                                    recombinant vector was transformed
+                                    into E. coli TOP10, showing normal colony growth.</p>
+                                <p>D: Colony PCR validation of single-clone E. coli. M: 1 kb plus DNA marker; lanes
+                                    1-12: PCR results of 12 tested
+                                    single colonies; clear single bands at the correct positions. Correct single clones
+                                    were randomly selected for
+                                    sequencing validation.</p>
+                                <p>E: Sequencing results of the target gene NtC3H CDS. The entire sequence was
+                                    successfully obtained, confirming
+                                    accurate sequencing.</p>
+                                <p>F: Single colonies of pS1300-NtC3H-GFP transformants on LB kanamycin+ rifampicin+
+                                    plate. The extracted plasmid was
+                                    transformed into Agrobacterium GV3101, showing normal colony growth.</p>
+                                <p>G: Colony PCR validation of single-clone Agrobacterium. M: 1 kb plus DNA marker;
+                                    lanes 1-8: bands at the correct
+                                    positions for 8 tested colonies.</p>
+                            </figcaption>
+                        </figure>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">pS1300-SlC3H-GFP vector construction</b>
+                            </p>
+                        </div>
+                        <p>Figure 6 shows the successful two-round PCR amplification of the target gene SlC3H CDS
+                            (<a class="link" href="http://parts.igem.org/Part:BBa_K5218013">BBa_K5218013</a>). The first
+                            round
+                            of PCR produced a product with a length of 1573 bp, and the second round produced a product
+                            with a length of 1545 bp
+                            (Figure 6A and Figure 6B), ultimately obtaining a product without a termination codon and
+                            with recombinant overhangs.
+                            PCR validation of the recombinant single colonies confirmed that most of the single colonies
+                            were successfully
+                            constructed, as verified by PCR and sequencing (Figure 6D and Figure 6E).</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/results/11.png" alt="s6">
+                            <figcaption>
+                                <p>Figure 6: Construction Results of pS1300-SlC3H-GFP Vector</p>
+                                <p>A: First round of SlC3H CDS PCR products (with termination codons, without
+                                    recombinant overhangs) on agarose gel
+                                    electrophoresis. M: 1 kb plus DNA marker; 1: successfully amplified SlC3H CDS PCR
+                                    product.</p>
+                                <p>B: Second round of SlC3H CDS PCR products (without termination codons, with
+                                    recombinant overhangs) on agarose gel
+                                    electrophoresis. M: 1 kb plus DNA marker; 1: successfully amplified SlC3H CDS PCR
+                                    product.</p>
+                                <p>C: Single colonies of pS1300-SlC3H-GFP transformants on LB kanamycin+ plate. The
+                                    recombinant vector was transformed
+                                    into E. coli TOP10, showing normal colony growth.</p>
+                                <p>D: Colony PCR validation of single-clone E. coli. M: 1 kb plus DNA marker; lanes
+                                    1-12: PCR results of 12 tested
+                                    single colonies; clear single bands at the correct positions. Correct single clones
+                                    were randomly selected for
+                                    sequencing validation.</p>
+                                <p>E: Sequencing results of the target gene SlC3H CDS. Sequencing successfully completed
+                                    for several single clones; one
+                                    single clone had a segment deletion and was discarded.</p>
+                                <p>F: Single colonies of pS1300-SlC3H-GFP transformants on LB kanamycin+ rifampicin+
+                                    plate. The correctly sequenced
+                                    plasmid was transformed into Agrobacterium GV3101, showing normal colony growth.</p>
+                                <p>G: Colony PCR validation of single-clone Agrobacterium. M: 2000 bp DNA marker; lanes
+                                    1-8: bands at the correct
+                                    positions for 8 tested colonies.</p>
+                            </figcaption>
+                        </figure>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">pS1300-CrC3H-GFP vector construction</b>
+                            </p>
+                        </div>
+                        <p>Figure 7 shows the successful two-round PCR amplification of the target gene CrC3H CDS
+                            (<a class="link" href="http://parts.igem.org/Part:BBa_K5218009">BBa_K5218009</a>). The first
+                            round
+                            of PCR produced a product with a length of 1688 bp, and the second round produced a product
+                            with a length of 1569 bp
+                            (Figure 7A and Figure 7B), ultimately obtaining a product without a termination codon and
+                            with recombinant overhangs.
+                            PCR validation of the recombinant single colonies confirmed that most of the single colonies
+                            were successfully
+                            constructed, as verified by PCR and sequencing (Figure 7D and Figure 7E).</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/results/12.png" alt="s6">
+                            <figcaption>
+                                <p>Figure 7: Construction Results of pS1300-CrC3H-GFP Vector</p>
+                                <p>A: First round of CrC3H CDS PCR products (with termination codons, without
+                                    recombinant overhangs) on agarose gel
+                                    electrophoresis. M: 1 kb plus DNA marker; 1: circular plasmid GFP; 2: Hind III\Kpn I
+                                    double enzyme digestion linear
+                                    plasmid GFP; 3: CrC3H CDS PCR product. The results indicate successful amplification
+                                    of CrC3H CDS and successful
+                                    digestion of GFP.</p>
+                                <p>B: Second round of CrC3H CDS PCR products (without termination codons, with
+                                    recombinant overhangs) on agarose gel
+                                    electrophoresis. M: 1 kb plus DNA marker; 1 and 2: successfully amplified CrC3H CDS
+                                    PCR products; the CrC3H CDS in
+                                    lane 2 was successfully amplified.</p>
+                                <p>C: Single colonies of pS1300-CrC3H-GFP transformants on LB kanamycin+ plate. The
+                                    recombinant vector was transformed
+                                    into E. coli TOP10, showing normal colony growth.</p>
+                                <p>D: Colony PCR validation of single-clone E. coli. M: 1 kb plus DNA marker; lanes
+                                    1-12: PCR results of 12 tested
+                                    single colonies; clear single bands at the correct positions. Correct single clones
+                                    were randomly selected for
+                                    sequencing validation.</p>
+                                <p>E: Sequencing results of the target gene CrC3H CDS. Sequencing was complete, but with
+                                    some individual base mutations,
+                                    which were considered acceptable due to template variability.</p>
+                                <p>F: Single colonies of pS1300-CrC3H-GFP transformants on LB kanamycin+ rifampicin+
+                                    plate. The correctly sequenced
+                                    plasmid was transformed into Agrobacterium GV3101, showing normal colony growth.</p>
+                                <p>G: Colony PCR validation of single-clone Agrobacterium. M: 5000 bp DNA marker; lanes
+                                    1-16: bands at the correct
+                                    positions for 16 tested colonies.</p>
+                            </figcaption>
+                        </figure>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Functional Validation of the 8 Gene CDS-GFP Vectors</b>
+                            </p>
+                        </div>
+                        <p>Before August 4, 2024, we completed the transient transformation functional validation of the
+                            8 gene CDS-GFP
+                            constructs.</p>
+                        <p>We separately transformed Agrobacterium GV3101 strains with pS1300-GFP and pS1300-gene
+                            CDS-GFP constructs, followed
+                            by transient transformation of tobacco leaves through injection. After 48 hours, transgenic
+                            tobacco leaves were
+                            examined under a fluorescence microscope. The results showed GFP fluorescence signals from
+                            the gene CDS-GFP fusion
+                            proteins in the epidermal cells of tobacco leaves, indicating the successful engineering of
+                            each pS1300-gene CDS-GFP
+                            construct.</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/results/19.png" alt="s6">
+                            <figcaption>
+                                <p>Figure 8: Fluorescence signals of each pS1300-gene CDS-GFP vector in tobacco leaves
+                                </p>
+                                <p>Note: Blank Control is the tobacco line FBP-T2 used as a blank control, while the
+                                    others were injected with
+                                    individual pS1300-gene CDS-GFP vectors.</p>
+                            </figcaption>
+                        </figure>
+                        <p>We observed the phenotypes in a completely dark setting using a DSLR camera (parameters: ISO
+                            6400, aperture F2,
+                            shutter speed 30s). The results showed that the experimental groups transiently expressing
+                            the 8 pS1300-gene CDS-GFP
+                            constructs exhibited higher brightness compared to the Control (only injected vector
+                            pS1300-GFP) and Blank Control,
+                            aligning with our expectations. This preliminary result indicates that the successfully
+                            constructed TAL and C3H
+                            genes can enhance luminescence intensity.</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/results/20.png" alt="s6">
+                            <figcaption>
+                                <p>Figure 9: Self-luminescence signals of each pS1300-gene CDS-GFP vector in tobacco
+                                    leaves</p>
+                                <p>Note: Blank Control is the blank control of the tobacco line FBP-T2, while the others
+                                    were injected with individual
+                                    pS1300-gene CDS-GFP vectors. The left image shows phenotypic observations taken with
+                                    a DSLR camera (ISO 6400,
+                                    aperture F2, shutter speed 30s) under white light and in darkness 48 hours after
+                                    injection. The plants, from left to
+                                    right, are: Blank Control, Control (only injected vector), and pS1300-gene CDS-GFP.
+                                    The table on the right shows the
+                                    luminescence brightness data analyzed by ImageJ grayscale values.</p>
+                            </figcaption>
+                        </figure>
+                        <p>In addition to data comparison and analysis, we also analyzed the variability of the data. As
+                            shown in the figure
+                            below, in the C3H group, AtC3H had a relatively higher peak and shorter length, with a more
+                            concentrated
+                            distribution, indicating the most significant growth in AtC3H. In the TAL group, RtTAL also
+                            showed a relatively
+                            higher peak and shorter length with a dense distribution, demonstrating that RtTAL had the
+                            most growth. This
+                            confirms that the data reflected in the previous figure are generally accurate, and that
+                            AtC3H in the C3H group and
+                            RtTAL in the TAL group are more densely clustered, indicating more stable transformation
+                            repeatability.</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/engineering/160.png"
+                                alt="s6">
+                            <figcaption>
+                                <p>Figure 10: The data in this table are derived from the experimental group minus the
+                                    Control(only injected vector) group</p>
+                                <p>Note: The TAL group was significantly higher than the Control (only injected vector)
+                                    group, with RtTAL showing the
+                                    highest brightness, indicating that the RtTAL gene had the best expression
+                                    performance in tobacco, followed by the
+                                    AtC3H gene. The Box Plot is used to display the central tendency and dispersion of
+                                    the data, where the interquartile
+                                    range (IQR) is represented by the box, the median is indicated by a horizontal line,
+                                    and the arithmetic mean of all
+                                    data points is marked with an "x."</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                <section id="reponse">
+                    <h3>Formaldehyde-Responsive Promoter-GUS Staining Test</h3>
+                    <div style="text-align: left;">
+                        <p>We completed the construction of 3 vectors:
+                            (<a class="link" href="http://parts.igem.org/Part:BBa_K5218018">BBa_K5218018</a>),
+                            (<a class="link" href="http://parts.igem.org/Part:BBa_K5218020">BBa_K5218020</a>), and
+                            (<a class="link" href="http://parts.igem.org/Part:BBa_K5218022">BBa_K5218022</a>).
+                            These constructs validated that the promoters GRF3, GS1, and MDH1 can respond to
+                            formaldehyde signals.
+                        </p>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">p1300-GRF3-GUS vector construction</b>
+                            </p>
+                        </div>
+                        <p>Figure 1 shows the successful amplification of the target gene GRF3 promoter (<a class="link"
+                                href="http://parts.igem.org/Part:BBa_K5218017">BBa_K5218017</a>),
+                            with a length of 1786 bp.
+                            The GUS digestion product appears slightly higher than the circular control plasmid,
+                            indicating successful digestion
+                            (Figure 1A). PCR validation and sequencing of the recombinant single colonies confirmed
+                            successful vector construction
+                            (Figure 1C and Figure 1D). During PCR validation of single colonies after transforming the
+                            recombinant plasmid into
+                            Agrobacterium GV3101, initial attempts failed to produce the expected bands due to
+                            undetected PCR machine malfunctions,
+                            leading to multiple primer changes. Ultimately, only three single colonies could be verified
+                            (Figure 1G, blue box).</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/results/14.png" alt="s6">
+                            <figcaption>
+                                <p>Figure 1: Construction Results of p1300-GRF3-GUS Vector</p>
+                                <p>A: GRF3 pro PCR product on agarose gel electrophoresis. M: 5000 bp DNA marker; 1:
+                                    circular plasmid GUS; 2: BamH I
+                                    digested linear plasmid GUS; 3: GRF3 pro PCR product. The figure shows successful
+                                    amplification of the GRF3 product
+                                    and successful digestion of GUS.</p>
+                                <p>B: Single colonies of p1300-GRF3-GUS transformants on LB kanamycin+ plate. The
+                                    recombinant vector was transformed
+                                    into E. coli TOP10, showing normal colony growth.</p>
+                                <p>C: Colony PCR validation of single-clone E. coli. M: 5000 bp DNA marker; lanes 1-16:
+                                    PCR results of 16 tested single
+                                    colonies; lanes 12 and 13 show clear single bands at the correct positions, which
+                                    were used for sequencing.</p>
+                                <p>D: Sequencing results of the target gene GRF3 pro. Sequencing was fully completed
+                                    successfully.</p>
+                                <p>E: Single colonies of p1300-GRF3-GUS transformants on LB kanamycin+ rifampicin+
+                                    plate. The correctly sequenced
+                                    plasmid was transformed into Agrobacterium GV3101, showing normal colony growth.</p>
+                                <p>F and G: PCR validation of recombinant single-clone Agrobacterium. M: 5000 bp DNA
+                                    marker; lanes 1-8: bands for eight
+                                    single colonies amplified with different primers. Due to a PCR instrument
+                                    malfunction (identified in later
+                                    experiments), only three single colonies were validated using primer GUSP-seq-F/R,
+                                    showing bands at correct
+                                    positions. Additionally, the left side of Figure F shows PCR results of empty vector
+                                    pS1300-GUS.</p>
+                            </figcaption>
+                        </figure>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">p1300-GS1-GUS vector construction</b>
+                            </p>
+                        </div>
+                        <p>Figure 2 shows the successful amplification of the target gene GS1 promoter (<a class="link"
+                                href="http://parts.igem.org/Part:BBa_K5218019">BBa_K5218019</a>),
+                            with a length of 997 bp
+                            (Figure 2A). PCR validation and sequencing of the recombinant single colonies confirmed
+                            successful vector construction
+                            (Figure 2C and Figure 2D). After transforming the recombinant plasmid into Agrobacterium
+                            GV3101, single colony PCR
+                            validation was also successful (Figure 2F).</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/results/15.png" alt="s6">
+                            <figcaption>
+                                <p>Figure 2: Construction Results of p1300-GS1-GUS Vector</p>
+                                <p>A: GS1 pro PCR product on agarose gel electrophoresis. M: 5000 bp DNA marker; 1 and
+                                    2: GS1 pro PCR products; lane 2
+                                    shows the successful amplification of GS1 pro.</p>
+                                <p>B: Single colonies of p1300-GS1-GUS transformants on LB kanamycin+ plate. The
+                                    recombinant vector was transformed into
+                                    E. coli TOP10, showing normal colony growth.</p>
+                                <p>C: Colony PCR validation of single-clone E. coli. M: 5000 bp DNA marker; lanes 1-16:
+                                    PCR results of 16 tested single
+                                    colonies; clear single bands at the correct positions. Correct single clones were
+                                    randomly selected for sequencing
+                                    validation.</p>
+                                <p>D: Sequencing results of the target gene GS1 pro. Sequencing was fully completed
+                                    successfully.</p>
+                                <p>E: Single colonies of p1300-GS1-GUS transformants on LB kanamycin+ rifampicin+ plate.
+                                    The correctly sequenced plasmid
+                                    was transformed into Agrobacterium GV3101, showing normal colony growth.</p>
+                                <p>F: Colony PCR validation of single-clone Agrobacterium. M: 5000 bp DNA marker; lanes
+                                    1-8: bands at the correct
+                                    positions for 8 tested colonies.</p>
+                            </figcaption>
+                        </figure>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">p1300-MDH1-GUS vector construction</b>
+                            </p>
+                        </div>
+                        <p>Figure 3 shows the successful amplification of the target gene MDH1 promoter (<a class="link"
+                                href="http://parts.igem.org/Part:BBa_K5218021">BBa_K5218021</a>),
+                            with a length of 341 bp.
+                            The GUS digestion was incomplete, resulting in two bands, indicating the need to increase
+                            the digestion time before
+                            product recovery (Figure 3A). PCR validation and sequencing of the recombinant single
+                            colonies confirmed successful
+                            vector construction (Figure 3C and Figure 3D). After transforming the recombinant plasmid
+                            into Agrobacterium GV3101,
+                            single colony PCR validation was also successful (Figure 3F).</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/results/16.png" alt="s6">
+                            <figcaption>
+                                <p>Figure 3: Construction Results of p1300-MDH1-GUS Vector</p>
+                                <p>A: MDH1 pro PCR product on agarose gel electrophoresis. M: 5000 bp DNA marker; 1 and
+                                    2: successfully amplified MDH1
+                                    pro PCR products.</p>
+                                <p>B: Single colonies of p1300-MDH1-GUS transformants on LB kanamycin+ plate. The
+                                    recombinant vector was transformed
+                                    into E. coli TOP10, showing normal colony growth.</p>
+                                <p>C: Colony PCR validation of single-clone E. coli. M: 5000 bp DNA marker; lanes 1-16:
+                                    PCR results of 16 tested single
+                                    colonies; clear single bands at the correct positions. Correct single clones were
+                                    randomly selected for sequencing
+                                    validation.</p>
+                                <p>D: Sequencing results of the target gene MDH1 pro. Sequencing was fully completed
+                                    successfully for some single
+                                    clones; two clones did not align correctly and were discarded.</p>
+                                <p>E: Single colonies of p1300-MDH1-GUS transformants on LB kanamycin+ rifampicin+
+                                    plate. The correctly sequenced
+                                    plasmid was transformed into Agrobacterium GV3101, showing normal colony growth.</p>
+                                <p>F: Colony PCR validation of single-clone Agrobacterium. M: 5000 bp DNA marker; lanes
+                                    1-8: bands at the correct
+                                    positions for 8 tested colonies.</p>
+                            </figcaption>
+                        </figure>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Functional Validation of the 3 Promoter-GUS Vectors</b>
+                            </p>
+                        </div>
+                        <p>Before August 18, 2024, we completed the transient transformation functional validation of
+                            the 3 promoter-GUS
+                            constructs.</p>
+                        <p>We performed transient transformation of tobacco leaves with the blank control (0.5x PBS),
+                            positive Agrobacterium
+                            control (pS1300-GUS), and experimental groups (p1300-GRF3-GUS, p1300-GS1-GUS,
+                            p1300-MDH1-GUS).
+                            After 12 hours of
+                            injection, we initiated the treatments under identical conditions by applying H2O as the
+                            control
+                            and 2mM formaldehyde
+                            spray. The plants were incubated in sealed conditions for 36 hours, with the spray treatment
+                            applied every 12 hours.
+                            After 48 hours post-injection, we collected samples and performed GUS staining and
+                            decolorization.</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/engineering/24.png"
+                                alt="s6">
+                            <figcaption>
+                                <p>Figure 4: The process of GUS decolorization and photography performed in our
+                                    experiment</p>
+                            </figcaption>
+                        </figure>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/engineering/250.png"
+                                alt="s6">
+                            <figcaption>
+                                <p>Figure 5: GUS staining results of the formaldehyde-responsive promoter</p>
+                            </figcaption>
+                        </figure>
+                        <p>As shown in Figure 5, in the blank control group (0.5x PBS), no GUS signal was detected
+                            after
+                            spraying with either
+                            H2O or formaldehyde. In the positive control group (pS1300-GUS), a strong blue GUS signal
+                            was
+                            observed after both H2O
+                            and formaldehyde treatments, with an even deeper blue coloration following formaldehyde
+                            application, indicating
+                            increased GUS expression.</p>
+                        <p>In the experimental group treated with p1300-MDH1-GUS, GUS signals were observed after both
+                            H2O
+                            and formaldehyde
+                            treatments, but the blue coloration was weaker following formaldehyde treatment, and the GUS
+                            signal was generally weaker
+                            compared to the GUS control group. This suggests that the expression of the MDH1 promoter is
+                            inhibited by formaldehyde,
+                            though the level of inhibition is not very strong.</p>
+                        <p>In the experimental group treated with p1300-GS1-GUS, blue coloration appeared after H2O
+                            treatment, but GUS expression
+                            was almost completely absent after formaldehyde treatment, indicating that the GS1 promoter
+                            is
+                            strongly inhibited by
+                            formaldehyde.</p>
+                        <p>Similarly, in the experimental group treated with p1300-GRF3-GUS, blue coloration was
+                            observed
+                            after H2O treatment, but
+                            no GUS expression was detected after formaldehyde treatment, demonstrating that the GRF3
+                            promoter is also inhibited by
+                            formaldehyde.</p>
+                        <p>The results above indicate that the experimental groups with p1300-promoter-GUS showed
+                            significant phenotypic
+                            differences. After formaldehyde treatment, the expression of the promoters was inhibited to
+                            varying degrees. The
+                            p1300-GRF3-GUS group displayed the most pronounced differentiation, with the GRF3 promoter
+                            completely inhibiting the
+                            expression of the GUS gene in response to formaldehyde treatment, resulting in no
+                            blue-stained
+                            tissue in the transformed
+                            leaves. This outcome aligns with our concept of a formaldehyde-responsive bioluminescence
+                            monitor control element.</p>
+                    </div>
+                </section>
+
+                <section id="module">
+                    <h3>Creation of a Controlled Luminescence Intensity Regulation Module</h3>
+                    <div style="text-align: left;">
+                        <p>We completed the construction of 2 vectors:
+                            (<a class="link" href="http://parts.igem.org/Part:BBa_K5218023">BBa_K5218023</a>) and
+                            (<a class="link" href="http://parts.igem.org/Part:BBa_K5218024">BBa_K5218024</a>).
+                            These constructs validated that the pGRF3-RtTAL and pGRF3-AtC3H modules can adjust
+                            luminescence intensity in
+                            response to formaldehyde signals.
+                        </p>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">p1300-pGRF3-RtTAL-GFP, p1300-pGRF3-AtC3H-GFP vector
+                                    construction</b>
+                            </p>
+                        </div>
+                        <p>The Super promoter in pS1300-RtTAL-GFP and pS1300-AtC3H-GFP was replaced with the GRF3
+                            promoter, still using BamH I for
+                            single enzyme digestion to remove the Super promoter sequence. Since we used a seamless
+                            cloning method, the PCR products
+                            required corresponding homologous arm overhangs for recombination. The 5' end of the GRF3
+                            sequence was connected to the
+                            basic backbone of both vectors, in the same position as the GUS vector, so the homologous
+                            overhangs were the same.
+                            However, the 3' end was connected to the RtTAL and AtC3H sequences, respectively, so the
+                            recombination overhangs were
+                            specific to each gene. The figure shows the successful amplification of the GRF3 promoter
+                            (Figure 1A, lanes 5 and 6).
+                            After replacing the PCR machine, both E. coli and Agrobacterium single-colony PCR
+                            validations confirmed successful
+                            vector construction (Figure 1F-L).</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/results/17.png" alt="s6">
+                            <figcaption>
+                                <p>Figure 1: Construction Results of p1300-pGRF3-RtTAL-GFP and p1300-pGRF3-AtC3H-GFP
+                                    Vectors</p>
+                                <p>A: GRF3 pro PCR products on agarose gel electrophoresis. M: 1 kb plus DNA marker;
+                                    lanes 1 and 2: successfully
+                                    amplified MDH1 pro PCR products; lanes 3 and 4: successfully amplified GS1 pro PCR
+                                    products; lanes 5 and 6:
+                                    successfully amplified GRF3 pro PCR products. Lane 1, 3, and 5 contain homologous
+                                    arm overhangs for recombination
+                                    with RtTAL, while lanes 2, 4, and 6 contain homologous arm overhangs for
+                                    recombination with AtC3H.</p>
+                                <p>B: Single colonies of p1300-pGRF3-RtTAL-GFP transformants on LB kanamycin+ plate. The
+                                    recombinant vector was
+                                    transformed into E. coli TOP10, showing normal colony growth.</p>
+                                <p>C: Single colonies of p1300-pGRF3-AtC3H-GFP transformants on LB kanamycin+ plate. The
+                                    recombinant vector was
+                                    transformed into E. coli TOP10, showing normal colony growth.</p>
+                                <p>D: Single colonies of p1300-pGRF3-RtTAL-GFP transformants on LB kanamycin+
+                                    rifampicin+ plate. The correctly sequenced
+                                    plasmid was transformed into Agrobacterium GV3101, showing normal colony growth.</p>
+                                <p>E: Single colonies of p1300-pGRF3-AtC3H-GFP transformants on LB kanamycin+
+                                    rifampicin+ plate. The correctly sequenced
+                                    plasmid was transformed into Agrobacterium GV3101, showing normal colony growth.</p>
+                                <p>F: Colony PCR validation of p1300-pGRF3-RtTAL-GFP single-clone E. coli. M: 5000 bp
+                                    DNA marker; lanes 1-24: PCR
+                                    results of 24 tested single colonies; clear single bands at the correct positions.
+                                    Correct single clones were
+                                    randomly selected for sequencing validation.</p>
+                                <p>G: Sequencing results of the target gene MDH1 pro. Sequencing was fully completed
+                                    successfully.</p>
+                                <p>H: Colony PCR validation of p1300-pGRF3-AtC3H-GFP single-clone E. coli. M: 5000 bp
+                                    DNA marker; lanes 1-24: PCR
+                                    results of 24 tested single colonies; clear single bands at the correct positions.
+                                    Correct single clones were
+                                    randomly selected for sequencing validation.</p>
+                                <p>I: Sequencing results of the target gene MDH1 pro. Sequencing was fully completed
+                                    successfully.</p>
+                                <p>J and K: Colony PCR validation of p1300-pGRF3-RtTAL-GFP single-clone Agrobacterium.
+                                    M: 5000 bp DNA marker; lanes 1-8:
+                                    bands at the correct positions for 8 tested colonies with different primers.</p>
+                                <p>J and K: Colony PCR validation of p1300-pGRF3-AtC3H-GFP single-clone Agrobacterium.
+                                    M: 5000 bp DNA marker; lanes 1-8:
+                                    bands at the correct positions for 8 tested colonies.</p>
+                            </figcaption>
+                        </figure>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Functional Validation of the 2 Promoter-Gene CDS Vectors</b>
+                            </p>
+                        </div>
+                        <p>Before August 26, 2024, we completed the transient transformation functional validation of
+                            the 2 promoter-gene CDS
+                            constructs.</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/engineering/30.png"
+                                alt="s6">
+                            <figcaption>
+                                <p>Figure 2: Discussion and procedure for transient expression experiments of the
+                                    pGRF3-gene module (left), formaldehyde
+                                    treatment inside the fume hood (center), and observation of functional validation
+                                    results (right).</p>
+                            </figcaption>
+                        </figure>
+                        <p>We then used the GRF3 promoter, which showed the most significant phenotypic differences, to
+                            replace the Super
+                            promoter sequence on the pS1300-RtTAL-GFP and pS1300-AtC3H-GFP vectors, resulting in the
+                            constructs
+                            <a class="link" href="http://parts.igem.org/Part:BBa_K5218023">p1300-pGRF3-RtTAL-GFP
+                                (BBa_K5218023)</a> and
+                            <a class="link" href="http://parts.igem.org/Part:BBa_K5218024">p1300-pGRF3-AtC3H-GFP
+                                (BBa_K5218024)</a>.
+                            This combined the formaldehyde-responsive regulatory module with luminescence-enhancing
+                            genes to create
+                            formaldehyde-responsive luminescent plants.
+                        </p>
+                        <p>The results after treating with 2mM HCHO for 36 hours showed that the control group
+                            pS1300-GFP emitted normal
+                            luminescence under water treatment, but its luminescence was significantly suppressed and
+                            extremely weak under
+                            formaldehyde treatment. In the experimental group with the GRF3 promoter,
+                            p1300-pGRF3-RtTAL-GFP showed normal
+                            luminescence after water treatment, with brightness significantly higher than the GFP
+                            control group, and the
+                            brightness under formaldehyde treatment was almost unaffected. The pS1300-RtTAL-GFP control
+                            group showed little
+                            change in brightness under water and formaldehyde treatments, with a slight reduction in
+                            luminescence after
+                            formaldehyde treatment, although brightness was still higher than that of the GFP group.
+                            This suggests that the GRF3
+                            gene has a certain response to formaldehyde, but the difference in luminescence intensity is
+                            small, making it
+                            difficult to draw further conclusions.</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/engineering/280.png"
+                                alt="s6">
+                            <figcaption>
+                                <p>Figure 3: Formaldehyde-Responsive Results of p1300-pGRF3-RtTAL-GFP</p>
+                                <p>Note: Using Agrobacterium-mediated transient transformation of tobacco leaves, 2 mM
+                                    HCHO and blank control H2O were
+                                    sprayed starting at 12 hours post-injection, with reagent replacement every 12 hours
+                                    for a total of three treatments
+                                    over 36 hours. At 48 hours post-injection, phenotypic observations were taken in
+                                    both white light and darkness using
+                                    a DSLR camera with ISO 6400, aperture F2, and shutter speed 30s.</p>
+                            </figcaption>
+                        </figure>
+                        <p>In the formaldehyde response experiment of the p1300-pGRF3-RtTAL-GFP vector, the tobacco
+                            seedlings used were at an
+                            incorrect growth stage, making the injection of the infection solution difficult and
+                            resulting in irregular
+                            luminescent areas and significant leaf damage. This greatly affected the brightness analysis
+                            and visual perception
+                            of the results. Therefore, the results are for reference only, and after reflecting on the
+                            reasons, we conducted a
+                            more comprehensive second functional verification.</p>
+                        <p>We observed a similar pattern in the p1300-pGRF3-AtC3H-GFP experiments as seen in the
+                            pGRF3-RtTAL module. To better
+                            contrast this phenomenon, we adopted a different photography method. As shown in the figure
+                            below, the pS1300-GFP
+                            control group was significantly inhibited by formaldehyde, resulting in extremely faint
+                            luminescence. In the
+                            p1300-pGRF3-AtC3H-GFP experimental group, luminescence slightly increased after formaldehyde
+                            treatment compared to
+                            water treatment. The brightness of the pS1300-AtC3H-GFP control group was generally
+                            consistent, with formaldehyde
+                            treatment resulting in slightly lower brightness than the p1300-pGRF3-AtC3H-GFP group.</p>
+                        <p>Overall, the GRF3 promoter can respond to formaldehyde, enhancing the luminescence of glowing
+                            plants, though the
+                            effect is not very pronounced. Additionally, the AtC3H gene allows plants to maintain
+                            near-normal luminescence under
+                            formaldehyde inhibition, demonstrating the gene's stability. The results of this experiment
+                            were improved based on
+                            verification from different batches, using more mature tobacco plants and directly
+                            photographing the luminescent
+                            areas of the injected leaves for clearer results.</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/engineering/290.png"
+                                alt="s6">
+                            <figcaption>
+                                <p>Figure 4: Formaldehyde-Responsive Results of p1300-pGRF3-AtC3H-GFP</p>
+                                <p>Note: The experimental procedure was the same as that used for the
+                                    p1300-pGRF3-RtTAL-GFP construct. The injected leaves
+                                    were photographed in 3D, with camera settings: ISO 6400, aperture F2, shutter speed
+                                    30s.</p>
+                            </figcaption>
+                        </figure>
+                        <p>In summary, the GRF3 promoter can respond to formaldehyde and enhance the luminescence
+                            intensity of glowing plants,
+                            although the effect is not very pronounced. Additionally, the AtC3H gene enables the plant
+                            to maintain near-normal
+                            luminescence under formaldehyde suppression, demonstrating the stability of this gene. The
+                            results of this
+                            experiment were refined based on validations from different batches, using tobacco plants
+                            with a longer growth
+                            period and directly photographing the luminescence of leaves after injection to make the
+                            results more intuitive.</p>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Collection Section -->
+    <section class="collection" style="align-items: center; background-color: rgba(30, 30, 30);">
+        <div class="partners">
+            <img class="partners__image"
+                src="https://static.igem.wiki/teams/5218/image/static/images/sponsor/all.png" />
+        </div>
+
+        <div class="contacts">
+            <p class="contacts__description">Address: BGI Center, No. 9 Yunhua Road, Yantian District, Shenzhen, 518083,
+                China</p>
+            <p class="contacts__description">Phone: +86 13101793873 (Weekdays: 8:00-17:00 Weekends: Closed) E-mail:
+                chenlichuan@genomics.cn</p>
+        </div>
+
+        <div class="copyright">
+            <p class="copyright__text">
+                ©2024 Content on this site is licensed under a
+                <a class="copyright__link" href="">Attribution 4.0 International license.</a>
+            </p>
+            <p class="copyright__text">
+                The repository used to create this website is available at
+                <a class="copyright__link" href="">gitlab.igem.org/2024/bgi-mammothedu-south</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- JavaScript -->
+
+    <!-- Loader -->
+    <script>
+        // Remove the preloader when the page is fully loaded
+        window.onload = function () {
+            const preloader = document.getElementById('preloader');
+            preloader.style.opacity = '0'; // Start fading out the preloader
+            setTimeout(() => {
+                preloader.style.display = 'none'; // Hide the preloader completely
+            }, 500); // Wait for the fade-out to complete
+        };
+    </script>
+
+    <!-- Image slider -->
+    <script>
+        let currentSlide = 0;
+        const slides = [
+            "linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0)), url('https://static.igem.wiki/teams/5218/image/static/images/protocal/8.jpg')",
+            "linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0)), url('https://static.igem.wiki/teams/5218/image/static/images/protocal/7.jpg')",
+            "linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0)), url('https://static.igem.wiki/teams/5218/image/static/images/protocal/9.jpg')"
+        ];
+        const dots = document.querySelectorAll('.carousel-nav span');
+        const introSection = document.getElementById('intro-section');
+
+        function showSlide(index) {
+            dots[currentSlide].classList.remove('active');
+            currentSlide = index;
+            introSection.style.backgroundImage = slides[currentSlide]; // Apply the gradient and image
+            dots[currentSlide].classList.add('active');
+        }
+
+        // Make sure the first slide is loaded when the page loads
+        document.addEventListener('DOMContentLoaded', function () {
+            // Preload images
+            slides.forEach(function (slide) {
+                const img = new Image();
+                img.src = slide.match(/url\('(.*)'\)/)[1]; // Extract the URL from the background-image
+            });
+
+            showSlide(0); // Show the first slide immediately after preloading starts
+        });
+
+        setInterval(() => {
+            const nextSlide = (currentSlide + 1) % slides.length;
+            showSlide(nextSlide);
+        }, 2000); // Change every 2 seconds
+    </script>
+
+    <!-- ToC -->
+    <script>
+        // Smooth scroll when clicking ToC links
+        document.querySelectorAll('.toc a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+    <!-- PDF fullscreen view -->
+    <script>
+        function toggleFullScreen() {
+            var elem = document.getElementById("pdf");
+
+            if (!document.fullscreenElement) {
+                if (elem.requestFullscreen) {
+                    elem.requestFullscreen();
+                } else if (elem.mozRequestFullScreen) { // Firefox
+                    elem.mozRequestFullScreen();
+                } else if (elem.webkitRequestFullscreen) { // Chrome, Safari and Opera
+                    elem.webkitRequestFullscreen();
+                } else if (elem.msRequestFullscreen) { // IE/Edge
+                    elem.msRequestFullscreen();
+                }
+            } else {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                } else if (document.mozCancelFullScreen) { // Firefox
+                    document.mozCancelFullScreen();
+                } else if (document.webkitExitFullscreen) { // Chrome, Safari and Opera
+                    document.webkitExitFullscreen();
+                } else if (document.msExitFullscreen) { // IE/Edge
+                    document.msExitFullscreen();
+                }
+            }
+        }
+    </script>
+
+    <!-- Header -->
+    <script src="./static/js/header.js"></script>
+
+</body>
+
+</html>

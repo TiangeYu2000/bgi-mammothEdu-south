@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="https://static.igem.wiki/teams/5218/image/static/images/logo.png" />
+  <title>Petalglow</title>
+  <link rel="stylesheet" href="./static/css/reset.css">
+  <link rel="stylesheet" href="./static/css/main.css">
+  <link rel="stylesheet" href="./static/css/header.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+</head>
+
+<body>
+  <div class="layout">
+    <header class="navbar">
+      <!-- Logo -->
+      <a class="navbar__logo" href="https://2024.igem.wiki/bgi-mammothedu-south/">
+        <img class="navbar__logo-icon" src="https://static.igem.wiki/teams/5218/image/static/images/logo.png" width="80"
+          alt="PetalGlow Logo" />
+        <div class="navbar__logo-text">
+          <div class="navbar__title" href="https://2024.igem.wiki/bgi-mammothedu-south/">Petalglow</div>
+          <div class="navbar__subtitle" href="https://2024.igem.wiki/bgi-mammothedu-south/roster">BGI-MammothEdu-South
+          </div>
+        </div>
+      </a>
+
+      <!-- Toggle for mobile menu -->
+      <input type="checkbox" id="menu-toggle" class="navbar__checkbox" />
+      <label for="menu-toggle" class="navbar__toggle-btn">☰</label>
+
+      <!-- Navigation Menu -->
+      <nav class="navbar__menu">
+        <!-- Home Link （Return to Home page） -->
+        <a href="https://2024.igem.wiki/bgi-mammothedu-south/" class="navbar__menu-item">Home</a>
+
+        <!-- Project Dropdown -->
+        <div class="navbar__menu-item-dropdown">
+          <a href="#" class="navbar__menu-item">Project</a>
+          <div class="navbar__submenu">
+            <a href="./description.html" class="navbar__submenu-item">Description</a>
+            <a href="./engineering.html" class="navbar__submenu-item">Engineering</a>
+            <a href="./results" class="navbar__submenu-item">Results</a>
+            <a href="./results#plant" class="navbar__submenu-item">Plant</a>
+            <a href="./implementation" class="navbar__submenu-item">Implementation</a>
+            <a href="./contribution" class="navbar__submenu-item">Contribution</a>
+          </div>
+        </div>
+
+        <!-- Wet Lab Dropdown -->
+        <div class="navbar__menu-item-dropdown">
+          <a href="#" class="navbar__menu-item">Wet Lab</a>
+          <div class="navbar__submenu">
+            <a href="./parts.html" class="navbar__submenu-item">Parts</a>
+            <a href="./experiments" class="navbar__submenu-item">Experiments</a>
+            <a href="./notebook.html" class="navbar__submenu-item">Notebook</a>
+            <a href="./protocal" class="navbar__submenu-item">Protocal</a>
+            <a href="./safety" class="navbar__submenu-item">Safety</a>
+          </div>
+        </div>
+
+        <!-- Dry Lab Dropdown -->
+        <div class="navbar__menu-item-dropdown">
+          <a href="#" class="navbar__menu-item">Dry Lab</a>
+          <div class="navbar__submenu">
+            <a href="./model" class="navbar__submenu-item">Model</a>
+            <a href="./measurement" class="navbar__submenu-item">Measurement</a>
+          </div>
+        </div>
+
+        <!-- Out Reach Dropdown -->
+        <div class="navbar__menu-item-dropdown">
+          <a href="#" class="navbar__menu-item">Out Reach</a>
+          <div class="navbar__submenu">
+            <a href="./human-practices.html" class="navbar__submenu-item">Human Practices</a>
+            <a href="./education" class="navbar__submenu-item">Education</a>
+            <a href="./entrepreneurship" class="navbar__submenu-item">Entrepreneurship</a>
+            <a href="./inclusivity" class="navbar__submenu-item">Inclusivity</a>
+          </div>
+        </div>
+
+        <!-- Team Dropdown -->
+        <div class="navbar__menu-item-dropdown">
+          <a href="#" class="navbar__menu-item">Team</a>
+          <div class="navbar__submenu">
+            <a href="./roster.html" class="navbar__submenu-item">Roster</a>
+            <a href="./attributions.html" class="navbar__submenu-item">Attribution</a>
+            <a href="./partnership.html" class="navbar__submenu-item">Partnership</a>
+            <a href="./highlights.html" class="navbar__submenu-item">Highlights</a>
+            <a href="#" class="navbar__submenu-item">Medals</a>
+          </div>
+        </div>
+
+        <!-- Close Button for mobile menu -->
+        <label for="menu-toggle" class="navbar__close-btn">✖</label>
+      </nav>
+    </header>
+
+    <!-- Preloader Section -->
+    <div id="preloader">
+      <div class="spinner"></div>
+      <p>cooking...</p>
+    </div>
+
+    <div class="main-content">
+      <div class="main-content__background-overlay"></div>
+
+      <!-- Introduction Section -->
+      <section class="intro">
+        <div id="falling-acids-container"></div>
+        <h3 class="intro__title">Petalglow: Let there be <span id="light-word">light</span></h3>
+        <p class="intro__text">to comfort, to companion, to inspire</p>
+      </section>
+
+      <!-- Promotion Video Section -->
+      <section class="video">
+        <h3 class="video__title">A Trailer of Petalglow</h3>
+        <div class="video__container">
+          <!-- <iframe title="BGI-MammothEdu-South: The Trailer of Petalglow (2024) - Project Promotion [English]"
+            width="560" height="315" src="https://video.igem.org/videos/embed/3c1d1db4-65f2-47e8-8d12-92a9436fc172"
+            frameborder="0" allowfullscreen="" sandbox="allow-same-origin allow-scripts allow-popups allow-forms">
+          </iframe> -->
+          <iframe title="BGI-MammothEdu-South: Petalglow (2024) - Team Presentation [English]" 
+            width="560" height="315" src="https://video.igem.org/videos/embed/40310898-672f-4a0a-bb56-882067ce52a4" 
+            frameborder="0" allowfullscreen="" sandbox="allow-same-origin allow-scripts allow-popups allow-forms">
+          </iframe>
+        </div>
+      </section>
+
+      <!-- Problem Section -->
+      <section class="problem">
+        <h3 class="problem__title">The Problem</h3>
+        <div class="problem__content">
+          <p class="problem__description">
+            Anxiety, intensified by societal pressures like neijuan, leads to restless nights. The resulting lack of
+            rest amplifies anxiety, creating a vicious cycle. Traditional night lights disrupt melatonin production,
+            worsening anxiety at midnight.
+          </p>
+          <img class="problem__image" src="https://static.igem.wiki/teams/5218/image/static/images/index/1.png"
+            alt="Problem Image" />
+        </div>
+      </section>
+
+      <!-- Solution Section -->
+      <section class="solution">
+        <h3 class="solution__title">Our Solution</h3>
+        <p class="solution__text">
+          We developed a bioluminescent plant companion, Petalglow, with 150% increased light intensity compared to
+          previous fungal bioluminescence pathways (FBP) in transgenic tobacco plants.
+        </p>
+      </section>
+
+      <!-- Detailed Solution Section (Daytime) -->
+      <section class="detailed-solution">
+        <h3 class="detailed-solution__title">Daytime Solution</h3>
+        <div class="detailed-solution__content">
+          <p class="detailed-solution__paragraph">
+            At daytime, Petalglow promotes relaxation through horticultural therapy. Daily tasks like watering the
+            plant alleviate anxiety and stress, and enhance mood.
+          </p>
+          <img class="detailed-solution__image_1"
+            src="https://static.igem.wiki/teams/5218/image/static/images/index/2.jpg" alt="Daytime Solution Image" />
+        </div>
+      </section>
+
+      <!-- Detailed Solution Section (Night) -->
+      <section class="detailed-solution">
+        <h3 class="detailed-solution__title">Night Solution</h3>
+        <div class="detailed-solution__content">
+          <p class="detailed-solution__paragraph">
+            At night, Petalglow emits soft, calming bioluminescent light, creating an ideal pre-sleep environment
+            without disrupting sleep-inducing darkness.
+          </p>
+          <img class="detailed-solution__image_2"
+            src="https://static.igem.wiki/teams/5218/image/static/images/index/3.png" alt="Night Solution Image" />
+        </div>
+      </section>
+
+      <!-- Team Section -->
+      <section class="team">
+        <h3 class="team__title">Team</h3>
+        <div class="team__content">
+          <p class="team__description">
+            Our team consists of members from diverse locations such as Toronto, Guangzhou, and Beijing, who gathered
+            in Shenzhen to realize the dream of glowing plants.
+          </p>
+          <img class="team__image" src="https://static.igem.wiki/teams/5218/image/static/images/index/4.png"
+            alt="Team Image" />
+        </div>
+      </section>
+
+      <!-- Collection Section -->
+      <section class="collection">
+        <div class="partners">
+          <img class="partners__image" src="https://static.igem.wiki/teams/5218/image/static/images/sponsor/all.png" />
+        </div>
+
+        <div class="contacts">
+          <p class="contacts__description">Address: BGI Center, No. 9 Yunhua Road, Yantian District, Shenzhen, 518083,
+            China</p>
+          <p class="contacts__description">Phone: +86 13101793873 (Weekdays: 8:00-17:00 Weekends: Closed) E-mail:
+            chenlichuan@genomics.cn</p>
+        </div>
+
+        <div class="copyright">
+          <p class="copyright__text">
+            ©2024 Content on this site is licensed under a <a class="copyright__link"
+              href="https://creativecommons.org/licenses/by/4.0/">Creative Commons
+              Attribution 4.0 International license</a>
+          </p>
+          <p class="copyright__text">
+            The repository used to create this website is available at
+            <a class="copyright__link" href="">gitlab.igem.org/2024/bgi-mammothedu-south</a>
+          </p>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+
+  <!-- Loader -->
+  <script>
+    // Remove the preloader when the page is fully loaded
+    window.onload = function () {
+      const preloader = document.getElementById('preloader');
+      preloader.style.opacity = '0'; // Start fading out the preloader
+      setTimeout(() => {
+        preloader.style.display = 'none'; // Hide the preloader completely
+      }, 500); // Wait for the fade-out to complete
+    };
+  </script>
+
+  <!-- Animation -->
+  <!-- <script src="./static/js/ca_falling.js"></script> -->
+
+  <!-- Header -->
+  <script src="./static/js/header.js"></script>
+
+</body>
+
+</html>

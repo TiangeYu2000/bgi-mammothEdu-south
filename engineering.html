@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="https://static.igem.wiki/teams/5218/image/static/images/logo.png" />
+    <title>PetalGlow</title>
+    <!-- Reset and Custom Stylesheets -->
+    <link rel="stylesheet" href="./static/css/reset.css">
+    <link rel="stylesheet" href="./static/css/main.css">
+    <link rel="stylesheet" href="./static/css/header.css">
+    <link rel="stylesheet" href="./static/css/notebook.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header class="navbar">
+        <!-- Logo -->
+        <a class="navbar__logo" href="https://2024.igem.wiki/bgi-mammothedu-south/">
+            <img class="navbar__logo-icon" src="https://static.igem.wiki/teams/5218/image/static/images/logo.png"
+                width="80" alt="PetalGlow Logo" />
+            <div class="navbar__logo-text">
+                <div class="navbar__title" href="https://2024.igem.wiki/bgi-mammothedu-south/">Petalglow</div>
+                <div class="navbar__subtitle" href="roster.html">BGI-MammothEdu-South</div>
+            </div>
+        </a>
+
+        <!-- Toggle for mobile menu -->
+        <input type="checkbox" id="menu-toggle" class="navbar__checkbox" />
+        <label for="menu-toggle" class="navbar__toggle-btn">☰</label>
+
+        <!-- Navigation Menu -->
+        <nav class="navbar__menu">
+            <!-- Home Link （Retrun to Home page） -->
+            <a href="https://2024.igem.wiki/bgi-mammothedu-south/" class="navbar__menu-item">Home</a>
+
+            <!-- Project Dropdown -->
+            <div class="navbar__menu-item-dropdown">
+                <a href="#" class="navbar__menu-item">Project</a>
+                <div class="navbar__submenu">
+                    <a href="./description.html" class="navbar__submenu-item">Description</a>
+                    <a href="./engineering.html" class="navbar__submenu-item">Engineering</a>
+                    <a href="./results" class="navbar__submenu-item">Results</a>
+                    <a href="./results#plant" class="navbar__submenu-item">Plant</a>
+                    <a href="./implementation" class="navbar__submenu-item">Implementation</a>
+                    <a href="./contribution" class="navbar__submenu-item">Contribution</a>
+                </div>
+            </div>
+
+            <!-- Wet Lab Dropdown -->
+            <div class="navbar__menu-item-dropdown">
+                <a href="#" class="navbar__menu-item">Wet Lab</a>
+                <div class="navbar__submenu">
+                    <a href="./parts.html" class="navbar__submenu-item">Parts</a>
+                    <a href="./experiments" class="navbar__submenu-item">Experiments</a>
+                    <a href="./notebook.html" class="navbar__submenu-item">Notebook</a>
+                    <a href="./protocal" class="navbar__submenu-item">Protocal</a>
+                    <a href="./safety" class="navbar__submenu-item">Safety</a>
+                </div>
+            </div>
+
+            <!-- Dry Lab Dropdown -->
+            <div class="navbar__menu-item-dropdown">
+                <a href="#" class="navbar__menu-item">Dry Lab</a>
+                <div class="navbar__submenu">
+                    <a href="./model" class="navbar__submenu-item">Model</a>
+                    <a href="./measurement" class="navbar__submenu-item">Measurement</a>
+                </div>
+            </div>
+
+            <!-- Out Reach Dropdown -->
+            <div class="navbar__menu-item-dropdown">
+                <a href="#" class="navbar__menu-item">Out Reach</a>
+                <div class="navbar__submenu">
+                    <a href="./human-practices.html" class="navbar__submenu-item">Human Practices</a>
+                    <a href="./education" class="navbar__submenu-item">Education</a>
+                    <a href="./entrepreneurship" class="navbar__submenu-item">Entrepreneurship</a>
+                    <a href="./inclusivity" class="navbar__submenu-item">Inclusivity</a>
+                </div>
+            </div>
+
+            <!-- Team Dropdown -->
+            <div class="navbar__menu-item-dropdown">
+                <a href="#" class="navbar__menu-item">Team</a>
+                <div class="navbar__submenu">
+                    <a href="./roster.html" class="navbar__submenu-item">Roster</a>
+                    <a href="./attributions.html" class="navbar__submenu-item">Attribution</a>
+                    <a href="./partnership.html" class="navbar__submenu-item">Partnership</a>
+                    <a href="./highlights.html" class="navbar__submenu-item">Highlights</a>
+                    <a href="#" class="navbar__submenu-item">Medals</a>
+                </div>
+            </div>
+
+            <!-- Close Button for mobile menu -->
+            <label for="menu-toggle" class="navbar__close-btn">✖</label>
+        </nav>
+    </header>
+
+    <!-- Preloader Section -->
+    <div id="preloader">
+        <div class="spinner"></div>
+        <p>cooking...</p>
+    </div>
+
+    <section class="intro-section" id="intro-section">
+        <!-- Navigation Dots for Carousel -->
+        <div class="carousel-nav">
+            <span class="active" onclick="showSlide(0)"></span>
+            <span onclick="showSlide(1)"></span>
+            <span onclick="showSlide(2)"></span>
+        </div>
+
+        <div class="intro-background">
+            <h1>Engineering</h1>
+        </div>
+    </section>
+
+    <!-- Main Section with Content and TOC -->
+    <section class="description-page">
+        <!-- Background Image for Content Section -->
+        <div class="content-background">
+            <!-- Table of Contents (Left Side) -->
+            <nav class="toc">
+                <ul>
+                    <li><a href="#overview">&#127849Overview</a></li>
+                    <li><a href="#first">&#127849First circle</a></li>
+                    <li><a href="#second">&#127849Second circle</a></li>
+                    <li><a href="#third">&#127849Third circle</a></li>
+                    <li><a href="#references">&#127849References</a></li>
+                </ul>
+            </nav>
+
+            <!-- Content Sections (Right Side) -->
+            <div class="content" style="margin-top: -290px;">
+                <section id="overview">
+                    <h3>Overview</h3>
+                    <div style="text-align: left;">
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/engineering/1.png"
+                                alt="s6">
+                        </figure>
+                        <p>To achieve a higher and more controllable bioluminescence visible to the naked eye, we
+                            designed the project as three
+                            Design-Build-Test-Learn (DBTL) cycles. In the first cycle, we increased the concentration of
+                            substrates in the caffeic
+                            acid cycle using the Tyrosine Ammonia-Lyase (TAL) and p-Coumarate 3-Hydroxylase (C3H) genes,
+                            thereby enhancing the
+                            brightness of the plant’s bioluminescence, similar to adding more fuel to an engine to make
+                            it run faster. In the second
+                            cycle, we tested a regulatory module for key catalytic enzymes upstream of the caffeic acid
+                            pathway to further increase
+                            production, implementing a β-glucuronidase (GUS) staining module to enable the plant to
+                            respond to formaldehyde. In the
+                            third cycle, we combined the formaldehyde-responsive regulatory module with the enhanced
+                            bioluminescence genes, creating
+                            a plant that can respond to formaldehyde with increased light emission, much like adding an
+                            accelerator pedal to our
+                            engine.</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/engineering/111.png"
+                                alt="s6">
+                        </figure>
+                    </div>
+                </section>
+
+                <section id="first">
+                    <h3>First Circle: transient expression RtTAL and AtC3H to enhance the self-luminescence brightness
+                    </h3>
+                    <div style="text-align: left;">
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Design</b>
+                            </p>
+                        </div>
+                        <p>We have obtained the first-generation stable transgenic line FBP-T2 seeds (also known as
+                            FBP-22) of bioluminescent
+                            tobacco from a research institution. While this line produces visible bioluminescence, its
+                            brightness is still far from
+                            meeting practical everyday use requirements [1].</p>
+                        <p>Therefore, in this cycle, to enhance the bioluminescence intensity of the FBP-T2/FBP-22 line,
+                            we planned to screen
+                            upstream pathway genes that increase the substrate concentration in the caffeic acid cycle.
+                            After reviewing the
+                            literature and mapping the metabolic pathways that could boost the substrate concentration
+                            in the caffeic acid cycle, we
+                            identified the TAL gene [2] and C3H gene [3]. We constructed overexpression plasmids for
+                            these genes and introduced them
+                            into Escherichia coli TOP10 for positive monoclonal identification and amplification. The
+                            target plasmids were then
+                            transferred into Agrobacterium tumefaciens strain GV3101, followed by positive PCR
+                            identification. Using
+                            Agrobacterium-mediated transient transformation, we infected tobacco leaves to verify
+                            functional expression.</p>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Build</b>
+                            </p>
+                        </div>
+                        <p>The pS1300-GFP (pCAMBIA1300 backbone) vector framework was provided by Mammoth Education Co.,
+                            Ltd. The vector was
+                            linearized by double digestion with Kpn I and Hind III, followed by purification to obtain
+                            the linear plasmid.</p>
+                        <p>The sequences for RcTAL, RtTAL (codon optimized), and NoRtTAL (non-codon optimized) were
+                            synthesized by BGI LHG and
+                            PCR-cloned using the plasmid as a template to obtain PCR products with homologous arms. For
+                            AtC3H, CrC3H, NtC3H, PpC3H,
+                            RcC3H, and SlC3H, the templates used for the first round of PCR cloning (to obtain PCR
+                            products with stop codons) were
+                            the cDNA from Arabidopsis thaliana (At), Catharanthus roseus (Cr), Nicotiana tabacum (Nt),
+                            Physcomitrium sphaericum
+                            (Pp), Rosa spp (Rc), and Solanum lycopersicum (Sl), respectively. A second round of PCR
+                            cloning was performed using
+                            these PCR products as templates to obtain homologous arm-containing PCR products.</p>
+                        <p>Each gene fragment (purified PCR product with homologous arms) was ligated into the
+                            linearized vector using seamless
+                            cloning (In-Fusion Cloning) techniques. This produced the final verified plasmids,
+                            including:</p>
+                        <ul style="list-style-type: disc;">
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem); ">pS1300-RtTAL-GFP (<a class="link"
+                                    href="http://parts.igem.org/Part:BBa_K5218003">BBa_K5218006</a>)
+                            </li>
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem); ">pS1300-AtC3H-GFP (<a class="link"
+                                    href="http://parts.igem.org/Part:BBa_BBa_K5218003">BBa_K5218003</a>)
+                            </li>
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem); ">pS1300-RcTAL-GFP (<a class="link"
+                                    href="http://parts.igem.org/Part:BBa_K5218004">BBa_K5218004</a>)
+                            </li>
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem); ">pS1300-NoRtTAL-GFP (<a class="link"
+                                    href="http://parts.igem.org/Part:BBa_K5218026">BBa_K5218026</a>)
+                            </li>
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem); ">pS1300-CrC3H-GFP (<a class="link"
+                                    href="http://parts.igem.org/Part:BBa_K5218010">BBa_K5218010</a>)
+                            </li>
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem); ">pS1300-NtC3H-GFP (<a class="link"
+                                    href="http://parts.igem.org/Part:BBa_K5218012">BBa_K5218012</a>)
+                            </li>
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem); ">pS1300-PpC3H-GFP (<a class="link"
+                                    href="http://parts.igem.org/Part:BBa_K5218008">BBa_K5218008</a>)
+                            </li>
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem); ">pS1300-SlC3H-GFP (<a class="link"
+                                    href="http://parts.igem.org/Part:BBa_K5218014">BBa_K5218014</a>)
+                            </li>
+                        </ul>
+                        <p></p>
+                        <p>The plasmid maps for each construct are shown below:</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/engineering/4.png"
+                                alt="s6">
+                            <figcaption>
+                                <p>Figure 1B-1: pS1300-GFP vector backbone map</p>
+                            </figcaption>
+                        </figure>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/engineering/5.png"
+                                alt="s6">
+                            <figcaption>
+                                <p>Figure 1B-2: pS1300-RtTAL-GFP vector map</p>
+                            </figcaption>
+                        </figure>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/engineering/6.png"
+                                alt="s6">
+                            <figcaption>
+                                <p>Figure 1B-3: pS1300-AtC3H-GFP vector map</p>
+                            </figcaption>
+                        </figure>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/engineering/7.png"
+                                alt="s6">
+                            <figcaption>
+                                <p>Figure 1B-4: Primer R for the RtTAL gene</p>
+                            </figcaption>
+                        </figure>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/engineering/8.png"
+                                alt="s6">
+                            <figcaption>
+                                <p>Figure 1B-5: Primer R for the AtC3H gene</p>
+                            </figcaption>
+                        </figure>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/engineering/9.png"
+                                alt="s6">
+                            <figcaption>
+                                <p>Figure 1B-6: pS1300-RcTAL-GFP vector map</p>
+                            </figcaption>
+                        </figure>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/engineering/10.png"
+                                alt="s6">
+                            <figcaption>
+                                <p>Figure 1B-7: pS1300-NoRtTAL-GFP vector map</p>
+                            </figcaption>
+                        </figure>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/engineering/11.png"
+                                alt="s6">
+                            <figcaption>
+                                <p>Figure 1B-8: pS1300-CrC3H-GFP vector map</p>
+                            </figcaption>
+                        </figure>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/engineering/12.png"
+                                alt="s6">
+                            <figcaption>
+                                <p>Figure 1B-9: pS1300-NtC3H-GFP vector map</p>
+                            </figcaption>
+                        </figure>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/engineering/13.png"
+                                alt="s6">
+                            <figcaption>
+                                <p>Figure 1B-10: pS1300-PpC3H-GFP vector map</p>
+                            </figcaption>
+                        </figure>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/engineering/14.png"
+                                alt="s6">
+                            <figcaption>
+                                <p>Figure 1B-11: pS1300-SlC3H-GFP vector map</p>
+                            </figcaption>
+                        </figure>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Test</b>
+                            </p>
+                        </div>
+                        <p>We successfully cloned and constructed eight vectors using different methods and transformed
+                            them into Agrobacterium
+                            tumefaciens GV3101, followed by positive clone verification via PCR, which was successful.
+                            Subsequently, we performed
+                            functional validation in the FBP-T2/FBP-22 tobacco lines using the transient transformation
+                            method. To observe the
+                            phenotypes, we photographed the plants in complete darkness with a DSLR camera set to ISO
+                            6400, aperture F2, and a
+                            30-second exposure. The bioluminescence brightness was analyzed using ImageJ to measure
+                            grayscale values.</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/engineering/150.png"
+                                alt="s6">
+                            <figcaption>
+                                <p>Figure 1T-1 Light intensity of bioluminescence in different constructs transiently
+                                    expressed in tobacco leaves.</p>
+                            </figcaption>
+                        </figure>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/engineering/160.png"
+                                alt="s6">
+                            <figcaption>
+                                <p>Figure 1T-2 The data in this table are derived from the experimental group minus the
+                                    Control(only injected vector)
+                                    group.</p>
+                            </figcaption>
+                        </figure>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/engineering/170.png"
+                                alt="s6">
+                            <figcaption>
+                                <p>Figure 1T-3: Phenotypic observation results of tobacco leaves transiently transformed
+                                    with pS1300-RtTAL-GFP</p>
+                            </figcaption>
+                        </figure>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/engineering/180.png"
+                                alt="s6">
+                            <figcaption>
+                                <p>Figure 1T-4: Phenotypic observation results of tobacco leaves transiently transformed
+                                    with pS1300-AtC3H-GFP</p>
+                            </figcaption>
+                        </figure>
+                        <p>As shown in Figures 1T-1 and 1T-2, the experimental data indicate that all eight experimental
+                            groups, which were
+                            transiently injected with pS1300-gene-GFP constructs, exhibited varying degrees of higher
+                            brightness compared to the
+                            control group (injected with only the pS1300-GFP vector). These preliminary results suggest
+                            that the successfully
+                            constructed TAL and C3H genes can effectively enhance bioluminescence intensity. Among them,
+                            the pS1300-RtTAL-GFP
+                            injection produced the highest brightness, followed by the pS1300-AtC3H-GFP injection. The
+                            phenotypic observation
+                            results further confirmed this finding (Figures 1T-3 and 1T-4).</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/engineering/19.png"
+                                alt="s6">
+                            <figcaption>
+                                <p>Figure 1T-5: Discussion and experimental procedures of transient infection with TAL
+                                    and C3H (top) and result analysis
+                                    (bottom).</p>
+                            </figcaption>
+                        </figure>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Learn</b>
+                            </p>
+                        </div>
+                        <p>Through the transient expression of the eight genes, we concluded that the pS1300-RtTAL-GFP
+                            and pS1300-AtC3H-GFP
+                            constructs we designed and built can effectively enhance bioluminescence intensity. The
+                            phenotypic imaging results
+                            showed significantly higher brightness compared to the Control (only injected vector
+                            pS1300-GFP) and Blank Control,
+                            achieving brighter luminescence than the first-generation lines FBP-T2/FBP-22. These genes
+                            play a crucial role in
+                            increasing substrate concentrations in the caffeic acid cycle and boosting bioluminescence.
+                        </p>
+                        <p>Additionally, we conducted multiple tests to extract RNA and obtain cDNA samples from various
+                            materials, stages, and
+                            parts of ornamental roses, but unfortunately, we were unable to clone RcC3H. During RNA
+                            extraction, we observed
+                            significant browning of the RNA precipitate, likely due to the high content of secondary
+                            metabolites leading to
+                            excessive impurities. Attempts to change RNA extraction methods were unsuccessful in
+                            reducing the impurity content. Due
+                            to time constraints and the availability of sample types, we decided to prioritize more
+                            critical tasks and abandon
+                            further attempts to obtain the RcC3H gene.</p>
+                        <p>In conclusion, we have selected the pS1300-RtTAL-GFP and pS1300-AtC3H-GFP vectors for
+                            subsequent experimental
+                            validation.</p>
+                    </div>
+                </section>
+
+                <section id="second">
+                    <h3>Second Circle: formaldehyde-responsive promoter - GUS staining test</h3>
+                    <div style="text-align: left;">
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Design</b>
+                            </p>
+                        </div>
+                        <p>We aim for the plant to adjust its bioluminescence in response to environmental signals,
+                            showcasing the potential of
+                            synthetic biology in environmental sensing and response. After enhancing the
+                            bioluminescence, we
+                            wondered if the plant
+                            could detect human emotional fluctuations by sensing gases released through breathing or
+                            secretion. However, upon
+                            reviewing relevant studies, we found that collecting such gases for experiments is difficult
+                            and
+                            restricted by Human
+                            Subjects Research Policy.</p>
+                        <p>As a result, we chose formaldehyde, a common and controllable environmental hazardous gas, as
+                            the
+                            ideal signal for
+                            monitoring. Through literature review and the NCBI database, we identified the promoter
+                            sequences for
+                            formaldehyde-responsive factors in plants, AtGRF3, AtGS1, and AtMDH1 [4]. We then
+                            constructed
+                            promoter-GUS vectors and
+                            used Agrobacterium-mediated transient transformation to verify GUS expression in tobacco
+                            leaves.
+                        </p>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Build</b>
+                            </p>
+                        </div>
+                        <p>In this process, the pS1300-GUS (pCAMBIA1300 backbone) vector was digested with BamH I to
+                            remove
+                            the original strong
+                            Super promoter, resulting in a linearized vector, p1300-GUS.</p>
+                        <p>The GRF3, GS1, and MDH1 promoters were PCR-cloned using Col-0 Arabidopsis DNA as a template,
+                            with
+                            homologous arms at
+                            both ends matching the BamH I sites of the GUS vector. These promoters were seamlessly
+                            cloned
+                            into the linear p1300-GUS
+                            vector. The constructs were then transformed into Escherichia coli TOP10 for sequencing
+                            verification, followed by
+                            plasmid extraction and transformation into Agrobacterium tumefaciens GV3101. The resulting
+                            Agrobacterium
+                            vectors—p1300-GRF3-GUS (<a class="link"
+                                href="http://parts.igem.org/Part:BBa_K5218018">BBa_K5218018</a>), p1300-GS1-GUS (<a
+                                class="link" href="http://parts.igem.org/Part:BBa_K5218020">BBa_K5218020</a>), and
+                            p1300-MDH1-GUS
+                            (<a class="link" href="http://parts.igem.org/Part:BBa_K5218022">BBa_K5218022</a>)—were
+                            confirmed
+                            via PCR verification. The maps are shown below:</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/engineering/20.png"
+                                alt="s6">
+                            <figcaption>
+                                <p>Figure 2B-1: pS1300-GUS vector backbone map</p>
+                            </figcaption>
+                        </figure>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/engineering/21.png"
+                                alt="s6">
+                            <figcaption>
+                                <p>Figure 2B-2: p1300-GRF3-GUS vector map</p>
+                            </figcaption>
+                        </figure>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/engineering/22.png"
+                                alt="s6">
+                            <figcaption>
+                                <p>Figure 2B-3: p1300-GS1-GUS vector map</p>
+                            </figcaption>
+                        </figure>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/engineering/23.png"
+                                alt="s6">
+                            <figcaption>
+                                <p>Figure 2B-4: p1300-MDH1-GUS vector map</p>
+                            </figcaption>
+                        </figure>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Test</b>
+                            </p>
+                        </div>
+                        <p>We performed transient transformation of tobacco leaves with the blank control (0.5x PBS),
+                            positive Agrobacterium
+                            control (pS1300-GUS), and experimental groups (p1300-GRF3-GUS, p1300-GS1-GUS,
+                            p1300-MDH1-GUS).
+                            After 12 hours of
+                            injection, we initiated the treatments under identical conditions by applying H2O as the
+                            control
+                            and 2mM formaldehyde
+                            spray. The plants were incubated in sealed conditions for 36 hours, with the spray treatment
+                            applied every 12 hours.
+                            After 48 hours post-injection, we collected samples and performed GUS staining and
+                            decolorization.</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/engineering/24.png"
+                                alt="s6">
+                            <figcaption>
+                                <p>Figure 2T-1: The process of GUS decolorization and photography performed in our
+                                    experiment</p>
+                            </figcaption>
+                        </figure>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/engineering/250.png"
+                                alt="s6">
+                            <figcaption>
+                                <p>Figure 2T-2: GUS staining results of the formaldehyde-responsive promoter</p>
+                            </figcaption>
+                        </figure>
+                        <p>As shown in Figure 2T-2, in the blank control group (0.5x PBS), no GUS signal was detected
+                            after
+                            spraying with either
+                            H2O or formaldehyde. In the positive control group (pS1300-GUS), a strong blue GUS signal
+                            was
+                            observed after both H2O
+                            and formaldehyde treatments, with an even deeper blue coloration following formaldehyde
+                            application, indicating
+                            increased GUS expression.</p>
+                        <p>In the experimental group treated with p1300-MDH1-GUS, GUS signals were observed after both
+                            H2O
+                            and formaldehyde
+                            treatments, but the blue coloration was weaker following formaldehyde treatment, and the GUS
+                            signal was generally weaker
+                            compared to the GUS control group. This suggests that the expression of the MDH1 promoter is
+                            inhibited by formaldehyde,
+                            though the level of inhibition is not very strong.</p>
+                        <p>In the experimental group treated with p1300-GS1-GUS, blue coloration appeared after H2O
+                            treatment, but GUS expression
+                            was almost completely absent after formaldehyde treatment, indicating that the GS1 promoter
+                            is
+                            strongly inhibited by
+                            formaldehyde.</p>
+                        <p>Similarly, in the experimental group treated with p1300-GRF3-GUS, blue coloration was
+                            observed
+                            after H2O treatment, but
+                            no GUS expression was detected after formaldehyde treatment, demonstrating that the GRF3
+                            promoter is also inhibited by
+                            formaldehyde.</p>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Learn</b>
+                            </p>
+                        </div>
+                        <p>The results above indicate that the experimental groups with p1300-promoter-GUS showed
+                            significant phenotypic
+                            differences. After formaldehyde treatment, the expression of the promoters was inhibited to
+                            varying degrees. The
+                            p1300-GRF3-GUS group displayed the most pronounced differentiation, with the GRF3 promoter
+                            completely inhibiting the
+                            expression of the GUS gene in response to formaldehyde treatment, resulting in no
+                            blue-stained
+                            tissue in the transformed
+                            leaves. This outcome aligns with our concept of a formaldehyde-responsive bioluminescence
+                            monitor control element.</p>
+                    </div>
+                </section>
+
+                <section id="third">
+                    <h3>Third Circle: creating a Controlled Bioluminescence Intensity Regulation Module</h3>
+                    <div style="text-align: left;">
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Design</b>
+                            </p>
+                        </div>
+                        <p>Next, we decided to replace the Super promoter on the pS1300-RtTAL-GFP and pS1300-AtC3H-GFP
+                            vectors with the
+                            formaldehyde-responsive AtGRF3 promoter. This will combine the formaldehyde-responsive
+                            regulatory module with the
+                            bioluminescence enhancement genes, creating a plant that can respond to formaldehyde by
+                            adjusting its bioluminescence.
+                            This experiment aims to validate our hypothesis of whether the plant can detect gases
+                            released through human emotional
+                            fluctuations, such as those emitted through breathing or secretion.</p>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Build</b>
+                            </p>
+                        </div>
+                        <p>In the first round of constructing the TAL or C3H gene fusions, we had already added a BamH I
+                            restriction site to the
+                            F-end adapter of the primers. Therefore, when removing the Super promoter from the
+                            pS1300-RtTAL-GFP and pS1300-AtC3H-GFP
+                            vectors, we continued to use BamH I digestion to obtain linearized plasmids.</p>
+                        <p>The R-end homologous arm sequence of GRF3 was modified through PCR cloning to match the
+                            corresponding homologous arms
+                            for RtTAL and AtC3H. Using seamless cloning, we constructed the new vectors
+                            p1300-pGRF3-RtTAL-GFP (<a class="link"
+                                href="http://parts.igem.org/Part:BBa_K5218023">BBa_K5218023</a>) and
+                            p1300-pGRF3-AtC3H-GFP (<a class="link"
+                                href="http://parts.igem.org/Part:BBa_K5218024">BBa_K5218024</a>). The plasmids, once
+                            confirmed by sequencing, were
+                            transformed into Agrobacterium
+                            tumefaciens GV3101 for positive PCR verification. The vector maps are shown below:</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/engineering/26.png"
+                                alt="s6">
+                            <figcaption>
+                                <p>Figure 3B-1: p1300-pGRF3-RtTAL-GFP vector map</p>
+                            </figcaption>
+                        </figure>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/engineering/27.png"
+                                alt="s6">
+                            <figcaption>
+                                <p>Figure 3B-2: p1300-pGRF3-AtC3H-GFP vector map</p>
+                            </figcaption>
+                        </figure>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Test</b>
+                            </p>
+                        </div>
+                        <p>We continued to use Agrobacterium-mediated transient transformation of tobacco leaves for
+                            validation. After 12 hours of
+                            injection, the leaves were treated with H2O and 2mM formaldehyde, with formaldehyde
+                            treatment being refreshed every 12
+                            hours. The plants were incubated in a sealed environment for 36 hours, and observations were
+                            made 48 hours
+                            post-injection.</p>
+                        <p>The results showed that in the control group (pS1300-GFP), the leaves exhibited normal
+                            bioluminescence under water
+                            treatment, but the bioluminescence intensity was significantly suppressed after formaldehyde
+                            treatment, becoming
+                            extremely faint (Figure 3T-1). In the experimental group p1300-pGRF3-RtTAL-GFP, after
+                            replacing the promoter with GRF3,
+                            the leaves displayed normal bioluminescence under water treatment, with intensity noticeably
+                            higher than that of the
+                            control GFP group, and the bioluminescence intensity remained largely unaffected by
+                            formaldehyde treatment. In contrast,
+                            the pS1300-RtTAL-GFP control group showed little change in bioluminescence intensity after
+                            both water and formaldehyde
+                            treatments, with only a slight reduction in brightness following formaldehyde treatment,
+                            though still higher than the
+                            GFP control group.</p>
+                        <p>The results suggest that the GRF3 gene does have some response to formaldehyde, but the
+                            difference in bioluminescence
+                            intensity is minimal, making it difficult to draw further conclusions.</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/engineering/280.png"
+                                alt="s6">
+                            <figcaption>
+                                <p>Figure 3T-1: Formaldehyde response results of p1300-pGRF3-RtTAL-GFP</p>
+                            </figcaption>
+                        </figure>
+                        <p>In this experiment using the p1300-pGRF3-RtTAL-GFP vector in response to formaldehyde, the
+                            tobacco seedlings used were
+                            not at the correct stage for this experiment. The infiltration solution was difficult to
+                            inject, resulting in irregular
+                            bioluminescent areas and significant leaf stress, which affected both the brightness
+                            analysis and visual assessment.
+                            Therefore, these results are for reference only. After reflecting on the issues, we
+                            conducted a more complete second
+                            functional validation.</p>
+                        <p>In the p1300-pGRF3-AtC3H-GFP experiment, we observed similar patterns to those found with the
+                            pGRF3-RtTAL module. To
+                            better illustrate this phenomenon, we used an alternative photography method. As shown in
+                            Figure 3T-2, the pS1300-GFP
+                            control group was significantly suppressed by formaldehyde, with bioluminescence becoming
+                            extremely faint. In the
+                            p1300-pGRF3-AtC3H-GFP experimental group, the bioluminescence slightly increased after
+                            formaldehyde treatment compared
+                            to water treatment. In the pS1300-AtC3H-GFP control group, the brightness remained
+                            consistent, with the
+                            formaldehyde-treated group showing slightly lower brightness compared to the
+                            p1300-pGRF3-AtC3H-GFP group.</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/engineering/290.png"
+                                alt="s6">
+                            <figcaption>
+                                <p>Figure 3T-2: Formaldehyde response results of p1300-pGRF3-AtC3H-GFP</p>
+                            </figcaption>
+                        </figure>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/engineering/30.png"
+                                alt="s6">
+                            <figcaption>
+                                <p>Figure 3T-3: Discussion and procedure for transient expression experiments of the
+                                    pGRF3-gene module (left), formaldehyde
+                                    treatment inside the fume hood (center), and observation of functional validation
+                                    results (right).</p>
+                            </figcaption>
+                        </figure>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Learn</b>
+                            </p>
+                        </div>
+                        <p>The GRF3 promoter can respond to formaldehyde and increase the brightness of bioluminescent
+                            plants, though the effect is
+                            not very pronounced. Additionally, the AtC3H gene allows the plant to maintain near-normal
+                            luminescence under
+                            formaldehyde inhibition, demonstrating its stability. The results of this experiment were
+                            improved by verification
+                            across different batches, using tobacco plants grown for a longer period, and directly
+                            capturing the bioluminescence of
+                            the leaves after injection for clearer visualization.</p>
+                        <p>Based on the results of these experiments, we can confirm that the GRF3 promoter does indeed
+                            respond to formaldehyde,
+                            and both the TAL and C3H genes exhibit high bioluminescence stability. This aligns with our
+                            expectations, and we
+                            successfully created a bioluminescent plant responsive to formaldehyde. This experiment also
+                            validates the feasibility
+                            of detecting gas signals released by human emotional fluctuations, such as breathing or
+                            secretion, in future studies.</p>
+                        <p>However, the formaldehyde used in the experiment caused some damage to the plants, which
+                            affected the results. The Super
+                            promoter-GUS expression module did not perform as expected, which can be explained by the
+                            complexity of overall
+                            physiological activity within plants when applying synthetic biology. GUS staining is
+                            commonly used for studying
+                            promoter expression in plant genes, and our attempt to use it for studying environmental
+                            effects on gene expression
+                            highlights how it can be influenced by multiple factors, including plant growth and
+                            development. These findings provide
+                            useful reference points for other teams conducting related experiments. Below, Figure 3L-1
+                            shows some explanations we
+                            received from online users when seeking help for these issues.</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/engineering/31.png"
+                                alt="s6">
+                            <figcaption>
+                                <p>Figure 3L-1: Consultation on GUS staining analysis</p>
+                            </figcaption>
+                        </figure>
+                        <p>In the future, we aim to optimize the expression units of RtTAL and AtC3H by constructing
+                            them into a single vector for
+                            stable genetic transformation, with the goal of enhancing the brightness of the FBP-T2 line.
+                            We will design more refined
+                            experimental plans to monitor responses to environmental factors such as formaldehyde or
+                            emotional gases in stable plant
+                            lines. Additionally, optimizing protein expression and developing male sterility lines will
+                            also be important directions
+                            for future research.</p>
+                    </div>
+                </section>
+
+                <section id="references">
+                    <h3>References</h3>
+                    <div style="text-align: left;">
+                        <p>[1] Zheng, P., Ge, J., Ji, J., Zhong, J., Chen, H., Luo, D., Li, W., Bi, B., Ma, Y., Tong,
+                            W., Han, L., Ma, S., Zhang,
+                            Y., Wu, J., Zhao, Y., Pan, R., Fan, P., Lu, M. and Du, H. (2023) Metabolic engineering and
+                            mechanical investigation of
+                            enhanced plant autoluminescence. Plant Biotechnol J, 21: 1671-1681.</p>
+                        <p>[2] Liu, Langqing, Liu, Hong, Zhang Wei, Yao, Mingdong, Li, Bingzhi, Liu, Duo, Yuan Yingjin.
+                            (2019) Engineering the
+                            biosynthesis of caffeic acid in saccharomyces cerevisiae with heterologous enzyme
+                            combinations. Engineering, 5(2), 9</p>
+                        <p>[3] Mitiouchkina, T., Mishin, A.S., Somermeyer, L.G. et al. Plants with genetically encoded
+                            autoluminescence. (2020)
+                            Nature Biotechnology, 38, 944–946.</p>
+                        <p>[4] Xing Zhao, Xueting Yang, Yunfang Li, Hongjuan Nian, Kunzhi Li. (2023) 14-3-3 proteins
+                            regulate the HCHO stress
+                            response by interacting with AtMDH1 and AtGS1 in tobacco and Arabidopsis. Journal of
+                            Hazardous Materials, 458, 132036</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collection Section -->
+    <section class="collection" style="background-color: rgba(30, 30, 30);">
+        <div class="partners">
+            <img class="partners__image"
+                src="https://static.igem.wiki/teams/5218/image/static/images/sponsor/all.png" />
+        </div>
+
+        <div class="contacts">
+            <p class="contacts__description">Address: BGI Center, No. 9 Yunhua Road, Yantian District,
+                Shenzhen, 518083,
+                China</p>
+            <p class="contacts__description">Phone: +86 13101793873 (Weekdays: 8:00-17:00 Weekends: Closed)
+                E-mail:
+                chenlichuan@genomics.cn</p>
+        </div>
+
+        <div class="copyright">
+            <p class="copyright__text">
+                ©2024 Content on this site is licensed under a
+                <a class="copyright__link" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons
+                    Attribution 4.0 International license</a>
+            </p>
+            <p class="copyright__text">
+                The repository used to create this website is available at
+                <a class="copyright__link" href="">gitlab.igem.org/2024/bgi-mammothedu-south</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- JavaScript -->
+
+    <!-- Loader -->
+    <script>
+        // Remove the preloader when the page is fully loaded
+        window.onload = function () {
+            const preloader = document.getElementById('preloader');
+            preloader.style.opacity = '0'; // Start fading out the preloader
+            setTimeout(() => {
+                preloader.style.display = 'none'; // Hide the preloader completely
+            }, 500); // Wait for the fade-out to complete
+        };
+    </script>
+
+    <!-- Image slider -->
+    <script>
+        let currentSlide = 0;
+        const slides = [
+            "linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0)), url('https://static.igem.wiki/teams/5218/image/static/images/engineering/3.jpg')",
+            "linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0)), url('https://static.igem.wiki/teams/5218/image/static/images/engineering/h2.jpg')",
+            "linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0)), url('https://static.igem.wiki/teams/5218/image/static/images/engineering/h1.jpg')"
+        ];
+        const dots = document.querySelectorAll('.carousel-nav span');
+        const introSection = document.getElementById('intro-section');
+
+        function showSlide(index) {
+            dots[currentSlide].classList.remove('active');
+            currentSlide = index;
+            introSection.style.backgroundImage = slides[currentSlide]; // Apply the gradient and image
+            dots[currentSlide].classList.add('active');
+        }
+
+        // Make sure the first slide is loaded when the page loads
+        document.addEventListener('DOMContentLoaded', function () {
+            // Preload images
+            slides.forEach(function (slide) {
+                const img = new Image();
+                img.src = slide.match(/url\('(.*)'\)/)[1]; // Extract the URL from the background-image
+            });
+
+            showSlide(0); // Show the first slide immediately after preloading starts
+        });
+
+        setInterval(() => {
+            const nextSlide = (currentSlide + 1) % slides.length;
+            showSlide(nextSlide);
+        }, 2000); // Change every 2 seconds
+    </script>
+
+    <!-- ToC -->
+    <script>
+        // Smooth scroll when clicking ToC links
+        document.querySelectorAll('.toc a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+    <!-- PDF fullscreen view -->
+    <script>
+        function toggleFullScreen() {
+            var elem = document.getElementById("pdf");
+
+            if (!document.fullscreenElement) {
+                if (elem.requestFullscreen) {
+                    elem.requestFullscreen();
+                } else if (elem.mozRequestFullScreen) { // Firefox
+                    elem.mozRequestFullScreen();
+                } else if (elem.webkitRequestFullscreen) { // Chrome, Safari and Opera
+                    elem.webkitRequestFullscreen();
+                } else if (elem.msRequestFullscreen) { // IE/Edge
+                    elem.msRequestFullscreen();
+                }
+            } else {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                } else if (document.mozCancelFullScreen) { // Firefox
+                    document.mozCancelFullScreen();
+                } else if (document.webkitExitFullscreen) { // Chrome, Safari and Opera
+                    document.webkitExitFullscreen();
+                } else if (document.msExitFullscreen) { // IE/Edge
+                    document.msExitFullscreen();
+                }
+            }
+        }
+    </script>
+
+    <!-- Header -->
+    <script src="./static/js/header.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="https://static.igem.wiki/teams/5218/image/static/images/logo.png" />
+    <title>PetalGlow</title>
+    <!-- Reset and Custom Stylesheets -->
+    <link rel="stylesheet" href="./static/css/reset.css">
+    <link rel="stylesheet" href="./static/css/main.css">
+    <link rel="stylesheet" href="./static/css/header.css">
+    <link rel="stylesheet" href="./static/css/notebook.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header class="navbar">
+        <!-- Logo -->
+        <a class="navbar__logo" href="https://2024.igem.wiki/bgi-mammothedu-south/">
+            <img class="navbar__logo-icon" src="https://static.igem.wiki/teams/5218/image/static/images/logo.png"
+                width="80" alt="PetalGlow Logo" />
+            <div class="navbar__logo-text">
+                <div class="navbar__title" href="https://2024.igem.wiki/bgi-mammothedu-south/">Petalglow</div>
+                <div class="navbar__subtitle" href="roster.html">BGI-MammothEdu-South</div>
+            </div>
+        </a>
+
+        <!-- Toggle for mobile menu -->
+        <input type="checkbox" id="menu-toggle" class="navbar__checkbox" />
+        <label for="menu-toggle" class="navbar__toggle-btn">☰</label>
+
+        <!-- Navigation Menu -->
+        <nav class="navbar__menu">
+            <!-- Home Link （Retrun to Home page） -->
+            <a href="https://2024.igem.wiki/bgi-mammothedu-south/" class="navbar__menu-item">Home</a>
+
+            <!-- Project Dropdown -->
+            <div class="navbar__menu-item-dropdown">
+                <a href="#" class="navbar__menu-item">Project</a>
+                <div class="navbar__submenu">
+                    <a href="./description.html" class="navbar__submenu-item">Description</a>
+                    <a href="./engineering.html" class="navbar__submenu-item">Engineering</a>
+                    <a href="./results" class="navbar__submenu-item">Results</a>
+                    <a href="./results#plant" class="navbar__submenu-item">Plant</a>
+                    <a href="./implementation" class="navbar__submenu-item">Implementation</a>
+                    <a href="./contribution" class="navbar__submenu-item">Contribution</a>
+                </div>
+            </div>
+
+            <!-- Wet Lab Dropdown -->
+            <div class="navbar__menu-item-dropdown">
+                <a href="#" class="navbar__menu-item">Wet Lab</a>
+                <div class="navbar__submenu">
+                    <a href="./parts.html" class="navbar__submenu-item">Parts</a>
+                    <a href="./experiments" class="navbar__submenu-item">Experiments</a>
+                    <a href="./notebook.html" class="navbar__submenu-item">Notebook</a>
+                    <a href="./protocal" class="navbar__submenu-item">Protocal</a>
+                    <a href="./safety" class="navbar__submenu-item">Safety</a>
+                </div>
+            </div>
+
+            <!-- Dry Lab Dropdown -->
+            <div class="navbar__menu-item-dropdown">
+                <a href="#" class="navbar__menu-item">Dry Lab</a>
+                <div class="navbar__submenu">
+                    <a href="./model" class="navbar__submenu-item">Model</a>
+                    <a href="./measurement" class="navbar__submenu-item">Measurement</a>
+                </div>
+            </div>
+
+            <!-- Out Reach Dropdown -->
+            <div class="navbar__menu-item-dropdown">
+                <a href="#" class="navbar__menu-item">Out Reach</a>
+                <div class="navbar__submenu">
+                    <a href="./human-practices.html" class="navbar__submenu-item">Human Practices</a>
+                    <a href="./education" class="navbar__submenu-item">Education</a>
+                    <a href="./entrepreneurship" class="navbar__submenu-item">Entrepreneurship</a>
+                    <a href="./inclusivity" class="navbar__submenu-item">Inclusivity</a>
+                </div>
+            </div>
+
+            <!-- Team Dropdown -->
+            <div class="navbar__menu-item-dropdown">
+                <a href="#" class="navbar__menu-item">Team</a>
+                <div class="navbar__submenu">
+                    <a href="./roster.html" class="navbar__submenu-item">Roster</a>
+                    <a href="./attributions.html" class="navbar__submenu-item">Attribution</a>
+                    <a href="./partnership.html" class="navbar__submenu-item">Partnership</a>
+                    <a href="./highlights.html" class="navbar__submenu-item">Highlights</a>
+                    <a href="#" class="navbar__submenu-item">Medals</a>
+                </div>
+            </div>
+
+            <!-- Close Button for mobile menu -->
+            <label for="menu-toggle" class="navbar__close-btn">✖</label>
+        </nav>
+    </header>
+
+    <!-- Preloader Section -->
+    <div id="preloader">
+        <div class="spinner"></div>
+        <p>cooking...</p>
+    </div>
+
+    <section class="intro-section" id="intro-section">
+        <!-- Navigation Dots for Carousel -->
+        <div class="carousel-nav">
+            <span class="active" onclick="showSlide(0)"></span>
+            <span onclick="showSlide(1)"></span>
+            <span onclick="showSlide(2)"></span>
+        </div>
+
+        <div class="intro-background">
+            <h1>Safety</h1>
+        </div>
+    </section>
+
+    <!-- Main Section with Content and TOC -->
+    <section class="description-page">
+        <!-- Background Image for Content Section -->
+        <div class="content-background">
+            <!-- Table of Contents (Left Side) -->
+            <nav class="toc">
+                <ul>
+                    <li><a href="#overview">&#127849Overview</a></li>
+                    <li><a href="#sf">&#127849Safety form</a></li>
+                    <li><a href="#spd">&#127849Safe design</a></li>
+                    <li><a href="#slw">&#127849Lab safety</a></li>
+                </ul>
+            </nav>
+
+            <!-- Content Sections (Right Side) -->
+            <div class="content" style="margin-top: -220px;">
+                <section id="overview">
+                    <h3>Overview</h3>
+                    <div style="text-align: left;">
+                        <p>Safety is a critical topic in synthetic biology and an essential factor that must be
+                            considered in any work or product.
+                            The 'Work Safety Law of the People's Republic of China' clearly stipulates that our
+                            country's safety management work
+                            must adhere to the principle of 'safety first, prevention foremost, and comprehensive
+                            management.' In all production
+                            processes, protecting human life must be the top priority. Our project aims to create a
+                            controllable glowing plant pet
+                            as a solution to help people alleviate anxiety in daily life. Therefore, we have considered
+                            various potential impacts on
+                            humans and the environment during the creation of this product. This year, we analyzed the
+                            risks that may arise
+                            throughout the project and outlined the following details.</p>
+                    </div>
+                </section>
+
+                <section id="sf">
+                    <h3>Safety Form</h3>
+                    <div style="text-align: left;">
+                        <p>We have seriously completed the Safety form, carefully reflected and reviewed the 34
+                            questions mentioned in the official
+                            iGEM safety form. You are welcome to view the detailed safety form about our project
+                            submitted <a class="link"
+                                href="https://teams.igem.org/5218/safety/48681c9e-be3d-472a-aee1-3096f0b1dbda">here</a>！
+                        </p>
+                    </div>
+                </section>
+
+                <section id="spd">
+                    <h3>Safe Project Design</h3>
+                    <div style="text-align: left;">
+                        <p>In designing our safety protocols, since we will be using genetically modified glowing
+                            tobacco (FBP-T2 line/FBP-22 line)
+                            as the plant chassis for related research, we have implemented a series of measures to
+                            ensure the safety of the
+                            experiments and minimize risks. Below are the specific decisions we made in the design
+                            process:</p>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Biosafety and Bioethics</b>
+                            </p>
+                        </div>
+                        <p>During the course of the project, we received training on bioethics and safety, which
+                            allowed us to revisit and gain a
+                            deeper understanding of ethical principles. By studying and analyzing various ethical
+                            cases, we formulated the following
+                            guidelines.</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/safety/s1.png" alt="s1">
+                            <figcaption>
+                                <p>Figure1: Bioethics and Safety Training Page</p>
+                            </figcaption>
+                        </figure>
+                        <p>1. Strict Selection of Non-pathogenic Chassis:</p>
+                        <p>We chose to use non-pathogenic, commercially available Escherichia coli TOP10 and
+                            Agrobacterium GV3101 as microbial
+                            vectors to construct the chassis, and selected the commonly used model plant Nicotiana
+                            benthamiana as the plant chassis
+                            for functional validation. This ensures that no health risks are posed to humans,
+                            animals, or plants during the
+                            experimental process.</p>
+                        <p>2. Selection of Components that Do Not Harm Humans, Animals, or Plants:</p>
+                        <p>When selecting the vector backbone, we chose the pCAMBIA1300 backbone, which is free of any
+                            harmful effects. Components
+                            added to this backbone, such as plant promoters, terminators, the resistance marker gene
+                            Kan, and reporter genes like
+                            GFP/GUS, have all been widely used and are harmless to humans and the environment.</p>
+                        <p>3. Substitute Hazardous Materials with Safer Alternatives:</p>
+                        <p>In the validation experiments, we replaced traditional hazardous materials with safer
+                            alternatives commonly available in
+                            the market. For example, we used non-toxic or low-toxicity nucleic acid dyes instead of the
+                            cell-permeable ethidium
+                            bromide (EB) dye, and weak acid solutions to dissolve acetylacetone instead of using the
+                            toxic DMSO solvent.</p>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Agricultural Genetically Modified Organism (GMO) Biosafety</b>
+                            </p>
+                        </div>
+                        <p>According to the 'Regulations on the Safety Assessment and Management of Agricultural
+                            Genetically Modified Organisms,'
+                            the microorganisms TOP10 and GV3101, the genetically modified plant FBP-T2 line, and future
+                            transgenic products we study
+                            are classified as Biosafety Level I (non-dangerous), indicating no risk to the environment
+                            or humans. Therefore, in
+                            strict compliance with national and international laws, regulations, and standards, we
+                            successfully applied for and
+                            utilized the standard genetically modified plant research laboratory at the Shenzhen BGI
+                            Research Institute of Life
+                            Sciences. We have implemented the following safety measures:</p>
+                        <p>1. Safe Genetic Modification Methods:</p>
+                        <p>We use transient Agrobacterium-mediated transformation, which offers advantages such as no
+                            permanent genetic
+                            modification and low environmental risk. This method is simple, efficient, and does not
+                            require complex tissue culture
+                            and regeneration processes, thereby reducing risks of pathogen spread, contamination, and
+                            cross-contamination in the
+                            laboratory environment. During the transient transformation of tobacco leaves, plant
+                            materials do not require additional
+                            experimental treatments, so the injection operations are performed in a dedicated isolation
+                            chamber within the
+                            transgenic isolation climate room. After the experiment, thorough disinfection is conducted
+                            immediately to prevent any
+                            risk of spread and cross-contamination.</p>
+                        <p>2. Controlled Enviroment Chamber Management:</p>
+                        <p>The laboratory has separate controlled environment chambers for non-transgenic and transgenic
+                            materials, including areas
+                            for tissue culture, preparation, inoculation, washing and disinfection, sterilization, waste
+                            sterilization, and waste
+                            storage. Our transgenic tobacco FBP-T2 line materials are cultivated in a specific
+                            transgenic chamber, with detailed
+                            records maintained for material and personnel access to ensure that materials are not lost
+                            and genes do not escape.
+                            Non-transgenic materials such as Arabidopsis, periwinkle, ornamental roses, and cherry
+                            tomatoes are managed in standard
+                            climate chambers, completely isolated from transgenic materials. During tobacco leaf
+                            injection experiments, operations
+                            are conducted in a designated sample inoculation area, and thorough disinfection of the area
+                            is performed after the
+                            experiment.</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/safety/s2.png" alt="s1">
+                            <figcaption>
+                                <p>Figure 2: Images of materials related to transgenic plant safety management and
+                                    climate chamber facilities</p>
+                            </figcaption>
+                        </figure>
+                        <p>3. Data Protection and Privacy:</p>
+                        <p>Data Security: Ensure that all data and information related to genetically modified plants
+                            are protected in accordance
+                            with relevant laws and regulations to prevent data leakage and misuse.</p>
+                        <p>Transparency: Disclose relevant information about genetically modified plant projects to
+                            ensure public right to
+                            information and participation.</p>
+                        <p>4. Use of Enclosed Protective Equipment:</p>
+                        <p>When transferring genetically modified plant materials for formaldehyde treatment, in
+                            addition to pre-registration and
+                            reporting procedures, we use standardized enclosed equipment for transport to ensure that
+                            the transgenic plants do not
+                            come into contact with the natural environment and are physically isolated for protection.
+                        </p>
+                        <p>5. Biological Switch Mechanism:</p>
+                        <p>Team iGEM14_Valencia_UpV 2014 submitted two biosafety devices for plants, <a class="link"
+                                href="http://parts.igem.org/Part:BBa_K1554004">BBa_K1554004</a> and
+                            <a class="link" href="http://parts.igem.org/Part:BBa_K1554005">BBa_K1554005</a>, which
+                            specifically express barnase in anthers under the regulation of the TA29 tapetum-specific
+                            promoter to make the plants
+                            infertile. This will avoid the dispersion of the plant's genetic material in the
+                            environment.
+                            In the future, we aim to
+                            apply these two modules to the design of FBP enhanced plants for strict biosafety
+                            implementation.
+                        </p>
+                        <p>6. Public Opinion Survey:</p>
+                        <p>We have concerns about the use of genetically modified plants, as this topic may spark public
+                            controversy. As part of
+                            our human practice, we conducted a survey to gather public opinions on the use of genetic
+                            modification and incorporated
+                            these findings into our public outreach efforts. This approach has received positive
+                            feedback from the public during the
+                            outreach activities we participated in, aiming to minimize concerns and foster discussion on
+                            the topic.</p>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Human Subjects Research Policy</b>
+                            </p>
+                        </div>
+                        <p>We strictly adhere to local laws, regulations, rules, and guidelines, carefully managing the
+                            ways in which the project
+                            interacts with humans, as well as the collection and analysis of information. The project
+                            does not involve any human
+                            biomedical samples. Regarding the connection between plants and humans, we primarily focus
+                            on the following two aspects:</p>
+                        <p>1. Informed Consent and Ethical Review:</p>
+                        <p>Informaed Consnet: Our project research does not involve
+                            any human subjects. All team members have provided informed consent and are fully
+                            aware of the research
+                            objectives, procedures, potential risks, and benefits.</p>
+                        <p>Ethical Review: All research projects have undergone rigorous review and approval by the BGI
+                            Ethics Committee to ensure compliance with
+                            ethical and legal requirements.</p>
+                        <p>2. Regulatory Compliance:</p>
+                        <p>Laws and Regulations: Ensure that all project experiments strictly comply with relevant
+                            national and international laws, regulations, and
+                            standards.</p>
+                        <p>Safety Certification: Before the commercialization of genetically modified plants, obtain the
+                            necessary safety certifications and approvals.
+                            Currently, our materials are not involved in commercialization.</p>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Environmental Samples Policy</b>
+                            </p>
+                        </div>
+                        <p>1. Environmental Impact Assessment:</p>
+                        <p>Since the inherent hazard levels of the genetically modified plants or microorganisms we work
+                            with are very low, and the
+                            research is conducted in a relatively enclosed environment with proper handling before and
+                            after experiments, we ensure
+                            that the research process does not have a negative impact on the environment. All research
+                            activities comply with
+                            environmental protection regulations and standards.</p>
+                        <p>2. Safe Collection of Environmental Samples:</p>
+                        <p>When taking samples, we only collect plant tissues from artificially cultivated plants in the
+                            climate chamber for RNA or
+                            DNA extraction. During the process, we follow strict safety procedures to ensure that the
+                            sampling does not cause
+                            environmental contamination or damage. All sampling equipment and containers are disinfected
+                            and sterilized to avoid
+                            cross-contamination.</p>
+                        <p>3. Sample Transport and Storage:</p>
+                        <p>Except for plant materials that require short-distance transportation for formaldehyde
+                            treatment, no other samples
+                            involve outdoor transportation. Materials such as RNA, DNA, plasmids, E. coli, and
+                            Agrobacterium are involved in
+                            storage. These materials, especially plant materials, are strictly regulated and not taken
+                            out of the laboratory. They
+                            are transported in standardized enclosed equipment to a fume hood in the climate chamber
+                            inoculation area for
+                            processing. Other samples are stored in laboratory-grade refrigerators to prevent sample
+                            degradation or contamination,
+                            ensuring their integrity and safety.</p>
+                    </div>
+                </section>
+
+                <section id="slw">
+                    <h3>Safe Lab Work</h3>
+                    <div style="text-align: left;">
+                        <p>We have successfully applied for and utilized the standard laboratory facilities at BGI
+                            Shenzhen for our project
+                            research. This facility provides comprehensive safety features and continuous supervision by
+                            mentors. The key aspects
+                            include:</p>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Safety Management Training</b>
+                            </p>
+                        </div>
+                        <p>Before entering the laboratory, we underwent safety training and foundational
+                            experimental knowledge with the staff of
+                            BGI Research Institute. This included simulations and practical skills for different
+                            laboratory activities, safety
+                            knowledge and case studies, and proper use of laboratory equipment. We were granted
+                            access only after passing the
+                            required assessment.</p>
+                        <p>During this period, we strictly adhered to the Research Institute's internal 'Laboratory
+                            Safety Management Regulations'
+                            while conducting our projects. To ensure that team members work in a safer laboratory
+                            environment, we also complied with
+                            the iGEM competition's safety and security rules.</p>
+                        <p>To avoid accidents or damage, we implemented appropriate safety measures during
+                            experiments, such as wearing gloves,
+                            masks, laboratory coats, and safety goggles when necessary, to protect against
+                            biological and non-biological hazards.</p>
+                        <p>The following is a part of the safety training curriculum we covered:</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/safety/s30.png" alt="s3">
+                            <figcaption>
+                                <p>Figure 3: Laboratory Safety Training Curriculum and Laboratory Safety Management
+                                    Regulation Content</p>
+                            </figcaption>
+                        </figure>
+                        <p>At the same time, we adhere to a system of mutual supervision by at least two people.
+                            After completing daily
+                            experiments, we check the laboratory safety and standardize the behavior of laboratory
+                            team members. Experienced mentors
+                            also provide guidance and regulations on experimental operations and safety management
+                            to ensure that team members
+                            conduct experiments smoothly in a safer laboratory environment.</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/safety/s4.png" alt="s4">
+                        </figure>
+
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Safety Equipment and Facilities</b>
+                            </p>
+                        </div>
+                        <p>The biological laboratory we work in has a safety level of 1 (low risk) and is equipped with
+                            appropriate safety and
+                            emergency equipment, such as biosafety cabinets, emergency eyewash stations, incubators,
+                            sterilization devices, sinks,
+                            storage cabinets, electrical equipment, and fire-fighting equipment.</p>
+                        <p>Reagents and chemicals are categorized and stored accordingly. Flammable and explosive
+                            chemicals (such as anhydrous
+                            ethanol, isopropanol, sodium hypochlorite, formaldehyde) are kept in dedicated storage
+                            cabinets with warnings and are
+                            locked with dual-person management. We first register and report when using these reagents,
+                            and the required amount is
+                            retrieved by the administrator. The reagents are then used in a designated fume hood for
+                            safe experimentation.</p>
+                        <p>For specialized equipment (such as autoclaves for high temperature and pressure), we follow
+                            regulations by registering
+                            and reporting in advance and seek assistance from certified personnel to operate the
+                            equipment.</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/safety/s5.png" alt="s5">
+                            <figcaption>
+                                <p>Figure 4: Partial Display of Laboratory Safety Facilities</p>
+                            </figcaption>
+                        </figure>
+                        <p>Our project involves handling hazardous chemicals such as formaldehyde, and the amount of
+                            formaldehyde used in
+                            experiments will be strictly controlled within safety limits. We adhere to safety protocols
+                            by preparing 2mM
+                            formaldehyde solutions, applying formaldehyde to samples, and sealing them in a chemical
+                            fume hood. Additionally, we
+                            wear personal protective equipment, including lab coats, safety goggles, masks, and gloves.
+                            Waste liquids, discarded
+                            materials, and sharp objects are collected and stored in designated hazardous waste areas
+                            and are subsequently disposed
+                            of by a professional hazardous waste management company.</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/safety/s6.png" alt="s6">
+                            <figcaption>
+                                <p>Figure 5: Formaldehyde treatment in the laboratory fume hood (left) and sealed
+                                    transportation of plant materials (right)</p>
+                            </figcaption>
+                        </figure>
+                        <p>Additionally, we place a special emphasis on the safety of microbiological experiments. This
+                            year, we use low-risk
+                            microorganisms, such as E. coli TOP10 and Agrobacterium GV3101, for basic biological
+                            experiments. For working with
+                            low-risk organisms, we conduct most experiments in a clean bench or biological safety
+                            cabinet to prevent aerosol
+                            generation. For products related to transgenic plants, we ensure that they are not
+                            cultivated in unintended locations
+                            and implement specific biological containment and isolation measures according to
+                            regulations to limit their spread. For
+                            waste materials related to microbiological experiments and transgenic plants, we first use
+                            chemical disinfectants for
+                            initial decontamination, followed by thorough sterilization using high-temperature and
+                            high-pressure methods in a
+                            designated waste sterilization area. The treated waste is then disposed of in specific bins
+                            and handled by approved
+                            disposal facilities.</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/safety/s7.jpg" alt="s7">
+                        </figure>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Emergency Response Measures</b>
+                            </p>
+                        </div>
+                        <p>The laboratory is equipped with emergency response equipment, including fire extinguishers,
+                            first aid supplies, and
+                            accident response materials. Detailed emergency response plans have been established to
+                            ensure swift and effective
+                            handling of safety incidents. During experiments, we have also developed emergency response
+                            procedures for laboratory
+                            safety incidents based on training, as outlined below:</p>
+                        <p>1. Stop the experiment immediately: In the event of a safety incident, all experimental
+                            operations should be stopped immediately to ensure that the
+                            experimental equipment is in a safe state.</p>
+                        <p>2. Assess the circumstances of the accident: Quickly assess the type and severity of the
+                            incident, including whether it involves chemical spills, fire, injuries,
+                            etc.</p>
+                        <p>3. Notify relevant personnel: Immediately notify the laboratory supervisor and safety
+                            personnel to report the incident.</p>
+                        <p>4. Evacuate personnel: Depending on the severity of the incident, evacuate all personnel from
+                            the laboratory immediately if necessary, ensuring
+                            they are kept away from the danger zone.</p>
+                        <p>5. Use emergency equipment: use the emergency equipment provided in the laboraatory according
+                            to the type of incident. For example:</p>
+                        <ul style="list-style-type: disc;">
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem); ">Chemical spill: Use absorbent materials
+                                or a spill response kit to handle the situation.
+                            </li>
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem); ">Fire: Use a fire extinguisher or fire
+                                blanket to extinguish the source of the fire.
+                            </li>
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem); ">Luciferase (Luz):
+                                Catalyzes the oxidation of fungal luciferin,
+                                resulting in
+                                light emission.
+                            </li>
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem); ">Injury: Use a first aid kit for initial
+                                treatment and call for emergency assistance as needed.
+                            </li>
+                        </ul>
+                        <p></p>
+                        <p>6. Ventilation and isolation: If there is a leak of toxic or irritating gases, the
+                            laboratory's negative pressure exhaust system should be activated
+                            immediately to ensure air circulation and isolate the contaminated area.</p>
+                        <p>7. Cleaning and disinfection: After handling the incident, the affected area should be
+                            thoroughly cleaned and disinfected to ensure that no residual
+                            contaminants are left behind.</p>
+                        <p>8. Documentation and reporting: Carefully record the time, location, cause, response process,
+                            and outcome of the incident, and submit an incident report
+                            to the relevant departments.</p>
+                        <p>9. Incident analysis and improvement: Analyze the incident to identify its causes, develop
+                            improvement measures, and prevent similar incidents from occurring
+                            again.</p>
+                        <p>We equip the laboratory with the necessary safety equipment and personal protective gear, and
+                            conduct regular safety
+                            training and emergency drills, either periodically or as organized by the research
+                            institute, to ensure that all team
+                            members are familiar with emergency procedures and the use of equipment.</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/safety/s8.png" alt="s6">
+                            <figcaption>
+                                <p>Figure 6: Display of the laboratory emergency response safety section</p>
+                            </figcaption>
+                        </figure>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Public Safety and Health</b>
+                            </p>
+                        </div>
+                        <p>Fortunately, we have focused on safety training and management, learning various key safety
+                            points and strictly adhering
+                            to the laboratory's rules and regulations to standardize experimental procedures. During
+                            this time, no safety hazards or
+                            incidents, large or small, have occurred. We consistently wear lab coats and gloves in the
+                            laboratory, disinfect our
+                            hands before leaving, and leave all supplies and products in the lab without taking them
+                            outside. We also avoid touching
+                            public areas with our gloved hands to prevent cross-contamination. This effectively reduces
+                            potential risks to public
+                            safety and health.</p>
+                        <figure>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/safety/s9.png" alt="s6">
+                        </figure>
+                        <p>Through the integrated implementation of these design decisions and safety measures, we have
+                            minimized the potential
+                            risks present during the experimental process, ensuring the safety and reliability of the
+                            project, while also fully
+                            protecting the safety of both human and public environments.</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collection Section -->
+    <section class="collection" style="background-color: rgba(30, 30, 30);">
+        <div class="partners">
+            <img class="partners__image"
+                src="https://static.igem.wiki/teams/5218/image/static/images/sponsor/all.png" />
+        </div>
+
+        <div class="contacts">
+            <p class="contacts__description">Address: BGI Center, No. 9 Yunhua Road, Yantian District,
+                Shenzhen, 518083,
+                China</p>
+            <p class="contacts__description">Phone: +86 13101793873 (Weekdays: 8:00-17:00 Weekends: Closed)
+                E-mail:
+                chenlichuan@genomics.cn</p>
+        </div>
+
+        <div class="copyright">
+            <p class="copyright__text">
+                ©2024 Content on this site is licensed under a
+                <a class="copyright__link" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons
+                    Attribution 4.0 International license</a>
+            </p>
+            <p class="copyright__text">
+                The repository used to create this website is available at
+                <a class="copyright__link" href="">gitlab.igem.org/2024/bgi-mammothedu-south</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- JavaScript -->
+
+    <!-- Loader -->
+    <script>
+        // Remove the preloader when the page is fully loaded
+        window.onload = function () {
+            const preloader = document.getElementById('preloader');
+            preloader.style.opacity = '0'; // Start fading out the preloader
+            setTimeout(() => {
+                preloader.style.display = 'none'; // Hide the preloader completely
+            }, 500); // Wait for the fade-out to complete
+        };
+    </script>
+
+    <!-- Image slider -->
+    <script>
+        let currentSlide = 0;
+        const slides = [
+            "linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0)), url('https://static.igem.wiki/teams/5218/image/static/images/safety/1.jpg')",
+            "linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0)), url('https://static.igem.wiki/teams/5218/image/static/images/safety/2.jpg')",
+            "linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0)), url('https://static.igem.wiki/teams/5218/image/static/images/safety/3.jpg')"
+        ];
+        const dots = document.querySelectorAll('.carousel-nav span');
+        const introSection = document.getElementById('intro-section');
+
+        function showSlide(index) {
+            dots[currentSlide].classList.remove('active');
+            currentSlide = index;
+            introSection.style.backgroundImage = slides[currentSlide]; // Apply the gradient and image
+            dots[currentSlide].classList.add('active');
+        }
+
+        // Make sure the first slide is loaded when the page loads
+        document.addEventListener('DOMContentLoaded', function () {
+            // Preload images
+            slides.forEach(function (slide) {
+                const img = new Image();
+                img.src = slide.match(/url\('(.*)'\)/)[1]; // Extract the URL from the background-image
+            });
+
+            showSlide(0); // Show the first slide immediately after preloading starts
+        });
+
+        setInterval(() => {
+            const nextSlide = (currentSlide + 1) % slides.length;
+            showSlide(nextSlide);
+        }, 2000); // Change every 2 seconds
+    </script>
+
+    <!-- ToC -->
+    <script>
+        // Smooth scroll when clicking ToC links
+        document.querySelectorAll('.toc a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+    <!-- Header -->
+    <script src="./static/js/header.js"></script>
+
+</body>
+
+</html>

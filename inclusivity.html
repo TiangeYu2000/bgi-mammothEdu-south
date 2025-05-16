@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="https://static.igem.wiki/teams/5218/image/static/images/logo.png" />
+    <title>PetalGlow</title>
+    <!-- Reset and Custom Stylesheets -->
+    <link rel="stylesheet" href="./static/css/reset.css">
+    <link rel="stylesheet" href="./static/css/main.css">
+    <link rel="stylesheet" href="./static/css/header.css">
+    <link rel="stylesheet" href="./static/css/notebook.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header class="navbar">
+        <!-- Logo -->
+        <a class="navbar__logo" href="https://2024.igem.wiki/bgi-mammothedu-south/">
+            <img class="navbar__logo-icon" src="https://static.igem.wiki/teams/5218/image/static/images/logo.png"
+                width="80" alt="PetalGlow Logo" />
+            <div class="navbar__logo-text">
+                <div class="navbar__title" href="https://2024.igem.wiki/bgi-mammothedu-south/">Petalglow</div>
+                <div class="navbar__subtitle" href="roster.html">BGI-MammothEdu-South</div>
+            </div>
+        </a>
+
+        <!-- Toggle for mobile menu -->
+        <input type="checkbox" id="menu-toggle" class="navbar__checkbox" />
+        <label for="menu-toggle" class="navbar__toggle-btn">☰</label>
+
+        <!-- Navigation Menu -->
+        <nav class="navbar__menu">
+            <!-- Home Link （Retrun to Home page） -->
+            <a href="https://2024.igem.wiki/bgi-mammothedu-south/" class="navbar__menu-item">Home</a>
+
+            <!-- Project Dropdown -->
+            <div class="navbar__menu-item-dropdown">
+                <a href="#" class="navbar__menu-item">Project</a>
+                <div class="navbar__submenu">
+                    <a href="./description.html" class="navbar__submenu-item">Description</a>
+                    <a href="./engineering.html" class="navbar__submenu-item">Engineering</a>
+                    <a href="./results" class="navbar__submenu-item">Results</a>
+                    <a href="./results#plant" class="navbar__submenu-item">Plant</a>
+                    <a href="./implementation" class="navbar__submenu-item">Implementation</a>
+                    <a href="./contribution" class="navbar__submenu-item">Contribution</a>
+                </div>
+            </div>
+
+            <!-- Wet Lab Dropdown -->
+            <div class="navbar__menu-item-dropdown">
+                <a href="#" class="navbar__menu-item">Wet Lab</a>
+                <div class="navbar__submenu">
+                    <a href="./parts.html" class="navbar__submenu-item">Parts</a>
+                    <a href="./experiments" class="navbar__submenu-item">Experiments</a>
+                    <a href="./notebook.html" class="navbar__submenu-item">Notebook</a>
+                    <a href="./protocal" class="navbar__submenu-item">Protocal</a>
+                    <a href="./safety" class="navbar__submenu-item">Safety</a>
+                </div>
+            </div>
+
+            <!-- Dry Lab Dropdown -->
+            <div class="navbar__menu-item-dropdown">
+                <a href="#" class="navbar__menu-item">Dry Lab</a>
+                <div class="navbar__submenu">
+                    <a href="./model" class="navbar__submenu-item">Model</a>
+                    <a href="./measurement" class="navbar__submenu-item">Measurement</a>
+                </div>
+            </div>
+
+            <!-- Out Reach Dropdown -->
+            <div class="navbar__menu-item-dropdown">
+                <a href="#" class="navbar__menu-item">Out Reach</a>
+                <div class="navbar__submenu">
+                    <a href="./human-practices.html" class="navbar__submenu-item">Human Practices</a>
+                    <a href="./education" class="navbar__submenu-item">Education</a>
+                    <a href="./entrepreneurship" class="navbar__submenu-item">Entrepreneurship</a>
+                    <a href="./inclusivity" class="navbar__submenu-item">Inclusivity</a>
+                </div>
+            </div>
+
+            <!-- Team Dropdown -->
+            <div class="navbar__menu-item-dropdown">
+                <a href="#" class="navbar__menu-item">Team</a>
+                <div class="navbar__submenu">
+                    <a href="./roster.html" class="navbar__submenu-item">Roster</a>
+                    <a href="./attributions.html" class="navbar__submenu-item">Attribution</a>
+                    <a href="./partnership.html" class="navbar__submenu-item">Partnership</a>
+                    <a href="./highlights.html" class="navbar__submenu-item">Highlights</a>
+                    <a href="#" class="navbar__submenu-item">Medals</a>
+                </div>
+            </div>
+
+            <!-- Close Button for mobile menu -->
+            <label for="menu-toggle" class="navbar__close-btn">✖</label>
+        </nav>
+    </header>
+
+    <!-- Preloader Section -->
+    <div id="preloader">
+        <div class="spinner"></div>
+        <p>cooking...</p>
+    </div>
+
+    <section class="intro-section" id="intro-section">
+        <!-- Navigation Dots for Carousel -->
+        <div class="carousel-nav">
+            <span class="active" onclick="showSlide(0)"></span>
+            <span onclick="showSlide(1)"></span>
+            <span onclick="showSlide(2)"></span>
+        </div>
+
+        <div class="intro-background">
+            <h1>Inclusivity</h1>
+        </div>
+    </section>
+
+    <!-- Main Section with Content and TOC -->
+    <section class="description-page">
+        <!-- Background Image for Content Section -->
+        <div class="content-background">
+            <!-- Table of Contents (Left Side) -->
+            <nav class="toc">
+                <ul>
+                    <li><a href="#promoting">&#127849Promoting</a></li>
+                    <li><a href="#activities">&#127849Activities</a></li>
+                    <li><a href="#future">&#127849The future</a></li>
+                </ul>
+            </nav>
+
+            <!-- Content Sections (Right Side) -->
+            <div class="content" style="margin-top: -170px;">
+                <section id="promoting">
+                    <h3>Promoting Inclusivity Through Documentation and Accessibility</h3>
+                    <div style="text-align: left;">
+                        <p>To ensure that the work done by our team is accessible and can be built upon by others, we
+                            documented all our protocols
+                            and experimental procedures in both English and Chinese. By creating a bilingual experiment
+                            notebook, we aim to make
+                            synthetic biology more approachable for teams or external entities worldwide, particularly
+                            those in China who may have
+                            difficulty accessing resources in English. This ensures that researchers, students, and
+                            enthusiasts from diverse
+                            linguistic backgrounds can fully understand and replicate our work, enhancing collaboration
+                            and knowledge-sharing across
+                            borders.</p>
+                    </div>
+                </section>
+
+                <section id="activities">
+                    <h3>Activities</h3>
+                    <div style="text-align: left;">
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Expanding Access to Synthetic Biology</b>
+                            </p>
+                        </div>
+                        <p>Our team sought to break down barriers to participation in synthetic biology by increasing
+                            access to education and
+                            resources. For example, we organized outreach programs at local schools, such as Tiandong
+                            Middle School, where we
+                            introduced students to synthetic biology, iGEM, and the broader concept of inclusivity. By
+                            giving presentations and
+                            hosting discussions on mental health, we educated young minds about the potential of
+                            synthetic biology to create
+                            positive social change. These activities aimed to inspire students from diverse backgrounds
+                            to explore synthetic biology
+                            and understand how it can be used to address real-world problems, such as mental health,
+                            which is often stigmatized in
+                            Eastern cultures.</p>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Investigating Barriers to Participation in Science</b>
+                            </p>
+                        </div>
+                        <p>During the development of PetalGlow, we recognized that many people in China and other
+                            Eastern cultures face significant
+                            social stigmas around mental health. These stigmas often prevent individuals from seeking
+                            traditional treatment, making
+                            it crucial for us to develop an accessible, low-cost alternative for managing mild to
+                            moderate mental health issues. By
+                            interviewing mental health professionals and psychiatrists, such as Dr. Zhong and Nurse
+                            Alex, we gained valuable
+                            insights into the barriers to mental health care in China, such as the high cost of
+                            biological treatments and the
+                            cultural resistance to psychological therapy. This helped shape our project's goal of
+                            creating an inclusive product that
+                            offers therapeutic benefits without the need for medical intervention, medication, or
+                            invasive procedures.</p>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Inclusive Design for Diverse Audiences</b>
+                            </p>
+                        </div>
+                        <p>Our target audience includes individuals with mild anxiety or depression, students, and plant
+                            lovers. In particular,
+                            PetalGlow addresses the needs of those who avoid traditional medical treatment due to stigma
+                            or financial constraints.
+                            We also considered how to make the product more engaging for users by fostering a sense of
+                            community. For example, our
+                            plans to develop an online platform where users can share plant care tips and mental health
+                            experiences will help
+                            cultivate a supportive and inclusive community. This community aspect helps ensure that
+                            users feel connected and
+                            encouraged, rather than isolated, as they navigate their mental health journey.</p>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Building Inclusivity in Science Education</b>
+                            </p>
+                        </div>
+                        <p>We extended our efforts to increase inclusivity by reaching out to middle school students
+                            with little knowledge of
+                            synthetic biology. Through our educational workshops, we provided students with the
+                            opportunity to learn about iGEM, our
+                            project, and how they can contribute to building a more inclusive world through science. By
+                            making synthetic biology
+                            concepts more accessible, we hope to inspire the next generation of scientists, ensuring
+                            that future advancements in the
+                            field are shaped by individuals from diverse backgrounds and perspectives.</p>
+                    </div>
+                </section>
+
+                <section id="future">
+                    <h3>Future Inclusivity Goals</h3>
+                    <div style="text-align: left;">
+                        <p>Looking forward, our team is committed to further improving PetalGlow to make it even more
+                            inclusive. Our plans include:</p>
+                        <p>1. Enhancing brightness to increase the plant's therapeutic effects.</p>
+                        <p>2. Adding interactive elements, allowing the plant to respond to human behavior, which could
+                            strengthen its
+                            psychological impact.</p>
+                        <p>3. Developing larger bioluminescent plants to cater to different preferences.</p>
+                        <p>4. Expanding the range of light colors to suit individual needs and the preferences of
+                            specific communities, including
+                            people with visual sensitivities or specific cultural associations with color.</p>
+                        <p>By continuously evolving our project with inclusivity at its core, we aim to create a product
+                            that is accessible,
+                            effective, and meaningful to a broad range of users, ultimately promoting a more inclusive
+                            approach to synthetic biology
+                            and mental health care.</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collection Section -->
+    <section class="collection" style="background-color: rgba(30, 30, 30);">
+        <div class="partners">
+            <img class="partners__image"
+                src="https://static.igem.wiki/teams/5218/image/static/images/sponsor/all.png" />
+        </div>
+
+        <div class="contacts">
+            <p class="contacts__description">Address: BGI Center, No. 9 Yunhua Road, Yantian District,
+                Shenzhen, 518083,
+                China</p>
+            <p class="contacts__description">Phone: +86 13101793873 (Weekdays: 8:00-17:00 Weekends: Closed)
+                E-mail:
+                chenlichuan@genomics.cn</p>
+        </div>
+
+        <div class="copyright">
+            <p class="copyright__text">
+                ©2024 Content on this site is licensed under a
+                <a class="copyright__link" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons
+                    Attribution 4.0 International license</a>
+            </p>
+            <p class="copyright__text">
+                The repository used to create this website is available at
+                <a class="copyright__link" href="">gitlab.igem.org/2024/bgi-mammothedu-south</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- JavaScript -->
+
+    <!-- Loader -->
+    <script>
+        // Remove the preloader when the page is fully loaded
+        window.onload = function () {
+            const preloader = document.getElementById('preloader');
+            preloader.style.opacity = '0'; // Start fading out the preloader
+            setTimeout(() => {
+                preloader.style.display = 'none'; // Hide the preloader completely
+            }, 500); // Wait for the fade-out to complete
+        };
+    </script>
+
+    <!-- Image slider -->
+    <script>
+        let currentSlide = 0;
+        const slides = [
+            "linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0)), url('https://static.igem.wiki/teams/5218/image/static/images/inclusivity/1.jpg')",
+            "linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0)), url('https://static.igem.wiki/teams/5218/image/static/images/inclusivity/2.jpg')",
+            "linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0)), url('https://static.igem.wiki/teams/5218/image/static/images/inclusivity/3.jpg')"
+        ];
+        const dots = document.querySelectorAll('.carousel-nav span');
+        const introSection = document.getElementById('intro-section');
+
+        function showSlide(index) {
+            dots[currentSlide].classList.remove('active');
+            currentSlide = index;
+            introSection.style.backgroundImage = slides[currentSlide]; // Apply the gradient and image
+            dots[currentSlide].classList.add('active');
+        }
+
+        // Make sure the first slide is loaded when the page loads
+        document.addEventListener('DOMContentLoaded', function () {
+            // Preload images
+            slides.forEach(function (slide) {
+                const img = new Image();
+                img.src = slide.match(/url\('(.*)'\)/)[1]; // Extract the URL from the background-image
+            });
+
+            showSlide(0); // Show the first slide immediately after preloading starts
+        });
+
+        setInterval(() => {
+            const nextSlide = (currentSlide + 1) % slides.length;
+            showSlide(nextSlide);
+        }, 2000); // Change every 2 seconds
+    </script>
+
+    <!-- ToC -->
+    <script>
+        // Smooth scroll when clicking ToC links
+        document.querySelectorAll('.toc a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+    <!-- Header -->
+    <script src="./static/js/header.js"></script>
+
+</body>
+
+</html>

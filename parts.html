@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="https://static.igem.wiki/teams/5218/image/static/images/logo.png" />
+    <title>PetalGlow</title>
+    <!-- Reset and Custom Stylesheets -->
+    <link rel="stylesheet" href="./static/css/reset.css">
+    <link rel="stylesheet" href="./static/css/main.css">
+    <link rel="stylesheet" href="./static/css/header.css">
+    <link rel="stylesheet" href="./static/css/parts.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header class="navbar">
+        <!-- Logo -->
+        <a class="navbar__logo" href="https://2024.igem.wiki/bgi-mammothedu-south/">
+            <img class="navbar__logo-icon" src="https://static.igem.wiki/teams/5218/image/static/images/logo.png"
+                width="80" alt="PetalGlow Logo" />
+            <div class="navbar__logo-text">
+                <div class="navbar__title" href="https://2024.igem.wiki/bgi-mammothedu-south/">Petalglow</div>
+                <div class="navbar__subtitle" href="https://2024.igem.wiki/bgi-mammothedu-south/roster">
+                    BGI-MammothEdu-South</div>
+            </div>
+        </a>
+
+        <!-- Toggle for mobile menu -->
+        <input type="checkbox" id="menu-toggle" class="navbar__checkbox" />
+        <label for="menu-toggle" class="navbar__toggle-btn">☰</label>
+
+        <!-- Navigation Menu -->
+        <nav class="navbar__menu">
+            <!-- Home Link （Retrun to Home page） -->
+            <a href="https://2024.igem.wiki/bgi-mammothedu-south/" class="navbar__menu-item">Home</a>
+
+            <!-- Project Dropdown -->
+            <div class="navbar__menu-item-dropdown">
+                <a href="#" class="navbar__menu-item">Project</a>
+                <div class="navbar__submenu">
+                    <a href="./description.html" class="navbar__submenu-item">Description</a>
+                    <a href="./engineering.html" class="navbar__submenu-item">Engineering</a>
+                    <a href="./results" class="navbar__submenu-item">Results</a>
+                    <a href="./results#plant" class="navbar__submenu-item">Plant</a>
+                    <a href="./implementation" class="navbar__submenu-item">Implementation</a>
+                    <a href="./contribution" class="navbar__submenu-item">Contribution</a>
+                </div>
+            </div>
+
+            <!-- Wet Lab Dropdown -->
+            <div class="navbar__menu-item-dropdown">
+                <a href="#" class="navbar__menu-item">Wet Lab</a>
+                <div class="navbar__submenu">
+                    <a href="./parts.html" class="navbar__submenu-item">Parts</a>
+                    <a href="./experiments" class="navbar__submenu-item">Experiments</a>
+                    <a href="./notebook.html" class="navbar__submenu-item">Notebook</a>
+                    <a href="./protocal" class="navbar__submenu-item">Protocal</a>
+                    <a href="./safety" class="navbar__submenu-item">Safety</a>
+                </div>
+            </div>
+
+            <!-- Dry Lab Dropdown -->
+            <div class="navbar__menu-item-dropdown">
+                <a href="#" class="navbar__menu-item">Dry Lab</a>
+                <div class="navbar__submenu">
+                    <a href="./model" class="navbar__submenu-item">Model</a>
+                    <a href="./measurement" class="navbar__submenu-item">Measurement</a>
+                </div>
+            </div>
+
+            <!-- Out Reach Dropdown -->
+            <div class="navbar__menu-item-dropdown">
+                <a href="#" class="navbar__menu-item">Out Reach</a>
+                <div class="navbar__submenu">
+                    <a href="./human-practices.html" class="navbar__submenu-item">Human Practices</a>
+                    <a href="./education" class="navbar__submenu-item">Education</a>
+                    <a href="./entrepreneurship" class="navbar__submenu-item">Entrepreneurship</a>
+                    <a href="./inclusivity" class="navbar__submenu-item">Inclusivity</a>
+                </div>
+            </div>
+
+            <!-- Team Dropdown -->
+            <div class="navbar__menu-item-dropdown">
+                <a href="#" class="navbar__menu-item">Team</a>
+                <div class="navbar__submenu">
+                    <a href="./roster.html" class="navbar__submenu-item">Roster</a>
+                    <a href="./attributions.html" class="navbar__submenu-item">Attribution</a>
+                    <a href="./partnership.html" class="navbar__submenu-item">Partnership</a>
+                    <a href="./highlights.html" class="navbar__submenu-item">Highlights</a>
+                    <a href="#" class="navbar__submenu-item">Medals</a>
+                </div>
+            </div>
+
+            <!-- Close Button for mobile menu -->
+            <label for="menu-toggle" class="navbar__close-btn">✖</label>
+        </nav>
+    </header>
+
+    <!-- Preloader Section -->
+    <div id="preloader">
+        <div class="spinner"></div>
+        <p>cooking...</p>
+    </div>
+
+
+    <!-- Main Section with Content and TOC -->
+    <section class="description-page">
+        <!-- Background Image for Content Section -->
+        <div class="content-background">
+            <!-- <div
+                style="text-align:center;margin-top:20vh;margin-left:min(100px,5vw);margin-right:min(100px,5vw);margin-bottom:min(80px,15vh);">
+                <span
+                    style="font-family: 'ADLaM Display Regular', sans-serif;font-size:9vw;font-weight:600;color:white;">Parts</span>
+            </div> -->
+            <div class="table-container">
+                <table>
+                    <h3>Basic Part</h3>
+                    <p></p>
+                    <thead>
+                        <tr>
+                            <th>Part Name</th>
+                            <th>Gene Name</th>
+                            <th>Organism</th>
+                            <th>Gene Loci</th>
+                            <th>Gene
+                                Description</th>
+                            <th>Forward
+                                Primer
+                                (5'->3')</th>
+                            <th>Reverse
+                                Primer
+                                (5'->3')</th>
+                            <th>Length</th>
+                            <th>Part Type</th>
+                            <th>Short Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a class="link" href="http://parts.igem.org/Part:BBa_K5218001
+                            ">BBa_K5218001</a></td>
+                            <td>RcTAL</td>
+                            <td>Rhodobacter Capsulatus</td>
+                            <td>non</td>
+                            <td>Tyrosine ammonia lyase (TAL) gene from Rhodobacter capsulatus</td>
+                            <td>TACACCAAATCGACTCTAGAAAGCTTGGATCCatgacgctccaatcacagactg</td>
+                            <td>TCCTCGCCCTTGCTCACCATGGTACCaccactagccggagggtcggc</td>
+                            <td>1599</td>
+                            <td>Coding</td>
+                            <td>Tyrosine ammonia-lyase (TAL) that catalyzes the formation of p-coumaric acid from
+                                tyrosine.</td>
+                        </tr>
+                        <tr>
+                            <td><a class="link" href="http://parts.igem.org/Part:BBa_K5218005
+                                                        ">&#127849BBa_K5218005</a></td>
+                            <td>RtTAL</td>
+                            <td>Rhodosporidium Toruloides</td>
+                            <td>non</td>
+                            <td>Tyrosine ammonia lyase (TAL) gene from Rhodosporidium toruloides</td>
+                            <td>TACACCAAATCGACTCTAGAAAGCTTGGATCCATGGCTCCTTCTTTGGATTCTATTTCT</td>
+                            <td>TCCTCGCCCTTGCTCACCATGGTACCAGCCAACATCTTCAACAAAACATTATTAATTC</td>
+                            <td>2148</td>
+                            <td>Coding</td>
+                            <td>Tyrosine ammonia-lyase (TAL) that catalyzes the formation of p-coumaric acid from
+                                tyrosine.</td>
+                        </tr>
+                        <tr>
+                            <td><a class="link" href="http://parts.igem.org/Part:BBa_K5218025">BBa_K5218025</a></td>
+                            <td>NoRtTAL</td>
+                            <td>Rhodosporidium Toruloides</td>
+                            <td>non</td>
+                            <td>Tyrosine ammonia lyase (TAL) gene from Rhodosporidium toruloides</td>
+                            <td>TACACCAAATCGACTCTAGAAAGCTTGGATCCATGGCACCCTCGCTCGACTC</td>
+                            <td>TCCTCGCCCTTGCTCACCATGGTACCAGCGAGCATCTTGAGGAGG</td>
+                            <td>2148</td>
+                            <td>Coding</td>
+                            <td>Tyrosine ammonia-lyase (TAL) that catalyzes the formation of p-coumaric acid from
+                                tyrosine.</td>
+                        </tr>
+                        <tr>
+                            <td><a class="link" href="http://parts.igem.org/Part:BBa_K5218002">&#127849BBa_K5218002</a>
+                            </td>
+                            <td>AtC3H</td>
+                            <td>Arabidopsis Thaliana</td>
+                            <td>AT2G40890</td>
+                            <td>cytochrome P450, family 98, subfamily A, polypeptide 3</td>
+                            <td>TACACCAAATCGACTCTAGAAAGCTTGGATCCCATGTCGTGGTTTCTAATAGCG</td>
+                            <td>TCCTCGCCCTTGCTCACCATGGTACCcatatcgtaaggcacgcgtttg</td>
+                            <td>1524</td>
+                            <td>Coding</td>
+                            <td>p-coumaric acid 3-hdroxylase that catalyzes the formation of caffeic acid from
+                                p-coumaric acid.</td>
+                        </tr>
+                        <tr>
+                            <td><a class="link" href="http://parts.igem.org/Part:BBa_K5218007">BBa_K5218007</a></td>
+                            <td>PpC3H</td>
+                            <td>Physcomitrella Patens</td>
+                            <td>LOC112275074</td>
+                            <td>cytochrome P450 98A3-like</td>
+                            <td>TACACCAAATCGACTCTAGAAAGCTTGGATCCTGGGTCAACCGCTTCACATT</td>
+                            <td>TCCTCGCCCTTGCTCACCATGGTACCcgaaggggatgatccgtttttg</td>
+                            <td>1601</td>
+                            <td>Coding</td>
+                            <td>p-coumaric acid 3-hdroxylase that catalyzes the formation of caffeic acid from
+                                p-coumaric acid.</td>
+                        </tr>
+                        <tr>
+                            <td><a class="link" href="http://parts.igem.org/Part:BBa_K5218009">BBa_K5218009</a></td>
+                            <td>CrC3H</td>
+                            <td>Catharanthus Roseus</td>
+                            <td>JAMLDZ010000192.1</td>
+                            <td>hypothetical protein</td>
+                            <td>TACACCAAATCGACTCTAGAAAGCTTGGATCCTTCTTCCCCACTACCGCCAA</td>
+                            <td>TCCTCGCCCTTGCTCACCATGGTACCtatatccacaggcacgcgtttg</td>
+                            <td>1569</td>
+                            <td>Coding</td>
+                            <td>p-coumaric acid 3-hdroxylase that catalyzes the formation of caffeic acid from
+                                p-coumaric acid.</td>
+                        </tr>
+                        <tr>
+                            <td><a class="link" href="http://parts.igem.org/Part:BBa_K5218013">BBa_K5218013</a></td>
+                            <td>SlC3H</td>
+                            <td>Solanum Lycopersicum</td>
+                            <td>LOC101246092</td>
+                            <td>cytochrome P450 98A2</td>
+                            <td>TACACCAAATCGACTCTAGAAAGCTTGGATCCACAATGGCTATTCCCATTCCTT</td>
+                            <td>TCCTCGCCCTTGCTCACCATGGTACCcatgtcgactgcaattcgtttatac</td>
+                            <td>1545</td>
+                            <td>Coding</td>
+                            <td>p-coumaric acid 3-hdroxylase that catalyzes the formation of caffeic acid from
+                                p-coumaric acid.</td>
+                        </tr>
+                        <tr>
+                            <td><a class="link" href="http://parts.igem.org/Part:BBa_K5218011">BBa_K5218011</a></td>
+                            <td>NtC3H</td>
+                            <td>Nicotiana Tabacum</td>
+                            <td>LOC107803600</td>
+                            <td>cytochrome P450 98A2-like</td>
+                            <td>TACACCAAATCGACTCTAGAAAGCTTGGATCCACAATGGCTATTTCTTTAGCTGC</td>
+                            <td>TCCTCGCCCTTGCTCACCATGGTACCcatgtccactgcaattcgtttatac</td>
+                            <td>1536</td>
+                            <td>Coding</td>
+                            <td>p-coumaric acid 3-hdroxylase that catalyzes the formation of caffeic acid from
+                                p-coumaric acid.</td>
+                        </tr>
+                        <tr>
+                            <td><a class="link" href="http://parts.igem.org/Part:BBa_K5218015">BBa_K5218015</a></td>
+                            <td>RcC3H</td>
+                            <td>Rosa Chinensis</td>
+                            <td>LOC112191575</td>
+                            <td>cytochrome P450 98A2</td>
+                            <td>TACACCAAATCGACTCTAGAAAGCTTGGATCCTTCCGGCCTCTGCCAATTTC</td>
+                            <td>TCCTCGCCCTTGCTCACCATGGTACCcatttcagcttccacacgtttg</td>
+                            <td>1569</td>
+                            <td>Coding</td>
+                            <td>p-coumaric acid 3-hdroxylase that catalyzes the formation of caffeic acid from
+                                p-coumaric acid.</td>
+                        </tr>
+                        <tr>
+                            <td><a class="link" href="http://parts.igem.org/Part:BBa_K5218017">BBa_K5218017</a></td>
+                            <td>GRF3</td>
+                            <td>Arabidopsis Thaliana</td>
+                            <td>AT5G38480</td>
+                            <td>GENERAL REGULATORY FACTOR 3
+                                general regulatory factor, a 14-3-3 gene</td>
+                            <td>CACGGTATCGATAAGCTCGCGGATCCTCTGGCCTAAAACGAAACCG</td>
+                            <td>ctcagatctaccatGGTACCGGATCCAATCTGACACGTGTGTAGCCA</td>
+                            <td>1783</td>
+                            <td>Promoter</td>
+                            <td>Regulate the response of plants to HCHO stress.</td>
+                        </tr>
+                        <tr>
+                            <td><a class="link" href="http://parts.igem.org/Part:BBa_K5218019">BBa_K5218019</a></td>
+                            <td>GS1</td>
+                            <td>Arabidopsis Thaliana</td>
+                            <td>AT5G57440</td>
+                            <td>Other Names: GLYCEROL-3-PHOSPHATASE 2;GPP2;GS1
+                                A member of haloacid dehalogenase-like hydrolase family, HAD-type phosphosugar
+                                phosphatase. Together with MDH1
+                                indispensable for Arabidopsis to metabolize HCHO.</td>
+                            <td>CACGGTATCGATAAGCTCGCGGATCCGATCCGGAGATGGGTTGCAG</td>
+                            <td>ctcagatctaccatGGTACCGGATCCACCGATAACGACGAACCGAAT</td>
+                            <td>997</td>
+                            <td>Promoter</td>
+                            <td>Regulate the response of plants to HCHO stress.</td>
+                        </tr>
+                        <tr>
+                            <td><a class="link" href="http://parts.igem.org/Part:BBa_K5218021">BBa_K5218021</a></td>
+                            <td>MDH1</td>
+                            <td>Arabidopsis Thaliana</td>
+                            <td>AT1G04410</td>
+                            <td>Other Names: C-NAD-MDH1;CYTOSOLIC-NAD-DEPENDENT MALATE DEHYDROGENASE 1;NDH1
+                                predicted to encode a cytosolic malate dehydrogenase. Together with GS1 indispensable
+                                for Arabidopsis to metabolize
+                                HCHO.</td>
+                            <td>ctcagatctaccatGGTACCGGATCCGGAGATTATCGCCGGAAAACG</td>
+                            <td>CACGGTATCGATAAGCTCGCGGATCCTGGACGTGGTTCTTCTCGC</td>
+                            <td>340</td>
+                            <td>Promoter</td>
+                            <td>Regulate the response of plants to HCHO stress.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <h3>Composite Part</h3>
+                    <thead>
+                        <tr>
+                            <th>Part Accession</th>
+                            <th>Part Name</th>
+                            <th>Type</th>
+                            <th>Length(bp)</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a class="link" href="http://parts.igem.org/Part:BBa_K5218003">BBa_K5218003</a></td>
+                            <td>pS1300-AtC3H-GFP</td>
+                            <td>plasmid</td>
+                            <td>12,252</td>
+                            <td>AtC3H gene fused with GFP reporter gene for functional characterization</td>
+                        </tr>
+                        <tr>
+                            <td><a class="link" href="http://parts.igem.org/Part:BBa_K5218004">BBa_K5218004</a></td>
+                            <td>pS1300-RcTAL-GFP</td>
+                            <td>plasmid</td>
+                            <td>12,326</td>
+                            <td>RcTAL gene fused with GFP reporter gene for functional characterization</td>
+                        </tr>
+                        <tr>
+                            <td><a class="link" href="http://parts.igem.org/Part:BBa_K5218006">BBa_K5218006</a></td>
+                            <td>pS1300-RtTAL-GFP</td>
+                            <td>plasmid</td>
+                            <td>12,875</td>
+                            <td>RtTAL gene fused with GFP reporter gene for functional characterization</td>
+                        </tr>
+                        <tr>
+                            <td><a class="link" href="http://parts.igem.org/Part:BBa_K5218008">BBa_K5218008</a></td>
+                            <td>pS1300-PpC3H-GFP</td>
+                            <td>plasmid</td>
+                            <td>12,328</td>
+                            <td>PpC3H gene fused with GFP reporter gene for functional characterization</td>
+                        </tr>
+                        <tr>
+                            <td><a class="link" href="http://parts.igem.org/Part:BBa_K5218010">BBa_K5218010</a></td>
+                            <td>pS1300-CrC3H-GFP</td>
+                            <td>plasmid</td>
+                            <td>12,296</td>
+                            <td>CrC3H gene fused with GFP reporter gene for functional characterization</td>
+                        </tr>
+                        <tr>
+                            <td><a class="link" href="http://parts.igem.org/Part:BBa_K5218012">BBa_K5218012</a></td>
+                            <td>pS1300-NtC3H-GFP</td>
+                            <td>plasmid</td>
+                            <td>12,263</td>
+                            <td>NtC3H gene fused with GFP reporter gene for functional characterization</td>
+                        </tr>
+                        <tr>
+                            <td><a class="link" href="http://parts.igem.org/Part:BBa_K5218014">BBa_K5218014</a></td>
+                            <td>pS1300-SlC3H-GFP</td>
+                            <td>plasmid</td>
+                            <td>12,272</td>
+                            <td>SlC3H gene fused with GFP reporter gene for functional characterization</td>
+                        </tr>
+                        <tr>
+                            <td><a class="link" href="http://parts.igem.org/Part:BBa_K5218016">BBa_K5218016</a></td>
+                            <td>pS1300-RcC3H-GFP</td>
+                            <td>plasmid</td>
+                            <td>12,296</td>
+                            <td>RcC3H gene fused with GFP reporter gene for functional characterization</td>
+                        </tr>
+                        <tr>
+                            <td><a class="link" href="http://parts.igem.org/Part:BBa_K5218018">BBa_K5218018</a></td>
+                            <td>p1300-GRF3-GUS</td>
+                            <td>plasmid</td>
+                            <td>12,727</td>
+                            <td>GRF3 promoter fused with GUS reporter gene for functional characterization</td>
+                        </tr>
+                        <tr>
+                            <td><a class="link" href="http://parts.igem.org/Part:BBa_K5218020">BBa_K5218020</a></td>
+                            <td>p1300-GS1-GUS</td>
+                            <td>plasmid</td>
+                            <td>11,938</td>
+                            <td>GS1 promoter fused with GUS reporter gene for functional characterization</td>
+                        </tr>
+                        <tr>
+                            <td><a class="link" href="http://parts.igem.org/Part:BBa_K5218022">BBa_K5218022</a></td>
+                            <td>p1300-MDH1-GUS</td>
+                            <td>plasmid</td>
+                            <td>11,281</td>
+                            <td>MDH1 promoter fused with GUS reporter gene for functional characterization</td>
+                        </tr>
+                        <tr>
+                            <td><a class="link" href="http://parts.igem.org/Part:BBa_K5218026">BBa_K5218026</a></td>
+                            <td>pS1300-NoRtTAL-GFP</td>
+                            <td>plasmid</td>
+                            <td>12,875</td>
+                            <td>NoRtTAL gene fused with GFP reporter gene for functional characterization</td>
+                        </tr>
+                        <tr>
+                            <td><a class="link" href="http://parts.igem.org/Part:BBa_K5218023">BBa_K5218023</a></td>
+                            <td>p1300-pGRF3-RtTAL-GFP</td>
+                            <td>plasmid</td>
+                            <td>13,542</td>
+                            <td>GRF3 promoter fused with RtTAL and GFP reporter gene for functional characterization
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a class="link" href="http://parts.igem.org/Part:BBa_K5218024">&#127849BBa_K5218024</a>
+                            </td>
+                            <td>p1300-pGRF3-AtC3H-GFP</td>
+                            <td>plasmid</td>
+                            <td>12,919</td>
+                            <td>GRF3 promoter fused with ATC3H and GFP reporter gene for functional characterization
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+
+    </section>
+
+    <!-- Collection Section -->
+    <section class="collection" style="background-color: rgba(30, 30, 30);">
+        <div class="partners">
+            <img class="partners__image"
+                src="https://static.igem.wiki/teams/5218/image/static/images/sponsor/all.png" />
+        </div>
+
+        <div class="contacts">
+            <p class="contacts__description">Address: BGI Center, No. 9 Yunhua Road, Yantian District,
+                Shenzhen, 518083,
+                China</p>
+            <p class="contacts__description">Phone: +86 13101793873 (Weekdays: 8:00-17:00 Weekends: Closed)
+                E-mail:
+                chenlichuan@genomics.cn</p>
+        </div>
+
+        <div class="copyright">
+            <p class="copyright__text">
+                ©2024 Content on this site is licensed under a Creative Commons
+                <a class="copyright__link" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons
+                    Attribution 4.0 International license</a>
+            </p>
+            <p class="copyright__text">
+                The repository used to create this website is available at
+                <a class="copyright__link" href="">gitlab.igem.org/2024/bgi-mammothedu-south</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- JavaScript -->
+
+    <!-- Loader -->
+    <script>
+        // Remove the preloader when the page is fully loaded
+        window.onload = function () {
+            const preloader = document.getElementById('preloader');
+            preloader.style.opacity = '0'; // Start fading out the preloader
+            setTimeout(() => {
+                preloader.style.display = 'none'; // Hide the preloader completely
+            }, 500); // Wait for the fade-out to complete
+        };
+    </script>
+
+    <!-- Image slider -->
+    <script>
+        let currentSlide = 0;
+        const slides = [
+            "linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0)), url('https://static.igem.wiki/teams/5218/image/static/images/implement/h1.jpg')",
+            "linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0)), url('https://static.igem.wiki/teams/5218/image/static/images/implement/h2.jpg')",
+            "linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0)), url('https://static.igem.wiki/teams/5218/image/static/images/implement/h3.jpg')"
+        ];
+        const dots = document.querySelectorAll('.carousel-nav span');
+        const introSection = document.getElementById('intro-section');
+
+        function showSlide(index) {
+            dots[currentSlide].classList.remove('active');
+            currentSlide = index;
+            introSection.style.backgroundImage = slides[currentSlide]; // Apply the gradient and image
+            dots[currentSlide].classList.add('active');
+        }
+
+        setInterval(() => {
+            const nextSlide = (currentSlide + 1) % slides.length;
+            showSlide(nextSlide);
+        }, 2000); // Change every 2 seconds
+    </script>
+
+    <!-- ToC -->
+    <script>
+        // Smooth scroll when clicking ToC links
+        document.querySelectorAll('.toc a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+    <!-- Header -->
+    <script src="./static/js/header.js"></script>
+
+</body>
+
+</html>

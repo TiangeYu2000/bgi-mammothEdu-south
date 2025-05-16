@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="https://static.igem.wiki/teams/5218/image/static/images/logo.png" />
+    <title>PetalGlow</title>
+    <!-- Reset and Custom Stylesheets -->
+    <link rel="stylesheet" href="./static/css/reset.css">
+    <link rel="stylesheet" href="./static/css/main.css">
+    <link rel="stylesheet" href="./static/css/header.css">
+    <link rel="stylesheet" href="./static/css/notebook.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header class="navbar">
+        <!-- Logo -->
+        <a class="navbar__logo" href="https://2024.igem.wiki/bgi-mammothedu-south/">
+            <img class="navbar__logo-icon" src="https://static.igem.wiki/teams/5218/image/static/images/logo.png"
+                width="80" alt="PetalGlow Logo" />
+            <div class="navbar__logo-text">
+                <div class="navbar__title" href="https://2024.igem.wiki/bgi-mammothedu-south/">Petalglow</div>
+                <div class="navbar__subtitle" href="roster.html">BGI-MammothEdu-South</div>
+            </div>
+        </a>
+
+        <!-- Toggle for mobile menu -->
+        <input type="checkbox" id="menu-toggle" class="navbar__checkbox" />
+        <label for="menu-toggle" class="navbar__toggle-btn">☰</label>
+
+        <!-- Navigation Menu -->
+        <nav class="navbar__menu">
+            <!-- Home Link （Retrun to Home page） -->
+            <a href="https://2024.igem.wiki/bgi-mammothedu-south/" class="navbar__menu-item">Home</a>
+
+            <!-- Project Dropdown -->
+            <div class="navbar__menu-item-dropdown">
+                <a href="#" class="navbar__menu-item">Project</a>
+                <div class="navbar__submenu">
+                    <a href="./description.html" class="navbar__submenu-item">Description</a>
+                    <a href="./engineering.html" class="navbar__submenu-item">Engineering</a>
+                    <a href="./results" class="navbar__submenu-item">Results</a>
+                    <a href="./results#plant" class="navbar__submenu-item">Plant</a>
+                    <a href="./implementation" class="navbar__submenu-item">Implementation</a>
+                    <a href="./contribution" class="navbar__submenu-item">Contribution</a>
+                </div>
+            </div>
+
+            <!-- Wet Lab Dropdown -->
+            <div class="navbar__menu-item-dropdown">
+                <a href="#" class="navbar__menu-item">Wet Lab</a>
+                <div class="navbar__submenu">
+                    <a href="./parts.html" class="navbar__submenu-item">Parts</a>
+                    <a href="./experiments" class="navbar__submenu-item">Experiments</a>
+                    <a href="./notebook.html" class="navbar__submenu-item">Notebook</a>
+                    <a href="./protocal" class="navbar__submenu-item">Protocal</a>
+                    <a href="./safety" class="navbar__submenu-item">Safety</a>
+                </div>
+            </div>
+
+            <!-- Dry Lab Dropdown -->
+            <div class="navbar__menu-item-dropdown">
+                <a href="#" class="navbar__menu-item">Dry Lab</a>
+                <div class="navbar__submenu">
+                    <a href="./model" class="navbar__submenu-item">Model</a>
+                    <a href="./measurement" class="navbar__submenu-item">Measurement</a>
+                </div>
+            </div>
+
+            <!-- Out Reach Dropdown -->
+            <div class="navbar__menu-item-dropdown">
+                <a href="#" class="navbar__menu-item">Out Reach</a>
+                <div class="navbar__submenu">
+                    <a href="./human-practices.html" class="navbar__submenu-item">Human Practices</a>
+                    <a href="./education" class="navbar__submenu-item">Education</a>
+                    <a href="./entrepreneurship" class="navbar__submenu-item">Entrepreneurship</a>
+                    <a href="./inclusivity" class="navbar__submenu-item">Inclusivity</a>
+                </div>
+            </div>
+
+            <!-- Team Dropdown -->
+            <div class="navbar__menu-item-dropdown">
+                <a href="#" class="navbar__menu-item">Team</a>
+                <div class="navbar__submenu">
+                    <a href="./roster.html" class="navbar__submenu-item">Roster</a>
+                    <a href="./attributions.html" class="navbar__submenu-item">Attribution</a>
+                    <a href="./partnership.html" class="navbar__submenu-item">Partnership</a>
+                    <a href="./highlights.html" class="navbar__submenu-item">Highlights</a>
+                    <a href="#" class="navbar__submenu-item">Medals</a>
+                </div>
+            </div>
+
+            <!-- Close Button for mobile menu -->
+            <label for="menu-toggle" class="navbar__close-btn">✖</label>
+        </nav>
+    </header>
+
+    <!-- Preloader Section -->
+    <div id="preloader">
+        <div class="spinner"></div>
+        <p>cooking...</p>
+    </div>
+
+    <section class="intro-section" id="intro-section">
+        <!-- Navigation Dots for Carousel -->
+        <div class="carousel-nav">
+            <span class="active" onclick="showSlide(0)"></span>
+            <span onclick="showSlide(1)"></span>
+            <span onclick="showSlide(2)"></span>
+        </div>
+
+        <div class="intro-background">
+            <h1>Protocal</h1>
+        </div>
+    </section>
+
+    <!-- Main Section with Content and TOC -->
+    <section class="description-page">
+        <!-- Background Image for Content Section -->
+        <div class="content-background">
+            <!-- Table of Contents (Left Side) -->
+            <nav class="toc">
+                <ul>
+                    <li><a href="#english">&#127849English</a></li>
+                    <li><a href="#chinese">&#127849Chinese</a></li>
+                </ul>
+            </nav>
+
+            <!-- Content Sections (Right Side) -->
+            <div class="content" style="margin-top: -110px;">
+                <section id="english">
+                    <h3>Protocal English Version</h3>
+                    <div style="text-align: left;">
+                        <p>We
+                            meticulously documented our entire experimental process and created an experimental
+                            manual
+                            to help future iGEM teams and researchers replicate or build on our work. The manual is
+                            openly accessible and provides
+                            step-by-step instructions for constructing bioluminescent plants with both English and
+                            Chinese
+                            versions.</p>
+                        <p><b style="color: #a8f900;">Content</b></p>
+                        <ul style="list-style-type: disc;">
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem);">Cloning PCR: Page 1</li>
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem);">Enzyme Digestion Reaction: Page 2</li>
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem);">Agarose Gel Electrophoresis: Pages 3 to
+                                4</li>
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem);">Product Purification: Page 5</li>
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem);">Homologous Recombination Ligation
+                                Reaction: Page 6</li>
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem);">Transformation into Competent E. coli:
+                                Page 7</li>
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem);">Transformation into Competent
+                                Agrobacterium: Page 8</li>
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem);">Single Colony Picking: Page 9</li>
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem);">Positive Single Colony Liquid PCR
+                                Verification: Page 10</li>
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem);">Sequencing Comparison: Page 11</li>
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem);">Plasmid Extraction: Pages 12 to 13</li>
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem);">Tobacco Cultivation Manual: Pages 14 to
+                                16</li>
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem);">Plant RNA Extraction: Pages 17 to 19
+                            </li>
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem);">Reverse Transcription Experiment: Page
+                                20</li>
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem);">Plant DNA Extraction: Pages 21 to 23
+                            </li>
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem);">Transient Transformation Verification
+                                and GUS Staining of
+                                Tobacco Leaves: Pages 24 to 25</li>
+                        </ul>
+                        <p></p>
+                        <p>
+                            <object id="pdf" type="application/pdf"
+                                data="https://static.igem.wiki/teams/5218/image/static/images/contribution/experiments-for-protocol-wiki-en.pdf"
+                                class="pdf">
+                                <a
+                                    href="https://static.igem.wiki/teams/5218/image/static/images/contribution/experiments-for-protocol-wiki-en.pdf"></a>
+                                <a
+                                    href="https://static.igem.wiki/teams/5218/image/static/images/contribution/experiments-for-protocol-wiki-en.pdf">https://static.igem.wiki/teams/5218/image/static/images/contribution/experiments-for-protocol-wiki-en.pdf</a>
+                            </object>
+                            <!-- Fullscreen Button -->
+                            <!-- <button onclick="toggleFullScreen()">
+                                <p>Toggle Fullscreen</p>
+                            </button> -->
+                        </p>
+                    </div>
+                </section>
+
+                <section id="chinese">
+                    <h3>Protocal Chinese Version</h3>
+                    <div style="text-align: left;">
+                        <p>
+                            <object id="pdf" type="application/pdf"
+                                data="https://static.igem.wiki/teams/5218/image/static/images/contribution/experiments-for-protocol-wiki-cn.pdf"
+                                class="pdf">
+                                <a
+                                    href="https://static.igem.wiki/teams/5218/image/static/images/contribution/experiments-for-protocol-wiki-cn.pdf"></a>
+                                <a
+                                    href="https://static.igem.wiki/teams/5218/image/static/images/contribution/experiments-for-protocol-wiki-cn.pdf">https://static.igem.wiki/teams/5218/image/static/images/contribution/experiments-for-protocol-wiki-cn.pdf</a>
+                            </object>
+                            <!-- Fullscreen Button -->
+                            <!-- <button onclick="toggleFullScreen()">
+                                <p>Toggle Fullscreen</p>
+                            </button> -->
+                        </p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collection Section -->
+    <section class="collection" style="align-items: center; background-color: rgba(30, 30, 30);">
+        <div class="partners">
+            <img class="partners__image"
+                src="https://static.igem.wiki/teams/5218/image/static/images/sponsor/all.png" />
+        </div>
+
+        <div class="contacts">
+            <p class="contacts__description">Address: BGI Center, No. 9 Yunhua Road, Yantian District, Shenzhen, 518083,
+                China</p>
+            <p class="contacts__description">Phone: +86 13101793873 (Weekdays: 8:00-17:00 Weekends: Closed) E-mail:
+                chenlichuan@genomics.cn</p>
+        </div>
+
+        <div class="copyright">
+            <p class="copyright__text">
+                ©2024 Content on this site is licensed under a
+                <a class="copyright__link" href="">Attribution 4.0 International license.</a>
+            </p>
+            <p class="copyright__text">
+                The repository used to create this website is available at
+                <a class="copyright__link" href="">gitlab.igem.org/2024/bgi-mammothedu-south</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- JavaScript -->
+
+    <!-- Loader -->
+    <script>
+        // Remove the preloader when the page is fully loaded
+        window.onload = function () {
+            const preloader = document.getElementById('preloader');
+            preloader.style.opacity = '0'; // Start fading out the preloader
+            setTimeout(() => {
+                preloader.style.display = 'none'; // Hide the preloader completely
+            }, 500); // Wait for the fade-out to complete
+        };
+    </script>
+
+    <!-- Image slider -->
+    <script>
+        let currentSlide = 0;
+        const slides = [
+            "linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0)), url('https://static.igem.wiki/teams/5218/image/static/images/protocal/1.jpg')",
+            "linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0)), url('https://static.igem.wiki/teams/5218/image/static/images/protocal/3.jpg')",
+            "linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0)), url('https://static.igem.wiki/teams/5218/image/static/images/protocal/2.jpg')"
+        ];
+        const dots = document.querySelectorAll('.carousel-nav span');
+        const introSection = document.getElementById('intro-section');
+
+        function showSlide(index) {
+            dots[currentSlide].classList.remove('active');
+            currentSlide = index;
+            introSection.style.backgroundImage = slides[currentSlide]; // Apply the gradient and image
+            dots[currentSlide].classList.add('active');
+        }
+
+        // Make sure the first slide is loaded when the page loads
+        document.addEventListener('DOMContentLoaded', function () {
+            // Preload images
+            slides.forEach(function (slide) {
+                const img = new Image();
+                img.src = slide.match(/url\('(.*)'\)/)[1]; // Extract the URL from the background-image
+            });
+
+            showSlide(0); // Show the first slide immediately after preloading starts
+        });
+
+        setInterval(() => {
+            const nextSlide = (currentSlide + 1) % slides.length;
+            showSlide(nextSlide);
+        }, 2000); // Change every 2 seconds
+    </script>
+
+    <!-- ToC -->
+    <script>
+        // Smooth scroll when clicking ToC links
+        document.querySelectorAll('.toc a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+    <!-- PDF fullscreen view -->
+    <script>
+        function toggleFullScreen() {
+            var elem = document.getElementById("pdf");
+
+            if (!document.fullscreenElement) {
+                if (elem.requestFullscreen) {
+                    elem.requestFullscreen();
+                } else if (elem.mozRequestFullScreen) { // Firefox
+                    elem.mozRequestFullScreen();
+                } else if (elem.webkitRequestFullscreen) { // Chrome, Safari and Opera
+                    elem.webkitRequestFullscreen();
+                } else if (elem.msRequestFullscreen) { // IE/Edge
+                    elem.msRequestFullscreen();
+                }
+            } else {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                } else if (document.mozCancelFullScreen) { // Firefox
+                    document.mozCancelFullScreen();
+                } else if (document.webkitExitFullscreen) { // Chrome, Safari and Opera
+                    document.webkitExitFullscreen();
+                } else if (document.msExitFullscreen) { // IE/Edge
+                    document.msExitFullscreen();
+                }
+            }
+        }
+    </script>
+
+    <!-- Header -->
+    <script src="./static/js/header.js"></script>
+
+</body>
+
+</html>

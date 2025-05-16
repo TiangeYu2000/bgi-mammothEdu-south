@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="https://static.igem.wiki/teams/5218/image/static/images/logo.png" />
+  <title>Petalglow</title>
+  <link rel="stylesheet" href="./static/css/reset.css">
+  <link rel="stylesheet" href="./static/css/main.css">
+  <link rel="stylesheet" href="./static/css/header.css">
+  <link rel="stylesheet" href="./static/css/team.css">
+</head>
+
+<body>
+  <!-- Header Section -->
+  <header class="navbar">
+    <!-- Logo -->
+    <a class="navbar__logo" href="https://2024.igem.wiki/bgi-mammothedu-south/">
+      <img class="navbar__logo-icon" src="https://static.igem.wiki/teams/5218/image/static/images/logo.png" width="80"
+        alt="PetalGlow Logo" />
+      <div class="navbar__logo-text">
+        <div class="navbar__title" href="https://2024.igem.wiki/bgi-mammothedu-south/">Petalglow</div>
+        <div class="navbar__subtitle" href="https://2024.igem.wiki/bgi-mammothedu-south/">BGI-MammothEdu-South</div>
+      </div>
+    </a>
+
+    <!-- Toggle for mobile menu -->
+    <input type="checkbox" id="menu-toggle" class="navbar__checkbox" />
+    <label for="menu-toggle" class="navbar__toggle-btn">☰</label>
+
+    <!-- Navigation Menu -->
+    <nav class="navbar__menu">
+      <!-- Home Link （Return to Home page） -->
+      <a href="https://2024.igem.wiki/bgi-mammothedu-south/" class="navbar__menu-item">Home</a>
+
+      <!-- Project Dropdown -->
+      <div class="navbar__menu-item-dropdown">
+        <a href="#" class="navbar__menu-item">Project</a>
+        <div class="navbar__submenu">
+          <a href="./description.html" class="navbar__submenu-item">Description</a>
+          <a href="./engineering.html" class="navbar__submenu-item">Engineering</a>
+          <a href="./results" class="navbar__submenu-item">Results</a>
+          <a href="./results#plant" class="navbar__submenu-item">Plant</a>
+          <a href="./implementation" class="navbar__submenu-item">Implementation</a>
+          <a href="./contribution" class="navbar__submenu-item">Contribution</a>
+        </div>
+      </div>
+
+      <!-- Wet Lab Dropdown -->
+      <div class="navbar__menu-item-dropdown">
+        <a href="#" class="navbar__menu-item">Wet Lab</a>
+        <div class="navbar__submenu">
+          <a href="./parts.html" class="navbar__submenu-item">Parts</a>
+          <a href="./experiments" class="navbar__submenu-item">Experiments</a>
+          <a href="./notebook.html" class="navbar__submenu-item">Notebook</a>
+          <a href="./protocal" class="navbar__submenu-item">Protocal</a>
+          <a href="./safety" class="navbar__submenu-item">Safety</a>
+        </div>
+      </div>
+
+      <!-- Dry Lab Dropdown -->
+      <div class="navbar__menu-item-dropdown">
+        <a href="#" class="navbar__menu-item">Dry Lab</a>
+        <div class="navbar__submenu">
+          <a href="./model" class="navbar__submenu-item">Model</a>
+          <a href="./measurement" class="navbar__submenu-item">Measurement</a>
+        </div>
+      </div>
+
+      <!-- Out Reach Dropdown -->
+      <div class="navbar__menu-item-dropdown">
+        <a href="#" class="navbar__menu-item">Out Reach</a>
+        <div class="navbar__submenu">
+          <a href="./human-practices.html" class="navbar__submenu-item">Human Practices</a>
+          <a href="./education" class="navbar__submenu-item">Education</a>
+          <a href="./entrepreneurship" class="navbar__submenu-item">Entrepreneurship</a>
+          <a href="./inclusivity" class="navbar__submenu-item">Inclusivity</a>
+        </div>
+      </div>
+
+      <!-- Team Dropdown -->
+      <div class="navbar__menu-item-dropdown">
+        <a href="#" class="navbar__menu-item">Team</a>
+        <div class="navbar__submenu">
+          <a href="./roster.html" class="navbar__submenu-item">Roster</a>
+          <a href="./attributions.html" class="navbar__submenu-item">Attribution</a>
+          <a href="./partnership.html" class="navbar__submenu-item">Partnership</a>
+          <a href="./highlights.html" class="navbar__submenu-item">Highlights</a>
+          <a href="#" class="navbar__submenu-item">Medals</a>
+        </div>
+      </div>
+
+      <!-- Close Button for mobile menu -->
+      <label for="menu-toggle" class="navbar__close-btn">✖</label>
+    </nav>
+  </header>
+
+  <!-- Preloader Section -->
+  <div id="preloader">
+    <div class="spinner"></div>
+    <p>cooking...</p>
+  </div>
+
+  <section class="intro-section" id="intro-section">
+    <!-- Navigation Dots for Carousel -->
+    <div class="carousel-nav">
+      <span class="active" onclick="showSlide(0)"></span>
+      <span onclick="showSlide(1)"></span>
+      <span onclick="showSlide(2)"></span>
+    </div>
+
+    <div class="intro-background">
+      <h1>Team</h1>
+    </div>
+  </section>
+
+  <section class="description-page">
+    <!-- Background Image for Content Section -->
+    <div class="content-background">
+      <section class="student-section">
+        <div class="student-container">
+          <!-- Team Member Tree Structure -->
+          <div id="student_tree" class="tree-half">
+            <!-- Tree nodes for students -->
+            <div class="tree__node" data-student="stu_1">
+              <img src="https://static.igem.wiki/teams/5218/image/static/images/team/stu-1/node.png" alt="Amy Fu">
+            </div>
+            <div class="tree__node" data-student="stu_2">
+              <img src="https://static.igem.wiki/teams/5218/image/static/images/team/stu-2/node.png" alt="Zihan Huang">
+            </div>
+            <div class="tree__node" data-student="stu_3">
+              <img src="https://static.igem.wiki/teams/5218/image/static/images/team/stu-3/node.png" alt="Jinfan Li">
+            </div>
+            <div class="tree__node" data-student="stu_4">
+              <img src="https://static.igem.wiki/teams/5218/image/static/images/team/stu-4/node.png" alt="Junhao Li">
+            </div>
+            <div class="tree__node" data-student="stu_5">
+              <img src="https://static.igem.wiki/teams/5218/image/static/images/team/stu-5/node.png"
+                alt="Chengcheng Liu">
+            </div>
+            <div class="tree__node" data-student="stu_6">
+              <img src="https://static.igem.wiki/teams/5218/image/static/images/team/stu-6/node.png" alt="Jerry Liu">
+            </div>
+            <div class="tree__node" data-student="stu_7">
+              <img src="https://static.igem.wiki/teams/5218/image/static/images/team/stu-7/node.png" alt="Yvxiang Long">
+            </div>
+            <div class="tree__node" data-student="stu_8">
+              <img src="https://static.igem.wiki/teams/5218/image/static/images/team/stu-8/node.png" alt="Guanbo Lu">
+            </div>
+            <div class="tree__node" data-student="stu_9">
+              <img src="https://static.igem.wiki/teams/5218/image/static/images/team/stu-9/node.png" alt="Star Mu">
+            </div>
+            <div class="tree__node" data-student="stu_10">
+              <img src="https://static.igem.wiki/teams/5218/image/static/images/team/stu-10/node.png" alt="Yvjun Peng">
+            </div>
+            <div class="tree__node" data-student="stu_11">
+              <img src="https://static.igem.wiki/teams/5218/image/static/images/team/stu-11/node.png"
+                alt="Kaiyuan Wang">
+            </div>
+            <div class="tree__node" data-student="stu_12">
+              <img src="https://static.igem.wiki/teams/5218/image/static/images/team/stu-12/node.png"
+                alt="Juliette Xiong">
+            </div>
+            <div class="tree__node" data-student="stu_13">
+              <img src="https://static.igem.wiki/teams/5218/image/static/images/team/stu-13/node.png" alt="Hannah Xu">
+            </div>
+            <div class="tree__node" data-student="stu_14">
+              <img src="https://static.igem.wiki/teams/5218/image/static/images/team/stu-14/node.png" alt="Kevin Ye">
+            </div>
+            <div class="tree__node" data-student="stu_15">
+              <img src="https://static.igem.wiki/teams/5218/image/static/images/team/stu-15/node.png" alt="Aoran Yi">
+            </div>
+            <div class="tree__node" data-student="stu_16">
+              <img src="https://static.igem.wiki/teams/5218/image/static/images/team/stu-16/node.png" alt="Han Zou">
+            </div>
+          </div>
+
+          <!-- Right side (Student Card or Team Description) -->
+          <div class="info-half">
+            <!-- Default team description (shown when no hover) -->
+            <div class="team-description">
+              <h3>Meet Our Amazing Team!</h3>
+              <p>
+                Our team is composed of diverse and talented individuals from different backgrounds. Together, we are
+                working
+                to achieve the goal of creating glowing plants through biotechnology and synthetic biology.
+              </p>
+            </div>
+
+            <!-- Student card will be shown here on hover -->
+            <div class="student-card">
+              <!-- Content populated dynamically via JS -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PI & Instructor Section -->
+      <section class="teacher-section">
+        <h3 class="section-title">-PI & Instructor-</h3>
+
+        <div class="teacher-container">
+          <div class="teacher-node" data-teacher="1">
+            <img src="https://static.igem.wiki/teams/5218/image/static/images/team/0.png" alt="Kai Wang">
+            <p>Kai Wang, PI</p>
+          </div>
+          <div class="teacher-node" data-teacher="2">
+            <img src="https://static.igem.wiki/teams/5218/image/static/images/team/1.png" alt="Lichuan Chen">
+            <p>Lichuan Chen, PI</p>
+          </div>
+          <div class="teacher-node" data-teacher="3">
+            <img src="https://static.igem.wiki/teams/5218/image/static/images/team/2.png" alt="Xiaojuan Wang">
+            <p>Xiaojuan Wang, PI</p>
+          </div>
+          <div class="teacher-node" data-teacher="4">
+            <img src="https://static.igem.wiki/teams/5218/image/static/images/team/3.png" alt="Rui Zhang">
+            <p>Rui Zhang, Instructor</p>
+          </div>
+          <div class="teacher-node" data-teacher="5">
+            <img src="https://static.igem.wiki/teams/5218/image/static/images/team/4.png" alt="Tiange Yu">
+            <p>Tiange Yu, Instructor</p>
+          </div>
+        </div>
+
+        <!-- This div will hold the teacher description -->
+        <div class="teacher-description">
+          <p class="advisor-name">Hover over a teacher to see their info</p>
+          <p class="teacher-description-text"></p>
+        </div>
+      </section>
+
+      <!-- Advisors Section -->
+      <section class="advisor-section">
+        <h2 class="section-title">-Advisors-</h2> <!-- Add title for the advisor section -->
+
+        <div class="advisor-container">
+          <div class="advisor-node" data-advisor="1">
+            <img src="https://static.igem.wiki/teams/5218/image/static/images/team/5.png" alt="Wanjun Chen">
+            <p>Wanjun Chen</p>
+          </div>
+          <div class="advisor-node" data-advisor="2">
+            <img src="https://static.igem.wiki/teams/5218/image/static/images/team/6.png" alt="Yueqi Zeng">
+            <p>Yueqi Zeng</p>
+          </div>
+          <div class="advisor-node" data-advisor="3">
+            <img src="https://static.igem.wiki/teams/5218/image/static/images/team/7.png" alt="Xu Wang">
+            <p>Xu Wang</p>
+          </div>
+          <div class="advisor-node" data-advisor="4">
+            <img src="https://static.igem.wiki/teams/5218/image/static/images/team/8.png" alt="Aoruan Mo">
+            <p>Aoruan Mo</p>
+          </div>
+        </div>
+
+        <!-- This div will hold the advisor description -->
+        <div class="advisor-description">
+          <p class="advisor-name">Hover over an advisor to see their info</p>
+          <p class="advisor-description-text"></p>
+        </div>
+      </section>
+
+    </div>
+  </section>
+
+  <section class="collection" style="background-color: rgba(30, 30, 30);">
+    <div class="partners">
+      <img class="partners__image" src="https://static.igem.wiki/teams/5218/image/static/images/sponsor/all.png" />
+    </div>
+
+    <div class="contacts">
+      <p class="contacts__description">Address: BGI Center, No. 9 Yunhua Road, Yantian District,
+        Shenzhen, 518083,
+        China</p>
+      <p class="contacts__description">Phone: +86 13101793873 (Weekdays: 8:00-17:00 Weekends: Closed)
+        E-mail:
+        chenlichuan@genomics.cn</p>
+    </div>
+
+    <div class="copyright">
+      <p class="copyright__text">
+        ©2024 Content on this site is licensed under a
+        <a class="copyright__link" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons
+          Attribution 4.0 International license</a>
+      </p>
+      <p class="copyright__text">
+        The repository used to create this website is available at
+        <a class="copyright__link" href="">gitlab.igem.org/2024/bgi-mammothedu-south</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- JavaScript -->
+
+  <!-- Loader -->
+  <script>
+    // Remove the preloader when the page is fully loaded
+    window.onload = function () {
+      const preloader = document.getElementById('preloader');
+      preloader.style.opacity = '0'; // Start fading out the preloader
+      setTimeout(() => {
+        preloader.style.display = 'none'; // Hide the preloader completely
+      }, 500); // Wait for the fade-out to complete
+    };
+  </script>
+
+  <!-- Image slider -->
+  <script>
+    let currentSlide = 0;
+    const slides = [
+      "linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0)), url('https://static.igem.wiki/teams/5218/image/static/images/team/2.jpg')",
+      "linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0)), url('https://static.igem.wiki/teams/5218/image/static/images/team/1.jpg')",
+      "linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0)), url('https://static.igem.wiki/teams/5218/image/static/images/team/3.jpg')"
+    ];
+    const dots = document.querySelectorAll('.carousel-nav span');
+    const introSection = document.getElementById('intro-section');
+
+    function showSlide(index) {
+      dots[currentSlide].classList.remove('active');
+      currentSlide = index;
+      introSection.style.backgroundImage = slides[currentSlide]; // Apply the gradient and image
+      dots[currentSlide].classList.add('active');
+    }
+
+    // Make sure the first slide is loaded when the page loads
+    document.addEventListener('DOMContentLoaded', function () {
+      // Preload images
+      slides.forEach(function (slide) {
+        const img = new Image();
+        img.src = slide.match(/url\('(.*)'\)/)[1]; // Extract the URL from the background-image
+      });
+
+      showSlide(0); // Show the first slide immediately after preloading starts
+    });
+
+    setInterval(() => {
+      const nextSlide = (currentSlide + 1) % slides.length;
+      showSlide(nextSlide);
+    }, 2000); // Change every 2 seconds
+  </script>
+
+  <!-- ToC -->
+  <script>
+    // Smooth scroll when clicking ToC links
+    document.querySelectorAll('.toc a').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+
+  <!-- pdf -->
+  <script>
+    function toggleFullScreen() {
+      var elem = document.getElementById("pdf");
+
+      if (!document.fullscreenElement) {
+        if (elem.requestFullscreen) {
+          elem.requestFullscreen();
+        } else if (elem.mozRequestFullScreen) { // Firefox
+          elem.mozRequestFullScreen();
+        } else if (elem.webkitRequestFullscreen) { // Chrome, Safari and Opera
+          elem.webkitRequestFullscreen();
+        } else if (elem.msRequestFullscreen) { // IE/Edge
+          elem.msRequestFullscreen();
+        }
+      } else {
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+        } else if (document.mozCancelFullScreen) { // Firefox
+          document.mozCancelFullScreen();
+        } else if (document.webkitExitFullscreen) { // Chrome, Safari and Opera
+          document.webkitExitFullscreen();
+        } else if (document.msExitFullscreen) { // IE/Edge
+          document.msExitFullscreen();
+        }
+      }
+    }
+  </script>
+
+  <!-- JavaScript for the navigation and other dynamic features -->
+  <script src="./static/js/jquery-3.7.1.js"></script>
+  <script src="./static/js/header.js"></script>
+  <script src="./static/js/team.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="https://static.igem.wiki/teams/5218/image/static/images/logo.png" />
+    <title>PetalGlow</title>
+    <!-- Reset and Custom Stylesheets -->
+    <link rel="stylesheet" href="./static/css/reset.css">
+    <link rel="stylesheet" href="./static/css/main.css">
+    <link rel="stylesheet" href="./static/css/header.css">
+    <link rel="stylesheet" href="./static/css/notebook.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header class="navbar">
+        <!-- Logo -->
+        <a class="navbar__logo" href="https://2024.igem.wiki/bgi-mammothedu-south/">
+            <img class="navbar__logo-icon" src="https://static.igem.wiki/teams/5218/image/static/images/logo.png"
+                width="80" alt="PetalGlow Logo" />
+            <div class="navbar__logo-text">
+                <div class="navbar__title" href="https://2024.igem.wiki/bgi-mammothedu-south/">Petalglow</div>
+                <div class="navbar__subtitle" href="roster.html">BGI-MammothEdu-South</div>
+            </div>
+        </a>
+
+        <!-- Toggle for mobile menu -->
+        <input type="checkbox" id="menu-toggle" class="navbar__checkbox" />
+        <label for="menu-toggle" class="navbar__toggle-btn">☰</label>
+
+        <!-- Navigation Menu -->
+        <nav class="navbar__menu">
+            <!-- Home Link （Retrun to Home page） -->
+            <a href="https://2024.igem.wiki/bgi-mammothedu-south/" class="navbar__menu-item">Home</a>
+
+            <!-- Project Dropdown -->
+            <div class="navbar__menu-item-dropdown">
+                <a href="#" class="navbar__menu-item">Project</a>
+                <div class="navbar__submenu">
+                    <a href="./description.html" class="navbar__submenu-item">Description</a>
+                    <a href="./engineering.html" class="navbar__submenu-item">Engineering</a>
+                    <a href="./results" class="navbar__submenu-item">Results</a>
+                    <a href="./results#plant" class="navbar__submenu-item">Plant</a>
+                    <a href="./implementation" class="navbar__submenu-item">Implementation</a>
+                    <a href="./contribution" class="navbar__submenu-item">Contribution</a>
+                </div>
+            </div>
+
+            <!-- Wet Lab Dropdown -->
+            <div class="navbar__menu-item-dropdown">
+                <a href="#" class="navbar__menu-item">Wet Lab</a>
+                <div class="navbar__submenu">
+                    <a href="./parts.html" class="navbar__submenu-item">Parts</a>
+                    <a href="./experiments" class="navbar__submenu-item">Experiments</a>
+                    <a href="./notebook.html" class="navbar__submenu-item">Notebook</a>
+                    <a href="./protocal" class="navbar__submenu-item">Protocal</a>
+                    <a href="./safety" class="navbar__submenu-item">Safety</a>
+                </div>
+            </div>
+
+            <!-- Dry Lab Dropdown -->
+            <div class="navbar__menu-item-dropdown">
+                <a href="#" class="navbar__menu-item">Dry Lab</a>
+                <div class="navbar__submenu">
+                    <a href="./model" class="navbar__submenu-item">Model</a>
+                    <a href="./measurement" class="navbar__submenu-item">Measurement</a>
+                </div>
+            </div>
+
+            <!-- Out Reach Dropdown -->
+            <div class="navbar__menu-item-dropdown">
+                <a href="#" class="navbar__menu-item">Out Reach</a>
+                <div class="navbar__submenu">
+                    <a href="./human-practices.html" class="navbar__submenu-item">Human Practices</a>
+                    <a href="./education" class="navbar__submenu-item">Education</a>
+                    <a href="./entrepreneurship" class="navbar__submenu-item">Entrepreneurship</a>
+                    <a href="./inclusivity" class="navbar__submenu-item">Inclusivity</a>
+                </div>
+            </div>
+
+            <!-- Team Dropdown -->
+            <div class="navbar__menu-item-dropdown">
+                <a href="#" class="navbar__menu-item">Team</a>
+                <div class="navbar__submenu">
+                    <a href="./roster.html" class="navbar__submenu-item">Roster</a>
+                    <a href="./attributions.html" class="navbar__submenu-item">Attribution</a>
+                    <a href="./partnership.html" class="navbar__submenu-item">Partnership</a>
+                    <a href="./highlights.html" class="navbar__submenu-item">Highlights</a>
+                    <a href="#" class="navbar__submenu-item">Medals</a>
+                </div>
+            </div>
+
+            <!-- Close Button for mobile menu -->
+            <label for="menu-toggle" class="navbar__close-btn">✖</label>
+        </nav>
+    </header>
+
+    <!-- Preloader Section -->
+    <div id="preloader">
+        <div class="spinner"></div>
+        <p>cooking...</p>
+    </div>
+
+    <section class="intro-section" id="intro-section">
+        <!-- Navigation Dots for Carousel -->
+        <div class="carousel-nav">
+            <span class="active" onclick="showSlide(0)"></span>
+            <span onclick="showSlide(1)"></span>
+            <span onclick="showSlide(2)"></span>
+        </div>
+
+        <div class="intro-background">
+            <h1>Implementation</h1>
+        </div>
+    </section>
+
+    <!-- Main Section with Content and TOC -->
+    <section class="description-page">
+        <!-- Background Image for Content Section -->
+        <div class="content-background">
+            <!-- Table of Contents (Left Side) -->
+            <nav class="toc">
+                <ul>
+                    <li><a href="#production">&#127849Production</a></li>
+                    <li><a href="#distribution">&#127849Distribution</a></li>
+                    <li><a href="#application">&#127849Application</a></li>
+                    <li><a href="#future">&#127849The Future</a></li>
+                </ul>
+            </nav>
+
+            <!-- Content Sections (Right Side) -->
+            <div class="content" style="margin-top: -220px;">
+                <section id="production">
+                    <h3>Production</h3>
+                    <div style="text-align: left;">
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Overview of PetalGlow Production</b>
+                            </p>
+                        </div>
+                        <p>PetalGlow is designed to increase
+                            bioluminescence by modifying the plant's natural metabolic
+                            pathways and introducing
+                            new genetic elements. The engineering effort focuses on optimizing the caffeic acid cycle
+                            and
+                            incorporating genes from
+                            fungal bioluminescence systems.</p>
+                        <p>1. Target Pathway Caffeic Acid Cycle:
+                        </p>
+                        <p>The caffeic acid cycle is integral to
+                            PetalGlow's bioluminescence. This cycle involves the
+                            conversion of substrate
+                            supply like phenylalanine and tyrosine into caffeic acid, a crucial intermediate in the
+                            synthesis of bioluminescent
+                            compounds. By enhancing this pathway, the plant can produce more of the substrates required
+                            for
+                            bioluminescence.</p>
+                        <p>2. Introduction of Bioluminescent Genes:
+                        </p>
+                        <p>PetalGlow's bioluminescence is achieved by
+                            introducing genes that enable the synthesis and
+                            recycling of fungal
+                            luciferin. These genes are primarily sourced from fungal organisms. The key components
+                            include:
+                        </p>
+                        <ul style="list-style-type: disc;">
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem); ">Hispidin Synthase
+                                (HispS): Catalyzes the formation of hispidin,
+                                which
+                                is a
+                                precursor to fungal luciferin.
+                            </li>
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem); ">Hispidin-3-Hydroxylase
+                                (H3H): Hydroxylates hispidin to produce
+                                3-hydroxyhispidin, which then forms fungal luciferin.
+                            </li>
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem); ">Luciferase (Luz):
+                                Catalyzes the oxidation of fungal luciferin,
+                                resulting in
+                                light emission.
+                            </li>
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem); ">Caffeyl Pyruvate Hydrolase
+                                (CPH): Catalyzes the hydrolysis of
+                                caffeyl
+                                pyruvate back into caffeic acid, allowing the cycle to continue.
+                            </li>
+                        </ul>
+                        <p></p>
+                        <p>3. Gene Modification and Integration:
+                        </p>
+                        <p>The production process begins with
+                            constructing a synthetic pathway that combines enhanced
+                            caffeic acid synthesis with
+                            the fungal bioluminescent system. This involves:</p>
+                        <ul style="list-style-type: disc;">
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem); ">Overexpression of Key
+                                Enzymes: Genes like PAL (Phenylalanine
+                                Ammonia-Lyase), C4H
+                                (Cinnamate-4-Hydroxylase), and C3H
+                                (Cinnamate-4-Hydroxylase) are overexpressed to increase the production of caffeic
+                                acid.
+                            </li>
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem); ">Integration of Fungal
+                                Bioluminescent Genes: Genes from fungi that
+                                produce luciferin and
+                                luciferase are introduced into
+                                the plant genome, allowing the plant to sustain the bioluminescent reaction.
+                            </li>
+                        </ul>
+                        <p></p>
+                        <p>4. Engineering the Bioluminescent
+                            Pathway:</p>
+                        <p>The genetic elements required for
+                            bioluminescence are assembled into a plasmid vector. This
+                            plasmid includes:</p>
+                        <ul style="list-style-type: disc;">
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem); ">Promoters and Regulatory
+                                Sequences: A strong promoter, such as the
+                                CaMV
+                                35S
+                                promoter, ensures high expression levels of the introduced genes throughout the
+                                plant tissues.
+                            </li>
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem); ">Gene Stacking: The
+                                genes necessary for both caffeic acid production
+                                and
+                                bioluminescence are organized sequentially within the plasmid,
+                                ensuring their coordinated expression in the plant cells.
+                            </li>
+                        </ul>
+                        <p></p>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Biotechnological Process</b></p>
+                        </div>
+                        <p>1. Vector Construction:</p>
+                        <ul style="list-style-type: disc;">
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem); ">Plasmid Vector: A
+                                plasmid vector with a multiple cloning site (MCS)
+                                is
+                                selected to incorporate the genes responsible for caffeic acid
+                                synthesis and bioluminescence. It features a strong promoter for gene expression, a
+                                selectable marker for antibiotic
+                                resistance, and the necessary bioluminescent gene sequences.
+                            </li>
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem); ">Restriction Enzymes and
+                                Ligation: The plasmid and target genes are
+                                cut
+                                with
+                                restriction enzymes and then ligated together using DNA ligase, creating the
+                                recombinant plasmid.
+                            </li>
+                        </ul>
+                        <p></p>
+                        <p>2. Transformation:</p>
+                        <ul style="list-style-type: disc;">
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem); ">Agrobacterium-Mediated
+                                Transformation: The recombinant plasmid is
+                                introduced into
+                                <em>Agrobacterium tumefaciens</em> using electroporation. This bacterium then
+                                transfers
+                                the
+                                genetic material into plant cells via T-DNA integration.
+                            </li>
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem); ">Plant
+                                Transformation: The <em>Agrobacterium</em> infects plant
+                                tissues,
+                                typically
+                                leaf discs, initiating the genetic transformation process.
+                            </li>
+                        </ul>
+                        <p>3. Selection and Regeneration:</p>
+                        <ul style="list-style-type: disc;">
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem); ">Antibiotic
+                                Selection: Transformed cells are cultured on
+                                antibiotic-containing media to select for those that successfully integrated the
+                                plasmid.
+                            </li>
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem); ">Regeneration: The
+                                selected cells are regenerated into whole plants
+                                in a
+                                tissue culture environment, using plant hormones to induce
+                                root and shoot development.
+                            </li>
+                        </ul>
+                        <p></p>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Cultivation and Growth</b></p>
+                        </div>
+                        <p>1. Cultivation Process</p>
+                        <p>The cultivation of PetalGlow plants will
+                            take place in highly controlled environments to ensure consistent and reliable
+                            expression of the bioluminescent trait. This process will involve regulating key factors
+                            such as light, temperature,
+                            humidity, and nutrient supply to create optimal growth conditions. Additionally, genetic
+                            stability will be closely
+                            monitored throughout cultivation to maintain uniform bioluminescence across all plants,
+                            ensuring that each PetalGlow
+                            plant exhibits the desired glowing effect at its full potential.</p>
+                        <p>2. Tissue Culture:</p>
+                        <ul style="list-style-type: disc;">
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem); ">Initial Growth:
+                                Transformed plants are initially grown in sterile in
+                                vitro
+                                conditions with carefully balanced nutrients and hormones.
+                            </li>
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem); ">Acclimatization:
+                                Once roots and shoots develop, plants are gradually
+                                acclimatized to external conditions by controlling humidity and
+                                light exposure.
+                            </li>
+                        </ul>
+                        <p></p>
+                        <p>3. Optimal Growth Conditions:
+                        <p>
+                        <ul style="list-style-type: disc;">
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem); ">Light: Requires
+                                12-16 hours of direct sunlight or equivalent
+                                artificial light.
+                            </li>
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem); ">Temperature:
+                                Optimal growth occurs between 23°C to 26°C.
+                                Protect
+                                from temperatures below 10°C and above 35°C.
+                            </li>
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem); ">Soil and Watering:
+                                Use well-draining, organic-rich soil with a
+                                pH
+                                of 5.5 to 6.5. Water moderately to maintain humidity and prevent root
+                                rot.
+                            </li>
+                        </ul>
+                        <p></p>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Quality Control</b></p>
+                        </div>
+                        <ul style="list-style-type: disc;">
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem); ">Luminescence
+                                Quantification: In the future, light intensity
+                                will be
+                                measured with a luminometer to ensure the consistency and inensity of each
+                                Petalglow plant.
+                            </li>
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem); ">Environmental
+                                Interaction: Testing plants will be tested under
+                                varying conditions to ensure consistent bioluminescence without degradation over
+                                time.
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="distribution">
+                    <h3>Distribution</h3>
+                    <div style="text-align: left;">
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Distribution Channels</b>
+                            </p>
+                        </div>
+                        <p>1. Direct-to-Consumer Sales:
+                        </p>
+                        <p>Petalglow will be available for purchase
+                            through its official e-commerce platform, offering customers a convenient way
+                            to explore and buy various plant species directly online. The website will provide detailed
+                            product information,
+                            customer support, and an accessible shopping experience. Additionally, a subscription
+                            service will be offered for
+                            customers who wish to receive regular deliveries of Petalglow plants, ensuring they always
+                            have fresh plants that
+                            exhibit optimal bioluminescence. This subscription model will cater to those seeking a
+                            steady supply and consistent
+                            experience with Petalglow.</p>
+                        <p>2. Retail Partnerships:
+                        </p>
+                        <p>PetalGlow will also be distributed through
+                            high-end home décor stores that cater to consumers
+                            looking for unique,
+                            aesthetically pleasing products. These stores provide a physical dark space where customers
+                            can see the bioluminescent
+                            effect of PetalGlow in person.</p>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Packaging and Shipping</b>
+                            </p>
+                        </div>
+                        <ul style="list-style-type: disc;">
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem); ">Eco-Friendly Packaging: The
+                                packaging for PetalGlow will be made from recyclable and biodegradable materials,
+                                aligning
+                                with the product's environmentally friendly image. The packaging is designed to be
+                                sturdy enough to protect the plant
+                                while minimizing environmental impact.
+                            </li>
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem); ">Plant Protection: Each PetalGlow
+                                plant will be securely housed in a specialized transparent container that maintains
+                                humidity during transportation.
+                            </li>
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem); ">Rapid Delivery: PetalGlow will be
+                                shipped using expedited delivery services to minimize the time plants spend in
+                                transit. This ensures that the plants arrive fresh and ready for immediate use by
+                                the consumer.</li>
+                        </ul>
+                        <p></p>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Regulatory Compliance</b>
+                            </p>
+                        </div>
+                        <p>Given that PetalGlow is a genetically
+                            modified organism (GMO), it will comply with all relevant regulations in the
+                            markets where it is sold. PetalGlow will undergo rigorous testing to obtain the necessary
+                            GMO safety certifications in
+                            each target market, including meeting the requirements of the Agricultural GMO Safety
+                            Certificate in China, ensuring the
+                            product is safe for cultivation and consumption. The packaging will clearly label PetalGlow
+                            as a GMO product, providing
+                            transparency for consumers and ensuring regulatory compliance.
+                        </p>
+                        <p>For international shipments, PetalGlow will
+                            adhere to phytosanitary standards to prevent the spread of pests and
+                            diseases, with each shipment including the required certificates to facilitate smooth
+                            customs clearance. Additionally,
+                            PetalGlow will meet the import and export regulations of the countries it is shipped to,
+                            ensuring all documentation is
+                            in order and the product complies with local GMO standards.</p>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Customer Support and After-Sales
+                                    Service</b>
+                            </p>
+                        </div>
+                        <ul style="list-style-type: disc;">
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem); ">Instructional Materials: Each
+                                PetalGlow package includes detailed care instructions, both in print and available
+                                online, to help customers maintain the health and bioluminescence of their plants.</li>
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/implement/implement1.png"
+                                alt="implement1">
+                            <img class="text_img"
+                                src="https://static.igem.wiki/teams/5218/image/static/images/implement/implement2.png"
+                                alt="implement2">
+                            <li style="font-size: clamp(0.5rem, 1.25vw, 1rem); ">Replacement Guarantee: To ensure
+                                customer satisfaction, PetalGlow will offer a replacement guarantee for plants that
+                                arrive in poor condition or fail to thrive within the first 30 days after purchase. This
+                                policy will build consumer
+                                trust and encourages repeat purchases.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="application">
+                    <h3>Application</h3>
+                    <div style="text-align: left;">
+                        <p>PetalGlow is thoughtfully designed for
+                            individuals seeking natural methods to alleviate mild anxiety and improve sleep
+                            quality. Integrating seamlessly into daily life, it functions as a holistic wellness product
+                            that offers therapeutic
+                            benefits both during the day and at night.
+                        </p>
+                        <p>During daylight hours, PetalGlow serves as a
+                            conduit for horticultural therapy. Users engage in nurturing
+                            routines—watering, pruning, and observing the plant's growth. This hands-on interaction with
+                            nature fosters mindfulness
+                            and reduces stress by encouraging users to focus on the present moment. The act of caring
+                            for a living organism provides
+                            a sense of responsibility and accomplishment, which has been shown to alleviate symptoms of
+                            anxiety and enhance overall
+                            mental well-being. The visible progress of PetalGlow's growth serves as a tangible reward,
+                            reinforcing positive emotions
+                            and a connection to nature.</p>
+                        <p>At night, PetalGlow transforms into a source
+                            of calming bioluminescent light. Unlike traditional artificial lights that
+                            can disrupt circadian rhythms and suppress melatonin production, PetalGlow emits a soft glow
+                            that creates an ideal
+                            pre-sleep environment. The gentle illumination is sufficient to ease nighttime anxiety
+                            without interfering with the
+                            darkness needed for quality sleep. This natural light helps users relax and unwind,
+                            addressing sleep difficulties often
+                            exacerbated by anxiety.</p>
+                    </div>
+                </section>
+
+                <section id="future">
+                    <h3>The Future</h3>
+                    <div style="text-align: left;">
+                        <p>Looking ahead, PetalGlow has the potential
+                            to
+                            expand its impact beyond individual households into communal spaces and
+                            larger communities.</p>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Lighting in the park - <em>PetalGlow
+                                        in
+                                        Cityscapes</em></b>
+                            </p>
+                        </div>
+                        <p>One exciting future application is the
+                            integration of PetalGlow into public parks and outdoor recreational areas.
+                            Planting clusters of bioluminescent PetalGlow plants along pathways, gardens, and
+                            gathering spots could transform these
+                            spaces into enchanting nighttime environments. The natural glow would provide gentle
+                            illumination without the need for
+                            artificial lighting, preserving the ecological integrity of the area and reducing light
+                            pollution. This application not
+                            only enhances the aesthetic appeal of public spaces but also encourages community
+                            members to engage with nature in new
+                            and meaningful ways after dusk.
+                        </p>
+                        <img class="text_img"
+                            src="https://static.igem.wiki/teams/5218/image/static/images/implement/implement3.jpg"
+                            alt="implement3">
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Educational Settings - <em>Learning
+                                        Through Nature</em></b>
+                            </p>
+                        </div>
+                        <p>PetalGlow offers an engaging tool for
+                            educational institutions aiming to teach students about plant biology, ecology,
+                            and bioluminescence. Schools and universities can integrate PetalGlow into science
+                            curricula, allowing students to
+                            observe and study the mechanisms of bioluminescence firsthand. This hands-on experience can
+                            spark interest in
+                            environmental science, botany, and sustainability, fostering a new generation of
+                            environmentally conscious individuals.</p>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Healthcare Facilities -
+                                    <em>Healthcare
+                                        Facilities</em></b>
+                            </p>
+                        </div>
+                        <p>Hospitals, clinics, and therapy centers can
+                            utilize PetalGlow to enhance patient care environments. The calming presence
+                            of plants, combined with the gentle bioluminescent glow, can reduce stress and anxiety among
+                            patients and visitors.
+                            Installing PetalGlow in waiting areas, patient rooms, or therapeutic gardens can contribute
+                            to a more soothing
+                            atmosphere, potentially improving patient recovery times and overall well-being.</p>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Hospitality Industry - <em>Enhancing
+                                        Guest Experiences</em></b>
+                            </p>
+                        </div>
+                        <p>Hotels, resorts, and spas can incorporate
+                            PetalGlow into their interior and exterior designs to provide guests with a
+                            unique and relaxing experience. The soft glow of the plants can create an inviting ambiance
+                            in lobbies, lounges, and
+                            guest rooms. In outdoor settings, PetalGlow can illuminate pathways and gardens, offering
+                            guests a magical nighttime
+                            environment that enhances their stay and sets the establishment apart from competitors.</p>
+                        <img class="text_img"
+                            src="https://static.igem.wiki/teams/5218/image/static/images/implement/implement4.jpg"
+                            alt="implement4">
+                        <img class="text_img"
+                            src="https://static.igem.wiki/teams/5218/image/static/images/implement/implement5.jpg"
+                            alt="implement5">
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Bioluminescent Art Installations -
+                                    <em>Fusion of Nature and Art</em></b>
+                            </p>
+                        </div>
+                        <p>Artists and event organizers can collaborate
+                            to create captivating bioluminescent installations using PetalGlow. These
+                            living artworks can be featured in galleries, festivals, and public spaces, offering
+                            spectators a mesmerizing experience
+                            that highlights the beauty of nature. Such installations can also raise awareness about
+                            environmental issues and the
+                            importance of biodiversity.</p>
+                        <div style="text-align: left; color: #a8f900;">
+                            <p><b style="color: #a8f900;">Event Decoration - <em>Adding a
+                                        Magical
+                                        Touch to Celebrations</em></b>
+                            </p>
+                        </div>
+                        <p>PetalGlow can serve as a unique decorative
+                            element for weddings, parties, and cultural events. The natural glow of the
+                            plants adds an ethereal ambiance, transforming ordinary venues into extraordinary settings.
+                            Event planners can use
+                            PetalGlow to create memorable experiences that leave a lasting impression on guests, all
+                            while utilizing sustainable and
+                            eco-friendly decor.</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collection Section -->
+    <section class="collection" style="background-color: rgba(30, 30, 30);">
+        <div class="partners">
+            <img class="partners__image"
+                src="https://static.igem.wiki/teams/5218/image/static/images/sponsor/all.png" />
+        </div>
+
+        <div class="contacts">
+            <p class="contacts__description">Address: BGI Center, No. 9 Yunhua Road, Yantian District,
+                Shenzhen, 518083,
+                China</p>
+            <p class="contacts__description">Phone: +86 13101793873 (Weekdays: 8:00-17:00 Weekends: Closed)
+                E-mail:
+                chenlichuan@genomics.cn</p>
+        </div>
+
+        <div class="copyright">
+            <p class="copyright__text">
+                ©2024 Content on this site is licensed under a
+                <a class="copyright__link" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons
+                    Attribution 4.0 International license</a>
+            </p>
+            <p class="copyright__text">
+                The repository used to create this website is available at
+                <a class="copyright__link" href="">gitlab.igem.org/2024/bgi-mammothedu-south</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- JavaScript -->
+
+    <!-- Loader -->
+    <script>
+        // Remove the preloader when the page is fully loaded
+        window.onload = function () {
+            const preloader = document.getElementById('preloader');
+            preloader.style.opacity = '0'; // Start fading out the preloader
+            setTimeout(() => {
+                preloader.style.display = 'none'; // Hide the preloader completely
+            }, 500); // Wait for the fade-out to complete
+        };
+    </script>
+
+    <!-- Image slider -->
+    <script>
+        let currentSlide = 0;
+        const slides = [
+            "linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0)), url('https://static.igem.wiki/teams/5218/image/static/images/implement/h4.jpg')",
+            "linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0)), url('https://static.igem.wiki/teams/5218/image/static/images/implement/h2.jpg')",
+            "linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0)), url('https://static.igem.wiki/teams/5218/image/static/images/implement/h3.jpg')"
+        ];
+        const dots = document.querySelectorAll('.carousel-nav span');
+        const introSection = document.getElementById('intro-section');
+
+        function showSlide(index) {
+            dots[currentSlide].classList.remove('active');
+            currentSlide = index;
+            introSection.style.backgroundImage = slides[currentSlide]; // Apply the gradient and image
+            dots[currentSlide].classList.add('active');
+        }
+
+        // Make sure the first slide is loaded when the page loads
+        document.addEventListener('DOMContentLoaded', function () {
+            // Preload images
+            slides.forEach(function (slide) {
+                const img = new Image();
+                img.src = slide.match(/url\('(.*)'\)/)[1]; // Extract the URL from the background-image
+            });
+
+            showSlide(0); // Show the first slide immediately after preloading starts
+        });
+
+        setInterval(() => {
+            const nextSlide = (currentSlide + 1) % slides.length;
+            showSlide(nextSlide);
+        }, 2000); // Change every 2 seconds
+    </script>
+
+    <!-- ToC -->
+    <script>
+        // Smooth scroll when clicking ToC links
+        document.querySelectorAll('.toc a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+    <!-- PDF fullscreen view -->
+    <script>
+        function toggleFullScreen() {
+            var elem = document.getElementById("pdf");
+
+            if (!document.fullscreenElement) {
+                if (elem.requestFullscreen) {
+                    elem.requestFullscreen();
+                } else if (elem.mozRequestFullScreen) { // Firefox
+                    elem.mozRequestFullScreen();
+                } else if (elem.webkitRequestFullscreen) { // Chrome, Safari and Opera
+                    elem.webkitRequestFullscreen();
+                } else if (elem.msRequestFullscreen) { // IE/Edge
+                    elem.msRequestFullscreen();
+                }
+            } else {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                } else if (document.mozCancelFullScreen) { // Firefox
+                    document.mozCancelFullScreen();
+                } else if (document.webkitExitFullscreen) { // Chrome, Safari and Opera
+                    document.webkitExitFullscreen();
+                } else if (document.msExitFullscreen) { // IE/Edge
+                    document.msExitFullscreen();
+                }
+            }
+        }
+    </script>
+
+    <!-- Header -->
+    <script src="./static/js/header.js"></script>
+
+</body>
+
+</html>
